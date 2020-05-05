@@ -1,0 +1,628 @@
+package com.infocrats.pageObjects;
+
+import com.infocrats.utils.BaseUtills;
+
+import net.serenitybdd.core.annotations.findby.FindBy;
+import net.serenitybdd.core.pages.WebElementFacade;
+
+public class MechCsrPage extends peststreamPage {
+	BaseUtills utills = new BaseUtills();
+	
+	
+	
+	@FindBy(xpath = "//span[contains(text(),'CSR DashBoard')]")
+	private WebElementFacade CSRDashBoard_Mech;
+	
+	@FindBy(xpath = "//button[contains(text(),'Advance Search')]")
+	private WebElementFacade AdvanceSearch_CSRDB_Mech;
+	
+	@FindBy(xpath = "//a[contains(text(),'1509')]")
+	private WebElementFacade MechOpp_CSRDB_Mech;
+	
+	@FindBy(xpath = "//tr[7]//td[10]//a[1]")
+	private WebElementFacade CallBttn_CSRDB_Mech;
+	
+	@FindBy(xpath = "//select[@id='EmployeeNo']")
+	private WebElementFacade DDCalledFor_CallBttn_CSRDB_Mech;
+	
+	@FindBy(xpath = "//option[contains(text(),'Ayan Rathore')]")
+	private WebElementFacade ValueDDCalledFor_CallBttn_CSRDB_Mech;
+	
+	@FindBy(xpath = "//textarea[@id='Description']")
+	private WebElementFacade Des_CallBttn_CSRDB_Mech;
+	
+	@FindBy(xpath = "//div[@id='AddCallPopup']//div//div//div//div//form[@id='form0']//div//div//div//div//textarea[@id='Note']")
+	private WebElementFacade Note_CallBttn_CSRDB_Mech;
+	
+	@FindBy(xpath = "//div[@id='AddCallPopup']//div//div//div//div//form[@id='form0']//div//span[contains(text(),'Save')]")
+	private WebElementFacade Save_CallBttn_CSRDB_Mech;
+	
+	@FindBy(xpath = "//div[@id='sample_1_paginate']//a[contains(text(),'3')]")
+	private WebElementFacade ThreeNext_CallBttn_CSRDB_Mech;
+	
+	@FindBy(xpath = "//a[contains(text(),'1508')]")
+	private WebElementFacade AccountNo_CSRDB_Mech;
+	
+	@FindBy(xpath = "//button[contains(text(),'Ok')]")
+	private WebElementFacade OkAccountAlert_CSRDB_Mech;
+	
+	@FindBy(xpath = "//body/div/div/div/div/div/div/div/div/div/div[2]/button[1]")
+	private WebElementFacade AddCallBttn_CSRDB_Mech;
+	
+	@FindBy(xpath = "//body//div[@id='AddCallPopup']//div//div//div//div//div[2]//div[1]//button[1]//span[1]")
+	private WebElementFacade DDTarget_CSRDB_Mech;
+	
+	@FindBy(xpath = "//span[contains(text(),'NewTarget')]")
+	private WebElementFacade ValueDDTarget_CSRDB_Mech;
+	
+	@FindBy(xpath = "//html//body//div//div//div//div//div//div//div//div//div//div//a//button//span[contains(text(),'Opportunity')]")
+	private WebElementFacade AddOppBttn_CSRDB_Mech;
+	
+	@FindBy(xpath = "//input[@id='SecondaryPhone']")
+	private WebElementFacade SecondaryPhoneNo_Opp_CSRDB_Mech;
+	
+	@FindBy(xpath = "//div[@id='s2id_DepartmentSysName']//a//span//b")
+	private WebElementFacade DDDep_Opp_CSRDB_Mech;
+	
+	@FindBy(xpath = "(//*[starts-with(@id,'select2-result-label-')])[5]")
+	private WebElementFacade ValueDDDep_Opp_CSRDB_Mech;
+	
+	@FindBy(xpath = "//div[@id='s2id_PrimaryServiceId']//a//span//b")
+	private WebElementFacade DDService_Opp_CSRDB_Mech;
+	
+	@FindBy(xpath = "(//*[starts-with(@id,'select2-result-label-')])[3]")
+	private WebElementFacade ValueDDService_Opp_CSRDB_Mech;
+	
+	@FindBy(xpath = "//button//span[contains(text(),'--Select--')]")
+	private WebElementFacade DDSource_Opp_CSRDB_Mech;
+	
+	@FindBy(xpath = "//span[contains(text(),'CustomerPortal App')]")
+	private WebElementFacade ValueDDSource_Opp_CSRDB_Mech;
+	
+	@FindBy(xpath = "//span[contains(text(),'Continue')]")
+	private WebElementFacade Cont_Opp_CSRDB_Mech;
+	
+	@FindBy(xpath = "//html//body//div//div//div//div//div//div//div//div//div//div//a//button//span[contains(text(),'Work Order')]")
+	private WebElementFacade AddWOBttn_CSRDB_Mech;
+	
+	@FindBy(xpath = "//div[@id='uniform-IsSameAsServiceAddress']")
+	private WebElementFacade KeepSameBillingAddress_AddWOBttn_CSRDB_Mech;
+	
+	@FindBy(xpath = "//textarea[@id='ServiceAddressControl_Notes']")
+	private WebElementFacade Notes_AddWOBttn_CSRDB_Mech;
+	
+	@FindBy(xpath = "//textarea[@id='ServiceAddressControl_Direction']")
+	private WebElementFacade Direction_AddWOBttn_CSRDB_Mech;
+	
+	@FindBy(xpath = "//input[@id='ServiceDateStr']")
+	private WebElementFacade ServiceDatePOP_AddWOBttn_CSRDB_Mech;
+	
+	@FindBy(xpath = "//td[@class='day'][contains(.,'30')]")
+	private WebElementFacade ServiceDateValue_AddWOBttn_CSRDB_Mech;
+	
+	@FindBy(xpath = "(//input[@type='radio'])[2]")
+	private WebElementFacade RangeTimeRdioBttn_AddWOBttn_CSRDB_Mech;
+	
+	@FindBy(xpath = "//select[@id='InitialPreferedId']")
+	private WebElementFacade DDTimeRange_AddWOBttn_CSRDB_Mech;
+	
+	@FindBy(xpath = "//select[@id='InitialPreferedId']//option[contains(text(),'09:00 AM - 10:00 AM')]")
+	private WebElementFacade ValueTimeRange_AddWOBttn_CSRDB_Mech;
+	
+	@FindBy(xpath = "//select[@id='SecondInitialPreferedId']")
+	private WebElementFacade DDSecondTimeRange_AddWOBttn_CSRDB_Mech;
+	
+	@FindBy(xpath = "//select[@id='SecondInitialPreferedId']//option[contains(text(),'10:00 AM - 11:00 AM')]")
+	private WebElementFacade ValueSecondTimeRange_AddWOBttn_CSRDB_Mech;
+	
+	@FindBy(xpath = "//select[@id='RouteMasterId']")
+	private WebElementFacade DDPrimaryRoute_AddWOBttn_CSRDB_Mech;
+	
+	@FindBy(xpath = "//option[contains(text(),'Name Route (q q)')]")
+	private WebElementFacade ValuePrimaryRoute_AddWOBttn_CSRDB_Mech;
+	
+	@FindBy(xpath = "//textarea[@id='SpecialInstruction']")
+	private WebElementFacade SpecialInstruction_AddWOBttn_CSRDB_Mech;
+	
+	@FindBy(xpath = "//textarea[@id='ServiceInstruction']")
+	private WebElementFacade ServiceInstruction_AddWOBttn_CSRDB_Mech;
+	
+	@FindBy(xpath = "//textarea[@id='InternalInstruction']")
+	private WebElementFacade InternalInstruction_AddWOBttn_CSRDB_Mech;
+	
+	@FindBy(xpath = "//textarea[@id='SetupInstruction']")
+	private WebElementFacade SetUpInstruction_AddWOBttn_CSRDB_Mech;
+	
+	@FindBy(xpath = "//button[@id='btnSubmit']//span[contains(text(),'Save')]")
+	private WebElementFacade Save_AddWOBttn_CSRDB_Mech;
+	
+	@FindBy(xpath = "//button//span[contains(text(),'Select')]")
+	private WebElementFacade DDServiceCategory_AddWOBttn_CSRDB_Mech;
+	
+	@FindBy(xpath = "//a//span[contains(text(),'Mechanical')]")
+	private WebElementFacade ValueDDServiceCategory_AddWOBttn_CSRDB_Mech;
+	
+	@FindBy(xpath = "//input[@id='serviceWohead']")
+	private WebElementFacade Services_AddWOBttn_CSRDB_Mech;
+	
+	@FindBy(xpath = "//strong[contains(.,'Time and Material')]")
+	private WebElementFacade ValueServices_AddWOBttn_CSRDB_Mech;
+	
+	@FindBy(xpath = "//body/div/div/div/div/div/div/div/div/form[@id='formWorkOrder']/div/div/div/div/div/a/span[1]")
+	private WebElementFacade Add_AddWOBttn_CSRDB_Mech;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	@Override
+	public WebElementFacade getUniqueElement() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+
+
+
+	public void CSRDashBoard_Mech() {
+		scrollUP(CSRDashBoard_Mech);
+		CSRDashBoard_Mech.click();
+		waitABit(3000);
+		
+	}
+
+
+
+
+
+	public void AdvanceSearch_CSRDB_Mech() {
+		AdvanceSearch_CSRDB_Mech.click();
+		waitABit(3000);
+	}
+
+
+
+
+
+	public void MechOpp_CSRDB_Mech() {
+		
+		//MechOpp_CSRDB_Mech.click();
+		//waitABit(3000);
+	}
+
+
+
+
+
+	public void CallBttn_CSRDB_Mech() {
+		CallBttn_CSRDB_Mech.click();
+		waitABit(3000);
+		
+	}
+
+
+
+
+
+	public void DDCalledFor_CallBttn_CSRDB_Mech() {
+		DDCalledFor_CallBttn_CSRDB_Mech.click();
+		waitABit(3000);
+		
+	}
+
+
+
+
+
+	public void ValueDDCalledFor_CallBttn_CSRDB_Mech() {
+		ValueDDCalledFor_CallBttn_CSRDB_Mech.click();
+		waitABit(6000);
+	}
+
+
+
+
+
+	public void Des_CallBttn_CSRDB_Mech() {
+		Des_CallBttn_CSRDB_Mech.click();
+		Des_CallBttn_CSRDB_Mech.sendKeys("Des regarding mechanical activity");
+		waitABit(3000);
+	}
+
+
+
+
+
+	public void Note_CallBttn_CSRDB_Mech() {
+		Note_CallBttn_CSRDB_Mech.click();
+		Note_CallBttn_CSRDB_Mech.sendKeys("Note regardind mech activity");
+		waitABit(3000);
+	}
+
+
+
+
+
+	public void Save_CallBttn_CSRDB_Mech() {
+		Save_CallBttn_CSRDB_Mech.click();
+		waitABit(3000);
+	}
+
+
+
+
+
+	public void ThreeNext_CallBttn_CSRDB_Mech() {
+		scrollDown(ThreeNext_CallBttn_CSRDB_Mech);
+		ThreeNext_CallBttn_CSRDB_Mech.click();
+		waitABit(3000);
+		
+	}
+
+
+
+
+
+	public void AccountNo_CSRDB_Mech() {
+		AccountNo_CSRDB_Mech.click();
+		waitABit(3000);
+		
+	}
+
+
+
+
+
+	public void OkAccountAlert_CSRDB_Mech() {
+		OkAccountAlert_CSRDB_Mech.click();
+		waitABit(3000);
+	}
+
+
+
+
+
+	public void AddCallBttn_CSRDB_Mech() {
+		AddCallBttn_CSRDB_Mech.click();
+		waitABit(3000);
+	}
+
+
+
+
+
+	public void DDTarget_CSRDB_Mech() {
+		DDTarget_CSRDB_Mech.click();
+		waitABit(3000);
+	}
+
+
+
+
+
+	public void ValueDDTarget_CSRDB_Mech() {
+		ValueDDTarget_CSRDB_Mech.click();
+		waitABit(3000);
+	}
+
+
+
+
+
+	public void AddOppBttn_CSRDB_Mech() {
+		AddOppBttn_CSRDB_Mech.click();
+		waitABit(3000);
+		
+		String allWindowHandle = getDriver().getWindowHandle();
+		getDriver().switchTo().window(allWindowHandle);
+		getDriver().get("https://tcr.pestream.com/Sale/PhoneSales?accountNo=1508&returnUrl=/Sales/CrmAccount/AccountDetail?accountId=333151");
+		waitABit(2000);
+
+	}
+
+
+
+
+
+	public void SecondaryPhoneNo_Opp_CSRDB_Mech() {
+		SecondaryPhoneNo_Opp_CSRDB_Mech.click();
+		SecondaryPhoneNo_Opp_CSRDB_Mech.sendKeys("9636987452");
+		waitABit(3000);
+	}
+
+
+
+
+
+	public void DDDep_Opp_CSRDB_Mech() {
+		DDDep_Opp_CSRDB_Mech.click();
+		waitABit(3000);
+	}
+
+
+
+
+
+	public void ValueDDDep_Opp_CSRDB_Mech() {
+		ValueDDDep_Opp_CSRDB_Mech.click();
+		waitABit(3000);
+	}
+
+
+
+
+
+	public void DDService_Opp_CSRDB_Mech() {
+		DDService_Opp_CSRDB_Mech.click();
+		waitABit(3000);
+	}
+
+
+
+
+
+	public void ValueDDService_Opp_CSRDB_Mech() {
+		ValueDDService_Opp_CSRDB_Mech.click();
+		waitABit(3000);
+	}
+
+
+
+
+
+	public void DDSource_Opp_CSRDB_Mech() {
+		DDSource_Opp_CSRDB_Mech.click();
+		waitABit(3000);
+	}
+
+
+
+
+
+	public void ValueDDSource_Opp_CSRDB_Mech() {
+		ValueDDSource_Opp_CSRDB_Mech.click();
+		waitABit(3000);
+	}
+
+
+
+
+
+	public void Cont_Opp_CSRDB_Mech() {
+		Cont_Opp_CSRDB_Mech.click();
+		waitABit(3000);
+	}
+
+
+
+
+
+	public void AddWOBttn_CSRDB_Mech() {
+		AddWOBttn_CSRDB_Mech.click();
+		waitABit(3000);
+		
+		String allWindowHandle = getDriver().getWindowHandle();
+		getDriver().switchTo().window(allWindowHandle);
+		getDriver().get("https://tcr.pestream.com/Services/WorkOrder/Manage?accountNo=1508&returnUrl=/Sales/CrmAccount/AccountDetail?accountId=333151");
+		waitABit(2000);
+	}
+
+
+
+
+
+	public void KeepSameBillingAddress_AddWOBttn_CSRDB_Mech() {
+		KeepSameBillingAddress_AddWOBttn_CSRDB_Mech.click();
+		waitABit(3000);
+	}
+
+
+
+
+
+	public void Notes_AddWOBttn_CSRDB_Mech() {
+		Notes_AddWOBttn_CSRDB_Mech.click();
+		Notes_AddWOBttn_CSRDB_Mech.sendKeys("Notes");
+		waitABit(3000);
+	}
+
+
+
+
+
+	public void Direction_AddWOBttn_CSRDB_Mech() {
+		Direction_AddWOBttn_CSRDB_Mech.click();
+		Direction_AddWOBttn_CSRDB_Mech.sendKeys("Direction");
+		waitABit(3000);
+	}
+
+
+
+
+
+	public void ServiceDatePOP_AddWOBttn_CSRDB_Mech() {
+		ServiceDatePOP_AddWOBttn_CSRDB_Mech.click();
+		waitABit(3000);
+	}
+
+
+
+
+
+	public void ServiceDateValue_AddWOBttn_CSRDB_Mech() {
+		ServiceDateValue_AddWOBttn_CSRDB_Mech.click();
+		waitABit(3000);
+	}
+
+
+
+
+
+	public void RangeTimeRdioBttn_AddWOBttn_CSRDB_Mech() {
+		RangeTimeRdioBttn_AddWOBttn_CSRDB_Mech.click();
+		waitABit(3000);
+	}
+
+
+
+
+
+	public void DDTimeRange_AddWOBttn_CSRDB_Mech() {
+		DDTimeRange_AddWOBttn_CSRDB_Mech.click();
+		waitABit(3000);
+	}
+
+
+
+
+
+	public void ValueTimeRange_AddWOBttn_CSRDB_Mech() {
+		ValueTimeRange_AddWOBttn_CSRDB_Mech.click();
+		waitABit(3000);
+	}
+
+
+
+
+
+	public void DDSecondTimeRange_AddWOBttn_CSRDB_Mech() {
+		DDSecondTimeRange_AddWOBttn_CSRDB_Mech.click();
+		waitABit(3000);
+	}
+
+
+
+
+
+	public void ValueSecondTimeRange_AddWOBttn_CSRDB_Mech() {
+		ValueSecondTimeRange_AddWOBttn_CSRDB_Mech.click();
+		waitABit(3000);
+	}
+
+
+
+
+
+	public void DDPrimaryRoute_AddWOBttn_CSRDB_Mech() {
+		DDPrimaryRoute_AddWOBttn_CSRDB_Mech.click();
+		waitABit(3000);
+	}
+
+
+
+
+
+	public void ValuePrimaryRoute_AddWOBttn_CSRDB_Mech() {
+		ValuePrimaryRoute_AddWOBttn_CSRDB_Mech.click();
+		waitABit(3000);
+	}
+
+
+
+
+
+	public void SpecialInstruction_AddWOBttn_CSRDB_Mech() {
+		SpecialInstruction_AddWOBttn_CSRDB_Mech.click();
+		SpecialInstruction_AddWOBttn_CSRDB_Mech.sendKeys("this is Special Instruction");
+		waitABit(3000);
+	}
+
+
+
+
+
+	public void ServiceInstruction_AddWOBttn_CSRDB_Mech() {
+		ServiceInstruction_AddWOBttn_CSRDB_Mech.click();
+		ServiceInstruction_AddWOBttn_CSRDB_Mech.sendKeys("This is Service Instruction");
+		waitABit(3000);
+	}
+
+
+
+
+
+	public void InternalInstruction_AddWOBttn_CSRDB_Mech() {
+		InternalInstruction_AddWOBttn_CSRDB_Mech.click();
+		InternalInstruction_AddWOBttn_CSRDB_Mech.sendKeys("This is Internal Instructions");
+		waitABit(3000);
+	}
+
+
+
+
+
+	public void SetUpInstruction_AddWOBttn_CSRDB_Mech() {
+		SetUpInstruction_AddWOBttn_CSRDB_Mech.click();
+		SetUpInstruction_AddWOBttn_CSRDB_Mech.sendKeys("This is SetUp Instructions");
+		waitABit(3000);
+	}
+
+
+
+
+
+	public void Save_AddWOBttn_CSRDB_Mech() {
+		Save_AddWOBttn_CSRDB_Mech.click();
+		waitABit(3000);
+	}
+
+
+
+
+
+	public void DDServiceCategory_AddWOBttn_CSRDB_Mech() {
+		DDServiceCategory_AddWOBttn_CSRDB_Mech.click();
+		waitABit(3000);
+		
+	}
+
+
+
+
+
+	public void ValueDDServiceCategory_AddWOBttn_CSRDB_Mech() {
+		ValueDDServiceCategory_AddWOBttn_CSRDB_Mech.click();
+		waitABit(3000);
+		
+	}
+
+
+
+
+
+	public void Services_AddWOBttn_CSRDB_Mech() {
+		Services_AddWOBttn_CSRDB_Mech.click();
+		waitABit(3000);
+	}
+
+
+
+
+
+	public void ValueServices_AddWOBttn_CSRDB_Mech() {
+		ValueServices_AddWOBttn_CSRDB_Mech.click();
+		waitABit(3000);
+	}
+
+
+
+
+
+	public void Add_AddWOBttn_CSRDB_Mech() {
+		Add_AddWOBttn_CSRDB_Mech.click();
+		waitABit(3000);
+		
+	}
+}
