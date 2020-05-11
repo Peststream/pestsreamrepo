@@ -1,3 +1,4 @@
+@test
 Feature: Test Case of new Termite.
   I want to use this template for my feature file
 
