@@ -8,7 +8,7 @@ Feature: Test Case of new Termite.
     And I can click sign in
     Then I am granted access to the system
 
-  @generalInfoResidential
+  @generalInfoResidential 
   Scenario: Test to Continue General Info of Termite
     When user click on CallTab
     Then user enters company
@@ -20,7 +20,7 @@ Feature: Test Case of new Termite.
     Then user click on OppType
     Then user click on continue
 
-  @generalInfoResidentialWithLead
+  @generalInfoResidentialWithLead 
   Scenario: Test to Continue General Info with lead Termite
     When user click on CallTab
     Then user enters company

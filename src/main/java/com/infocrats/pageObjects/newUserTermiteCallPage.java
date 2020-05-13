@@ -649,6 +649,7 @@ public void generatedOpportunity_FieldSTSaveComm() {
 		}
 
 		public void continueInspection_FieldSTSaveComm() {
+			waitABit(1000);
 			continueInspection_FieldSTSaveComm.click();
 			waitABit(1000);
 		}
@@ -678,33 +679,39 @@ public void generatedOpportunity_FieldSTSaveComm() {
 		}
 
 		public void Save_StdService_FieldSTSaveComm() {
+			waitABit(2000);
 			Save_StdService_FieldSTSaveComm.click();
 			waitABit(1000);
 		}
 
 		public void saveAndcontSelectService_FieldSTSaveComm() {
+			waitABit(2000);
 			saveAndcontSelectService_FieldSTSaveComm.click();
 			waitABit(3000);
 		}
 
 		public void radioBttn_Service_FieldSTSaveComm() {
+			waitABit(2000);
 			scrollUP(radioBttn_Service_FieldSTSaveComm);
 			radioBttn_Service_FieldSTSaveComm.click();
 			waitABit(1000);
 		}
 
 		public void saveAndcontConfigureProposal_FieldSTSaveComm() {
+			waitABit(2000);
 			saveAndcontConfigureProposal_FieldSTSaveComm.click();
 			waitABit(1000);
 			
 		}
 
 		public void radioBttncashAgreement_FieldSTSaveComm() {
+			waitABit(2000);
 			radioBttncashAgreement_FieldSTSaveComm.click();
 			waitABit(1000);
 		}
 
 		public void valuepaidamountAgreement_FieldSTSaveComm(Map<String, String> testData) {
+			waitABit(2000);
 			valuepaidamountAgreement_FieldSTSaveComm.sendKeys(testData.get("PaidAmount"));
 			waitABit(1000);
 		}
@@ -721,10 +728,11 @@ public void generatedOpportunity_FieldSTSaveComm() {
 
 		public void saveandcontAgreement_FieldSTSaveComm() {
 			saveandcontAgreement_FieldSTSaveComm.click();
-			waitABit(1000);
+			waitABit(3000);
 		}
 
 		public void sendemail_FieldSTSaveComm() {
+			waitABit(4000);
 			sendemail_FieldSTSaveComm.click();
 			waitABit(1000);
 		}

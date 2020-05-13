@@ -6,19 +6,10 @@ import cucumber.api.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
 
 @RunWith(CucumberWithSerenity.class)
-@CucumberOptions(features = { "src/test/resources/features/" }, tags = { "@test" }, glue = {
-
+@CucumberOptions(features = { "src/test/resources/features" }, tags = { "@test" }, glue = {
 		"com.infocrats.stepdefs" }, monochrome = true, plugin = { "pretty", "html:target/cucumber-reports",
 
 				"json:target/cucumber.json", "rerun:rerun.txt" })
 public class TestRunner {
 
 }
-
-
-
-
-
-
-
-

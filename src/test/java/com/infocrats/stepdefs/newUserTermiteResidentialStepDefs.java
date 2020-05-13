@@ -415,8 +415,7 @@ public class newUserTermiteResidentialStepDefs {
 		newusertermiteresidentialsteps.markedAsLostbtnSE();
 	}
 	
-	
-	
+
 
 	
 }
