@@ -758,5 +758,10 @@ public void generatedOpportunity_FieldSTSaveComm() {
 			saveML_InsideSTSaveComm.click();
 			waitABit(1000);
 		}
+		
+		public void saveML() {
+			saveML_InsideSTSaveComm.click();
+			waitABit(1000);
+		}
 
 }
