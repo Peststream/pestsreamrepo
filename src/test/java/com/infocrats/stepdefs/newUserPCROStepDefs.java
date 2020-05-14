@@ -477,12 +477,15 @@ public class newUserPCROStepDefs {
 	public void user_click_on_save_CompanyCustomer() {
 		newuserpcrosteps.save_CompanyCustomer();
 	}
-	
-	
 
-@Then("^user click on addToAgreement_ServiceBundleSelectPackagesOpportunity$")
-public void user_click_on_addToAgreement_ServiceBundleSelectPackagesOpportunity() {
-	newuserpcrosteps.addToAgreement_ServiceBundleSelectPackagesOpportunity();
-}
+	@Then("^user click on addToAgreement_ServiceBundleSelectPackagesOpportunity$")
+	public void user_click_on_addToAgreement_ServiceBundleSelectPackagesOpportunity() {
+		newuserpcrosteps.addToAgreement_ServiceBundleSelectPackagesOpportunity();
+	}
+	
+	@Then("^user click on addToAgreement_ServiceBundleSelectPackagesOpportunit$")
+	public void user_click_on_addToAgreement_ServiceBundleSelectPackagesOpportunit() {
+		newuserpcrosteps.addToAgreement_ServiceBundleSelectPackagesOpportunity();
+	}
 
 }

@@ -1,4 +1,3 @@
-@abc
 Feature: Test new user for Pest.
 
   Background: 

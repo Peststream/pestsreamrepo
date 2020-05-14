@@ -467,7 +467,7 @@ public class newUserPCROPage extends peststreamPage {
 	@FindBy(xpath = "(//span[contains(.,'Save')])[1]")
 	private WebElementFacade save_CompanyCustomer;
 	
-	@FindBy(xpath = "//*[@id='10121_BiMonthly']")
+	@FindBy(xpath = "/html//table[@id='tblBundle']//input[@name='IsSold_10121_Monthly']")
 	private WebElementFacade addToAgreement_ServiceBundleSelectPackagesOpportunity;
 
 	@Override
@@ -805,6 +805,7 @@ public class newUserPCROPage extends peststreamPage {
 
 	public void addBundleBtn() {
 		addBunldeButton.click();
+		scrollDown(addToAgreement_ServiceBundleSelectPackagesOpportunity);
 
 	}
 
