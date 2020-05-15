@@ -51,7 +51,7 @@ Feature: Create pest control residential opportunity for new user.
     Then user selects Primary Route
     And user clicks on Save Button Mech
 
-  
+  #Pass_Fixed
   @CSSO_JobtypeAdd_WorkOrder_Save_Mech
   Scenario: Test to Continue General Info of ScheduleServiceOrder with branch Mech and Job Type ,Save and open Work Order.
     When user clicked on CallTab
@@ -82,7 +82,7 @@ Feature: Create pest control residential opportunity for new user.
     Then user navigates Back twice
     And user checks the details and Save
 
-  #Pass
+  #Pass_Fixed
   @CSSO_GereralInfo_TMaterial_Save
   Scenario: Test to Continue General Info of ScheduleServiceOrder Mechanical by specifying Time and Material
     When user clicked on CallTab
@@ -171,7 +171,7 @@ Feature: Create pest control residential opportunity for new user.
     Then user selects Primary Route
     And user clicks on Save Button Mech
 
-  #
+  #Pass_Fixed
   @CSSO_SSO_FlatRate_Standard_Specific_Mechanic_WorkOrder_SaveDetails
   Scenario: Test to Continue General Info of ScheduleServiceOrder Mechanical by specifying Time and Material
     When user clicked on CallTab
