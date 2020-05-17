@@ -7,7 +7,7 @@ Feature: Create pest control residential opportunity for new user.
     Then I am granted access to the system
 
   #scenarios are not declared in this feature file
-  #Pass
+  #Pass_Fixed
   @CSSO_General_Mech
   Scenario: Test to Continue General Info of ScheduleServiceOrder Mechanical
     When user clicked on CallTab
@@ -171,7 +171,9 @@ Feature: Create pest control residential opportunity for new user.
     Then user selects Primary Route
     And user clicks on Save Button Mech
 
-  #Pass_Fixed
+  #Pass
+  
+  
   @CSSO_SSO_FlatRate_Standard_Specific_Mechanic_WorkOrder_SaveDetails
   Scenario: Test to Continue General Info of ScheduleServiceOrder Mechanical by specifying Time and Material
     When user clicked on CallTab
