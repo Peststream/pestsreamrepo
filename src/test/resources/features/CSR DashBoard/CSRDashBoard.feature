@@ -10,6 +10,7 @@ Feature: Creating action on already generated  account.
   @CallAction
   Scenario: 
     Testing Call action on Already Generated Account
+
     When User clicks on the CsrDashboard from the left tab
     Then User Clicks on Advvance Search Tab in CSR
     Then User clicks on Call Button in the Action Section
