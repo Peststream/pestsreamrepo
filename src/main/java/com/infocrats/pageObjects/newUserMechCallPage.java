@@ -131,7 +131,7 @@ public class newUserMechCallPage extends peststreamPage {
 	@FindBy(xpath = "//*[@id='btnAdvanceSearch']")
 	private WebElementFacade advanceSearch_Mech;
 
-	@FindBy(xpath = "//*[@id='sample_1']/tbody/tr[1]/td[2]/a")
+	@FindBy(xpath = "//table[@id='sample_1']/tbody/tr[1]/td[3]/a[@title='Edit Work Order']")
 	private WebElementFacade select_Work_Order;
 
 	@FindBy(xpath = "//*[@id='btnSubmit']/span[1]")
