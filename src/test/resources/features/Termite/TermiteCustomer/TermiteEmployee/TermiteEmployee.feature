@@ -1,3 +1,4 @@
+@termiteemp
 Feature: Test Cases for Termite Employee
   I want to use this template for my feature file
 
@@ -81,22 +82,5 @@ Feature: Test Cases for Termite Employee
     Then user click on DDTimeSlot_SupervisorTimeSheetEmpTermite
     Then user click on Save_SupervisorTimeSheetEmpTermite
 
-  @EditAdvanceSearchStaffEmpTermite
-  Scenario: Test to Add Staff in Termite
-    When user click on 	Emp_Termite
-    Then user click on Staff_EmpTermite
-    Then user click on AdvanceSearch_StaffEmpTermite
-    Then user click on EditAction_AdSearchStaffEmpTermite
-    Then user click on DDBranch_EditAdSearchStaffEmpTermite
-    Then user click on DDDivison_EditAdSearchStaffEmpTermite
-    Then user click on DDDept_EditAdSearchStaffEmpTermite
-    Then user click on DDStartLoc_EditAdSearchStaffEmpTermite
-    Then user click on Save_EditAdSearchStaffEmpTermite
-
-  @IsActiveAdvanceSearchStaffEmpTermite
-  Scenario: Test to Add ActiveActionStaff in Termite
-    When user click on 	Emp_Termite
-    Then user click on Staff_EmpTermite
-    Then user click on AdvanceSearch_StaffEmpTermite
-    Then user click on ActiveAction_AdSearchStaffEmpTermite
-    Then user click on No_ActiveAdSearchStaffEmpTermite
+ 
+  

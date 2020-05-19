@@ -146,18 +146,6 @@ Feature: Creating action on already generated  account.
     Then User Save the WorkOrder
 
   #Done
-  @ViewDetailForNewResiOpportunity
-  Scenario: Testing of ViewDetails from CSR dashBoard for new Opportunity
-    When User clicks on the CsrDashboard from the left tab
-    Then User Clicks on Advvance Search Tab in CSR
-    Then User Clicks on the View Details from action tab
-    Then user click on alertmessageCSRDashboard
-    Then User clicks on add opportunity
-    Then User selects Service and Source
-    Then User selects Opportunity Type
-    Then User clicks on Continue
-
-  #Done
   @ViewDetailForNewComOpportunity
   Scenario: Testing of ViewDetails from CSR dashBoard for new CommercialOpportunity
     When User clicks on the CsrDashboard from the left tab
@@ -168,13 +156,4 @@ Feature: Creating action on already generated  account.
     Then user click on DDSourceAccountOpportunit
     Then User clicks on Continue
 
-  #Done
-  @ViewDetailForNewCall
-  Scenario: Testing of view detail for new Call
-    When User clicks on the CsrDashboard from the left tab
-    Then User Clicks on Advvance Search Tab in CSR
-    Then User Clicks on the View Details from action tab
-    Then user click on alertmessageCSRDashboard
-    Then User clicks on the call button in view details
-    Then User enters CalledFor Source and Target DDL again
-    Then User saves New Call for Details
+ 

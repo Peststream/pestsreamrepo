@@ -260,9 +260,8 @@ public class newUserTermiteCallSteps extends pestreamSteps {
 	
 	
 	
-	
-public void generatedOpportunity_FieldSTSaveComm() {
-	newusertermitecallpage.generatedOpportunity_FieldSTSaveComm();
+	public void generatedOpportunity_FieldSTSaveComm() {
+		newusertermitecallpage.generatedOpportunity_FieldSTSaveComm();
 	}
 
 	public void saveAndcontGI_FieldSTSaveComm() {

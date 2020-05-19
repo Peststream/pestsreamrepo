@@ -274,6 +274,12 @@ public class newUserTermiteCallPage extends peststreamPage {
 	@FindBy(xpath = "(//span[contains(.,'Save')])[32]")
 	private WebElementFacade saveML_InsideSTSaveComm;
 	
+	@FindBy(xpath = "//select[@id='SpServiceAddressControl_ServiceStateSysName']")
+	private WebElementFacade DDselectstate;
+	
+	@FindBy(xpath = "//select[@id='SpServiceAddressControl_ServiceStateSysName']//option[contains(text(),'New York')]")
+	private WebElementFacade DDselectstatevalue;
+	
 	
 	
 	@Override
@@ -638,12 +644,22 @@ public class newUserTermiteCallPage extends peststreamPage {
 		
 		
 		
-public void generatedOpportunity_FieldSTSaveComm() {
-	generatedOpportunity_FieldSTSaveComm.click();
-			waitABit(1000);
-		}
+	public void generatedOpportunity_FieldSTSaveComm() {
+		generatedOpportunity_FieldSTSaveComm.click();
+		waitABit(2000);
+
+		scrollDown(DDselectstate);
+		waitABit(2000);
+		DDselectstate.click();
+		waitABit(3000);
+
+		DDselectstatevalue.click();
+		waitABit(3000);
+
+	}
 
 		public void saveAndcontGI_FieldSTSaveComm() {
+			scrollUP(saveAndcontGI_FieldSTSaveComm);
 			saveAndcontGI_FieldSTSaveComm.click();
 			waitABit(1000);
 		}
@@ -732,7 +748,7 @@ public void generatedOpportunity_FieldSTSaveComm() {
 		}
 
 		public void sendemail_FieldSTSaveComm() {
-			waitABit(4000);
+			waitABit(8000);
 			sendemail_FieldSTSaveComm.click();
 			waitABit(1000);
 		}

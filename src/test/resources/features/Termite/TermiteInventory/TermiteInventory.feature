@@ -1,3 +1,4 @@
+@termiteinventory
 Feature: Test Cases for Termite Inventory
   I want to use this template for my feature file
 
@@ -21,7 +22,7 @@ Feature: Test Cases for Termite Inventory
   Scenario: Test to Tranfer Management Inventory Termite
   When user click on InventoryTermite
   Then user click on TransferManag_InventoryTermite
-   Then user click on AddTransferInventory
+  Then user click on AddTransferInventory
   Then user click on DDLocFrom_TransferManagInventoryTermite
   Then user click on DDLocTo_TransferManagInventoryTermite
   Then user click on DDItemType_TransferManagInventoryTermite
