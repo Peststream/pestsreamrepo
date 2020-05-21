@@ -134,7 +134,7 @@ public class newUserMechCallPage extends peststreamPage {
 	@FindBy(xpath = "//table[@id='sample_1']/tbody/tr[1]/td[3]/a[@title='Edit Work Order']")
 	private WebElementFacade select_Work_Order;
 
-	@FindBy(xpath = "//*[@id='btnSubmit']/span[1]")
+	@FindBy(xpath = "//form[@id='frmLeadDetail']/div[@class='modal-footer pull-right']//button[@id='btnSave']")
 	private WebElementFacade checkDetails_Save_Button;
 
 	@FindBy(xpath = "//*[@id='dynamicModal']/div/div/div[3]/span")
@@ -212,7 +212,7 @@ public class newUserMechCallPage extends peststreamPage {
 	@FindBy(xpath = "//*[@id='uniform-rdoCommercial']")
 	private WebElementFacade commercial;
 
-	@FindBy(xpath = "(//span[contains(.,'Save')])[2]")
+	@FindBy(xpath = "//form[@id='frmLeadDetail']/div[@class='modal-footer pull-right']//button[@id='btnSave']")
 	private WebElementFacade saveInfo_Button;
 
 	@FindBy(xpath = "//*[@id='sample_1']/tbody/tr[1]/td[2]/a")
@@ -389,6 +389,16 @@ public class newUserMechCallPage extends peststreamPage {
 	@FindBy(xpath = "//*[@id='submit21']")
 	private WebElementFacade saveAndContinue_Job;
 
+	@FindBy(xpath = "//select[@id='OrderType']/option[@value='ServiceOrder']")
+	private WebElementFacade WorkOrderDD;
+	
+	@FindBy(xpath = "//*[@id='btnSubmit']/span[1]")
+	private WebElementFacade SaveBtnOnWorkOrder;
+	
+	
+	
+	
+	
 	@Override
 	public WebElementFacade getUniqueElement() {
 		return null;
@@ -581,9 +591,9 @@ public class newUserMechCallPage extends peststreamPage {
 
 	public void checkDetails_Save() {
 		waitABit(2000);
-		scrollDown(checkDetails_Save_Button);
+		scrollDown(SaveBtnOnWorkOrder);
 		waitABit(2000);
-		checkDetails_Save_Button.click();
+		SaveBtnOnWorkOrder.click();
 	}
 
 	public void clickOn_Appointment_Tab() {
@@ -1059,5 +1069,7 @@ public class newUserMechCallPage extends peststreamPage {
 		waitABit(3000);
 		saveAndContinue_Job.click();
 	}
+
+	
 
 }

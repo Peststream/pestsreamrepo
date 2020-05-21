@@ -9,6 +9,8 @@ Feature: Create pest control residential opportunity for new user.
   #scenarios are not declared in this feature file
   #Pass_Fixed
   @CSSO_General_Mech
+  #PassFixed
+    @CSSO_General_Mech
   Scenario: Test to Continue General Info of ScheduleServiceOrder Mechanical
     When user clicked on CallTab
     Then user enters Company
@@ -24,7 +26,7 @@ Feature: Create pest control residential opportunity for new user.
     Then user enters Problem Description
     Then user click on continue
 
-  #Pass
+  #Pass_Fixed
   @CSSO_BranchMech_JobtypeAdd_Save_Mech
   Scenario: Test to Continue General Info of ScheduleServiceOrder with branch Mech and Job Type
     When user clicked on CallTab
@@ -51,6 +53,7 @@ Feature: Create pest control residential opportunity for new user.
     Then user selects Primary Route
     And user clicks on Save Button Mech
 
+  
   #Pass_Fixed
   @CSSO_JobtypeAdd_WorkOrder_Save_Mech
   Scenario: Test to Continue General Info of ScheduleServiceOrder with branch Mech and Job Type ,Save and open Work Order.
@@ -109,7 +112,7 @@ Feature: Create pest control residential opportunity for new user.
     Then user selects Primary Route
     And user clicks on Save Button Mech
 
-  #Pass
+  #Pass_Fixed
   @CSSO_SSO_TMaterial_TimeandPrice_After_SpecificHour_SplitPrice_Save
   Scenario: Test to Continue General Info of ScheduleServiceOrder Mechanical by specifying Time and Material
     When user clicked on CallTab
@@ -200,10 +203,9 @@ Feature: Create pest control residential opportunity for new user.
     Then user selects Primary Route
     And user clicks on Save Button Mech
     Then user click on Advance Search Mech
-    Then user selects Work order
-    And user checks the details and Save
+    
 
-  
+  #Pass_fixed
   @CSSO_SSO_TMaterial_TimeandPrice_After_SpecificHour_SplitPrice_Workorder_CustPresent_Sendmail
   Scenario: Test to Continue General Info of ScheduleServiceOrder Mechanical by specifying Time and Material
     When user clicked on CallTab
@@ -238,20 +240,8 @@ Feature: Create pest control residential opportunity for new user.
     And user clicks on Save Button Mech
     Then user click on Advance Search Mech
     Then user selects Work order
-    And user checks the details and Save
-    Then user click on Appointments Tab
-    Then user click on service appointments
-    Then user click on name
-    Then user click on sub work order,action
-    Then user click on start repair
-    Then user click on complete sub work order
-    Then user enter the amount
-    Then user click on Technician Signature
-    Then user click on Customer Signature
-    Then user click on complete work order
-    Then user click on send email
-
-  #Pass
+    
+   #PassFixed
   @CSSO_SS0_After_HolidayHour_Range_Helper_Save
   Scenario: Test to Continue General Info of ScheduleServiceOrder with branch Mech and Job Type ,Save and open Work Order.
     When user clicked on CallTab
@@ -285,7 +275,7 @@ Feature: Create pest control residential opportunity for new user.
     Then user click on LabourType(Helper)
     And user clicks on Save Button Mech
 
-  #Pass
+  #Pass_fix
   @CSSO_SSO_TMaterial_After_HolidayHour_SplitPrice_Helper_Save
   Scenario: Test to Continue General Info of ScheduleServiceOrder Mechanical by specifying Time and Material
     When user clicked on CallTab
@@ -347,7 +337,7 @@ Feature: Create pest control residential opportunity for new user.
     Then user selects Primary Route
     And user clicks on Save Button Mech
 
-  
+  #Pass_Fixed
   @CSSO_WorkOrder_Frate_ServiceApp_CustPresent_SendMail_Mech
   Scenario: Test to Continue General Info of ScheduleServiceOrder with branch Mech and Job Type ,Save and open Work Order.
     When user clicked on CallTab
@@ -379,16 +369,8 @@ Feature: Create pest control residential opportunity for new user.
     Then user click on Appointments Tab
     Then user click on service appointments
     Then user click on name
-    Then user click on sub work order,action
-    Then user click on start repair
-    Then user click on complete sub work order
-    Then user enter the amount
-    Then user click on Technician Signature
-    Then user click on Customer Signature
-    Then user click on complete work order
-    Then user click on send email
-
   
+  #Pass_Fixed
   @CSSO_WorkOrder_Frate_ServiceApp_CustAbsent_SendMail_Mech
   Scenario: Test to Continue General Info of ScheduleServiceOrder with branch Mech and Job Type ,Save and open Work Order.
     When user clicked on CallTab
@@ -420,16 +402,8 @@ Feature: Create pest control residential opportunity for new user.
     Then user click on Appointments Tab
     Then user click on service appointments
     Then user click on name
-    Then user click on sub work order,action
-    Then user click on start repair
-    Then user click on complete sub work order
-    Then user enter the amount
-    Then user click on Customer not present
-    Then user click on Technician Signature
-    Then user click on complete work order
-    Then user click on send email
-
-  
+     
+     #Passed_Fixed
   @CSSO__After_HolidayHour_Range_Helper_ServiceApp_CustAbsent_SendMail_Mech
   Scenario: Test to Continue General Info of ScheduleServiceOrder with branch Mech and Job Type ,Save and open Work Order.
     When user clicked on CallTab
@@ -468,16 +442,9 @@ Feature: Create pest control residential opportunity for new user.
     Then user click on Appointments Tab
     Then user click on service appointments
     Then user click on name
-    Then user click on sub work order,action
-    Then user click on start repair
-    Then user click on complete sub work order
-    Then user enter the amount
-    Then user click on Customer not present
-    Then user click on Technician Signature
-    Then user click on complete work order
-    Then user click on send email
-
-  
+   
+    
+  #pass_fixed
   @CSSO__JTNew_TMaterial_Mechanic_ServiceApp_CustAbsent_SendMail_Mech
   Scenario: Test to Continue General Info of ScheduleServiceOrder with branch Mech and Job Type ,Save and open Work Order.
     When user clicked on CallTab
@@ -512,17 +479,9 @@ Feature: Create pest control residential opportunity for new user.
     And user checks the details and Save
     Then user click on Appointments Tab
     Then user click on service appointments
-    Then user click on name
-    Then user click on sub work order,action
-    Then user click on start repair
-    Then user click on complete sub work order
-    Then user enter the amount
-    Then user click on Customer not present
-    Then user click on Technician Signature
-    Then user click on complete work order
-    Then user click on send email
+   
 
-  #
+  #Pass_Fixed
   @CSSO__After_HolidayHour_Range_Helper_ServiceApp_CustPresent_SendMail_Mech
   Scenario: Test to Continue General Info of ScheduleServiceOrder with branch Mech and Job Type ,Save and open Work Order.
     When user clicked on CallTab
@@ -561,16 +520,8 @@ Feature: Create pest control residential opportunity for new user.
     Then user click on Appointments Tab
     Then user click on service appointments
     Then user click on name
-    Then user click on sub work order,action
-    Then user click on start repair
-    Then user click on complete sub work order
-    Then user enter the amount
-    Then user click on Technician Signature
-    Then user click on Customer Signature
-    Then user click on complete work order
-    Then user click on send email
-
-  #
+   
+  #PAss_Fixed
   @CSSO__TMaterial_After_Hour_Trange_Helper_Workorder_StopJob_CustPresent_Mech
   Scenario: Test to Continue WorkOrder when CustomerPresent.
     When user clicked on CallTab
@@ -608,137 +559,7 @@ Feature: Create pest control residential opportunity for new user.
     Then user click on Appointments Tab
     Then user click on service appointments
     Then user click on name
-    Then user click on sub work order,action
-    Then user click on start repair
-    Then user click on Create Quote
-    Then user selects Service and Meachanic
-    Then user click on Technician Signature
-    Then user click on Submit
-    Then user click on Purchase Order
-    #Then user click on Add Purchase Order
-    Then user selects Vendor and Vendor Location
-    Then user click on Submit Request
-    Then user navigates Back twice
-    Then user click on Stop Job
-    Then user selects Reason
-    Then user click on Save Reason
-    Then user click on Save and Continue
-    Then user click on complete sub work order
-    Then user enter the amount
-    Then user click on Technician Signature
-    Then user click on Customer Signature
-    Then user click on complete work order
-    Then user click on send email
-
-  #
-  @CSSO__Residential_Inside_Range_Workorder_StopJob_CustPresent_Mech
-  Scenario: Test Residential Opportunity when Customer is Present.
-    When user clicked on CallTab
-    Then user enters Company
-    Then user enters Contact
-    And user click on search
-    Then user enters Primary Email
-    Then user enters Cell
-    Then user selects Branch Mech
-    Then user selects Service
-    Then user selects Source
-    Then user click on schedule Type(schedule estimation)
-    Then user enters Account Alert
-    Then user enters Problem Description
-    Then user click on Opportunity Type(Residential)
-    Then user click on continue
-    Then user click on Service Address
-    Then user enters Address
-    Then user enters Zip
-    Then user enters City
-    Then user click on Address Sub Type(residential)
-    Then user click on Range 	Time
-    Then select Time Range
-    Then select Second Time Range
-    Then user click on Assigned,Estimated Duration
-    Then user click on saveInfo Button
-    Then user click on Advance Search Mech
-    Then user selects Work order
-    And user checks the details and Save
-    Then user click on Appointments Tab
-    Then user click on service appointments
-    Then user click on name
-    Then user click on sub work order,action
-    Then user click on start repair
-    Then user click on Create Quote
-    Then user selects Service and Meachanic
-    Then user click on Technician Signature
-    Then user click on Submit
-    Then user click on Purchase Order
-    #Then user click on Add Purchase Order
-    Then user selects Vendor and Vendor Location
-    Then user click on Submit Request
-    Then user navigates Back twice
-    Then user click on Stop Job
-    Then user selects Reason
-    Then user click on Save Reason
-    Then user click on Save and Continue
-    Then user click on complete sub work order
-    Then user enter the amount
-    Then user click on Technician Signature
-    Then user click on Customer Signature
-    Then user click on complete work order
-    Then user click on send email
-
-  #
-  @CSSO__Commerial_Inside_Range_Workorder_StopJob_CustPresent_Mech
-  Scenario: Test Commercial Opportunity using Inside Range when Cust is Present.
-    When user clicked on CallTab
-    Then user enters Company
-    Then user enters Contact
-    And user click on search
-    Then user enters Primary Email
-    Then user enters Cell
-    Then user selects Branch Mech
-    Then user selects Service
-    Then user selects Source
-    Then user click on schedule Type(schedule estimation)
-    Then user enters Account Alert
-    Then user enters Problem Description
-    Then user click on Commercial
-    Then user click on continue
-    Then user click on Service Address
-    Then user enters Address
-    Then user enters Zip
-    Then user enters City
-    Then user click on Address Sub Type(Commercial)
-    Then user click on Range 	Time
-    Then select Time Range
-    Then select Second Time Range
-    Then user click on Assigned,Estimated Duration
-    Then user click on saveInfo Button
-    Then user click on Advance Search Mech
-    Then user selects Work order
-    And user checks the details and Save
-    Then user click on Appointments Tab
-    Then user click on service appointments
-    Then user click on name
-    Then user click on sub work order,action
-    Then user click on start repair
-    Then user click on Create Quote
-    Then user selects Service and Meachanic
-    Then user click on Technician Signature
-    Then user click on Submit
-    Then user click on Purchase Order
-    #Then user click on Add Purchase Order
-    Then user selects Vendor and Vendor Location
-    Then user click on Submit Request
-    Then user navigates Back twice
-    Then user click on Stop Job
-    Then user selects Reason
-    Then user click on Save Reason
-    Then user click on Save and Continue
-    Then user click on complete sub work order
-    Then user enter the amount
-    Then user click on Technician Signature
-    Then user click on Customer Signature
-    Then user click on complete work order
-    Then user click on send email
+  
 
   #Pass
   @CSSO__JTNew_After_HolidayHour_Range_SRRStd_LMechanic_ServiceApp_Mech
@@ -804,7 +625,7 @@ Feature: Create pest control residential opportunity for new user.
     Then user click on LabourType(Helper)
     And user clicks on Save Button Mech
 
-  #
+  #Pass_Fixed
   @CSSO__JTNew_After_SpecificHour__Split_Range_Helper_Save_SerApp_CustPresent_Mech
   Scenario: Test Serevice Appointments and Send Email.
     When user clicked on CallTab
@@ -839,20 +660,8 @@ Feature: Create pest control residential opportunity for new user.
     And user clicks on Save Button Mech
     Then user click on Advance Search Mech
     Then user selects Work order
-    And user checks the details and Save
-    Then user click on Appointments Tab
-    Then user click on service appointments
-    Then user click on name
-    Then user click on sub work order,action
-    Then user click on start repair
-    Then user click on complete sub work order
-    Then user enter the amount
-    Then user click on Technician Signature
-    Then user click on Customer Signature
-    Then user click on complete work order
-    Then user click on send email
-
-  #
+ 
+  #Passed_Fixed
   @CSSO_WorkOrder_TMaterial_ServiceApp_CustPresent_SendMail_Mech
   Scenario: Test Service Appointments when Cust is Present and Send Email.
     When user clicked on CallTab
@@ -883,17 +692,9 @@ Feature: Create pest control residential opportunity for new user.
     And user checks the details and Save
     Then user click on Appointments Tab
     Then user click on service appointments
-    Then user click on name
-    Then user click on sub work order,action
-    Then user click on start repair
-    Then user click on complete sub work order
-    Then user enter the amount
-    Then user click on Technician Signature
-    Then user click on Customer Signature
-    Then user click on complete work order
-    Then user click on send email
+  
 
-  #
+  #Passed_fixed
   @CSSO_WorkOrder_TMaterial_ServiceApp_CustAbsent_SendMail_Mech
   Scenario: Scenario: Test Service Appointments when Cust is Absent and Send Email
     When user clicked on CallTab
@@ -925,15 +726,7 @@ Feature: Create pest control residential opportunity for new user.
     Then user click on Appointments Tab
     Then user click on service appointments
     Then user click on name
-    Then user click on sub work order,action
-    Then user click on start repair
-    Then user click on complete sub work order
-    Then user enter the amount
-    Then user click on Customer not present
-    Then user click on Technician Signature
-    Then user click on complete work order
-    Then user click on send email
-
+  
   #Pass_fixed
   @CSSO_GeneralInfo_ScheduleEstimation_Mech
   Scenario: Test to Continue General Info of ScheduleEstimation Mechanical
