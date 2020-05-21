@@ -8,8 +8,7 @@ Feature: Create pest control residential opportunity for new user.
 
   #scenarios are not declared in this feature file
   #Pass_Fixed
-  @CSSO_General_Mech
-  #PassFixed
+  
     @CSSO_General_Mech
   Scenario: Test to Continue General Info of ScheduleServiceOrder Mechanical
     When user clicked on CallTab
