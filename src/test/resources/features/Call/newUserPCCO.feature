@@ -1,3 +1,4 @@
+@newUserPcco
 Feature: Test new user for Pest.
 
   Background: 
