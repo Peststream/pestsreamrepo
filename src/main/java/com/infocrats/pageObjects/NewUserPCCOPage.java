@@ -830,11 +830,11 @@ public class NewUserPCCOPage extends peststreamPage {
 	}
 
 	public void ComddCat() {
-		waitABit(2000);
+		waitABit(4000);
 		scrollDown(ComddCat);
 		ComddCat.click();
-		waitABit(2000);
 		
+		waitABit(4000);
 		ComddCatValue.click();
 		waitABit(2000);
 		
