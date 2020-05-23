@@ -1,3 +1,4 @@
+@pcro
 Feature: Test new user for Pest.
 
   Background: 
