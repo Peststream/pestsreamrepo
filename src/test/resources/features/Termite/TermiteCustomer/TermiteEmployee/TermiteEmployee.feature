@@ -1,4 +1,4 @@
-@termiteemp
+@termite
 Feature: Test Cases for Termite Employee
   I want to use this template for my feature file
 

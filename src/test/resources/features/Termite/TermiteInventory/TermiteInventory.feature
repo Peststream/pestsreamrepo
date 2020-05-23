@@ -1,4 +1,4 @@
-@termiteinventory
+@termite
 Feature: Test Cases for Termite Inventory
   I want to use this template for my feature file
 

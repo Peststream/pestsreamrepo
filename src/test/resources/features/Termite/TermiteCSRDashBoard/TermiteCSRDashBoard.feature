@@ -1,4 +1,4 @@
-@termitecsr
+@termite
 Feature: Test Cases for Termite CSRDAshBoard
   I want to use this template for my feature file
 

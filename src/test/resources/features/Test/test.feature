@@ -8,57 +8,40 @@ Feature: Create pest control residential opportunity for exiting user.
     Then I am granted access to the system
 
  
-  @nuComFSTCompSendEmail @newUserPCCO
-  Scenario: Test to Send Email for commercial
-    When user clicked on call tab
-    When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
-    And select lead branch info
-    And enters Account_Alert and enterProblemDiscription
-    Then I click on commercial Radio button
-    And click on continue button for commercial opportunity
-    Then enter service address
-    Then click on assign to DDL
-    And choose assign to person
-    And click on save Button
-    Then click on opportunity action icon
-    Then review all the details and click on save and continue button
-    Then click on continue button on inspection tab
-    Then click on ComddCat
-    Then click on ComddService
-    Then click on ComddFrequency
-    Then click on saveBttnCom
-    Then click on save and continue on select service tab
-    And click on checkBox of Service under ConfigureProposal
-    Then review proposal and click on save and proposal
-    Then check payment type and enter amount
-    Then check term and condition
-    Then enter full name and signature
-    Then click on save and continue on Agreement tab
+ @nuserviceBundleAddBundleButtonSNP @newUserPCRO
+  Scenario: Test Save And Proposal Opportunity Info package for standard service for service bundle
+    Given user clicked on call tab in left panel
+    When enters lead info "Company", "Contact", "PrimaryEmail", "PrimaryPhone", "Cell", "SecondaryPhone"
+    And select lead branch "BranchName", "Department","Primary Reason Of Call", "Service", "Source"
+    And enters "AccountAlert", "ProblemDescription"
+    Then I click on Residential Radio button
+    And click on continue button
+    Then Service address "line1","line2","Zip","city","state"
+    And check Is Tax Exempt
+    Then Enter Tax Exemption
+    #Then IS Billing Address Different Than Service Address
+    #And Billing addess "line1","line2","Zip","city","state"
+    Then click on service bundle radio button
+    And Select service bundle
+    And click on billing Frequency DDl
+    And choose monthly frequency from DDL
+    Then click on Add Bundle button
+    And click On Save & Proposal
+    Then enter proposal note
+    And click on Send proposal button On review page
+    Then add more email
+    And click add more email button
+    And click send proposal button
     
-   @nuComISTSendEmail @newUserPCCO
-  Scenario: Test opportunity for InsideRadioButton complete flow for commercial
-    When user clicked on call tab
-    When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
-    And select lead branch info
-    And enters Account_Alert and enterProblemDiscription
-    Then I click on commercial Radio button
-    And click on continue button for commercial opportunity
-    Then enter service address
-    Then User Clicks on Inside Radio Button
-    Then click on assign to DDL
-    And choose assign to person
-    And click on save Button
-    Then click on opportunity action icon
-    Then review all the details and click on save and continue button
-    Then click on continue button on inspection tab
-    Then click on ComddCat
-    Then click on ComddService
-    Then click on ComddFrequency
-    Then click on saveBttnCom
-    Then click on save and continue on select service tab
-    And click on checkBox of Service under ConfigureProposal
-    Then review proposal and click on save and proposal
-    Then check payment type and enter amount
-    Then check term and condition
-    Then enter full name and signature
-    Then click on save and continue on Agreement tab
+     @SaveScheduleEstimationInside @newUserPCRO
+  Scenario: To Test Save Opportunity Info Schedule Estimation for Inside for specific time
+    Given user clicked on call tab in left panel
+    When enters lead info "Company", "Contact", "PrimaryEmail", "PrimaryPhone", "Cell", "SecondaryPhone"
+    And select lead branch "BranchName", "Department","Primary Reason Of Call", "Service", "Source"
+    And enters "AccountAlert", "ProblemDescription"
+    Then I click on Residential Radio button
+    And click on continue button
+    Then Service address "line1","line2","Zip","city","state"
+    Then click on schedule estimation tab
+    And click on save
+    Then User Screen Waits for a Bit
