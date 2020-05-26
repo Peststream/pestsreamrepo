@@ -745,7 +745,7 @@ Feature: Create pest control residential opportunity for new user.
     Then user enters Problem Description
     Then user click on continue
 
-  #
+  #Pass_fixed
   @CSSO_ScheduleEstimation_Save_Mech
   Scenario: Test General Info of ScheduleEstimation with Job Type
     When user clicked on CallTab
@@ -770,7 +770,7 @@ Feature: Create pest control residential opportunity for new user.
     Then user click on Assigned,Estimated Duration
     Then user click on saveInfo Button
 
-  #
+  #Passes_fixed
   @CSSO_ScheduleEstimation_RangeTime_Mech
   Scenario: Test to Continue General Info of ScheduleEstimation with RangeTime
     When user clicked on CallTab
@@ -798,7 +798,7 @@ Feature: Create pest control residential opportunity for new user.
     Then user click on Assigned,Estimated Duration
     Then user click on saveInfo Button
 
-  #
+  #Passed_fixed
   @CSSO_ScheduleEstimation_Residential_Field_SpecificTime_Save_Mech
   Scenario: Test to General Info of ScheduleEstimation with SpecificTime
     When user clicked on CallTab
