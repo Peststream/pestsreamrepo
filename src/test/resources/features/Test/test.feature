@@ -7,15 +7,12 @@ Feature: Create pest control residential opportunity for exiting user.
     And I can click sign in
     Then I am granted access to the system
 
- 
-  @nuWTOL @newUserPCRO
-  Scenario: Test opportunity From Left nevigation menu with new account and without Lead for Residential
+  @EAWOL @existingPCRO
+  Scenario: Test opportunity From Left nevigation menu with existing account and without lead for Residential
     When user clicked on call tab in left panel
     Then verify page tittle of call page
-    When enters lead info "Company", "Contact", "PrimaryEmail", "PrimaryPhone", "Cell", "SecondaryPhone"
-    And select lead branch "BranchName", "Department","Primary Reason Of Call", "Service", "Source"
+    When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
+    Then i chose service and sounce from respective DDL
     And enters "AccountAlert", "ProblemDescription"
     Then I click on Residential Radio button
     And click on continue button
-
- 

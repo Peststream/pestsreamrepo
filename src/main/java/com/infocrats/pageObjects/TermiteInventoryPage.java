@@ -149,7 +149,7 @@ public class TermiteInventoryPage extends peststreamPage {
 
 	public void user_click_on_DDLocTo_TransferManagInventoryTermite() {
 		DDLocToTransferManagInventoryTermite.click();
-		waitABit(1000);
+		waitABit(3000);
 		
 		ValueDDLocToTransferManagInventoryTermite.click();
 		waitABit(1000);

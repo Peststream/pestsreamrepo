@@ -672,7 +672,7 @@ public class newUserTermiteCallPage extends peststreamPage {
 
 		public void DDCat_StdService_FieldSTSaveComm() {
 			DDCat_StdService_FieldSTSaveComm.click();
-			waitABit(1000);
+			waitABit(3000);
 			
 			ValueDDCat_StdService_FieldSTSaveComm.click();
 			waitABit(1000);
