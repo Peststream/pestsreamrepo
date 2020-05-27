@@ -7,7 +7,7 @@ Feature: Create pest control residential opportunity for exiting user.
     And I can click sign in
     Then I am granted access to the system
 
-  @EAWTL @existingPCRO
+ 
   Scenario: Test opportunity From Left nevigation menu with existing account and with lead for Residential
     When user clicked on call tab in left panel
     Then verify page tittle of call page
