@@ -44,7 +44,7 @@ public class CSRDashBoardPage extends peststreamPage {
 	@FindBy(xpath = "//textarea[@id='Note']")
 	private WebElementFacade notes;
 	
-	@FindBy(xpath = "(//span[contains(.,'Save')])")
+	@FindBy(xpath = "(//span[contains")
 	private WebElementFacade savebtn;
 	
 	@FindBy(xpath = "//tr[1]//td[10]//a[3]//i[1]")
