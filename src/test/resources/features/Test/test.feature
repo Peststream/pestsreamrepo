@@ -12,5 +12,4 @@ Feature: Create pest control residential opportunity for exiting user.
     When user clicked on call tab in left panel
     Then verify page tittle of call page
     Then i chose service and sounce from respective DDL
-    And I create lead
-    And enters "AccountAlert", "ProblemDescription"
+    
