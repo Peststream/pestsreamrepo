@@ -20,8 +20,8 @@ public class ExitingUserPCROPage extends peststreamPage {
 	@FindBy(xpath = "//*[@id=\"accountSaleshead\"]")
 	private WebElementFacade exitAcct;
 
-	/*@FindBy(xpath = "//*[@id=\"s2id_PrimaryServiceId\"]/a")
-	private WebElementFacade service_ddl;*/
+	@FindBy(xpath = "//*[id=\"s2id_PrimaryServiceId\"]/a")
+	private WebElementFacade service_ddl;
 
 	@FindBy(xpath = "//*[@id=\"frmGeneralInfo\"]/div/div/div[3]/div[5]/div[2]/div/div")
 	private WebElementFacade source_ddl;
@@ -172,11 +172,11 @@ public class ExitingUserPCROPage extends peststreamPage {
 	}
 
 	public void serviceAnd_source() {
-		//service_ddl.click();
+		service_ddl.click();
 		waitABit(5000);
-		//service_ddl.sendKeys(Keys.DOWN);
+		service_ddl.sendKeys(Keys.DOWN);
 		waitABit(3000);
-		//service_ddl.sendKeys(Keys.ENTER);
+		service_ddl.sendKeys(Keys.ENTER);
 		waitABit(2000);
 		source_ddl.click();
 		waitABit(1000);
