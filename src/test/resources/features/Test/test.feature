@@ -25,8 +25,7 @@ Feature: Create pest control residential opportunity for exiting user.
     Then i chose service and sounce from respective DDL
     And I create lead
     And enters "AccountAlert", "ProblemDescription"
-    Then I click on Residential Radio button
-    And click on continue button
+    
     
  #done   
  @EAOOPP @existingPCRO
