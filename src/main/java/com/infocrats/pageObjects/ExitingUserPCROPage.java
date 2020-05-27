@@ -20,7 +20,7 @@ public class ExitingUserPCROPage extends peststreamPage {
 	@FindBy(xpath = "//*[@id=\"accountSaleshead\"]")
 	private WebElementFacade exitAcct;
 
-	@FindBy(xpath = "//*[id=\"s2id_PrimaryServiceId\"]/a")
+	@FindBy(xpath = "//*[@id=\"s2id_PrimaryServiceId\"]/a")
 	private WebElementFacade service_ddl;
 
 	@FindBy(xpath = "//*[@id=\"frmGeneralInfo\"]/div/div/div[3]/div[5]/div[2]/div/div")
