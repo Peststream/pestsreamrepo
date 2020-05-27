@@ -1159,7 +1159,7 @@ public class newUserPCROPage extends peststreamPage {
 
 	public void validateThePage() {
 		waitABit(2000);
-		Assert.assertTrue("Hello".equals(validateThePage.getText()));
+		Assert.assertTrue("Save and Sign Agreement".equals(validateThePage.getText()));
 
 
 	}
