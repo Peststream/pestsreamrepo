@@ -1,4 +1,3 @@
-@pcro
 Feature: Test for existing user PCRO for Pest.
  
   Background: 
