@@ -1,5 +1,5 @@
 @mechcall
-Feature: Create pest control residential opportunity for new user.
+Feature: Test for new user Mech Call for Mech.
 
   Background: 
     Given User successfully logged into system with valid credentials

@@ -1,5 +1,5 @@
 @termite
-Feature: Test Case of new Termite.
+Feature: Test for new User Termite Call of Termite.
   I want to use this template for my feature file
 
   Background: 

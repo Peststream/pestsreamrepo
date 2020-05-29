@@ -1,4 +1,4 @@
-Feature: Create Billing Transaction
+Feature: Test for Billing Transcition.
 
  Background: 
     Given User successfully logged into system with valid credentials

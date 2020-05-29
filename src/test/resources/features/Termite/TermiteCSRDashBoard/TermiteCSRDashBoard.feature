@@ -1,5 +1,5 @@
 @termite
-Feature: Test Cases for Termite CSRDAshBoard
+Feature: Test for CSRDashboard of Termite.
   I want to use this template for my feature file
 
   Background: 

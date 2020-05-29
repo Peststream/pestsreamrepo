@@ -1,5 +1,5 @@
 @csr
-Feature: Creating action on already generated  account.
+Feature: Test of CSRDASHBOARD user for Pest.
 
   Background: 
     Given User successfully logged into system with valid credentials

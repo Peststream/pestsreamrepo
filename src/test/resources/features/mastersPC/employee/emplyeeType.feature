@@ -1,4 +1,4 @@
-Feature: To test the employee tab feature.
+Feature: Test for Employee.
 
   Background: 
     Given User successfully logged into system with valid credentials
