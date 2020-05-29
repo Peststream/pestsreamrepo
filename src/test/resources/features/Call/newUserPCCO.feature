@@ -1,5 +1,5 @@
 @pcro
-Feature: Test new user for Pest.
+Feature: Test for new user PCCO for Pest.
 
   Background: 
     Given User successfully logged into system with valid credentials
