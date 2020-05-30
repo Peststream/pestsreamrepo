@@ -1,4 +1,4 @@
-@termite
+@run @termite
 Feature: Test for Termite Customer of Termite.
   I want to use this template for my feature file
 

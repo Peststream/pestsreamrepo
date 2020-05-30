@@ -1,4 +1,4 @@
-@mechcall
+@run @mechcall
 Feature: Test for new user Mech Call for Mech.
 
   Background: 

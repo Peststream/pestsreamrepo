@@ -1,4 +1,4 @@
-@termite
+@run @termite
 Feature: Test for CSRDashboard of Termite.
   I want to use this template for my feature file
 

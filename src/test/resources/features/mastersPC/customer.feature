@@ -1,3 +1,4 @@
+@run
 Feature: Test for Customer.
 
   Background: 

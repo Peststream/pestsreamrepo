@@ -1,4 +1,4 @@
-@csr
+@run @csr
 Feature: Test of CSRDASHBOARD user for Pest.
 
   Background: 

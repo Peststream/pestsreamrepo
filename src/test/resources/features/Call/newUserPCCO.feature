@@ -1,3 +1,4 @@
+@run
 Feature: Test for new user PCCO for Pest.
 
   Background: 
