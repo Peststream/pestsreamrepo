@@ -1,6 +1,5 @@
-@run @termite
-Feature: Test Cases for Termite Employee
-  I want to use this template for my feature file
+@run @termite @one
+Feature: Test Cases for Termite Employee.
 
   Background: 
     Given User successfully logged into system with valid credentials

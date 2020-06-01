@@ -1,6 +1,5 @@
-@run @termite
+@run @termite @one
 Feature: Test Cases for Termite Inventory
-  I want to use this template for my feature file
 
   Background: 
     Given User successfully logged into system with valid credentials

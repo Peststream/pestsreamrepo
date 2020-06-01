@@ -1,6 +1,5 @@
 @run @termite
 Feature: Test for new User Termite Call of Termite.
-  I want to use this template for my feature file
 
   Background: 
     Given User successfully logged into system with valid credentials
