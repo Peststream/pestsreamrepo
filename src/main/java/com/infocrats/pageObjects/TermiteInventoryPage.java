@@ -48,7 +48,7 @@ public class TermiteInventoryPage extends peststreamPage {
 	@FindBy(xpath = "/html[1]/body[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/form[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/button[1]/span[1]")
 	private WebElementFacade DDLocToTransferManagInventoryTermite;
 	
-	@FindBy(xpath = "(//span[contains(.,'Location New')])[2]")
+	@FindBy(xpath = "(//span[contains(.,'Location Termite')])[18]")
 	private WebElementFacade ValueDDLocToTransferManagInventoryTermite;
 	
 	@FindBy(xpath = "//span[@id='select2-chosen-1']")
