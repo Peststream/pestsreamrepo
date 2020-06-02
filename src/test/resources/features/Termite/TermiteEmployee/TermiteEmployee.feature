@@ -80,6 +80,3 @@ Feature: Test Cases for Termite Employee.
     Then user click on DDDept_SupervisorTimeSheetEmpTermite
     Then user click on DDTimeSlot_SupervisorTimeSheetEmpTermite
     Then user click on Save_SupervisorTimeSheetEmpTermite
-
- 
-  
