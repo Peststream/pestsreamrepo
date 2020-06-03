@@ -17,7 +17,7 @@ Feature: Test for Call HVAC.
     And enters Account_Alert and enterProblemDiscription
     And click on continue button for commercial opportunity
 #pass
-  @TestOpportunityInfoForHVACForGeneralInfo
+  @TestFail1
   Scenario: Test opportunity info (general info) for HVAC
     When user clicked on call tab
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
@@ -31,7 +31,7 @@ Feature: Test for Call HVAC.
     And enters service address "Address Line1", "Zip","Contact", "City"
     And click on Save button from general info
 #pass
-  @TestOpportunityInfoForHVACForGeneralInfoLead
+  @TestFail2
   Scenario: Test opportunity info (general info) for HVAC
     When user clicked on call tab
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
@@ -49,7 +49,7 @@ Feature: Test for Call HVAC.
     And Select lead employee from DD
     And Click on save from Work Order
 #pass
-  @TestOpportunityInfoForHVACForOrderType
+  @Testfail4
   Scenario: Test opportunity info (general info) for HVAC
     When user clicked on call tab
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
@@ -71,7 +71,7 @@ Feature: Test for Call HVAC.
     And Select Order Type From DD
     And Click on save from Work Order
 #pass
-  @TesCSRDashboardForHVAC
+  @TestOpportunityInfoForHVAC
   Scenario: Test CSR Dashboard for HVAC
     When user click on CSR Dashboard
     When user click on Advance Search from CSR Dashboard
@@ -80,7 +80,7 @@ Feature: Test for Call HVAC.
     And Click on Continue From General Info
 
 #pass
-@TesCSRDashboardForHVACAddCall
+@TestOpportunityInfoForHVAC
   Scenario: Test CSR Dashboard for HVAC
     When user click on CSR Dashboard
     When user click on Advance Search from CSR Dashboard
@@ -89,7 +89,7 @@ Feature: Test for Call HVAC.
     And Click on Save Buttton From Add Call Tab
     
 #pass
-  @TesCSRDashboardForHVACAddTask
+  @TestOpportunityInfoForHVAC
   Scenario: Test CSR Dashboard for HVAC
     When user click on CSR Dashboard
     When user click on Advance Search from CSR Dashboard
@@ -98,7 +98,7 @@ Feature: Test for Call HVAC.
     And Click on Save Button
 
 #pass
-  @TesCSRDashboardAddTaskDetails
+  @TestOpportunityInfoForHVAC
   Scenario: Test CSR Dashboard for HVAC
     When user click on CSR Dashboard
     When user click on Advance Search from CSR Dashboard
@@ -106,7 +106,7 @@ Feature: Test for Call HVAC.
     And Select Task Name, Due Date
     And Click on Save Button
 #pass
-  @TesCSRDashboardForCreateWorkorder
+  @Testfail5
   Scenario: Test CSR Dashboard for HVAC
     When user click on CSR Dashboard
     When user click on Advance Search from CSR Dashboard
@@ -117,16 +117,17 @@ Feature: Test for Call HVAC.
     And Click on save from Work Order
 
 #pass
-  @TestCSRDashboardForEnterNote
+  @Testfail6
   Scenario: Test CSR Dashboard for HVAC
     When user click on CSR Dashboard
     When user click on Advance Search from CSR Dashboard
     And Select Detail Page From Action for the first Account
+    And Close Alert 
     And Enter Note
     And Click On Save Button
 
 #pass
-  @TestCSRDashboardForAddOpportunity
+  @TestOpportunityInfoForHVAC
   Scenario: Test CSR Dashboard for HVAC
     When user click on CSR Dashboard
     When user click on Advance Search from CSR Dashboard
@@ -135,7 +136,7 @@ Feature: Test for Call HVAC.
     And Click on Continue From General Info
 
 #pass
- @TestCustomerForAccountDropdown
+ @TestOpportunityInfoForHVAC
   Scenario: Test Customer DropDown For Account
     When User Click On Customer
     And Select Account From The DD List
@@ -144,7 +145,7 @@ Feature: Test for Call HVAC.
     And Click on Save	From Add Account
     
 #pass
-  @TestCustomerForAddOpportunity
+  @TestOpportunityInfoForHVAC
   Scenario: Test Customer DropDown For Account
     When User Click On Customer
     And Select Account From The DD List
@@ -154,17 +155,18 @@ Feature: Test for Call HVAC.
     And Click on Save	From Add Account
 
 #pass
-  @TestCustomerForViewIcon
+  @Testfail7
   Scenario: Test Customer DropDown For Account
     When User Click On Customer
     And Select Account From The DD List
     And Click On Advance Search From Account
     And Click On View Icon From Action For First Account
+    And Close Alert
     And Enter Note
     And Click On Save Button
 
 #pass
-  @TestCustomerForPhoneSales
+  @Testfail8
   Scenario: Test Customer DropDown For Account
     When User Click On Customer
     And Select Account From The DD List
@@ -173,7 +175,7 @@ Feature: Test for Call HVAC.
     And Click on Continue From General Info
 
 #pass
-  @TestCustomerForAddCompany
+  @TestOpportunityInfoForHVAC
   Scenario: Test Customer DropDown For Company
     When User Click On Customer
     And Select Customer From The DD List
@@ -182,7 +184,7 @@ Feature: Test for Call HVAC.
     And Click on Save	From Add Account
 
 #pass
-  @TestCompanyForAddOpportunity
+  @Testfail9
   Scenario: Test Customer DropDown For Company
     When User Click On Customer
     And Select Customer From The DD List
@@ -192,7 +194,7 @@ Feature: Test for Call HVAC.
     And Click on Continue From Add Opportunity
 
 #pass
-  @TestCompanyForViewIcon
+  @TestOpportunityInfoForHVAC
   Scenario: Test Customer DropDown For Company
     When User Click On Customer
     And Select Customer From The DD List
@@ -202,7 +204,7 @@ Feature: Test for Call HVAC.
     And Click On Save Button
 
 #pass
-  @TestCompanyForDeleteIcon
+  @TestOpportunityInfoForHVAC
   Scenario: Test Customer DropDown For Company
     When User Click On Customer
     And Select Customer From The DD List
@@ -210,7 +212,7 @@ Feature: Test for Call HVAC.
     And Click On Delete Icon From Action Company
     And Confirm The Alert
 #pass
-  @TestCompanyForDeleteIconCancel
+  @TestOpportunityInfoForHVAC
   Scenario: Test Customer DropDown For Company
     When User Click On Customer
     And Select Customer From The DD List
@@ -219,7 +221,7 @@ Feature: Test for Call HVAC.
     And Cancel The Alert
 
 #pass
-  @TestContactFromCustomerDD
+  @TestOpportunityInfoForHVAC
   Scenario: Test Customer DropDown For Contact
     When User Click On Customer
     And Select Contact From The DD List
@@ -228,7 +230,7 @@ Feature: Test for Call HVAC.
     And Click on Save	From Add Account
     
 #Pass
-  @TestContactForAddContact
+  @TestOpportunityInfoForHVAC
   Scenario: Test Customer DropDown For Contact
     When User Click On Customer
     And Select Contact From The DD List
@@ -247,7 +249,7 @@ Feature: Test for Call HVAC.
     And Click On Save Button For Add Opportunity For Contact
 
 #Pass
-  @TestContactForViewIcon
+  @TestOpportunityInfoForHVAC
   Scenario: Test Customer DropDown For Contact
     When User Click On Customer
     And Select Contact From The DD List
@@ -257,7 +259,7 @@ Feature: Test for Call HVAC.
     And Click On Save Button
 
 #pass
-  @TestContactForDeleteContact
+  @TestOpportunityInfoForHVAC
   Scenario: Test Customer DropDown For Contact
     When User Click On Customer
     And Select Contact From The DD List
@@ -266,7 +268,7 @@ Feature: Test for Call HVAC.
     And Confirm Delete Alert For Contact
 
 #Pass
-  @TestContactForCancelDeleteContact
+  @TestOpportunityInfoForHVAC
   Scenario: Test Customer DropDown For Contact
     When User Click On Customer
     And Select Contact From The DD List
@@ -275,7 +277,7 @@ Feature: Test for Call HVAC.
     And Decline Delete Alert For Contact
 
 #Pass
-  @TestOpportunityForAddOpportunity
+  @TestOpportunityInfoForHVAC
   Scenario: Test Customer DropDown For Opportunity
     When User Click On Customer
     And Select Opportunity From The DD List
@@ -285,7 +287,7 @@ Feature: Test for Call HVAC.
     And Click on Save	From Add Opportunity
 
 #Pass
-  @TestLeadForAddLead
+  @TestOpportunityInfoForHVAC
   Scenario: Test Customer DropDown For Lead
     When User Click On Customer
     And Select Lead From The DD List
@@ -294,7 +296,7 @@ Feature: Test for Call HVAC.
     And Click on Save	From Add Lead
 
 #Pass
-  @TestDatabaseFromCustomerDD
+  @TestOpportunityInfoForHVAC
   Scenario: Test Customer DropDown For Database
     When User Click On Customer
     And Select Database From The DD List

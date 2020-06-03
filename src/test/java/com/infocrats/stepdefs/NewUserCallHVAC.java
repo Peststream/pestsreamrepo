@@ -193,7 +193,7 @@ public class NewUserCallHVAC {
 	}
 
 	@When("^Enter Note$")
-	public void enter_Note() {
+	public void enter_Note() throws InterruptedException {
 		newusercallHVACsteps.EnterNoteForDetailPage();
 	}
 
@@ -203,12 +203,12 @@ public class NewUserCallHVAC {
 	}
 
 	@When("^User Click On Customer$")
-	public void user_Click_On_Customer() {
+	public void user_Click_On_Customer() throws InterruptedException {
 		newusercallHVACsteps.ClickOnCustomer();
 	}
 
 	@When("^Select Account From The DD List$")
-	public void select_Account_From_The_DD_List() {
+	public void select_Account_From_The_DD_List() throws InterruptedException {
 		newusercallHVACsteps.ClickOnAccountFromCustomer();
 	}
 
@@ -276,12 +276,12 @@ public class NewUserCallHVAC {
 	}
 
 	@When("^Click On Add Opportunity Icon From Action Company$")
-	public void click_On_Add_Opportunity_Icon_From_Action_Company() {
+	public void click_On_Add_Opportunity_Icon_From_Action_Company() throws InterruptedException {
 		newusercallHVACsteps.ClickOnAddOpportunityForCompany();
 	}
 
 	@When("^Select Account From DD$")
-	public void select_Account_From_DD() {
+	public void select_Account_From_DD() throws InterruptedException {
 		newusercallHVACsteps.SelectAccountFromCompany();
 
 	}

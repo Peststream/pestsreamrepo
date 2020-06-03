@@ -383,7 +383,7 @@ public class NewUserCallHVACPage extends peststreamPage {
 	}
 
 	public void PrimaryRequestedService() throws InterruptedException {
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		DDPrimaryRequestedService.click();
 		Thread.sleep(2000);
 		valueDDPrimaryRequestedService.click();
@@ -392,24 +392,24 @@ public class NewUserCallHVACPage extends peststreamPage {
 	}
 
 	public void ServiceAddress(Map<String, String> testData) throws InterruptedException {
-		Thread.sleep(1500);
+		Thread.sleep(2500);
 		PlusButtonSA.click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		AddressLine1.sendKeys(testData.get("Address line 1"));
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		ZipCode.sendKeys(testData.get("Zip"));
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		City.sendKeys(testData.get("City"));
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 
 	}
 
 	public void SaveFromOpportunity() throws InterruptedException {
 		Thread.sleep(3000);
 		scrollUP(SaveButton);
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		scrollUP(SaveButton);
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		SaveButton.click();
 		Thread.sleep(3000);
 		OkButton.click();
@@ -417,24 +417,24 @@ public class NewUserCallHVACPage extends peststreamPage {
 	}
 
 	public void JobDescription(Map<String, String> testData) throws InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		JobDescTF.click();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		JobDescTF.sendKeys(testData.get("Job Desc"));
-		Thread.sleep(1500);
+		Thread.sleep(3000);
 
 	}
 
 	public void checkFlatRate() throws InterruptedException {
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		Flatrate.click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 	}
 
 	public void clickAdvanceSearch() throws InterruptedException {
-		Thread.sleep(5000);
+		Thread.sleep(6000);
 		AdvanceSearchBtn.click();
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 
 	}
 
@@ -446,17 +446,18 @@ public class NewUserCallHVACPage extends peststreamPage {
 	public void selectLeadEmployee() throws InterruptedException {
 		scrollDownLarge(LeadEmployeeDD);
 		PrimaryRouteDD.click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		PrimaryRouteDD.click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		LeadEmployeeDD.click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		LeadEmployeeValueDD.click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 	}
 
 	public void clickSavefromWorkOrder() throws InterruptedException {
 		scrollDown(SaveBtnFromWorkOrder);
+		Thread.sleep(1500);
 		SaveBtnFromWorkOrder.click();
 		Thread.sleep(5000);
 
@@ -477,7 +478,7 @@ public class NewUserCallHVACPage extends peststreamPage {
 	public void selectOrderFromOrderTypeDD() throws InterruptedException {
 		OrderTypeDD.click();
 		OrderValueDD.click();
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 
 	}
 
@@ -595,49 +596,58 @@ public class NewUserCallHVACPage extends peststreamPage {
 
 	public void ClickCreateWorkorderFRomAction() throws InterruptedException {
 		scrollDown(CreateWorkOrderIconFromAction);
+		Thread.sleep(2500);
 		CreateWorkOrderIconFromAction.click();
-		Thread.sleep(1500);
+		Thread.sleep(5000);
 	}
 
 	public void SelectServiceCategoryAndServices() throws InterruptedException {
-		Thread.sleep(500);
+		Thread.sleep(2000);
 		ServiceCategoryDD.click();
-		Thread.sleep(500);
+		Thread.sleep(2000);
 		ServiceCategoryDDValue.click();
-		Thread.sleep(500);
+		Thread.sleep(2000);
 		ServicesDD.click();
-		Thread.sleep(1500);
+		Thread.sleep(2500);
 		ServicesDD.sendKeys(Keys.DOWN);
+		Thread.sleep(1000);
 		ServicesDD.sendKeys(Keys.ENTER);
-		Thread.sleep(1500);
+		Thread.sleep(2500);
 
 	}
 
 	public void ClickOnAddBTN() throws InterruptedException {
 		AddBtn.click();
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 
 	}
 
 	public void EnterServiceDate() throws InterruptedException {
 		scrollDownLarge(ServiceDatePicker);
-		ServiceDatePicker.click();
-		DueDateRightArrow.click();
-		ServiceDateValue.click();
 		Thread.sleep(1500);
+		ServiceDatePicker.click();
+		Thread.sleep(1500);
+		DueDateRightArrow.click();
+		Thread.sleep(1500);
+		ServiceDateValue.click();
+		Thread.sleep(3000);
 	}
 
 	public void ClickDetailPageFRomAction() throws InterruptedException {
 		scrollDown(DetailPageIconfromAction);
+		Thread.sleep(1500);
 		DetailPageIconfromAction.click();
 		Thread.sleep(3500);
 
 	}
 
-	public void EnterNoteForDetailPage() {
+	public void EnterNoteForDetailPage() throws InterruptedException {
 		scrollDown(EnterNoteTF);
+		Thread.sleep(1500);
 		EnterNoteTF.click();
+		Thread.sleep(1500);
 		EnterNoteTF.sendKeys("This is the Note");
+		Thread.sleep(1500);
 
 	}
 
@@ -647,12 +657,15 @@ public class NewUserCallHVACPage extends peststreamPage {
 
 	}
 
-	public void ClickOnCustomer() {
+	public void ClickOnCustomer() throws InterruptedException {
 		CustomerDD.click();
+		Thread.sleep(1500);
+		
 	}
 
-	public void ClickOnAccountFromCustomer() {
+	public void ClickOnAccountFromCustomer() throws InterruptedException {
 		AccountInCustomerDD.click();
+		Thread.sleep(1500);
 	}
 
 	public void EnterCustomerInfo(Map<String, String> testData) throws InterruptedException {
@@ -710,13 +723,14 @@ public class NewUserCallHVACPage extends peststreamPage {
 		AddTaskIconFromAction.click();
 		Thread.sleep(5000);
 		SourceDropDown.click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		SourceDropDownValue.click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		ProblemDescTF.sendKeys("This Is Problem Desc");
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		scrollDown(OpportunityRadioButton);
-		OpportunityRadioButton.click();
+		Thread.sleep(1000);
+		
 	}
 
 	public void ClickOnCompanyFromCustomer() throws InterruptedException {
@@ -734,14 +748,17 @@ public class NewUserCallHVACPage extends peststreamPage {
 
 	}
 
-	public void ClickOnAddOpportunityForCompany() {
+	public void ClickOnAddOpportunityForCompany() throws InterruptedException {
 		AddOpportunityForCompany.click();
+		Thread.sleep(2500);
 
 	}
 
-	public void SelectAccountFromCompany() {
+	public void SelectAccountFromCompany() throws InterruptedException {
 		AccountForCompany.click();
+		Thread.sleep(2000);
 		AccountValueForCompany.click();
+		Thread.sleep(2000);
 
 	}
 
