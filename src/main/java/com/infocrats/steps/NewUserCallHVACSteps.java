@@ -159,7 +159,7 @@ public class NewUserCallHVACSteps extends pestreamSteps {
 		newusercallHVACpage.ClickDetailPageFRomAction();
 	}
 
-	public void EnterNoteForDetailPage() {
+	public void EnterNoteForDetailPage() throws InterruptedException {
 		newusercallHVACpage.EnterNoteForDetailPage();
 
 	}
@@ -168,11 +168,11 @@ public class NewUserCallHVACSteps extends pestreamSteps {
 		newusercallHVACpage.ClickSaveOnDetailPage();
 	}
 
-	public void ClickOnCustomer() {
+	public void ClickOnCustomer() throws InterruptedException {
 		newusercallHVACpage.ClickOnCustomer();
 	}
 
-	public void ClickOnAccountFromCustomer() {
+	public void ClickOnAccountFromCustomer() throws InterruptedException {
 		newusercallHVACpage.ClickOnAccountFromCustomer();
 	}
 
@@ -220,11 +220,11 @@ public class NewUserCallHVACSteps extends pestreamSteps {
 		newusercallHVACpage.EnterTestDataForAddCompany();
 	}
 
-	public void ClickOnAddOpportunityForCompany() {
+	public void ClickOnAddOpportunityForCompany() throws InterruptedException {
 		newusercallHVACpage.ClickOnAddOpportunityForCompany();
 	}
 
-	public void SelectAccountFromCompany() {
+	public void SelectAccountFromCompany() throws InterruptedException {
 		newusercallHVACpage.SelectAccountFromCompany();
 	}
 
