@@ -277,7 +277,7 @@ public class TermiteEmployeePage extends peststreamPage {
 
 	public void clickon_DDDivison_StaffEmpTermite() {
 		DDDivisonStaffEmpTermite.click();
-		waitABit(1000);
+		waitABit(4000);
 		
 		ValueDDDivisonStaffEmpTermite.click();
 		waitABit(1000);
@@ -378,7 +378,7 @@ public class TermiteEmployeePage extends peststreamPage {
 
 	public void clickon_DDEmp_TeamEmpTermite() {
 		DDEmpTeamEmpTermite.click();
-		waitABit(1000);
+		waitABit(4000);
 		
 		ValueDDEmpTeamEmpTermite.click();
 		waitABit(1000);
