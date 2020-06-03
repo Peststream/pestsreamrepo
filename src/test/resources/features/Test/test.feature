@@ -7,7 +7,7 @@ Feature: Create pest control residential opportunity for exiting user.
     And I can click sign in
     Then I am granted access to the system
 
- @StaffEmpTermite
+  @StaffEmpTermite
   Scenario: Test to Add Employee in Termite
     When user click on 	Emp_Termite
     Then user click on Staff_EmpTermite
@@ -81,26 +81,12 @@ Feature: Create pest control residential opportunity for exiting user.
     Then user click on DDTimeSlot_SupervisorTimeSheetEmpTermite
     Then user click on Save_SupervisorTimeSheetEmpTermite
 
- 
-   @LocationsInventoryTermite
+  @LocationsInventoryTermite
   Scenario: Test to Add Locations in Inventory Termite
-  When user click on InventoryTermite
-  Then user click on Locations_InventoryTermite
-  Then user click on AddLoc_LocInventoryTermite
-  Then user click on LocName_LocInventoryTermite
-  Then user click on LocNo_LocInventoryTermite
-  Then user click on LocType_LocInventoryTermite
-  Then user click on Save_LocInventoryTermite
-  
-   @TransferManagInventoryTermite
-  Scenario: Test to Tranfer Management Inventory Termite
-  When user click on InventoryTermite
-  Then user click on TransferManag_InventoryTermite
-  Then user click on AddTransferInventory
-  Then user click on DDLocFrom_TransferManagInventoryTermite
-  Then user click on DDLocTo_TransferManagInventoryTermite
-  Then user click on DDItemType_TransferManagInventoryTermite
-  Then user click on DDDepartment_TransferManagInventoryTermite
-  Then user click on DDCategory_TransferManagInventoryTermite
-  Then user click on DDItem_TransferManagInventoryTermite
-  Then user click on Save_TransferManagInventoryTermite
+    When user click on InventoryTermite
+    Then user click on Locations_InventoryTermite
+    Then user click on AddLoc_LocInventoryTermite
+    Then user click on LocName_LocInventoryTermite
+    Then user click on LocNo_LocInventoryTermite
+    Then user click on LocType_LocInventoryTermite
+    Then user click on Save_LocInventoryTermite
