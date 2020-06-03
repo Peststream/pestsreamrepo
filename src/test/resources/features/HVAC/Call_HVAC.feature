@@ -17,7 +17,7 @@ Feature: Create pest control commercial opportunity for new user.
     And enters Account_Alert and enterProblemDiscription
     And click on continue button for commercial opportunity
 #pass
-  @TestFail1
+ @TestOpportunityInfoForHVAC1
   Scenario: Test opportunity info (general info) for HVAC
     When user clicked on call tab
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
@@ -31,7 +31,7 @@ Feature: Create pest control commercial opportunity for new user.
     And enters service address "Address Line1", "Zip","Contact", "City"
     And click on Save button from general info
 #pass
-  @TestFail2
+ @TestOpportunityInfoForHVAC
   Scenario: Test opportunity info (general info) for HVAC
     When user clicked on call tab
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
@@ -49,7 +49,7 @@ Feature: Create pest control commercial opportunity for new user.
     And Select lead employee from DD
     And Click on save from Work Order
 #pass
-  @Testfail4
+ @TestOpportunityInfoForHVAC
   Scenario: Test opportunity info (general info) for HVAC
     When user clicked on call tab
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
@@ -106,7 +106,7 @@ Feature: Create pest control commercial opportunity for new user.
     And Select Task Name, Due Date
     And Click on Save Button
 #pass
-  @Testfail5
+ @TestOpportunityInfoForHVAC
   Scenario: Test CSR Dashboard for HVAC
     When user click on CSR Dashboard
     When user click on Advance Search from CSR Dashboard
@@ -117,7 +117,7 @@ Feature: Create pest control commercial opportunity for new user.
     And Click on save from Work Order
 
 #pass
-  @Testfail6
+ @TestOpportunityInfoForHVAC
   Scenario: Test CSR Dashboard for HVAC
     When user click on CSR Dashboard
     When user click on Advance Search from CSR Dashboard
@@ -155,7 +155,7 @@ Feature: Create pest control commercial opportunity for new user.
     And Click on Save	From Add Account
 
 #pass
-  @Testfail7
+ @TestOpportunityInfoForHVAC
   Scenario: Test Customer DropDown For Account
     When User Click On Customer
     And Select Account From The DD List
@@ -166,7 +166,7 @@ Feature: Create pest control commercial opportunity for new user.
     And Click On Save Button
 
 #pass
-  @Testfail8
+ @TestOpportunityInfoForHVAC
   Scenario: Test Customer DropDown For Account
     When User Click On Customer
     And Select Account From The DD List
@@ -184,7 +184,7 @@ Feature: Create pest control commercial opportunity for new user.
     And Click on Save	From Add Account
 
 #pass
-  @Testfail9
+ @TestOpportunityInfoForHVAC
   Scenario: Test Customer DropDown For Company
     When User Click On Customer
     And Select Customer From The DD List
@@ -239,7 +239,7 @@ Feature: Create pest control commercial opportunity for new user.
     And Click on Close	From Add Account
 
 #PassButOnlyOneTimeAddopportunityIsPossible
-  @TestContactForAddOpportunity
+ @TestOpportunityInfoForHVAC
   Scenario: Test Customer DropDown For Contact
     When User Click On Customer
     And Select Contact From The DD List
