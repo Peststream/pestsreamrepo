@@ -1,4 +1,4 @@
-@run @hvac
+@run @hvacc
 Feature: Test for Call HVAC.
 
   Background: 
