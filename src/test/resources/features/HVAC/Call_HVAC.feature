@@ -9,7 +9,7 @@ Feature: Test for Call HVAC.
 
   #pass
   @TestOpportunityInfoForHVAC
-  Scenario: Test opportunity info (general info) for HVAC
+  Scenario: Test opportunity info (general info) for HVAC1
     When user clicked on call tab
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
     And select lead branch Information
@@ -19,7 +19,75 @@ Feature: Test for Call HVAC.
 
   #pass
   @TestOpportunityInfoForHVAC
-  Scenario: Test CSR Dashboard for HVAC
+  Scenario: Test opportunity info (general info) for HVAC2
+    When user clicked on call tab
+    When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
+    And select lead branch Information
+    And select source Information
+    And enters Account_Alert and enterProblemDiscription
+    And click on continue button for commercial opportunity
+    And select primary requested service
+    And check flat rate
+    And Enter Job Description
+    And enters service address "Address Line1", "Zip","Contact", "City"
+    And click on Save button from general info
+
+  #pass
+  @TestOpportunityInfoForHVAC
+  Scenario: Test opportunity info (general info) for HVAC3
+    When user clicked on call tab
+    When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
+    And select lead branch Information
+    And select source Information
+    And enters Account_Alert and enterProblemDiscription
+    And click on continue button for commercial opportunity
+    And select primary requested service
+    And check flat rate
+    And Enter Job Description
+    And enters service address "Address Line1", "Zip","Contact", "City"
+    And click on Save button from general info
+    And click on Advance Search from Work Order
+    And Select and click on one Work Order Number
+    And Select lead employee from DD
+    And Click on save from Work Order
+
+  #pass
+  @TestOpportunityInfoForHVAC
+  Scenario: Test opportunity info (general info) for HVAC4
+    When user clicked on call tab
+    When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
+    And select lead branch Information
+    And select source Information
+    And enters Account_Alert and enterProblemDiscription
+    And click on continue button for commercial opportunity
+    And select primary requested service
+    And check flat rate
+    And Enter Job Description
+    And enters service address "Address Line1", "Zip","Contact", "City"
+    And click on Save button from general info
+    And click on Advance Search from Work Order
+    And Select and click on one Work Order Number
+    And Select lead employee from DD
+    And Click on save from Work Order
+    And Click on Advance Search Button
+    And Click On First Work Order Number From Work Order
+    And Select Order Type From DD
+    And Click on save from Work Order
+
+  #pass
+  @TestOpportunityInfoForHVAC
+  Scenario: Test CSR Dashboard for HVAC5
+    When user click on CSR Dashboard
+    When user click on Advance Search from CSR Dashboard
+    And Select Create Workorder From Action for the first Account
+    And Select Service Category & Services
+    And Click On Add Button
+    And Enter Service Date
+    And Click on save from Work Order
+
+  #pass
+  @TestOpportunityInfoForHVAC
+  Scenario: Test CSR Dashboard for HVAC6
     When user click on CSR Dashboard
     When user click on Advance Search from CSR Dashboard
     And Select Add Opportunity From Action for the first Account
@@ -28,7 +96,7 @@ Feature: Test for Call HVAC.
 
   #pass
   @TestOpportunityInfoForHVAC
-  Scenario: Test CSR Dashboard for HVAC
+  Scenario: Test CSR Dashboard for HVAC7
     When user click on CSR Dashboard
     When user click on Advance Search from CSR Dashboard
     And Select Add Call From Action for the first Account
@@ -37,7 +105,7 @@ Feature: Test for Call HVAC.
 
   #pass
   @TestOpportunityInfoForHVAC
-  Scenario: Test CSR Dashboard for HVAC
+  Scenario: Test CSR Dashboard for HVAC8
     When user click on CSR Dashboard
     When user click on Advance Search from CSR Dashboard
     And Select Add Task From Action for the first Account
@@ -46,7 +114,7 @@ Feature: Test for Call HVAC.
 
   #pass
   @TestOpportunityInfoForHVAC
-  Scenario: Test CSR Dashboard for HVAC
+  Scenario: Test CSR Dashboard for HVAC9
     When user click on CSR Dashboard
     When user click on Advance Search from CSR Dashboard
     And Select Add Task From Action for the first Account
@@ -55,7 +123,7 @@ Feature: Test for Call HVAC.
 
   #pass
   @TestOpportunityInfoForHVAC
-  Scenario: Test CSR Dashboard for HVAC
+  Scenario: Test CSR Dashboard for HVAC10
     When user click on CSR Dashboard
     When user click on Advance Search from CSR Dashboard
     And Select Detail Page From Action for the first Account
@@ -65,7 +133,7 @@ Feature: Test for Call HVAC.
 
   #pass
   @TestOpportunityInfoForHVAC
-  Scenario: Test CSR Dashboard for HVAC
+  Scenario: Test CSR Dashboard for HVAC11
     When user click on CSR Dashboard
     When user click on Advance Search from CSR Dashboard
     And Select Add Opportunity From Action for the first Account
@@ -74,7 +142,7 @@ Feature: Test for Call HVAC.
 
   #pass
   @TestOpportunityInfoForHVAC
-  Scenario: Test Customer DropDown For Account
+  Scenario: Test Customer DropDown For Account12
     When User Click On Customer
     And Select Account From The DD List
     And Click on Add Account
@@ -83,7 +151,7 @@ Feature: Test for Call HVAC.
 
   #pass
   @TestOpportunityInfoForHVAC
-  Scenario: Test Customer DropDown For Account
+  Scenario: Test Customer DropDown For Account13
     When User Click On Customer
     And Select Account From The DD List
     And Click On Advance Search From Account
@@ -93,7 +161,7 @@ Feature: Test for Call HVAC.
 
   #pass
   @TestOpportunityInfoForHVAC
-  Scenario: Test Customer DropDown For Account
+  Scenario: Test Customer DropDown For Account14
     When User Click On Customer
     And Select Account From The DD List
     And Click On Advance Search From Account
@@ -104,7 +172,7 @@ Feature: Test for Call HVAC.
 
   #pass
   @TestOpportunityInfoForHVAC
-  Scenario: Test Customer DropDown For Account
+  Scenario: Test Customer DropDown For Account15
     When User Click On Customer
     And Select Account From The DD List
     And Click On Advance Search From Account
@@ -113,7 +181,7 @@ Feature: Test for Call HVAC.
 
   #pass
   @TestOpportunityInfoForHVAC
-  Scenario: Test Customer DropDown For Company
+  Scenario: Test Customer DropDown For Company16
     When User Click On Customer
     And Select Customer From The DD List
     And Click On Add	Company
@@ -122,7 +190,7 @@ Feature: Test for Call HVAC.
 
   #pass
   @TestOpportunityInfoForHVAC
-  Scenario: Test Customer DropDown For Company
+  Scenario: Test Customer DropDown For Company17
     When User Click On Customer
     And Select Customer From The DD List
     And click on Advance Search from Add Company
@@ -132,7 +200,7 @@ Feature: Test for Call HVAC.
 
   #pass
   @TestOpportunityInfoForHVAC
-  Scenario: Test Customer DropDown For Company
+  Scenario: Test Customer DropDown For Company18
     When User Click On Customer
     And Select Customer From The DD List
     And click on Advance Search from Add Company
@@ -142,7 +210,7 @@ Feature: Test for Call HVAC.
 
   #pass
   @TestOpportunityInfoForHVAC
-  Scenario: Test Customer DropDown For Company
+  Scenario: Test Customer DropDown For Company19
     When User Click On Customer
     And Select Customer From The DD List
     And click on Advance Search from Add Company
@@ -151,7 +219,7 @@ Feature: Test for Call HVAC.
 
   #pass
   @TestOpportunityInfoForHVAC
-  Scenario: Test Customer DropDown For Company
+  Scenario: Test Customer DropDown For Company20
     When User Click On Customer
     And Select Customer From The DD List
     And click on Advance Search from Add Company
@@ -160,7 +228,7 @@ Feature: Test for Call HVAC.
 
   #pass
   @TestOpportunityInfoForHVAC
-  Scenario: Test Customer DropDown For Contact
+  Scenario: Test Customer DropDown For Contact21
     When User Click On Customer
     And Select Contact From The DD List
     And click on Add Contact
@@ -169,7 +237,7 @@ Feature: Test for Call HVAC.
 
   #Pass
   @TestOpportunityInfoForHVAC
-  Scenario: Test Customer DropDown For Contact
+  Scenario: Test Customer DropDown For Contact22
     When User Click On Customer
     And Select Contact From The DD List
     And click on Add Contact
@@ -178,7 +246,7 @@ Feature: Test for Call HVAC.
 
   #PassButOnlyOneTimeAddopportunityIsPossible
   @TestOpportunityInfoForHVAC
-  Scenario: Test Customer DropDown For Contact
+  Scenario: Test Customer DropDown For Contact23
     When User Click On Customer
     And Select Contact From The DD List
     And Click on Advance Search Button
@@ -188,7 +256,7 @@ Feature: Test for Call HVAC.
 
   #Pass
   @TestOpportunityInfoForHVAC
-  Scenario: Test Customer DropDown For Contact
+  Scenario: Test Customer DropDown For Contact24
     When User Click On Customer
     And Select Contact From The DD List
     And Click on Advance Search Button
@@ -198,7 +266,7 @@ Feature: Test for Call HVAC.
 
   #pass
   @TestOpportunityInfoForHVAC
-  Scenario: Test Customer DropDown For Contact
+  Scenario: Test Customer DropDown For Contact25
     When User Click On Customer
     And Select Contact From The DD List
     And Click on Advance Search Button
@@ -207,7 +275,7 @@ Feature: Test for Call HVAC.
 
   #Pass
   @TestOpportunityInfoForHVAC
-  Scenario: Test Customer DropDown For Contact
+  Scenario: Test Customer DropDown For Contact26
     When User Click On Customer
     And Select Contact From The DD List
     And Click on Advance Search Button
@@ -216,7 +284,7 @@ Feature: Test for Call HVAC.
 
   #Pass
   @TestOpportunityInfoForHVAC
-  Scenario: Test Customer DropDown For Opportunity
+  Scenario: Test Customer DropDown For Opportunity27
     When User Click On Customer
     And Select Opportunity From The DD List
     And Click on Add Opportunity Button
@@ -226,7 +294,7 @@ Feature: Test for Call HVAC.
 
   #Pass
   @TestOpportunityInfoForHVAC
-  Scenario: Test Customer DropDown For Lead
+  Scenario: Test Customer DropDown For Lead28
     When User Click On Customer
     And Select Lead From The DD List
     And Click on Add Lead Button
@@ -235,7 +303,7 @@ Feature: Test for Call HVAC.
 
   #Pass
   @TestOpportunityInfoForHVAC
-  Scenario: Test Customer DropDown For Database
+  Scenario: Test Customer DropDown For Database29
     When User Click On Customer
     And Select Database From The DD List
     And Click on Add Database Entry Button
