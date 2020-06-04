@@ -17,73 +17,7 @@ Feature: Create pest control commercial opportunity for new user.
     And enters Account_Alert and enterProblemDiscription
     And click on continue button for commercial opportunity
 
-  #pass
-  @TestOpportunityInfoForHVAC
-  Scenario: Test opportunity info (general info) for HVAC2
-    When user clicked on call tab
-    When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
-    And select lead branch Information
-    And select source Information
-    And enters Account_Alert and enterProblemDiscription
-    And click on continue button for commercial opportunity
-    And select primary requested service
-    And check flat rate
-    And Enter Job Description
-    And enters service address "Address Line1", "Zip","Contact", "City"
-    And click on Save button from general info
-
-  #pass
-  @TestOpportunityInfoForHVAC
-  Scenario: Test opportunity info (general info) for HVAC3
-    When user clicked on call tab
-    When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
-    And select lead branch Information
-    And select source Information
-    And enters Account_Alert and enterProblemDiscription
-    And click on continue button for commercial opportunity
-    And select primary requested service
-    And check flat rate
-    And Enter Job Description
-    And enters service address "Address Line1", "Zip","Contact", "City"
-    And click on Save button from general info
-    And click on Advance Search from Work Order
-    And Select and click on one Work Order Number
-    And Select lead employee from DD
-    And Click on save from Work Order
-
-  #pass
-  @TestOpportunityInfoForHVAC
-  Scenario: Test opportunity info (general info) for HVAC4
-    When user clicked on call tab
-    When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
-    And select lead branch Information
-    And select source Information
-    And enters Account_Alert and enterProblemDiscription
-    And click on continue button for commercial opportunity
-    And select primary requested service
-    And check flat rate
-    And Enter Job Description
-    And enters service address "Address Line1", "Zip","Contact", "City"
-    And click on Save button from general info
-    And click on Advance Search from Work Order
-    And Select and click on one Work Order Number
-    And Select lead employee from DD
-    And Click on save from Work Order
-    And Click on Advance Search Button
-    And Click On First Work Order Number From Work Order
-    And Select Order Type From DD
-    And Click on save from Work Order
-
-  #pass
-  @TestOpportunityInfoForHVAC
-  Scenario: Test CSR Dashboard for HVAC5
-    When user click on CSR Dashboard
-    When user click on Advance Search from CSR Dashboard
-    And Select Create Workorder From Action for the first Account
-    And Select Service Category & Services
-    And Click On Add Button
-    And Enter Service Date
-    And Click on save from Work Order
+ 
 
   #pass
   @TestOpportunityInfoForHVAC
@@ -160,7 +94,7 @@ Feature: Create pest control commercial opportunity for new user.
     And Click on Save	From Add Account
 
   #pass
-  @TestOpportunityInfoForHVAC
+  @TestOpportunityInfoForHVAC1
   Scenario: Test Customer DropDown For Account14
     When User Click On Customer
     And Select Account From The DD List
@@ -246,7 +180,7 @@ Feature: Create pest control commercial opportunity for new user.
 
   #PassButOnlyOneTimeAddopportunityIsPossible
   @TestOpportunityInfoForHVAC
-  Scenario: Test Customer DropDown For Contact23
+    Scenario: Test Customer DropDown For Contact23
     When User Click On Customer
     And Select Contact From The DD List
     And Click on Advance Search Button
