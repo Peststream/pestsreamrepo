@@ -217,16 +217,16 @@ public class newUserTermiteCallPage extends peststreamPage {
 	@FindBy(xpath = "//span[contains(text(),'Termite Service Category')]")
 	private WebElementFacade ValueDDCat_StdService_FieldSTSaveComm;
 	
-	@FindBy(xpath = "//select[@id='Services']")
+	@FindBy(xpath = "(//span[contains(.,'Select Service...')])[1]")
 	private WebElementFacade DDService_StdService_FieldSTSaveComm;
 	
-	@FindBy(xpath = "//option[contains(text(),'Termite 2')]")
+	@FindBy(xpath = "(//span[contains(.,'Termite Service')])[3]")
 	private WebElementFacade ValueDDService_StdService_FieldSTSaveComm;
 	
-	@FindBy(xpath = "//select[@id='ServiceFrequency']")
+	@FindBy(xpath = "(//span[contains(.,'Select Frequency...')])[1]")
 	private WebElementFacade DDFrequency_StdService_FieldSTSaveComm;
 	
-	@FindBy(xpath = "//*[@id=\"ServiceFrequency\"]/option[4]")
+	@FindBy(xpath = "(//span[contains(.,'EOM')])[1]")
 	private WebElementFacade ValueDDFrequency_StdService_FieldSTSaveComm;
 	
 	@FindBy(xpath = "(//button[contains(.,'Save')])[5]")
@@ -697,7 +697,7 @@ public class newUserTermiteCallPage extends peststreamPage {
 		public void Save_StdService_FieldSTSaveComm() {
 			waitABit(2000);
 			Save_StdService_FieldSTSaveComm.click();
-			waitABit(1000);
+			waitABit(3000);
 		}
 
 		public void saveAndcontSelectService_FieldSTSaveComm() {
@@ -710,7 +710,7 @@ public class newUserTermiteCallPage extends peststreamPage {
 			waitABit(2000);
 			scrollUP(radioBttn_Service_FieldSTSaveComm);
 			radioBttn_Service_FieldSTSaveComm.click();
-			waitABit(1000);
+			waitABit(3000);
 		}
 
 		public void saveAndcontConfigureProposal_FieldSTSaveComm() {
@@ -723,23 +723,23 @@ public class newUserTermiteCallPage extends peststreamPage {
 		public void radioBttncashAgreement_FieldSTSaveComm() {
 			waitABit(2000);
 			radioBttncashAgreement_FieldSTSaveComm.click();
-			waitABit(1000);
+			waitABit(3000);
 		}
 
 		public void valuepaidamountAgreement_FieldSTSaveComm(Map<String, String> testData) {
 			waitABit(2000);
 			valuepaidamountAgreement_FieldSTSaveComm.sendKeys(testData.get("PaidAmount"));
-			waitABit(1000);
+			waitABit(3000);
 		}
 
 		public void radioBttnTANDCAgreement_FieldSTSaveComm() {
 			radioBttnTANDCAgreement_FieldSTSaveComm.click();
-			waitABit(1000);
+			waitABit(3000);
 		}
 
 		public void salesrepresentativesignAgreement_FieldSTSaveComm() {
 			salesrepresentativesignAgreement_FieldSTSaveComm.click();
-			waitABit(1000);
+			waitABit(3000);
 		}
 
 		public void saveandcontAgreement_FieldSTSaveComm() {
