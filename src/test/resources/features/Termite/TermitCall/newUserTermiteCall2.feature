@@ -1,13 +1,14 @@
-@testt
-Feature: Create pest control residential opportunity for exiting user.
+ @run @termitecall
+Feature: Test for new User Termite Call2 of Termite.
 
   Background: 
     Given User successfully logged into system with valid credentials
     When I enter a credentials for "CompanyAdmin"
     And I can click sign in
     Then I am granted access to the system
-
-   @sendEmailInsideRadioBttn_Comm
+ 
+ 
+ @sendEmailInsideRadioBttn_Comm
   Scenario: Test to Commercial SendEmail InsideRadioButton of ScheduleServiceOrder Termite
     When user click on CallTab
     Then user enters company
@@ -71,3 +72,75 @@ Feature: Create pest control residential opportunity for exiting user.
     Then user click on markaslost_InsideSTSaveComm
     Then user click on DDReasonML_InsideSTSaveComm
     Then user click on saveML_InsideSTSaveComm
+    
+     @resiScheduleEstimationFieldRangeTimeMarkLost
+  Scenario: Test to Save FieldRangeTime MarkLost ScheduleEstimation of Termite
+    When user click on CallTab
+    Then user enters company
+    Then user enters contact
+    Then user click on Branch
+    Then user click on Source
+    Then user enters Alert
+    Then user enters Problem Description
+    Then user click on OppType
+    Then user click on continue
+    Then user click on addressLine1
+    Then user click on zip
+    Then user click on city
+    Then user click on addNote
+    Then user click on ScheduleEstimation
+    Then user click on fieldRadioBttn_FieldScheduleEstimation
+    Then user click on RangeTime_InsideScheduleEstimation
+    Then user click on DDTimeRange_InsideScheduleEstimation
+    Then user click on DDAssignedTo
+    Then user click on MarkLost_ScheduleEstimation
+    Then user click on DDReason_ScheduleEstimation
+    Then user click on des_ScheduleEstimation
+    Then user click on save_ScheduleEstimation
+
+  @resiScheduleEstimationFieldRangeTimeSave
+  Scenario: Test to Save FieldRangeTime ScheduleEstimation of Termite
+    When user click on CallTab
+    Then user enters company
+    Then user enters contact
+    Then user click on Branch
+    Then user click on Source
+    Then user enters Alert
+    Then user enters Problem Description
+    Then user click on OppType
+    Then user click on continue
+    Then user click on addressLine1
+    Then user click on zip
+    Then user click on city
+    Then user click on addNote
+    Then user click on ScheduleEstimation
+    Then user click on fieldRadioBttn_FieldScheduleEstimation
+    Then user click on RangeTime_InsideScheduleEstimation
+    Then user click on DDTimeRange_InsideScheduleEstimation
+    Then user click on DDAssignedTo
+    Then user click on saveScheduleEstimation
+
+  @generalInfoCommercial
+  Scenario: Test to Continue GeneralInfoCommercial of ScheduleServiceOrder Termite
+    When user click on CallTab
+    Then user enters company
+    Then user enters contact
+    Then user click on Branch
+    Then user click on Source
+    Then user enters Alert
+    Then user enters Problem Description
+    Then user click on OppTypeComm
+    Then user click on continue
+
+  @generalInfoCommercialWithLead
+  Scenario: Test to Continue GeneralInfoCommercial using Lead of ScheduleServiceOrder Termite
+    When user click on CallTab
+    Then user enters company
+    Then user enters contact
+    Then user click on Branch
+    Then user click on Source
+    Then user click on lead
+    Then user enters Alert
+    Then user enters Problem Description
+    Then user click on OppTypeComm
+    Then user click on continue
