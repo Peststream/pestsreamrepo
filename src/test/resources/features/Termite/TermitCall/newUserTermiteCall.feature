@@ -1,4 +1,4 @@
-@run @termite @c
+@run @termite @call
 Feature: Test for new User Termite Call of Termite.
 
   Background: 

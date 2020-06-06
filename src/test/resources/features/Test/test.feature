@@ -7,8 +7,10 @@ Feature: Create pest control residential opportunity for exiting user.
     And I can click sign in
     Then I am granted access to the system
 
-  @sendEmailInsideRadioBttn_Comm
-  Scenario: Test to Commercial SendEmail InsideRadioButton of ScheduleServiceOrder Termite
+  
+
+  @markLostInsideRadioBttn_Comm
+  Scenario: Test to Commercial MarkLost InsideRadioButton of ScheduleServiceOrder Termite
     When user click on CallTab
     Then user enters company
     Then user enters contact
@@ -30,19 +32,6 @@ Feature: Create pest control residential opportunity for exiting user.
     Then user click on generatedOpportunity_FieldSTSaveComm
     Then user click on saveAndcontGI_FieldSTSaveComm
     Then user click on continueInspection_FieldSTSaveComm
-    Then user click on DDCat_StdService_FieldSTSaveComm
-    Then user click on DDService_StdService_FieldSTSaveComm
-    Then user click on DDFrequency_StdService_FieldSTSaveComm
-    Then user click on Save_StdService_FieldSTSaveComm
-    Then user click on saveAndcontSelectService_FieldSTSaveComm
-    Then user click on radioBttn_Service_FieldSTSaveComm
-    Then user click on saveAndcontConfigureProposal_FieldSTSaveComm
-    Then user click on radioBttncashAgreement_FieldSTSaveComm
-    Then user click on valuepaidamountAgreement_FieldSTSaveComm
-    Then user click on radioBttnTANDCAgreement_FieldSTSaveComm
-    Then user click on typenameagreement_FieldSTSaveComm
-    Then user click on 	salesrepresentativesignAgreement_FieldSTSaveComm
-    Then user click on saveandcontAgreement_FieldSTSaveComm
-    Then user click on sendemail_FieldSTSaveComm
-    
-    
+    Then user click on markaslost_InsideSTSaveComm
+    Then user click on DDReasonML_InsideSTSaveComm
+    Then user click on saveML_InsideSTSaveComm
