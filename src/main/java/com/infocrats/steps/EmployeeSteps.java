@@ -386,6 +386,59 @@ public class EmployeeSteps {
 	
 	}
 
+	public void Branch_StaffEmp() {
+		employeepage.Branch_StaffEmp();
+		
+	}
+
+	public void Divison() {
+		employeepage.Divison();
+		
+	}
+
+	public void Department() {
+		employeepage.Department();
+		
+	}
+
+	public void FName() throws Exception {
+		jsonData = JsonHelper.readJsonElement("call_Termite.json", "EmployeeData");
+		employeepage.FName(jsonData);
+		
+	}
+
+	public void LName() throws Exception {
+		jsonData = JsonHelper.readJsonElement("call_Termite.json", "EmployeeData");
+		employeepage.LName(jsonData);
+		
+	}
+
+	public void UserName() throws Exception {
+		jsonData = JsonHelper.readJsonElement("call_Termite.json", "EmployeeData");
+		employeepage.Username(jsonData);
+		
+	}
+
+	public void EmpType() {
+		employeepage.EmpType();
+		
+	}
+
+	public void RoleName() {
+		employeepage.RoleName();
+		
+	}
+
+	public void Save_StaffEmp() {
+		employeepage.Save_StaffEmp();
+		
+	}
+
+	public void EmpTypeHalf() {
+		employeepage.EmpTypeHalf();
+		
+	}
+
 
 }
 
