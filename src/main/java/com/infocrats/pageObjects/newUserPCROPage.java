@@ -2,6 +2,7 @@ package com.infocrats.pageObjects;
 
 import java.util.Map;
 
+import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Action;
@@ -13,6 +14,7 @@ import net.serenitybdd.core.pages.WebElementFacade;
 
 public class newUserPCROPage extends peststreamPage {
 	BaseUtills utills = new BaseUtills();
+	
 
 	@FindBy(xpath = "//*[@id=\"frmGeneralInfo\"]/div/div/div[3]/h4")
 	private WebElementFacade call_page_tittle;
@@ -469,6 +471,9 @@ public class newUserPCROPage extends peststreamPage {
 	
 	@FindBy(xpath = "/html//table[@id='tblBundle']//input[@name='IsSold_10121_Monthly']")
 	private WebElementFacade addToAgreement_ServiceBundleSelectPackagesOpportunity;
+	
+	@FindBy(xpath = "(//span[contains(.,'Save and Sign Agreement')])[2]")
+	private WebElementFacade validateThePage;
 
 	@Override
 	public WebElementFacade getUniqueElement() {
@@ -1150,6 +1155,13 @@ public class newUserPCROPage extends peststreamPage {
 	public void addToAgreement_ServiceBundleSelectPackagesOpportunity() {
 		addToAgreement_ServiceBundleSelectPackagesOpportunity.click();
 		waitABit(2000);
+	}
+
+	public void validateThePage() {
+		waitABit(2000);
+		Assert.assertTrue("Save and Sign Agreement".equals(validateThePage.getText()));
+
+
 	}
 
 }

@@ -166,10 +166,10 @@ public class TermiteEmployeeStepDefs {
 		termiteemployeesteps.clickon_AddRouteOverride_RouteOEmpTermite();
 	}
 
-	@Then("^user click on DDRoute_RouteOEmpTermite$")
+	/*@Then("^user click on DDRoute_RouteOEmpTermite$")
 	public void user_click_on_DDRoute_RouteOEmpTermite() {
 		termiteemployeesteps.clickon_DDRoute_RouteOEmpTermite();
-	}
+	}*/
 
 	@Then("^user click on Save_RouteOEmpTermite$")
 	public void user_click_on_Save_RouteOEmpTermite() {
@@ -290,5 +290,11 @@ public class TermiteEmployeeStepDefs {
 	public void user_click_on_Save_SupervisorTimeSheetEmpTermite() {
 		termiteemployeesteps.clickon_Save_SupervisorTimeSheetEmpTermite();
 	}
+	
+	@Then("^user click on DDRoute_RouteOEmpTermit$")
+	public void user_click_on_DDRoute_RouteOEmpTermit() {
+		termiteemployeesteps.select_DDRoute_RouteOEmpTermit();
+	}
+
 
 }

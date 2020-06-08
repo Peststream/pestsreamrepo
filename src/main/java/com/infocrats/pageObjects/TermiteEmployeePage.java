@@ -236,6 +236,12 @@ public class TermiteEmployeePage extends peststreamPage {
 	@FindBy(xpath = "(//span[contains(.,'Save')])[1]")
 	private WebElementFacade SaveSupervisorTimeSheetEmpTermite;
 	
+	@FindBy(xpath = "//select[@id='ddlRoute']")
+	private WebElementFacade select_DDRoute_RouteOEmpTermit;
+	
+	@FindBy(xpath = "//option[contains(text(),'Termite (Sarita S R)')]")
+	private WebElementFacade Value_select_DDRoute_RouteOEmpTermit;
+	
 	
 	
 
@@ -271,7 +277,7 @@ public class TermiteEmployeePage extends peststreamPage {
 
 	public void clickon_DDDivison_StaffEmpTermite() {
 		DDDivisonStaffEmpTermite.click();
-		waitABit(1000);
+		waitABit(4000);
 		
 		ValueDDDivisonStaffEmpTermite.click();
 		waitABit(1000);
@@ -372,7 +378,7 @@ public class TermiteEmployeePage extends peststreamPage {
 
 	public void clickon_DDEmp_TeamEmpTermite() {
 		DDEmpTeamEmpTermite.click();
-		waitABit(1000);
+		waitABit(4000);
 		
 		ValueDDEmpTeamEmpTermite.click();
 		waitABit(1000);
@@ -624,6 +630,15 @@ public class TermiteEmployeePage extends peststreamPage {
 
 	public void clickon_Save_SupervisorTimeSheetEmpTermite() {
 		SaveSupervisorTimeSheetEmpTermite.click();
+		waitABit(1000);
+	}
+
+
+	public void select_DDRoute_RouteOEmpTermit() {
+		select_DDRoute_RouteOEmpTermit.click();
+		waitABit(2000);
+		
+		Value_select_DDRoute_RouteOEmpTermit.click();
 		waitABit(1000);
 	}
 	

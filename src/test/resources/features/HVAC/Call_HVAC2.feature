@@ -1,4 +1,4 @@
-@hvac
+@run @hvac
 Feature: Create pest control commercial opportunity for new user.
 
   Background: 

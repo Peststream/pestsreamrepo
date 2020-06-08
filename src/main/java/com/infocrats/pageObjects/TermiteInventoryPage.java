@@ -2,6 +2,7 @@ package com.infocrats.pageObjects;
 
 import java.util.Map;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.Select;
 
 import com.infocrats.utils.BaseUtills;
@@ -149,9 +150,11 @@ public class TermiteInventoryPage extends peststreamPage {
 
 	public void user_click_on_DDLocTo_TransferManagInventoryTermite() {
 		DDLocToTransferManagInventoryTermite.click();
-		waitABit(1000);
+		waitABit(3000);
 		
-		ValueDDLocToTransferManagInventoryTermite.click();
+		ValueDDLocToTransferManagInventoryTermite.sendKeys(Keys.DOWN.ENTER);
+		
+//		ValueDDLocToTransferManagInventoryTermite.click();
 		waitABit(1000);
 		
 	}
