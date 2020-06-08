@@ -488,4 +488,8 @@ public class newUserPCROStepDefs {
 		newuserpcrosteps.addToAgreement_ServiceBundleSelectPackagesOpportunity();
 	}
 
+	@Then("^user validate the Page$")
+	public void user_validate_the_Page() {
+		newuserpcrosteps.validateThePage();
+	}
 }

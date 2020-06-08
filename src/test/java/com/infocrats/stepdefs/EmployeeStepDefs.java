@@ -353,5 +353,59 @@ public class EmployeeStepDefs {
 	public void user_clicks_on_ST_save_button() {
 		employeesteps.ST_Save();
 	}
+	
+	@Then("^user click on Branch_StaffEmp$")
+	public void user_click_on_Branch_StaffEmp() {
+		employeesteps.Branch_StaffEmp();
+	}
+
+	@Then("^user click on Divison$")
+	public void user_click_on_Divison() {
+		employeesteps.Divison();
+	}
+
+	@Then("^user click on Department$")
+	public void user_click_on_Department() {
+		employeesteps.Department();
+	}
+
+	@Then("^user click on FName$")
+	public void user_click_on_FName() throws Exception {
+		employeesteps.FName();
+	}
+
+	@Then("^user click on LName$")
+	public void user_click_on_LName() throws Exception {
+		employeesteps.LName();
+	}
+
+	@Then("^user click on UserName$")
+	public void user_click_on_UserName() throws Exception {
+		employeesteps.UserName();
+	}
+
+	@Then("^user click on EmpType$")
+	public void user_click_on_EmpType() {
+		employeesteps.EmpType();
+	}
+
+	@Then("^user click on RoleName$")
+	public void user_click_on_RoleName() {
+		employeesteps.RoleName();
+	}
+
+	@Then("^user click on Save_StaffEmp$")
+	public void user_click_on_Save_StaffEmp() {
+		employeesteps.Save_StaffEmp();
+	}
+	
+
+@Then("^user click on EmpTypeHalf$")
+public void user_click_on_EmpTypeHalf() {
+	employeesteps.EmpTypeHalf();
+}
+
+
+
 
 }

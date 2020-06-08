@@ -1,4 +1,5 @@
-Feature:  To test the feature of Setups feature.
+@run
+Feature:  Test for Core Setup WorkOrder.
  
   Background: 
    Given User successfully logged into system with valid credentials

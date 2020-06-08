@@ -1,4 +1,5 @@
-Feature: To test the Customer tab feature
+@run
+Feature: Test for Customer.
 
   Background: 
     Given User successfully logged into system with valid credentials

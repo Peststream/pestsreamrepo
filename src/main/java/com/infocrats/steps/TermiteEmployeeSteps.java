@@ -255,4 +255,9 @@ public class TermiteEmployeeSteps extends pestreamSteps {
 		termiteemployeepage.clickon_Save_SupervisorTimeSheetEmpTermite();
 	}
 
+	public void select_DDRoute_RouteOEmpTermit() {
+		termiteemployeepage.select_DDRoute_RouteOEmpTermit();
+		
+	}
+
 }

@@ -342,6 +342,4 @@ public class newUserTermiteCallSteps extends pestreamSteps {
 	public void saveML_InsideSTSaveComm() {
 		newusertermitecallpage.saveML_InsideSTSaveComm();
 	}
-
-
 }

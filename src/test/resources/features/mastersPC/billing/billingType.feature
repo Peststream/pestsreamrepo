@@ -1,4 +1,5 @@
-Feature: Create Billing Transaction
+@run @bill
+Feature: Test for Billing Transcition.
 
  Background: 
     Given User successfully logged into system with valid credentials

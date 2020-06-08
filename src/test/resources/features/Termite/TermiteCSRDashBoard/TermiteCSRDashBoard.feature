@@ -1,7 +1,6 @@
-@termite
-Feature: Test Cases for Termite CSRDAshBoard
-  I want to use this template for my feature file
-
+@run @termite
+Feature: Test for CSRDashboard of Termite.
+  
   Background: 
     Given User successfully logged into system with valid credentials
     When I enter a credentials for "CompanyAdmin"

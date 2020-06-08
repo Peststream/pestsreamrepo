@@ -1,5 +1,5 @@
-@pcro
-Feature: Create pest control residential opportunity for exiting user.
+@run
+Feature: Test for existing user PCRO for Pest.
  
   Background: 
    Given User successfully logged into system with valid credentials

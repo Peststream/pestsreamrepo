@@ -217,16 +217,16 @@ public class newUserTermiteCallPage extends peststreamPage {
 	@FindBy(xpath = "//span[contains(text(),'Termite Service Category')]")
 	private WebElementFacade ValueDDCat_StdService_FieldSTSaveComm;
 	
-	@FindBy(xpath = "//select[@id='Services']")
+	@FindBy(xpath = "(//span[contains(.,'Select Service...')])[1]")
 	private WebElementFacade DDService_StdService_FieldSTSaveComm;
 	
-	@FindBy(xpath = "//option[contains(text(),'Termite 2')]")
+	@FindBy(xpath = "(//span[contains(.,'Termite Service')])[3]")
 	private WebElementFacade ValueDDService_StdService_FieldSTSaveComm;
 	
-	@FindBy(xpath = "//select[@id='ServiceFrequency']")
+	@FindBy(xpath = "(//span[contains(.,'Select Frequency...')])[1]")
 	private WebElementFacade DDFrequency_StdService_FieldSTSaveComm;
 	
-	@FindBy(xpath = "//*[@id=\"ServiceFrequency\"]/option[4]")
+	@FindBy(xpath = "(//span[contains(.,'EOM')])[1]")
 	private WebElementFacade ValueDDFrequency_StdService_FieldSTSaveComm;
 	
 	@FindBy(xpath = "(//button[contains(.,'Save')])[5]")
@@ -419,57 +419,62 @@ public class newUserTermiteCallPage extends peststreamPage {
 
 	public void clickOnlead() {
 		Lead.click();
-		waitABit(1000);
+		waitABit(3000);
 
 	}
 
 	public void clickOnaddressLine(Map<String, String> testData) {
 		AddressLine.click();
+		waitABit(3000);
 		AddressLine.sendKeys(testData.get("AddressLine1"));
-		waitABit(1000);
+		waitABit(3000);
 	}
 
 	public void clickOnzip(Map<String, String> testData) {
 		Zip.click();
+		waitABit(3000);
 		Zip.sendKeys(testData.get("Zip"));
-		waitABit(1000);
+		waitABit(3000);
 	}
 
 	public void clickOncity(Map<String, String> testData) {
 		City.click();
+		waitABit(3000);
 		City.sendKeys(testData.get("City"));
-		waitABit(1000);
+		waitABit(3000);
 	}
 
 	public void clickOnaddNote(Map<String, String> testData) {
 		AddNote.click();
+		waitABit(3000);
 		AddNote.sendKeys(testData.get("AddNote"));
-		waitABit(1000);
+		waitABit(3000);
 	}
 
 	public void clickOnDDserviceStdServic() {
 		scrollDown(DDService);
+		waitABit(3000);
 		DDService.click();
-		waitABit(1000);
+		waitABit(3000);
 
 		valueService.click();
-		waitABit(1000);
+		waitABit(3000);
 	}
 
 	public void clickOnDDpackageStdServices() {
 		DDPackage.click();
-		waitABit(1000);
+		waitABit(3000);
 
 		valuePackage.click();
-		waitABit(1000);
+		waitABit(3000);
 	}
 
 	public void clickOnDDfrequencyStdServices() {
 		DDFrequency.click();
-		waitABit(1000);
+		waitABit(3000);
 
 		valueFrequency.click();
-		waitABit(1000);
+		waitABit(3000);
 	}
 
 	// public void clickOnDDbillingFrequency() {
@@ -479,22 +484,24 @@ public class newUserTermiteCallPage extends peststreamPage {
 
 	public void clickOnaddStdServices() {
 		AddStdService.click();
-		waitABit(1000);
+		waitABit(3000);
 	}
 
 	public void clickOnradioButtionAddToAgreement() {
 		RadioBtnAddToAgreement.click();
-		waitABit(1000);
+		waitABit(3000);
 	}
 
 	public void clickOnsaveAddToAgreement() {
 		scrollDown(SaveAddToAgreement);
+		waitABit(3000);
 		SaveAddToAgreement.click();
 		waitABit(6000);
 	}
 
 	public void clickOnOppTypeComm() {
 		scrollDown(OppTypeComm);
+		waitABit(3000);
 		OppTypeComm.click();
 		waitABit(1000);
 
@@ -502,138 +509,138 @@ public class newUserTermiteCallPage extends peststreamPage {
 
 	public void clickOnopportunity() {
 		Opportunity.click();
-		waitABit(1000);
+		waitABit(3000);
 	}
 
 	public void clickOnsaveAndCont() {
 		scrollUP(saveAndCont);
 		saveAndCont.click();
-		waitABit(1000);
+		waitABit(3000);
 	}
 
 	public void clickOncontinue_Insp() {
 		continue_Insp.click();
-		waitABit(1000);
+		waitABit(3000);
 	}
 
 	public void clickOnOppmarkAsLost() {
 		OppmarkAsLost.click();
-		waitABit(1000);
+		waitABit(3000);
 	}
 
 	public void clickOnOppDDReason() {
 		OppDDReason.click();
-		waitABit(1000);
+		waitABit(3000);
 
 		OppValueReason.click();
-		waitABit(1000);
+		waitABit(3000);
 	}
 
 	public void clickOndes(Map<String, String> testData) {
 		des.sendKeys(testData.get("Description"));
-		waitABit(1000);
+		waitABit(3000);
 	}
 
 	public void clickOnsave() {
 		save.click();
-		waitABit(1000);
+		waitABit(3000);
 	}
 
 	public void clickOnBundle() {
 		scrollDownLarge(Bundle);
 		Bundle.click();
-		waitABit(1000);
+		waitABit(3000);
 	}
 
 	public void clickOnDDBundle() {
 		DDBundle.click();
-		waitABit(1000);
+		waitABit(3000);
 		
 		ValueDDBundle.click();
-		waitABit(1000);
+		waitABit(3000);
 	}
 
 	public void clickOnAddBundle() {
 		AddBundle.click();
-		waitABit(1000);
+		waitABit(3000);
 	}
 
 	public void clickOnradioBttnAddToAgreement() {
 		RadioBttnAddToAgreement.click();
-		waitABit(1000);
+		waitABit(3000);
 	}
 
 	public void clickOnSave_BundleServices() {
 		Save_BundleServices.click();
-		waitABit(1000);
+		waitABit(3000);
 	}
 
 	public void clickOnScheduleEstimations() {
 		scrollDownLarge(ScheduleEstimations);
 		ScheduleEstimations.click();
-		waitABit(1000);
+		waitABit(3000);
 	}
 
 	public void clickOnDDAssignedTo() {
 		scrollDownLarge(DDAssignedTo);
 		DDAssignedTo.click();
-		waitABit(1000);
+		waitABit(3000);
 		
 		ValueDDAssignedTo.click();
-		waitABit(1000);
+		waitABit(3000);
 	}
 
 		public void saveScheduleEstimation() {
 		saveScheduleEstimation.click();
-		waitABit(1000);
+		waitABit(3000);
 	}
 
 		public void MarkLScheduleEstimation() {
 			MarkLScheduleEstimation.click();
-			waitABit(1000);
+			waitABit(3000);
 			
 		}
 
 		public void DDReason_ScheduleEstimation() {
 			DDReason_ScheduleEstimation.click();
-			waitABit(1000);
+			waitABit(3000);
 			
 			ValueDDReason_ScheduleEstimation.click();
-			waitABit(1000);
+			waitABit(3000);
 		}
 
 		public void des_ScheduleEstimation(Map<String, String> testData) {
 			des_ScheduleEstimation.sendKeys(testData.get("Description"));
-			waitABit(1000);
+			waitABit(3000);
 		}
 
 		public void save_ScheduleEstimation() {
 			save_ScheduleEstimation.click();
-			waitABit(1000);
+			waitABit(3000);
 		}
 
 		public void RangeTime_InsideScheduleEstimation() {
 			RangeTime_InsideScheduleEstimation.click();
-			waitABit(1000);
+			waitABit(3000);
 		}
 
 		public void DDTimeRange_InsideScheduleEstimation() {
 			DDTimeRange_InsideScheduleEstimation.click();
-			waitABit(1000);
+			waitABit(3000);
 			
 			ValueDDTimeRange_InsideScheduleEstimation.click();
-			waitABit(1000);
+			waitABit(3000);
 		}
 
 		public void fieldRadioBttn_FieldScheduleEstimation() {
 			fieldRadioBttn_FieldScheduleEstimation.click();
-			waitABit(1000);
+			waitABit(3000);
 			
 		}
 
 		public void click_on_InsideRadioBttn_Comm() {
 			InsideRadioBttn_Comm.click();
-			waitABit(1000);
+			waitABit(3000);
 		}
 
 		
@@ -672,7 +679,7 @@ public class newUserTermiteCallPage extends peststreamPage {
 
 		public void DDCat_StdService_FieldSTSaveComm() {
 			DDCat_StdService_FieldSTSaveComm.click();
-			waitABit(1000);
+			waitABit(3000);
 			
 			ValueDDCat_StdService_FieldSTSaveComm.click();
 			waitABit(1000);
@@ -697,7 +704,7 @@ public class newUserTermiteCallPage extends peststreamPage {
 		public void Save_StdService_FieldSTSaveComm() {
 			waitABit(2000);
 			Save_StdService_FieldSTSaveComm.click();
-			waitABit(1000);
+			waitABit(3000);
 		}
 
 		public void saveAndcontSelectService_FieldSTSaveComm() {
@@ -710,7 +717,7 @@ public class newUserTermiteCallPage extends peststreamPage {
 			waitABit(2000);
 			scrollUP(radioBttn_Service_FieldSTSaveComm);
 			radioBttn_Service_FieldSTSaveComm.click();
-			waitABit(1000);
+			waitABit(3000);
 		}
 
 		public void saveAndcontConfigureProposal_FieldSTSaveComm() {
@@ -723,23 +730,23 @@ public class newUserTermiteCallPage extends peststreamPage {
 		public void radioBttncashAgreement_FieldSTSaveComm() {
 			waitABit(2000);
 			radioBttncashAgreement_FieldSTSaveComm.click();
-			waitABit(1000);
+			waitABit(3000);
 		}
 
 		public void valuepaidamountAgreement_FieldSTSaveComm(Map<String, String> testData) {
 			waitABit(2000);
 			valuepaidamountAgreement_FieldSTSaveComm.sendKeys(testData.get("PaidAmount"));
-			waitABit(1000);
+			waitABit(3000);
 		}
 
 		public void radioBttnTANDCAgreement_FieldSTSaveComm() {
 			radioBttnTANDCAgreement_FieldSTSaveComm.click();
-			waitABit(1000);
+			waitABit(3000);
 		}
 
 		public void salesrepresentativesignAgreement_FieldSTSaveComm() {
 			salesrepresentativesignAgreement_FieldSTSaveComm.click();
-			waitABit(1000);
+			waitABit(3000);
 		}
 
 		public void saveandcontAgreement_FieldSTSaveComm() {

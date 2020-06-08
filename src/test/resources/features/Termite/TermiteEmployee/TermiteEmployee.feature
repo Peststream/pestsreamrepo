@@ -1,6 +1,5 @@
-@termite
-Feature: Test Cases for Termite Employee
-  I want to use this template for my feature file
+@run @termite @one
+Feature: Test Cases for Termite Employee.
 
   Background: 
     Given User successfully logged into system with valid credentials
@@ -81,6 +80,13 @@ Feature: Test Cases for Termite Employee
     Then user click on DDDept_SupervisorTimeSheetEmpTermite
     Then user click on DDTimeSlot_SupervisorTimeSheetEmpTermite
     Then user click on Save_SupervisorTimeSheetEmpTermite
-
- 
-  
+    
+    @LocationsInventoryTermite
+  Scenario: Test to Add Locations in Inventory Termite
+  When user click on InventoryTermite
+  Then user click on Locations_InventoryTermite
+  Then user click on AddLoc_LocInventoryTermite
+  Then user click on LocName_LocInventoryTermite
+  Then user click on LocNo_LocInventoryTermite
+  Then user click on LocType_LocInventoryTermite
+  Then user click on Save_LocInventoryTermite

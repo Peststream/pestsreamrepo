@@ -520,4 +520,9 @@ public class newUserPCROSteps extends pestreamSteps {
 		newuserpcropage.addToAgreement_ServiceBundleSelectPackagesOpportunity();
 	}
 
+	public void validateThePage() {
+		newuserpcropage.validateThePage();
+		
+	}
+
 }

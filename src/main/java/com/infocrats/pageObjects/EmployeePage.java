@@ -202,10 +202,10 @@ public class EmployeePage extends peststreamPage {
 	@FindBy(xpath = "//tr[1]//td[7]//a[1]")
 	private WebElementFacade Action;
 
-	@FindBy(xpath = "//select[@id='LeaveType']")
+	@FindBy(xpath = "(//span[@class='select2-chosen'])[2]")
 	private WebElementFacade DDLeaveType;
 
-	@FindBy(xpath = "//select[@id='LeaveType']//option[contains(text(),'Full Leave')]")
+	@FindBy(xpath = "(//div[@role='option'])[2]")
 	private WebElementFacade ValueLeaveType;
 
 	@FindBy(xpath = "//input[@id='LeaveStartTimeStr']")
@@ -223,16 +223,16 @@ public class EmployeePage extends peststreamPage {
 	@FindBy(xpath = "//button[@id='submitLeave']//span[@class='ladda-label'][contains(text(),'Save')]")
 	private WebElementFacade SaveLM;
 
-	@FindBy(xpath = "//select[@id='LeaveType']//option[contains(text(),'Half Leave')]")
+	@FindBy(xpath = "(//div[@role='option'])[3]")
 	private WebElementFacade ValueLeaveTypeHalf;
 
-	@FindBy(xpath = "//select[@id='LeaveType']//option[contains(text(),'Sick leave')]")
+	@FindBy(xpath = "(//div[@role='option'])[4]")
 	private WebElementFacade ValueLeaveTypeSick;
 
 	@FindBy(xpath = "//*[@id='ToDate1']")
 	private WebElementFacade DDToDateLM;
 
-	@FindBy(xpath = "/html/body/div[13]/div[1]/table/thead/tr[1]/th[3]/i")
+	@FindBy(xpath = "//div[@class='datepicker-days']//th[@class='next']")
 	private WebElementFacade LMnextMonthFull;
 
 	@FindBy(xpath = "//td[@class='day'][contains(text(),'28')]")
@@ -286,7 +286,7 @@ public class EmployeePage extends peststreamPage {
 	@FindBy(xpath = "//*[@id='DepartmentSysName']")
 	private WebElementFacade stdept;
 
-	@FindBy(xpath = "//*[@id='DepartmentSysName']/optgroup[2]/option")
+	@FindBy(xpath = "//option[contains(text(),'QA Automation Department1')]")
 	private WebElementFacade stdeptvalue;
 
 	@FindBy(xpath = "//*[@id='TimeSlot']")
@@ -315,6 +315,51 @@ public class EmployeePage extends peststreamPage {
 
 	@FindBy(xpath = "//*[@id='Description']")
 	private WebElementFacade st_description;
+	
+	@FindBy(xpath = "(//span[@class='select2-chosen'])[6]")
+	private WebElementFacade DDBranch_StaffEmp;
+	
+	@FindBy(xpath = "(//div[@role='option'])[3]")
+	private WebElementFacade ValueDDBranch_StaffEmp;
+	
+	@FindBy(xpath = "(//span[@class='select2-chosen'])[7]")
+	private WebElementFacade DDDivison;
+	
+	@FindBy(xpath = "(//div[@role='option'])[2]")
+	private WebElementFacade ValueDDDivison;
+	
+	@FindBy(xpath = "(//span[@class='select2-chosen'])[8]")
+	private WebElementFacade DDDepartment;
+	
+	@FindBy(xpath = "(//div[@role='option'])[2]")
+	private WebElementFacade ValueDDDepartment;
+	
+	@FindBy(xpath = "(//input[@name='FirstName'])[2]")
+	private WebElementFacade FName;
+	
+	@FindBy(xpath = "(//input[@name='LastName'])[2]")
+	private WebElementFacade LName;
+	
+	@FindBy(xpath = "(//input[@name='UserName'])[2]")
+	private WebElementFacade Username;
+	
+	@FindBy(xpath = "(//span[@class='select2-chosen'])[9]")
+	private WebElementFacade DDEmpType;
+	
+	@FindBy(xpath = "(//div[@class='select2-result-label'])[2]")
+	private WebElementFacade ValueDDEmpType;
+	
+	@FindBy(xpath = "(//span[@class='select2-chosen'])[11]")
+	private WebElementFacade DDRoleName;
+	
+	@FindBy(xpath = "(//div[@role='option'])[2]")
+	private WebElementFacade ValueDDRoleName;
+	
+	@FindBy(xpath = "(//span[@class='ladda-label'])[1]")
+	private WebElementFacade Save_StaffEmp;
+	
+	@FindBy(xpath = "(//div[@role='option'])[4]")
+	private WebElementFacade EmpTypeHalf;
 
 	@FindBy(xpath = "//*[@id='submitNonBillableTime']/span")
 	private WebElementFacade st_save;
@@ -352,7 +397,7 @@ public class EmployeePage extends peststreamPage {
 
 	public void addEmployee_btn() {
 		addEmployeeBtn.click();
-
+		waitABit(3000);
 	}
 
 	public void basicBranch_info() {
@@ -742,13 +787,13 @@ public class EmployeePage extends peststreamPage {
 
 	public void stDepartment() {
 		stdept.click();
-		waitABit(3000);
+		waitABit(5000);
 		stdeptvalue.click();
 	}
 
 	public void stTimeslot() {
 		sttimeslot.click();
-		waitABit(3000);
+		waitABit(5000);
 		sttimeslotvalue.click();
 	}
 
@@ -799,6 +844,79 @@ public class EmployeePage extends peststreamPage {
 		lm_to_time.clear();
 		waitABit(2000);
 		lm_to_time.sendKeys(testData.get("toLM_time"));
+	}
+
+	public void Branch_StaffEmp() {
+		waitABit(3000);
+		DDBranch_StaffEmp.click();
+		
+		waitABit(3000);
+		ValueDDBranch_StaffEmp.click();
+	}
+
+	public void Divison() {
+		waitABit(2000);
+		DDDivison.click();
+		
+		waitABit(2000);
+		ValueDDDivison.click();
+	}
+
+	public void Department() {
+		waitABit(2000);
+		DDDepartment.click();
+		
+		waitABit(2000);
+		ValueDDDepartment.click();
+	}
+
+	public void FName(Map<String, String> testData) {
+		waitABit(2000);
+		FName.sendKeys(testData.get("FName"));
+		
+	}
+
+	public void LName(Map<String, String> testData) {
+		waitABit(2000);
+		LName.sendKeys(testData.get("LName"));
+		
+	}
+
+	public void Username(Map<String, String> testData) {
+		waitABit(2000);
+		Username.sendKeys(testData.get("Username"));
+			}
+
+	public void EmpType() {
+		waitABit(2000);
+		DDEmpType.click();
+		
+		waitABit(2000);
+		ValueDDEmpType.click();
+	}
+
+	public void RoleName() {
+		waitABit(2000);
+		DDRoleName.click();
+		
+		waitABit(2000);
+		ValueDDRoleName.click();
+	}
+
+	public void Save_StaffEmp() {
+		waitABit(2000);
+		scrollDownLarge(Save_StaffEmp);
+		
+		waitABit(2000);
+		Save_StaffEmp.click();
+	}
+
+	public void EmpTypeHalf() {
+		waitABit(2000);
+		DDEmpType.click();
+		
+		waitABit(2000);
+		EmpTypeHalf.click();
 	}
 
 }
