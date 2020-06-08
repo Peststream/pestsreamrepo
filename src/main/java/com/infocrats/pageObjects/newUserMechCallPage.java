@@ -260,7 +260,7 @@ public class newUserMechCallPage extends peststreamPage {
 	@FindBy(xpath = "//*[@id='btnSubmitAgreement1']/span[1]")
 	private WebElementFacade saveandContinue_Signature;
 
-	@FindBy(xpath = "//button[@value='sendagreement']")
+	@FindBy(xpath = "/html//div[@id='SendEmail']/div[@class='vertical-alignment-helper']//form[@action='/Sale/Email/AddUpdateEmail']/div[@class='modal-body']//div[@class='col-md-12']/button[1]/span[@class='ladda-label']")
 	private WebElementFacade sendEmail_Agreement;
 
 	@FindBy(xpath = "//span[contains(.,'Send Agreement Link')]")
@@ -287,7 +287,7 @@ public class newUserMechCallPage extends peststreamPage {
 	@FindBy(xpath = "//*[@id='SecondRangeofTimeIdOpen']/option[3]")
 	private WebElementFacade value_second_Time_Range;
 
-	@FindBy(xpath = "//*[@id='CompleteSWO_IsCustomerNotPresent']")
+	@FindBy(xpath = "/html//input[@id='IsCustomerNotPresent']")
 	private WebElementFacade cust_NotPresent;
 
 	@FindBy(xpath = "//*[@id='uniform-rdoResidential']")
