@@ -98,7 +98,7 @@ Feature: Test for Call HVAC.
     And Select Account From The DD List
     And Click On Advance Search From Account
     And Click On View Icon From Action For First Account
-    And Close Alert
+   # And Close Alert
     And Enter Note
     And Click On Save Button
 
