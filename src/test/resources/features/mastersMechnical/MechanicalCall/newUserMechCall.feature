@@ -1,5 +1,5 @@
 @newusermechcall1
-Feature: Create pest control residential opportunity for new user.
+Feature: New USer Mech Call 1
 
   Background: 
     Given User successfully logged into system with valid credentials
