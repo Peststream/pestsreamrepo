@@ -405,6 +405,7 @@ public class newUserMechCallPage extends peststreamPage {
 	}
 
 	public void clickOnCallTab() {
+		waitABit(3000);
 		CallTab.click();
 
 	}
@@ -416,20 +417,24 @@ public class newUserMechCallPage extends peststreamPage {
 		companySearch.click();
 		waitABit(3000);
 		companySearchCreate.click();
+		waitABit(3000);
 	}
 
 	public void clickOnContact(Map<String, String> testData) {
 		Contact_CSSO.click();
-		waitABit(2000);
+		waitABit(3000);
 		Contact_CSSO.sendKeys(testData.get("Contact_CSSO"));
 		contactSearch.click();
-		waitABit(2000);
+		waitABit(3000);
 		contactSearchValue.click();
+		waitABit(3000);
 
 	}
 
 	public void clickOnSearch() {
+		waitABit(3000);
 		companySearch.click();
+		waitABit(3000);
 	}
 
 	public void enterPrimaryEmail(Map<String, String> testData) {
@@ -437,8 +442,9 @@ public class newUserMechCallPage extends peststreamPage {
 	}
 
 	public void enterCell(Map<String, String> testData) {
-
+		waitABit(2000);
 		PPhone_CSSO.sendKeys(testData.get("Primary_Cell"));
+		waitABit(2000);
 	}
 
 	public void clickOnBranch() {
@@ -446,6 +452,7 @@ public class newUserMechCallPage extends peststreamPage {
 		DDBranch_CSSO.click();
 		waitABit(3000);
 		ValueDDBranch_CSSO.click();
+		waitABit(2000);
 	}
 
 	public void clickOnDept() {
@@ -460,6 +467,7 @@ public class newUserMechCallPage extends peststreamPage {
 		DDService_CSSO.click();
 		waitABit(2000);
 		ValueDDService_CSSO.click();
+		waitABit(2000);
 
 	}
 
@@ -468,16 +476,22 @@ public class newUserMechCallPage extends peststreamPage {
 		DDSource_CSSO.click();
 		waitABit(2000);
 		ValueDDSource_CSSO.click();
+		waitABit(2000);
 		// scrollUP(Customer);
 	}
 
 	public void enterAcc_Alert(Map<String, String> testData) {
+		waitABit(2000);
 		AccAlert_CSSO.click();
+		waitABit(2000);
 		AccAlert_CSSO.sendKeys(testData.get("Acc_Alert_Mech"));
+		waitABit(2000);
 	}
 
 	public void enterProblemDescription(Map<String, String> testData) {
+		waitABit(2000);
 		ProbDes_CSSO.sendKeys(testData.get("Problem_Description_Mech"));
+		waitABit(2000);
 	}
 
 	public void selectOppType() {
@@ -485,11 +499,13 @@ public class newUserMechCallPage extends peststreamPage {
 		scrollDown(Opp_Type_Commercial);
 		waitABit(3000);
 		Opp_Type_Commercial.click();
+		waitABit(2000);
 
 	}
 
 	public void clickOnContinue() {
 		Continue_CSSO.click();
+		waitABit(2000);
 	}
 
 	public void ScheduleType() {
@@ -505,7 +521,7 @@ public class newUserMechCallPage extends peststreamPage {
 	}
 
 	public void Ser_Repair_Rate() {
-
+		waitABit(2000);
 		ser_Repair_Rate.click();
 	}
 
@@ -519,18 +535,23 @@ public class newUserMechCallPage extends peststreamPage {
 	public void ClickOnAdd() {
 		waitABit(3000);
 		add_Button.click();
+		waitABit(2000);
 	}
 
 	public void enter_Address(Map<String, String> testData) {
+		waitABit(2000);
 		Address.sendKeys(testData.get("Address"));
+		waitABit(2000);
 
 	}
 
 	public void enter_Zip(Map<String, String> testData) {
+		waitABit(2000);
 		Zip.sendKeys(testData.get("Zip"));
 	}
 
 	public void enter_City(Map<String, String> testData) {
+		waitABit(2000);
 		enter_city.sendKeys(testData.get("City"));
 
 	}
@@ -746,7 +767,7 @@ public class newUserMechCallPage extends peststreamPage {
 	}
 
 	public void clickOnNonStdEquipmentSubTab(Map<String, String> testData) {
-		waitABit(2000);
+ 		waitABit(2000);
 		nonStdEquipmentSubTab.click();
 
 	}
@@ -759,6 +780,7 @@ public class newUserMechCallPage extends peststreamPage {
 		serviceRepairRate_NonStd.click();
 		waitABit(2000);
 		repair_Name.sendKeys(testData.get("Repair_Name"));
+		waitABit(2000);
 
 	}
 
@@ -929,6 +951,7 @@ public class newUserMechCallPage extends peststreamPage {
 	public void clickOnServiceRR_After() {
 		waitABit(2000);
 		serviceRR_After.click();
+		waitABit(2000);
 	}
 
 	public void clickOnSpecific_Hour() {
@@ -936,11 +959,14 @@ public class newUserMechCallPage extends peststreamPage {
 	}
 
 	public void clickOnSplit_Price() {
+		waitABit(2000);
 		split_Price.click();
 	}
 
 	public void clickOnLabourType_Helper() {
+		waitABit(2000);
 		labourType_Helper.click();
+		waitABit(2000);
 	}
 
 	public void jTNew_Construction() {
@@ -950,6 +976,7 @@ public class newUserMechCallPage extends peststreamPage {
 	}
 
 	public void sendEmail_CustPresent() {
+		waitABit(2000);
 		boolean staleElement = true;
 		while (staleElement) {
 			try {
@@ -991,7 +1018,7 @@ public class newUserMechCallPage extends peststreamPage {
 
 	public void clickOnAddPurchase_Order() {
 		waitABit(4000);
-		// addPurchase_Order.click();
+		addPurchase_Order.click();
 		waitABit(7000);
 	}
 
@@ -1013,37 +1040,11 @@ public class newUserMechCallPage extends peststreamPage {
 
 	public void navigate_Back() {
 		waitABit(4000);
-		// getDriver().navigate().back();
-		// getDriver().navigate().refresh();
-		//
-		// getDriver().navigate().back();
-		// waitABit(3000);
-
-		// String allWindowHandle = getDriver().getWindowHandle();
-		// getDriver().switchTo().window(allWindowHandle);
-		// getDriver().get("https://pestream.com/Service/SubWorkOrder/PlumbingSubWorkOrder?workOrderId=634317&subWorkOrderId=45377");
-		// waitABit(2000);
-		/*
-		 * waitABit(4000); getDriver().navigate().to(
-		 * "https://pestream.com/Service/SubWorkOrder/PlumbingSubWorkOrder?workOrderId=634317&subWorkOrderId=45377"
-		 * ); waitABit(3000);
-		 */
-
-		// new
-		// getDriver().navigate().back();
-		// waitABit(3000);
-		// getDriver().navigate().back();
-		// waitABit(4000);
-
-		// new1
-		waitABit(3000);
 		((JavascriptExecutor) getDriver()).executeScript("window.history.go(-1)");
 
 		waitABit(3000);
 		((JavascriptExecutor) getDriver()).executeScript("window.history.go(-1)");
-		// JavascriptExecutor js = (JavascriptExecutor) getDriver();
-		// getDriver().executeScript("window.history.go(-1)");
-
+		
 	}
 
 	public void clickOnStop_Job() {

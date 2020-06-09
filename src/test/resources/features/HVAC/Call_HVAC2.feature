@@ -1,5 +1,5 @@
 @run @hvac
-Feature: Create pest control commercial opportunity for new user.
+Feature: Test for call Hvac 2
 
   Background: 
     Given User successfully logged into system with valid credentials
@@ -159,3 +159,24 @@ Feature: Create pest control commercial opportunity for new user.
     And Click on Add Database Entry Button
     And Select Or Enter General Test Info For Database
     And Click on Save	From Add Database Ezoom
+
+  #pass
+  @TestOpportunityInfoForHVAC14
+  Scenario: Test Customer DropDown For Account14
+    When User Click On Customer
+    And Select Account From The DD List
+    And Click On Advance Search From Account
+    And Click On View Icon From Action For First Account
+   #And Close Alert
+    And Enter Note
+    And Click On Save Button
+
+  #pass
+  @TestOpportunityInfoForHVAC17
+  Scenario: Test Customer DropDown For Company17
+    When User Click On Customer
+    And Select Customer From The DD List
+    And click on Advance Search from Add Company
+    And Click On Add Opportunity Icon From Action Company
+    And Select Account From DD
+    And Click on Continue From Add Opportunity
