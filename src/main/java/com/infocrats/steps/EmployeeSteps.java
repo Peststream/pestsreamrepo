@@ -439,6 +439,11 @@ public class EmployeeSteps {
 		
 	}
 
+	public void Branch_RouteEmployee() {
+		employeepage.Branch_RouteEmployee();
+		
+	}
+
 	
 
 }

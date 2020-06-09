@@ -1,4 +1,4 @@
-@run
+@run @pc
 Feature: Test for Customer.
 
   Background: 
