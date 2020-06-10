@@ -1,4 +1,4 @@
-@newusermechcall2
+@mech123 @newusermechcall2
 Feature: New User Mech Call 2
 
   Background: 
