@@ -1,12 +1,15 @@
 package com.infocrats.steps;
 
+import java.util.Map;
+
 import com.infocrats.pageObjects.CustomerPage;
+import com.infocrats.utils.JsonHelper;
 
 import net.thucydides.core.annotations.Step;
 
 public class CustomerSteps extends pestreamSteps {
 	
-	
+	private Map<String, String> jsonData;
 	CustomerPage customerpage;
 
 	@Step
@@ -231,13 +234,15 @@ public class CustomerSteps extends pestreamSteps {
 		customerpage.savebtn();
 	}
 
-	public void FirstName_ContactCustomer() {
-		customerpage.FirstName_ContactCustomer();
+	public void FirstName_ContactCustomer() throws Exception {
+		jsonData = JsonHelper.readJsonElement("call_Termite.json", "CallData");
+		customerpage.FirstName_ContactCustomer(jsonData);
 		
 	}
 
-	public void PEmail_ContactCustomer() {
-		customerpage.PEmail_ContactCustomer();
+	public void PEmail_ContactCustomer() throws Exception {
+		jsonData = JsonHelper.readJsonElement("call_Termite.json", "CallData");
+		customerpage.PEmail_ContactCustomer(jsonData);
 		
 	}
 

@@ -1,5 +1,7 @@
 package com.infocrats.pageObjects;
 
+import java.util.Map;
+
 import org.openqa.selenium.Keys;
 
 import com.infocrats.utils.BaseUtills;
@@ -110,10 +112,10 @@ public class CustomerPage extends peststreamPage {
 	@FindBy(xpath = "//*[@id=\"form0\"]/div[2]/button[2]/span")
 	private WebElementFacade Save_Button_Add_Company;
 	
-	@FindBy(xpath = "/html/body/div[3]/div[1]/div/ul/li[4]/ul/li[5]/a/span")
+	@FindBy(xpath = "//span[@class='title'][contains(text(),'Contact')]")
 	private WebElementFacade Contact_Tab_Left_Pannel;
 	
-	@FindBy(xpath = "/html/body/div[3]/div[2]/div[1]/div/div[2]/div/div/div[1]/div[1]/div/div/button/span")
+	@FindBy(xpath = "//span[contains(text(),'Add Contact')]")
 	private WebElementFacade Add_Contact_Button_Inside_Contact;
 	
 	@FindBy(xpath = "//*[@id=\"Title\"]")
@@ -519,15 +521,15 @@ public class CustomerPage extends peststreamPage {
 		waitABit(2000);
 	}
 
-	public void FirstName_ContactCustomer() {
+	public void FirstName_ContactCustomer(Map<String, String> testData) {
 		FirstName_ContactCustomer.click();
-		FirstName_ContactCustomer.sendKeys("New Company");
+		FirstName_ContactCustomer.sendKeys(testData.get("ContName"));
 		waitABit(4000);
 	}
 
-	public void PEmail_ContactCustomer() {
+	public void PEmail_ContactCustomer(Map<String, String> testData) {
 		PEmail_ContactCustomer.click();
-		PEmail_ContactCustomer.sendKeys("New Company");
+		PEmail_ContactCustomer.sendKeys(testData.get("PEmail"));
 		waitABit(4000);
 	}
 

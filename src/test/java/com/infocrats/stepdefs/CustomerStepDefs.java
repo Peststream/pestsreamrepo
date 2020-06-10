@@ -221,12 +221,12 @@ public void user_Clicks_on_Save() {
 
 
 @Then("^user click on FirstName_ContactCustomer$")
-public void user_click_on_FirstName_ContactCustomer() {
+public void user_click_on_FirstName_ContactCustomer() throws Exception {
 	customersteps.FirstName_ContactCustomer();
 }
 
 @Then("^user click on PEmail_ContactCustomer$")
-public void user_click_on_PEmail_ContactCustomer() {
+public void user_click_on_PEmail_ContactCustomer() throws Exception {
 	customersteps.PEmail_ContactCustomer();
 }
 
