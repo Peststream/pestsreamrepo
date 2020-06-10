@@ -220,4 +220,27 @@ public void user_Clicks_on_Save() {
 }
 
 
+@Then("^user click on FirstName_ContactCustomer$")
+public void user_click_on_FirstName_ContactCustomer() {
+	customersteps.FirstName_ContactCustomer();
+}
+
+@Then("^user click on PEmail_ContactCustomer$")
+public void user_click_on_PEmail_ContactCustomer() {
+	customersteps.PEmail_ContactCustomer();
+}
+
+@Then("^user click on Source_ContactCustomer$")
+public void user_click_on_Source_ContactCustomer() {
+	customersteps.Source_ContactCustomer();
+}
+
+
+@Then("^user click on Save_ContactCustomer$")
+public void user_click_on_Save_ContactCustomer() {
+	customersteps.Save_ContactCustomer();
+}
+
+
+
 }

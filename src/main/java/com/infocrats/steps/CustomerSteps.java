@@ -231,6 +231,26 @@ public class CustomerSteps extends pestreamSteps {
 		customerpage.savebtn();
 	}
 
+	public void FirstName_ContactCustomer() {
+		customerpage.FirstName_ContactCustomer();
+		
+	}
+
+	public void PEmail_ContactCustomer() {
+		customerpage.PEmail_ContactCustomer();
+		
+	}
+
+	public void Source_ContactCustomer() {
+		customerpage.Source_ContactCustomer();
+		
+	}
+
+	public void Save_ContactCustomer() {
+		customerpage.Save_ContactCustomer();
+		
+	}
+
 
 	
 

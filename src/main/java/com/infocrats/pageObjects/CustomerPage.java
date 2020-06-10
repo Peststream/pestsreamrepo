@@ -210,8 +210,20 @@ public class CustomerPage extends peststreamPage {
 	@FindBy(xpath = "//*[@id=\"form0\"]/div[2]/button[2]/span")
 	private WebElementFacade save;
 	
-	@FindBy(xpath = "//*[@id=\"form0\"]/div[2]/button[2]/span")
-	private WebElementFacade saveform;
+	@FindBy(xpath = "(//input[contains(@type,'text')])[18]")
+	private WebElementFacade FirstName_ContactCustomer;
+	
+	@FindBy(xpath = "(//input[contains(@type,'text')])[21]")
+	private WebElementFacade PEmail_ContactCustomer;
+	
+	@FindBy(xpath = "//span[@class='filter-option pull-left']")
+	private WebElementFacade DDSource_ContactCustomer;
+	
+	@FindBy(xpath = "(//a[contains(@class,'opt ')])[2]")
+	private WebElementFacade ValueDDSource_ContactCustomer;
+	
+	@FindBy(xpath = "(//span[@class='ladda-label'])[1]")
+	private WebElementFacade Save_ContactCustomer;
 	
 	@Override
 	public WebElementFacade getUniqueElement() {
@@ -506,5 +518,29 @@ public class CustomerPage extends peststreamPage {
 		
 		waitABit(2000);
 	}
+
+	public void FirstName_ContactCustomer() {
+		FirstName_ContactCustomer.click();
+		FirstName_ContactCustomer.sendKeys("New Company");
+		waitABit(4000);
+	}
+
+	public void PEmail_ContactCustomer() {
+		PEmail_ContactCustomer.click();
+		PEmail_ContactCustomer.sendKeys("New Company");
+		waitABit(4000);
+	}
+
+	public void Source_ContactCustomer() {
+		DDSource_ContactCustomer.click();
+		waitABit(4000);
+		
+		ValueDDSource_ContactCustomer.click();
+		waitABit(4000);
+	}
+
+	public void Save_ContactCustomer() {
+		Save_ContactCustomer.click();
+		waitABit(2000);	}
 
 }
