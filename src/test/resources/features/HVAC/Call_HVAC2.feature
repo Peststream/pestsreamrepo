@@ -18,7 +18,7 @@ Feature: Test for call Hvac 2
     And Click on Continue From Add Opportunity
 
   #pass
-  @TestOpportunityInfoForHVAC1
+  @TestOpportunityInfoForHVA2
   Scenario: Test opportunity info (general info) for HVAC2
     When user clicked on call tab
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
@@ -33,7 +33,7 @@ Feature: Test for call Hvac 2
     And click on Save button from general info
 
   #pass
-  @TestOpportunityInfoForHVAC1
+  @TestOpportunityInfoForHVA3
   Scenario: Test opportunity info (general info) for HVAC3
     When user clicked on call tab
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
@@ -52,7 +52,7 @@ Feature: Test for call Hvac 2
     And Click on save from Work Order
 
   #pass
-  @TestOpportunityInfoForHVAC1
+  @TestOpportunityInfoForHVA4
   Scenario: Test opportunity info (general info) for HVAC4
     When user clicked on call tab
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
@@ -75,7 +75,7 @@ Feature: Test for call Hvac 2
     And Click on save from Work Order
 
   #pass
-  @TestOpportunityInfoForHVAC1
+  @TestOpportunityInfoForHVA5
   Scenario: Test CSR Dashboard for HVAC5
     When user click on CSR Dashboard
     When user click on Advance Search from CSR Dashboard
@@ -159,17 +159,6 @@ Feature: Test for call Hvac 2
     And Click on Add Database Entry Button
     And Select Or Enter General Test Info For Database
     And Click on Save	From Add Database Ezoom
-
-  #pass
-  @TestOpportunityInfoForHVAC14
-  Scenario: Test Customer DropDown For Account14
-    When User Click On Customer
-    And Select Account From The DD List
-    And Click On Advance Search From Account
-    And Click On View Icon From Action For First Account
-   #And Close Alert
-    And Enter Note
-    And Click On Save Button
 
   #pass
   @TestOpportunityInfoForHVAC17
