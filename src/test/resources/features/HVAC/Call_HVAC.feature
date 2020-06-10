@@ -92,16 +92,15 @@ Feature: Test for Call HVAC.
     And Click on Save	From Add Account
 
   #pass
-  @TestOpportunityInfoForHVAC1
+  @TestOpportunityInfoForHVA14
   Scenario: Test Customer DropDown For Account14
     When User Click On Customer
     And Select Account From The DD List
     And Click On Advance Search From Account
     And Click On View Icon From Action For First Account
-   # And Close Alert
+   And Close Alert
     And Enter Note
     And Click On Save Button
-
   #pass
   @TestOpportunityInfoForHVAC
   Scenario: Test Customer DropDown For Account15
