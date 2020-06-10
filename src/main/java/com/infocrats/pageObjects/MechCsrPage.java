@@ -1,5 +1,9 @@
 package com.infocrats.pageObjects;
 
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.touch.DownAction;
+import org.openqa.selenium.remote.server.handler.interactions.touch.Down;
+
 import com.infocrats.utils.BaseUtills;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
@@ -40,10 +44,10 @@ public class MechCsrPage extends peststreamPage {
 	@FindBy(xpath = "//div[@id='sample_1_paginate']//a[contains(text(),'3')]")
 	private WebElementFacade ThreeNext_CallBttn_CSRDB_Mech;
 	
-	@FindBy(xpath = "//a[contains(text(),'1508')]")
+	@FindBy(xpath = "//*[@id='sample_1']/tbody/tr[1]/td[2]/a")
 	private WebElementFacade AccountNo_CSRDB_Mech;
 	
-	@FindBy(xpath = "//button[contains(text(),'Ok')]")
+	@FindBy(xpath = "/html//div[@id='DivAccountAlertPopup']/div[@class='vertical-alignment-helper']/div[@class='modal-dialog vertical-align-center']//div[@class='modal-body']/div[@class='modal-body-footer']//button[@type='button']")
 	private WebElementFacade OkAccountAlert_CSRDB_Mech;
 	
 	@FindBy(xpath = "//body/div/div/div/div/div/div/div/div/div/div[2]/button[1]")
@@ -64,7 +68,7 @@ public class MechCsrPage extends peststreamPage {
 	@FindBy(xpath = "//div[@id='s2id_DepartmentSysName']//a//span//b")
 	private WebElementFacade DDDep_Opp_CSRDB_Mech;
 	
-	@FindBy(xpath = "(//*[starts-with(@id,'select2-result-label-')])[5]")
+	@FindBy(xpath = "//div[@id='select2-drop']/ul[@role='listbox']/li[2]/ul/li[@role='presentation']/div[@role='option']")
 	private WebElementFacade ValueDDDep_Opp_CSRDB_Mech;
 	
 	@FindBy(xpath = "//div[@id='s2id_PrimaryServiceId']//a//span//b")
@@ -136,10 +140,10 @@ public class MechCsrPage extends peststreamPage {
 	@FindBy(xpath = "//button[@id='btnSubmit']//span[contains(text(),'Save')]")
 	private WebElementFacade Save_AddWOBttn_CSRDB_Mech;
 	
-	@FindBy(xpath = "//button//span[contains(text(),'Select')]")
+	@FindBy(xpath = "//div[@id='s2id_ddlServiceCategories']//span[@class='select2-chosen']")
 	private WebElementFacade DDServiceCategory_AddWOBttn_CSRDB_Mech;
 	
-	@FindBy(xpath = "//a//span[contains(text(),'Mechanical')]")
+	@FindBy(xpath = "//div[@id='select2-drop']/ul[@role='listbox']/li[4]/ul/li[@role='presentation']/div[@role='option']")
 	private WebElementFacade ValueDDServiceCategory_AddWOBttn_CSRDB_Mech;
 	
 	@FindBy(xpath = "//input[@id='serviceWohead']")
@@ -276,6 +280,7 @@ public class MechCsrPage extends peststreamPage {
 
 
 	public void AccountNo_CSRDB_Mech() {
+
 		AccountNo_CSRDB_Mech.click();
 		waitABit(3000);
 		
@@ -327,7 +332,7 @@ public class MechCsrPage extends peststreamPage {
 		
 		String allWindowHandle = getDriver().getWindowHandle();
 		getDriver().switchTo().window(allWindowHandle);
-		getDriver().get("https://tcr.pestream.com/Sale/PhoneSales?accountNo=1508&returnUrl=/Sales/CrmAccount/AccountDetail?accountId=333151");
+		getDriver().get("https://pestream.com/Sale/PhoneSales?accountNo=4468&returnUrl=/Sales/CrmAccount/AccountDetail?accountId");
 		waitABit(2000);
 
 	}
@@ -411,12 +416,12 @@ public class MechCsrPage extends peststreamPage {
 
 	public void AddWOBttn_CSRDB_Mech() {
 		AddWOBttn_CSRDB_Mech.click();
-		waitABit(3000);
+		waitABit(6000);
 		
 		String allWindowHandle = getDriver().getWindowHandle();
 		getDriver().switchTo().window(allWindowHandle);
-		getDriver().get("https://tcr.pestream.com/Services/WorkOrder/Manage?accountNo=1508&returnUrl=/Sales/CrmAccount/AccountDetail?accountId=333151");
-		waitABit(2000);
+		getDriver().get("https://pestream.com/Services/WorkOrder/Manage?accountNo=4731&returnUrl=/Sales/CrmAccount/AccountDetail?accountId");
+		waitABit(5000);
 	}
 
 
@@ -601,7 +606,6 @@ public class MechCsrPage extends peststreamPage {
 
 
 
-
 	public void Services_AddWOBttn_CSRDB_Mech() {
 		Services_AddWOBttn_CSRDB_Mech.click();
 		waitABit(3000);
@@ -612,7 +616,7 @@ public class MechCsrPage extends peststreamPage {
 
 
 	public void ValueServices_AddWOBttn_CSRDB_Mech() {
-		ValueServices_AddWOBttn_CSRDB_Mech.click();
+		Services_AddWOBttn_CSRDB_Mech.sendKeys(Keys.ARROW_DOWN.TAB);
 		waitABit(3000);
 	}
 

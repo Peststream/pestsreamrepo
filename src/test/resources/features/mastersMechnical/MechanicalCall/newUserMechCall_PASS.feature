@@ -1,4 +1,4 @@
-@run @mechcall
+@run @mechcallpass
 Feature: Test for new user Mech Call for Mech.
 
   Background: 
@@ -51,37 +51,6 @@ Feature: Test for new user Mech Call for Mech.
     Then user click on Schedule Time
     Then user selects Primary Route
     And user clicks on Save Button Mech
-
-  #Pass_Fixed
-  @CSSO_JobtypeAdd_WorkOrder_Save_Mech
-  Scenario: Test to Continue General Info of ScheduleServiceOrder with branch Mech and Job Type ,Save and open Work Order.
-    When user clicked on CallTab
-    Then user enters Company
-    Then user enters Contact
-    And user click on search
-    Then user enters Primary Email
-    Then user enters Cell
-    Then user selects Branch Mech
-    Then user selects Service
-    Then user selects Source
-    Then user enters Account Alert
-    Then user enters Problem Description
-    Then user click on Continue
-    Then user selects on job type
-    Then user click on Flat Rate
-    Then user enters Job Description
-    Then user click on Add
-    Then user click on Service Address
-    Then user enters Address
-    Then user enters Zip
-    Then user enters City
-    Then user click on Schedule Time
-    Then user selects Primary Route
-    And user clicks on Save Button Mech
-    Then user click on Advance Search Mech
-    Then user selects Work order
-    Then user navigates Back twice
-    And user checks the details and Save
 
   #Pass_Fixed
   @CSSO_GereralInfo_TMaterial_Save
@@ -553,36 +522,6 @@ Feature: Test for new user Mech Call for Mech.
     Then user click on service appointments
     Then user click on name
 
-  #Pass
-  @CSSO__JTNew_After_HolidayHour_Range_SRRStd_LMechanic_ServiceApp_Mech
-  Scenario: Test Opportunity using PrimaryRoute.
-    When user clicked on CallTab
-    Then user enters Company
-    Then user enters Contact
-    And user click on search
-    Then user enters Primary Email
-    Then user enters Cell
-    Then user selects Branch Mech
-    Then user selects Service
-    Then user selects Source
-    Then user enters Account Alert
-    Then user enters Problem Description
-    Then user click on Continue
-    Then user selects on job type (New Construction)
-    Then user click on Time and Material
-    Then user enters Job Description
-    Then user click on Add
-    Then user click on Service Address
-    Then user enters Address
-    Then user enters Zip
-    Then user enters City
-    Then user click on Address Sub Type(residential)
-    Then user click on Range 	Time
-    Then select Time Range
-    Then select Second Time Range
-    Then user selects Primary Route
-    And user clicks on Save Button Mech
-
   #PassFixed
   @CSSO__JTNew_After_SpecificHour__Split_Range_Helper_Save_Mech
   Scenario: Test Opportunity using Specific Hour.
@@ -866,76 +805,7 @@ Feature: Test for new user Mech Call for Mech.
     Then user click on Assigned,Estimated Duration
     Then user click on saveInfo Button
 
-  #Pass_Fixed
-  @CSSO_ScheduleEstimation_Comm_Field_Specific_NonStd_CustPresent_Mech
-  Scenario: Test ScheduleEstimation Commercial with FieldSpecific when Cust is Present and send email
-    When user clicked on CallTab
-    Then user enters Company
-    Then user enters Contact
-    And user click on search
-    Then user enters Primary Email
-    Then user enters Cell
-    Then user selects Branch Mech
-    Then user selects Service
-    Then user selects Source
-    Then user click on schedule Type(schedule estimation)
-    Then user enters Account Alert
-    Then user enters Problem Description
-    Then user click on Commercial
-    Then user click on continue
-    Then user click on Service Address
-    Then user enters Address
-    Then user enters Zip
-    Then user enters City
-    Then user click on Address Sub Type(Commercial)
-    Then user click on sales type (field)
-    Then user click on Assigned,Estimated Duration
-    Then user click on saveInfo Button
-    Then user click on Opportunity_Mech
-    Then user click on Save & Continue General Info
-    Then user click on continue Inspection
-    Then user click on Non Standard Equipment subTab
-    Then user click on Service Repair Rate(non standard)
-    Then user click on Save Equipment
-    Then user click on Save & Continue Equipment
-    Then user click on Save & Continue Customer Review
-    Then user click on Payment type
-    Then user Enters Amount paid
-    Then user click on I Agree Terms & Condition
-    Then user click on Electronic Signature
-    Then user click on Customer Signature
-    Then user click on Sales Representative Signature
-    Then user click on Save & Continue Signatures
-    Then user click on send email(Cust Present)
-
-  #Pass_Fixed
-  @CSSO_ScheduleEstimation_Commercial_Field_TimeRange_Save_Mech
-  Scenario: Test Commercial ScheduleEstimation with FieldTimeRange and save
-    When user clicked on CallTab
-    Then user enters Company
-    Then user enters Contact
-    And user click on search
-    Then user enters Primary Email
-    Then user enters Cell
-    Then user selects Branch Mech
-    Then user selects Service
-    Then user selects Source
-    Then user click on schedule Type(schedule estimation)
-    Then user enters Account Alert
-    Then user enters Problem Description
-    Then user click on Commercial
-    Then user click on continue
-    Then user click on Service Address
-    Then user enters Address
-    Then user enters Zip
-    Then user enters City
-    Then user click on Address Sub Type(Commercial)
-    Then user click on sales type (field)
-    Then user click on Range 	Time
-    Then select Time Range
-    Then select Second Time Range
-    Then user click on Assigned,Estimated Duration
-    Then user click on saveInfo Button
+ 
 
   #Pass_Email
   @CSSO_SchEstimation_Resi_Field_Specific_NonStd_CustPresent_Mech
