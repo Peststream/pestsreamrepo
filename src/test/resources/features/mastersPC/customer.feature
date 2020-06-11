@@ -58,13 +58,11 @@ Feature: Test for Customer.
     When user clicked on customer tab in left panel
     Then User clicked on contact tab
     And user clicked on Add Contact Button
-    Then user enter title
-    Then user enter First Name
-    Then user enter Last Name
-    And User enter primary Email
-    And user enter primary phone
-    Then user select Source from DDL
-    Then User click on save button
+    Then user click on FirstName_ContactCustomer
+    Then user click on PEmail_ContactCustomer
+    Then user click on Source_ContactCustomer
+    Then user click on Save_ContactCustomer
+    
 
   @DBFCtS
   Scenario: To check Database Entry From Customer Tab and Save

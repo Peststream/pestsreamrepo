@@ -226,6 +226,13 @@ public class CustomerPage extends peststreamPage {
 	
 	@FindBy(xpath = "(//span[@class='ladda-label'])[1]")
 	private WebElementFacade Save_ContactCustomer;
+
+	@FindBy(xpath = "//span[contains(.,'Nothing selected')]")
+	private WebElementFacade DDSource_OpportunityCustomer;
+	
+	@FindBy(xpath = "(//span[contains(.,'CustomerPortal App')])[2]")
+	private WebElementFacade ValueDDSource_OpportunityCustomer;
+	
 	
 	@Override
 	public WebElementFacade getUniqueElement() {
@@ -496,11 +503,17 @@ public class CustomerPage extends peststreamPage {
 		 	call1.click();
 		 	waitABit(3000);
 		 	
+		 	DDSource_OpportunityCustomer.click();
+			waitABit(2000);	
+			
+			ValueDDSource_OpportunityCustomer.click();
+			waitABit(2000);
+		 	
 		 	waitABit(3000);
 		 	insidesale.click();
 		 	waitABit(3000);
 			
-			insidesale.click();
+		 	insidesale1.click();
 			waitABit(3000);
 			urgency.click();
 			waitABit(3000);
@@ -547,4 +560,8 @@ public class CustomerPage extends peststreamPage {
 		Save_ContactCustomer.click();
 		waitABit(2000);	}
 
-}
+	public void DDSource_OpportunityCustomer() {
+			
+	}
+	
+	  }

@@ -256,6 +256,11 @@ public class CustomerSteps extends pestreamSteps {
 		
 	}
 
+	public void DDSource_OpportunityCustomer() {
+		customerpage.DDSource_OpportunityCustomer();
+		
+	}
+
 
 	
 
