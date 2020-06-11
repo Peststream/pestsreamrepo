@@ -1,4 +1,4 @@
-@run @pcro2 @pest
+@run @pcro2 @pests
 Feature: Test for new user PCRO2 for Pest.
 
   Background: 
