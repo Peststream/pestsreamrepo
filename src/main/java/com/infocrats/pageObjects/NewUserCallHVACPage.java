@@ -2,6 +2,7 @@ package com.infocrats.pageObjects;
 
 import java.util.Map;
 
+import org.codehaus.groovy.ast.stmt.ContinueStatement;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.remote.server.handler.AcceptAlert;
 
@@ -11,6 +12,8 @@ import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
 
 public class NewUserCallHVACPage extends peststreamPage {
+	private static final Boolean True = null;
+
 	BaseUtills utills = new BaseUtills();
 
 	@FindBy(xpath = "//*[@id=\"select2-chosen-5\"]")
@@ -726,6 +729,7 @@ public class NewUserCallHVACPage extends peststreamPage {
 	}
 
 	public void ClickViewIconFromAction() throws InterruptedException {
+		Thread.sleep(2000);
 		ViewIconFromAction.click();
 		Thread.sleep(4000);
 
@@ -786,7 +790,7 @@ public class NewUserCallHVACPage extends peststreamPage {
 
 	public void ClickOnDeleteFromActionForCompany() {
 		waitABit(2000);
-		DeleteIconFromActionForCompany.click();
+	
 
 	}
 
@@ -797,7 +801,7 @@ public class NewUserCallHVACPage extends peststreamPage {
 
 	public void CancelTheDeleteAlert() {
 		waitABit(2000);
-		DeclineAlert.click();
+		
 	}
 
 	public void ClickContactFromCustomerDD() {
@@ -909,8 +913,16 @@ public class NewUserCallHVACPage extends peststreamPage {
 	}
 
 	public void clickCloseForAlert() {
-		waitABit(2000);
-	CloseBtnForAlert.click();
+		try {
+			waitABit(2000);
+			CloseBtnForAlert.click();
+			
+		} catch (Exception e) {
+			waitABit(2000);
 		
+
+		}
 	}
 }
+			
+	

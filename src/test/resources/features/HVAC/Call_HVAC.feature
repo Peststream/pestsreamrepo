@@ -54,7 +54,7 @@ Feature: Test for Call HVAC.
     And Click on Save Button
 
   #pass
-  @TestOpportunityInfoForHVAC
+  @TestOpportunityInfoForHVA10
   Scenario: Test CSR Dashboard for HVAC10
     When user click on CSR Dashboard
     When user click on Advance Search from CSR Dashboard
@@ -98,7 +98,6 @@ Feature: Test for Call HVAC.
     And Select Account From The DD List
     And Click On Advance Search From Account
     And Click On View Icon From Action For First Account
-   And Close Alert
     And Enter Note
     And Click On Save Button
   #pass
@@ -120,7 +119,7 @@ Feature: Test for Call HVAC.
     And Click on Save	From Add Account
 
   #pass
-  @TestOpportunityInfoForHVAC
+  @TestOpportunityInfoForHVA17
   Scenario: Test Customer DropDown For Company17
     When User Click On Customer
     And Select Customer From The DD List
@@ -130,7 +129,7 @@ Feature: Test for Call HVAC.
     And Click on Continue From Add Opportunity
 
   #pass
-  @TestOpportunityInfoForHVAC
+  @TestOpportunityInfoForHVA18
   Scenario: Test Customer DropDown For Company18
     When User Click On Customer
     And Select Customer From The DD List
@@ -140,16 +139,16 @@ Feature: Test for Call HVAC.
     And Click On Save Button
 
   #pass
-  @TestOpportunityInfoForHVAC
+  @TestOpportunityInfoForHVA19
   Scenario: Test Customer DropDown For Company19
     When User Click On Customer
     And Select Customer From The DD List
     And click on Advance Search from Add Company
     And Click On Delete Icon From Action Company
-    And Confirm The Alert
+  
 
   #pass
-  @TestOpportunityInfoForHVAC
+  @TestOpportunityInfoForHVA20
   Scenario: Test Customer DropDown For Company20
     When User Click On Customer
     And Select Customer From The DD List
