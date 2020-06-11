@@ -182,7 +182,7 @@ public class CustomerPage extends peststreamPage {
 	private WebElementFacade dept;
 	
 	
-	@FindBy(xpath = "//*[@id=\"select2-result-label-20\"]/text()")
+	@FindBy(xpath = "(//div[@role='option'])[3]")
 	private WebElementFacade dept1;
 	
 	
@@ -190,26 +190,26 @@ public class CustomerPage extends peststreamPage {
 	private WebElementFacade call;
 	
 	
-	@FindBy(xpath = "/html[1]/body[1]/div[16]/ul[1]/li[2]/div[1]")
+	@FindBy(xpath = "(//div[@role='option'])[2]")
 	private WebElementFacade call1;
 
 	@FindBy(xpath = "/html[1]/body[1]/div[3]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/form[1]/div[1]/div[2]/div[7]/div[1]/div[1]/div[1]/a[1]/span[1]")
 	private WebElementFacade insidesale;
 
 	
-	@FindBy(xpath = "/html[1]/body[1]/div[18]/ul[1]/li[3]/div[1]")
+	@FindBy(xpath = "(//div[@role='option'])[3]")
 	private WebElementFacade insidesale1;
 
 	@FindBy(xpath = "/html[1]/body[1]/div[3]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/form[1]/div[1]/div[2]/div[7]/div[2]/div[1]/div[1]/a[1]/span[1]")
 	private WebElementFacade urgency;
 	
-	@FindBy(xpath = "/html[1]/body[1]/div[19]/ul[1]/li[3]/div[1]")
+	@FindBy(xpath = "(//div[@role='option'])[2]")
 	private WebElementFacade urgency1;
 	
-	@FindBy(xpath = "(//*[@id=\"FlowType\"])[3]")
+	@FindBy(xpath = "(//input[@name='FlowType'])[1]")
 	private WebElementFacade radioResidential;
 	
-	@FindBy(xpath = "//*[@id=\"form0\"]/div[2]/button[2]/span")
+	@FindBy(xpath = "(//span[@class='ladda-label'])[1]")
 	private WebElementFacade save;
 	
 	@FindBy(xpath = "(//input[contains(@type,'text')])[18]")
@@ -487,33 +487,35 @@ public class CustomerPage extends peststreamPage {
 	public void ddlDeptReasonServiceSourceInsideSaleUrgency() {
 		
 			dept.click();
-			waitABit(2000);
+			waitABit(3000);
 			dept1.click();
-			waitABit(2000);
+			waitABit(3000);
 			call.click();
-			waitABit(2000);
+			waitABit(3000);
 		
 		 	call1.click();
-		 	waitABit(2000);
+		 	waitABit(3000);
+		 	
+		 	waitABit(3000);
 		 	insidesale.click();
-		 	waitABit(2000);
+		 	waitABit(3000);
 			
 			insidesale.click();
-			waitABit(2000);
+			waitABit(3000);
 			urgency.click();
-			waitABit(2000);
+			waitABit(3000);
 		 	urgency1.click();
-		
+		 	waitABit(3000);
 	}
 
 	public void residentialRadio() {
 		radioResidential.click();
-		waitABit(2000);
+		waitABit(3000);
 	}
 
 	public void confindence() {
 	save.click();
-	waitABit(2000);
+	waitABit(3000);
 	}
 
 	public void savebtn() {
