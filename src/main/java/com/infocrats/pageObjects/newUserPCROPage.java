@@ -14,7 +14,6 @@ import net.serenitybdd.core.pages.WebElementFacade;
 
 public class newUserPCROPage extends peststreamPage {
 	BaseUtills utills = new BaseUtills();
-	
 
 	@FindBy(xpath = "//*[@id=\"frmGeneralInfo\"]/div/div/div[3]/h4")
 	private WebElementFacade call_page_tittle;
@@ -96,16 +95,10 @@ public class newUserPCROPage extends peststreamPage {
 
 	@FindBy(xpath = "//*[@id=\"view_container\"]/div/div/div[2]/div/div/div/form/span/section/div/span/div/div/ul/li[2]/div")
 	private WebElementFacade accountName;
-	
-	@FindBy(xpath="//*[@id='view_container']/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div/div/ul/li[2]/div/div/div[2]")
+
+	@FindBy(xpath = "//*[@id='view_container']/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div/div/ul/li[2]/div/div/div[2]")
 	private WebElementFacade gmailAccount;
 
-	
-	
-
-	
-
-	
 	@FindBy(xpath = "//*[@id=\"uniform-rdoCommercial\"]/span")
 	private WebElementFacade Commercial_RadioBtn;
 
@@ -459,19 +452,19 @@ public class newUserPCROPage extends peststreamPage {
 
 	@FindBy(xpath = "//div[@class='signinbutton']")
 	private WebElementFacade OutLook_LogIn_Bttn;
-	
+
 	@FindBy(xpath = "(//a[@class='btn btn-icon-only small-btn-icon red'])[1]")
 	private WebElementFacade ViewAction_CompanyCustomer;
-	
+
 	@FindBy(xpath = "//textarea[@id='Note']")
 	private WebElementFacade EnterNote_CompanyCustomer;
-	
+
 	@FindBy(xpath = "(//span[contains(.,'Save')])[1]")
 	private WebElementFacade save_CompanyCustomer;
-	
+
 	@FindBy(xpath = "/html//table[@id='tblBundle']//input[@name='IsSold_10121_Monthly']")
 	private WebElementFacade addToAgreement_ServiceBundleSelectPackagesOpportunity;
-	
+
 	@FindBy(xpath = "(//span[contains(.,'Save and Sign Agreement')])[2]")
 	private WebElementFacade validateThePage;
 
@@ -508,9 +501,13 @@ public class newUserPCROPage extends peststreamPage {
 		scrollToClickAnelement(create_new_contact);
 
 		middleName.sendKeys(testData.get("MiddleName"));
+		waitABit(300);
 		lastName.sendKeys(testData.get("LastName"));
+		waitABit(300);
 		primaryEmail.sendKeys(testData.get("PrimaryEmail"));
+		waitABit(300);
 		cellNo.sendKeys(testData.get("CellNumber"));
+		waitABit(300);
 		secondaryPhone.sendKeys(testData.get("SecondaryNumber"));
 	}
 
@@ -534,7 +531,9 @@ public class newUserPCROPage extends peststreamPage {
 	}
 
 	public void AccountDescription(Map<String, String> testData) {
+		waitABit(300);
 		accountAlert.sendKeys(testData.get("AccountAlert"));
+		waitABit(300);
 		accountDes.sendKeys(testData.get("ProblemDescription"));
 
 	}
@@ -569,9 +568,13 @@ public class newUserPCROPage extends peststreamPage {
 	}
 
 	public void service_Address(Map<String, String> testData) {
+		waitABit(300);
 		serviceAddressLine1.sendKeys(testData.get("Address"));
+		waitABit(300);
 		serviceAddressLine2.sendKeys(testData.get("Address"));
+		waitABit(300);
 		serviceZip.sendKeys(testData.get("ServiceZip"));
+		waitABit(300);
 		serviceCity.sendKeys(testData.get("ServiceCity"));
 
 	}
@@ -594,10 +597,13 @@ public class newUserPCROPage extends peststreamPage {
 	}
 
 	public void enterBilling_Address(Map<String, String> testData) {
-
+		waitABit(300);
 		billingAddress1.sendKeys(testData.get("Address"));
+		waitABit(300);
 		billingAddress2.sendKeys(testData.get("Address"));
+		waitABit(300);
 		billingZip.sendKeys(testData.get("ServiceZip"));
+		waitABit(300);
 		billingCity.sendKeys(testData.get("ServiceCity"));
 		waitABit(4000);
 
@@ -621,14 +627,14 @@ public class newUserPCROPage extends peststreamPage {
 		quarterly.click();
 		waitABit(1000);
 
-//		billingFrequency_ddl.click();
-//		everyOtherWeek.click();
-//		waitABit(1000);
+		// billingFrequency_ddl.click();
+		// everyOtherWeek.click();
+		// waitABit(1000);
 
 	}
 
 	public void clickOnAddBtn() {
-
+		waitABit(300);
 		add_btn.click();
 
 	}
@@ -636,6 +642,7 @@ public class newUserPCROPage extends peststreamPage {
 	// mark as lost opportunity
 	public void markAsLost_btn() {
 		mark_As_Lost_btn.click();
+		waitABit(300);
 
 	}
 
@@ -646,7 +653,7 @@ public class newUserPCROPage extends peststreamPage {
 	}
 
 	public void reason_Description(Map<String, String> testData) {
-
+		waitABit(300);
 		enterDescription.sendKeys(testData.get("ProblemDescription"));
 
 	}
@@ -725,7 +732,7 @@ public class newUserPCROPage extends peststreamPage {
 
 	public void saveAndSignAgreement_btn() {
 		saveAndsignAgreement_btn.click();
-
+		waitABit(300);
 	}
 
 	public void enterAdditionalNote(Map<String, String> testData) {
@@ -760,11 +767,11 @@ public class newUserPCROPage extends peststreamPage {
 
 			clickOnSendAgreementLink.click();
 		} catch (Exception e) {
+			waitABit(300);
 			clickOnSendAgreementLink.submit();
 		}
 	}
 
-	
 	public void account_Id() {
 
 		exiting_account.sendKeys("Info");
@@ -784,7 +791,7 @@ public class newUserPCROPage extends peststreamPage {
 	public void serviceBundleRadioBtn(Map<String, String> testData) {
 
 		enterElement.sendKeys(testData.get("AddNote"));
-		waitABit(1000);
+		waitABit(300);
 
 		serviceBundle.click();
 		waitABit(2000);
@@ -793,13 +800,13 @@ public class newUserPCROPage extends peststreamPage {
 
 	public void service_bundle() {
 		serviceBundeDDL.click();
-		waitABit(1000);
+		waitABit(300);
 		serviceBundeDDLValue.click();
 
 	}
 
 	public void billingFrequencyDDL() {
-
+		waitABit(300);
 		frequencyDDL.click();
 	}
 
@@ -809,82 +816,96 @@ public class newUserPCROPage extends peststreamPage {
 	}
 
 	public void addBundleBtn() {
+		waitABit(300);
 		addBunldeButton.click();
+		waitABit(300);
 		scrollDown(addToAgreement_ServiceBundleSelectPackagesOpportunity);
 
 	}
 
 	public void bundleCheck_btn() {
+		waitABit(300);
 		bundleCheckBtn.click();
 
 	}
 
 	// for non standard service
 	public void nonStandard_tab() {
-
+		waitABit(300);
 		nonStandardTab.click();
 	}
 
 	public void department_DDL() {
+		waitABit(300);
 		departmentDDL.click();
 
 	}
 
 	public void department_value() {
+		waitABit(300);
 		departmentValue.click();
 
 	}
 
 	public void serviceName(Map<String, String> testData) {
+		waitABit(300);
 		serviceName.sendKeys(testData.get("ServiceName"));
 
 	}
 
 	public void nonStandardBillingFreq_DDL() {
-
+		waitABit(300);
 		billingFrequencyDDL.click();
 	}
 
 	public void chooseBillingFrequency_Value() {
+		waitABit(300);
 		billingFrequencyValue.click();
 
 	}
 
 	public void nonStandardAdd_Btn() {
+		waitABit(300);
 		addButton.click();
 		waitABit(2000);
 	}
 
 	public void scheduleEstimationTab() {
+		waitABit(300);
 		scheduleEstimation.click();
 
 	}
 
 	public void saveInSchedule_Estimation() {
+		waitABit(300);
 		saveOnScheduleEstimation.click();
 		waitABit(5000);
 	}
 
 	public void getAssignedTo_value() {
+		waitABit(300);
 		openAssignedToDDL.click();
+
 		waitABit(3000);
 		assignedTovalue.click();
 
 	}
 
 	public void fieldRadio_btn() {
-
+		waitABit(300);
 		fieldRadioBtn.click();
 
 	}
 
 	public void rangeTimeRadio_btn() {
+		waitABit(300);
 		rangeTimeRadioBtn.click();
 		waitABit(1000);
 
 	}
 
 	public void getTimeRange_Value() {
+		waitABit(300);
 		timeRangeDDL.click();
 		waitABit(3000);
 		timeRangeValue.click();
@@ -892,6 +913,7 @@ public class newUserPCROPage extends peststreamPage {
 	}
 
 	public void getSecondTimeRangeValue() {
+		waitABit(300);
 		secondTimeRangeDDL.click();
 		waitABit(3000);
 		secondTimeRangeValue.click();
@@ -905,6 +927,7 @@ public class newUserPCROPage extends peststreamPage {
 	}
 
 	public void chooseServiceFrom_DDL() {
+		waitABit(300);
 		serviceDDlInSetups.click();
 		waitABit(2000);
 		serviceNameFromDDL.click();
@@ -912,19 +935,23 @@ public class newUserPCROPage extends peststreamPage {
 	}
 
 	public void addService_btn() {
+		waitABit(300);
 		addServiceBtn.click();
 
 	}
 
 	public void chooseFrequencyFrom_DDL() {
+		waitABit(300);
 		frequencyDDLInSetups.click();
 		waitABit(3000);
 		frequencyNameFromDDL.click();
+		waitABit(300);
 		yesBtn.click();
 
 	}
 
 	public void chooseScheduleFrom_DDL() {
+		waitABit(300);
 		scheduleDDLInSetups.click();
 		waitABit(3000);
 		scheduleNameFromDDL.click();
@@ -932,28 +959,36 @@ public class newUserPCROPage extends peststreamPage {
 	}
 
 	public void saveGenerate_btn() {
+		waitABit(300);
 		saveAndGenerateBtn.click();
 		waitABit(3000);
 
 	}
 
 	public void choosePrimary_Route() {
+		waitABit(300);
 		primaryRouteDDL.click();
+		waitABit(300);
 		primaryRouteValue.click();
 
 	}
 
 	public void startAndEnd_Date() {
-
+		waitABit(300);
 		firstDateDDL.click();
+		waitABit(300);
 		nextMonth.click();
+		waitABit(300);
 		firstDate.click();
 
 		waitABit(3000);
 
 		lastDateDDL.click();
+		waitABit(300);
 		nextbtnOnCal.click();
+		waitABit(300);
 		nextbtnOnCal.click();
+		waitABit(300);
 		lastDate.click();
 
 	}
@@ -977,8 +1012,9 @@ public class newUserPCROPage extends peststreamPage {
 	}
 
 	public void getServiceAppointment() {
-
+		waitABit(300);
 		scrollToClickAnelement(appointmentTab);
+		waitABit(300);
 		System.out.println("service appointment btn clicked..................................");
 		waitABit(1000);
 
@@ -993,12 +1029,15 @@ public class newUserPCROPage extends peststreamPage {
 	}
 
 	public void current_time() {
+		waitABit(300);
 		enterCurrentTime.click();
 		waitABit(3000);
 	}
 
 	public void saveAndContinue_btn() {
+		waitABit(300);
 		scrollUP(saveAndContinue);
+		waitABit(300);
 		saveAndContinue.click();
 		waitABit(3000);
 
@@ -1042,12 +1081,15 @@ public class newUserPCROPage extends peststreamPage {
 	}
 
 	public void invoiceSubmit_btn() {
+		waitABit(300);
 		invoiceSubmitBtn.click();
+		waitABit(300);
 		sendEmailOnServiceAppointment.click();
 		waitABit(5000);
 	}
 
 	public void savebtn() {
+		waitABit(300);
 		saveMoreDetail.click();
 		waitABit(5000);
 
@@ -1055,6 +1097,7 @@ public class newUserPCROPage extends peststreamPage {
 
 	public void customerOpp() {
 		// scrollUP(Customer);
+		waitABit(300);
 		Customer.click();
 		waitABit(2000);
 		opportunityy.click();
@@ -1070,7 +1113,9 @@ public class newUserPCROPage extends peststreamPage {
 	}
 
 	public void openRequired() {
+		waitABit(300);
 		scrollUP(openTab);
+		waitABit(300);
 		openTab.click();
 		waitABit(2000);
 
@@ -1080,7 +1125,7 @@ public class newUserPCROPage extends peststreamPage {
 	}
 
 	public void moreDetails() {
-
+		waitABit(300);
 		moreDetail.click();
 		waitABit(2000);
 
@@ -1088,22 +1133,24 @@ public class newUserPCROPage extends peststreamPage {
 
 	public void urgencyScheduleDateOpportunity() {
 		urgency1.click();
-		waitABit(2000);
+		waitABit(300);
 		highUrgency.click();
-		waitABit(2000);
+		waitABit(300);
 		scheduleDate.click();
-		waitABit(2000);
+		waitABit(300);
 		nextMonth.click();
-		waitABit(2000);
+		waitABit(300);
 		date.click();
-		waitABit(2000);
+		waitABit(300);
 		ScheduleOpportunityBtn.click();
-		waitABit(2000);
+		waitABit(300);
 
 	}
 
 	public void ContSalesProcess() {
+		waitABit(300);
 		scrollUP(contSaleProcess);
+		waitABit(300);
 		contSaleProcess.click();
 		for (String agreement : getDriver().getWindowHandles()) // iterating on child windows
 		{
@@ -1113,55 +1160,61 @@ public class newUserPCROPage extends peststreamPage {
 	}
 
 	public void saveSignA() {
+		waitABit(300);
 		saveSignOpportunity.click();
 		waitABit(5000);
 	}
 
-	
 	public void enterNotesSave(Map<String, String> testData) {
+		waitABit(300);
 		NotesMore.sendKeys(testData.get("EnterNotes"));
+		waitABit(300);
 		SaveMoreNotes.click();
 		waitABit(3000);
 
 	}
 
 	public void ChckBoxServiceBundle() {
+		waitABit(300);
 		chckBoxServiceBundle.click();
 		waitABit(2000);
 
 	}
 
 	public void OutLook_LogIn_Bttn() {
+		waitABit(300);
 		OutLook_LogIn_Bttn.click();
 		waitABit(2000);
 
 	}
 
 	public void ViewAction_CompanyCustomer() {
+		waitABit(300);
 		ViewAction_CompanyCustomer.click();
 		waitABit(2000);
 	}
 
 	public void EnterNote_CompanyCustomer(Map<String, String> testData) {
+		waitABit(300);
 		EnterNote_CompanyCustomer.sendKeys(testData.get("EnterNotes"));
 		waitABit(2000);
 	}
 
 	public void save_CompanyCustomer() {
+		waitABit(300);
 		save_CompanyCustomer.click();
 		waitABit(2000);
 	}
 
 	public void addToAgreement_ServiceBundleSelectPackagesOpportunity() {
+		waitABit(300);
 		addToAgreement_ServiceBundleSelectPackagesOpportunity.click();
 		waitABit(2000);
 	}
 
 	public void validateThePage() {
-		waitABit(2000);
+		waitABit(300);
 		Assert.assertTrue("Save and Sign Agreement".equals(validateThePage.getText()));
-
-
 	}
 
 }
