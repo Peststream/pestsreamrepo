@@ -8,7 +8,7 @@ Feature: Test for call Hvac 2
     Then I am granted access to the system
 
   #pass
-  @TestOpportunityInfoForHVAC1
+  @TestOpportunityInfoForHVAC17
   Scenario: Test Customer DropDown For Company17
     When User Click On Customer
     And Select Customer From The DD List
@@ -18,7 +18,7 @@ Feature: Test for call Hvac 2
     And Click on Continue From Add Opportunity
 
   #pass
-  @TestOpportunityInfoForHVA2
+  @TestOpportunityInfoForHVA02
   Scenario: Test opportunity info (general info) for HVAC2
     When user clicked on call tab
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
@@ -95,15 +95,13 @@ Feature: Test for call Hvac 2
     And Click on Close	From Add Account
 
   #PassButOnlyOneTimeAddopportunityIsPossible
-  @TestOpportunityInfoForHVAC
+  @TestOpportunityInfoForHVAC23
   Scenario: Test Customer DropDown For Contact23
     When User Click On Customer
     And Select Contact From The DD List
     And Click on Advance Search Button
     And Click On Add Opportunity For Contact
-    And Select or Enter General Test Data For Add Opportunity For Contact
-    And Click On Save Button For Add Opportunity For Contact
-
+  
   #Pass
   @TestOpportunityInfoForHVAC
   Scenario: Test Customer DropDown For Contact24
@@ -160,12 +158,4 @@ Feature: Test for call Hvac 2
     And Select Or Enter General Test Info For Database
     And Click on Save	From Add Database Ezoom
 
-  #pass
-  @TestOpportunityInfoForHVAC17
-  Scenario: Test Customer DropDown For Company17
-    When User Click On Customer
-    And Select Customer From The DD List
-    And click on Advance Search from Add Company
-    And Click On Add Opportunity Icon From Action Company
-    And Select Account From DD
-    And Click on Continue From Add Opportunity
+
