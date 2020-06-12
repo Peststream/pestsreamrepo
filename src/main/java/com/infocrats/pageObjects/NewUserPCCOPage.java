@@ -477,7 +477,7 @@ public class NewUserPCCOPage extends peststreamPage {
 	}
 
 	public void alrtDescrip_commnt(Map<String, String> testData) {
-		accountAlert.sendKeys(testData.get("AccountAlert"));
+		//accountAlert.sendKeys(testData.get("AccountAlert"));
 		accountDes.sendKeys(testData.get("ProblemDescription"));
 
 	}
