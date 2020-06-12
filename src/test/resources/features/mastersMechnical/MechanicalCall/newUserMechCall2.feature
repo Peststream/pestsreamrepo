@@ -74,32 +74,6 @@ Feature: New User Mech Call 2
     Then user click on Save Equipment
     Then user click on Save & Continue Equipment
 
-  
-  #Pass_Fixed
-  @CSSO_ScheduleEstimation_Residential_Inside_SpecificTime_Save_Mech
-  Scenario: Test ScheduleEstimation Residential with InsideSpecificTime6
-    When user clicked on CallTab
-    Then user enters Company
-    Then user enters Contact
-    And user click on search
-    Then user enters Primary Email
-    Then user enters Cell
-    Then user selects Branch Mech
-    Then user selects Service
-    Then user selects Source
-    Then user click on schedule Type(schedule estimation)
-    Then user enters Account Alert
-    Then user enters Problem Description
-    Then user click on Opportunity Type(Commercial)
-    Then user click on continue
-    Then user click on Service Address
-    Then user enters Address
-    Then user enters Zip
-    Then user enters City
-    Then user click on Address Sub Type(Commercial)
-    Then user click on Assigned,Estimated Duration
-    Then user click on saveInfo Button
-
   #Passed_Fixed
   @CSSO_ScheduleEstimation_Commercial_Field_Save_Mech
   Scenario: Test ScheduleEstimation Commercial with Field7
@@ -168,32 +142,6 @@ Feature: New User Mech Call 2
     Then user click on Sales Representative Signature
     Then user click on Save & Continue Signatures
     Then user click on Send Agreement Link
-
-  #Passed_Fixed
-  @CSSO_ScheduleEstimation_Commercial_Field_Specific_Save_Mech
-  Scenario: Test ScheduleEstimation Commercial with FieldSpecific9
-    When user clicked on CallTab
-    Then user enters Company
-    Then user enters Contact
-    And user click on search
-    Then user enters Primary Email
-    Then user enters Cell
-    Then user selects Branch Mech
-    Then user selects Service
-    Then user selects Source
-    Then user click on schedule Type(schedule estimation)
-    Then user enters Account Alert
-    Then user enters Problem Description
-    Then user click on Commercial
-    Then user click on continue
-    Then user click on Service Address
-    Then user enters Address
-    Then user enters Zip
-    Then user enters City
-    Then user click on Address Sub Type(Commercial)
-    Then user click on sales type (field)
-    Then user click on Assigned,Estimated Duration
-    Then user click on saveInfo Button
 
   #Pass_Fixed
   @CSSO_ScheduleEstimation_Commercial_Field_TimeRange_Save_Mech
@@ -472,34 +420,6 @@ Feature: New User Mech Call 2
     Then user enters Problem Description
     Then user click on Commercial
     Then user click on continue
-
-  #Pass
-  @CSSO_ScheduleEstimation_Comm_Inside_TimeRange_Save_Mech
-  Scenario: Test ScheduleEstimation Commercial with InsideTimeRange24
-    When user clicked on CallTab
-    Then user enters Company
-    Then user enters Contact
-    And user click on search
-    Then user enters Primary Email
-    Then user enters Cell
-    Then user selects Branch Mech
-    Then user selects Service
-    Then user selects Source
-    Then user click on schedule Type(schedule estimation)
-    Then user enters Account Alert
-    Then user enters Problem Description
-    Then user click on Commercial
-    Then user click on continue
-    Then user click on Service Address
-    Then user enters Address
-    Then user enters Zip
-    Then user enters City
-    Then user click on Address Sub Type(Commercial)
-    Then user click on Range 	Time
-    Then select Time Range
-    Then select Second Time Range
-    Then user click on Assigned,Estimated Duration
-    Then user click on saveInfo Button
 
   #Passed_recent
   @CSSO_ScheduleEstimation_Comm_Inside_TimeRange_NonStd_CustAbsent_Mech
