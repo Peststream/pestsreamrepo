@@ -1,4 +1,4 @@
-@run @mechcallpass
+@run @mechcallpass @hvac
 Feature: Test for new user Mech Call for Mech.
 
   Background: 
