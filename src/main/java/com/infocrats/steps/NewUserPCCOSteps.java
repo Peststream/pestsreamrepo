@@ -424,4 +424,9 @@ public class NewUserPCCOSteps extends pestreamSteps{
 		newuserpccopage.sendagreementlink();
 	}
 
+	public void DDCategory_SelectService_SalesApp() {
+		newuserpccopage.DDCategory_SelectService_SalesApp();
+		
+	}
+
 }

@@ -134,7 +134,7 @@ public class NewUserPCCOPage extends peststreamPage {
 	@FindBy(xpath = "(//span[contains(.,'Select Service...')])[1]")
 	private WebElementFacade serviceDDL;
 
-	@FindBy(xpath = "(//span[contains(.,'Pest Control')])[2]")
+	@FindBy(xpath = "//span[contains(text(),'Pest Control')]")
 	private WebElementFacade serviceValue;
 
 	@FindBy(xpath = "//select[contains(@name,'Package')]")
@@ -429,6 +429,30 @@ public class NewUserPCCOPage extends peststreamPage {
 	@FindBy(xpath = "//span[contains(text(),'Send Agreement Link')]")
 	private WebElementFacade sendagreementlink;
 	
+	@FindBy(xpath = "(//span[contains(.,'--Select--')])[5]")
+	private WebElementFacade DDCategory;
+	
+	@FindBy(xpath = "//span[contains(text(),'PestControl')]")
+	private WebElementFacade ValueDDCategory;
+	
+	@FindBy(xpath = "(//span[contains(.,'Select Service...')])[1]")
+	private WebElementFacade DDService;
+	
+	@FindBy(xpath = "//span[contains(text(),'Pest Control')]")
+	private WebElementFacade ValueDDService;
+	
+	@FindBy(xpath = "(//span[contains(.,'Select Frequency...')])[1]")
+	private WebElementFacade DDFreq;
+	
+	@FindBy(xpath = "(//a[contains(.,'EOM')])[1]")
+	private WebElementFacade ValueDDFreq;
+	
+	/*@FindBy(xpath = "//span[contains(text(),'Send Agreement Link')]")
+	private WebElementFacade sendagreementlink;
+	
+	@FindBy(xpath = "//span[contains(text(),'Send Agreement Link')]")
+	private WebElementFacade sendagreementlink;*/
+	
 
 
 	/*@FindBy(xpath = "https://accounts.google.com/signin/v2/identifier?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin")
@@ -584,24 +608,26 @@ public class NewUserPCCOPage extends peststreamPage {
 	}
 
 	public void saveProposal_btn() {
-		waitABit(2000);
+		waitABit(3000);
 		scrollDown(saveContOnProposal);
 		saveContOnProposal.click();
-		waitABit(2000);
+		waitABit(3000);
 	}
 
 	public void enter_payment() {
+		waitABit(3000);
 		((JavascriptExecutor) getDriver()).executeScript("arguments[0].checked = true;", cashMode);
 
 	}
 
 	public void trmCond_btn() {
-		waitABit(2000);
+		waitABit(3000);
 		((JavascriptExecutor) getDriver()).executeScript("arguments[0].checked = true;", conditionBox);
 
 	}
 
 	public void enterSignature(Map<String, String> testData) {
+		waitABit(3000);
 		name.sendKeys(testData.get("CustomerName"));
 		Actions builder = new Actions(getDriver());
 		Action drawAction = builder.moveToElement(signatureBox, 135, 15) // start points x axis and y axis.
@@ -620,6 +646,7 @@ public class NewUserPCCOPage extends peststreamPage {
 		saveCont.click();
 		waitABit(11000);
 		try {
+			waitABit(3000);
 			mailSend.click();
 		} catch (Exception e) {
 			mailSend.submit();
@@ -751,7 +778,7 @@ public class NewUserPCCOPage extends peststreamPage {
 		scrollUPSmall(checkBoxService);
 		waitABit(5000);
 		checkBoxService.click();
-		waitABit(2000);
+		waitABit(3000);
 	}
 
 	public void billing_Address_Different() {
@@ -1061,6 +1088,29 @@ public class NewUserPCCOPage extends peststreamPage {
 	public void sendagreementlink() {
 		sendagreementlink.click();
 		waitABit(2000);
+	}
+
+	public void DDCategory_SelectService_SalesApp() {
+		waitABit(3000);
+		scrollDownLarge(DDCategory);
+		waitABit(3000);
+		
+		DDCategory.click();
+		waitABit(3000);
+		ValueDDCategory.click();
+		waitABit(3000);
+		
+		
+		DDService.click();
+		waitABit(3000);
+		ValueDDService.click();
+		waitABit(3000);
+		
+		DDFreq.click();
+		waitABit(3000);
+		ValueDDFreq.click();
+		waitABit(3000);
+		
 	}
 
 
