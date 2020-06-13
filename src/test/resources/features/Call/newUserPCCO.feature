@@ -1,4 +1,4 @@
-@run @pcco1 @pests
+@run @pccoone @pests
 Feature: Test for new user PCCO for Pest.
 
   Background: 
