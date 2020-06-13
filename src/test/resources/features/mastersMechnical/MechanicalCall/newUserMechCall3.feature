@@ -1,4 +1,4 @@
-@newusermechcall3
+@hvac
 Feature: New User Mech Call3
 
   Background: 
@@ -36,7 +36,7 @@ Feature: New User Mech Call3
     Then user click on Advance Search Mech
     Then user selects Work order
     Then user navigates Back twice
-    And user checks the details and Save
+    #And user checks the details and Save
 
   #Passed_Fixed
   @CSSO_General_Mec2
@@ -338,20 +338,7 @@ Feature: New User Mech Call3
     Then user click on Assigned,Estimated Duration
     Then user click on saveInfo Button
     Then user click on Opportunity_Mech
-    Then user click on Save & Continue General Info
-    Then user click on continue Inspection
-    Then user click on Non Standard Equipment subTab
-    Then user click on Service Repair Rate(non standard)
-    Then user click on Save Equipment
-    Then user click on Save & Continue Equipment
-    Then user click on Save & Continue Customer Review
-    Then user click on Payment type
-    Then user Enters Amount paid
-    Then user click on I Agree Terms & Condition
-    Then user click on Electronic Signature
-    Then user click on Customer Signature
-    Then user click on Sales Representative Signature
-    Then user click on Save & Continue Signatures
+    #Then user click on Save & Continue General Info
 
   #passed_recent
   @CSSO_ScheduleEstimation_Comm_Inside_Specific_NonStd_CustPresent_Mech
@@ -378,20 +365,20 @@ Feature: New User Mech Call3
     Then user click on Assigned,Estimated Duration
     Then user click on saveInfo Button
     Then user click on Opportunity_Mech
-    Then user click on Save & Continue General Info
-    Then user click on continue Inspection
-    Then user click on Non Standard Equipment subTab
-    Then user click on Service Repair Rate(non standard)
-    Then user click on Save Equipment
-    Then user click on Save & Continue Equipment
-    Then user click on Save & Continue Customer Review
-    Then user click on Payment type
-    Then user Enters Amount paid
-    Then user click on I Agree Terms & Condition
-    Then user click on Electronic Signature
-    Then user click on Customer Signature
-    Then user click on Sales Representative Signature
-    Then user click on Save & Continue Signatures
+    #Then user click on Save & Continue General Info
+    #Then user click on continue Inspection
+    #Then user click on Non Standard Equipment subTab
+    #Then user click on Service Repair Rate(non standard)
+    #Then user click on Save Equipment
+    #Then user click on Save & Continue Equipment
+    #Then user click on Save & Continue Customer Review
+    #Then user click on Payment type
+    #Then user Enters Amount paid
+    #Then user click on I Agree Terms & Condition
+    #Then user click on Electronic Signature
+    #Then user click on Customer Signature
+    #Then user click on Sales Representative Signature
+    #Then user click on Save & Continue Signatures
 
   #Passed_recent
   @CSSO_SchEstimation_Comm_Inside_Range_Std_CustAbsent_Mech
@@ -425,4 +412,4 @@ Feature: New User Mech Call3
     Then user click on continue Inspection
     Then user enters Repair to Search
     Then user click on Save Equipment
-    Then user click on Save & Continue Equipment
+    #Then user click on Save & Continue Equipment

@@ -1,4 +1,4 @@
-@newusermechcall1
+@hvac
 Feature: New USer Mech Call 1
 
   Background: 
