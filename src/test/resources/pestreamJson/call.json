@@ -62,11 +62,14 @@
 		"to_time":"0500 pm",
 		"emp_Description":"This is Employee Timesheet Description."
 		},
-		
 	"SupervisorTimesheet":{
 	    "st_from_time":"1000 am",
 		"st_to_time":"0500 pm",
 		"st_description": "This is Supervisor Timesheet Description."
+		},
+	"CustomerData":{
+	    "FirstName_ContactCustomer": "Walker",
+		"PrimaryEmail": "testpestream@gmail.com"
 		}
 	
 }

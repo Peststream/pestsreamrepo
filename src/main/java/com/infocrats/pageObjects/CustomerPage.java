@@ -1,5 +1,7 @@
 package com.infocrats.pageObjects;
 
+import java.util.Map;
+
 import org.openqa.selenium.Keys;
 
 import com.infocrats.utils.BaseUtills;
@@ -110,10 +112,10 @@ public class CustomerPage extends peststreamPage {
 	@FindBy(xpath = "//*[@id=\"form0\"]/div[2]/button[2]/span")
 	private WebElementFacade Save_Button_Add_Company;
 	
-	@FindBy(xpath = "/html/body/div[3]/div[1]/div/ul/li[4]/ul/li[5]/a/span")
+	@FindBy(xpath = "//span[@class='title'][contains(text(),'Contact')]")
 	private WebElementFacade Contact_Tab_Left_Pannel;
 	
-	@FindBy(xpath = "/html/body/div[3]/div[2]/div[1]/div/div[2]/div/div/div[1]/div[1]/div/div/button/span")
+	@FindBy(xpath = "//span[contains(text(),'Add Contact')]")
 	private WebElementFacade Add_Contact_Button_Inside_Contact;
 	
 	@FindBy(xpath = "//*[@id=\"Title\"]")
@@ -180,7 +182,7 @@ public class CustomerPage extends peststreamPage {
 	private WebElementFacade dept;
 	
 	
-	@FindBy(xpath = "//*[@id=\"select2-result-label-20\"]/text()")
+	@FindBy(xpath = "(//div[@role='option'])[3]")
 	private WebElementFacade dept1;
 	
 	
@@ -188,30 +190,49 @@ public class CustomerPage extends peststreamPage {
 	private WebElementFacade call;
 	
 	
-	@FindBy(xpath = "/html[1]/body[1]/div[16]/ul[1]/li[2]/div[1]")
+	@FindBy(xpath = "(//div[@role='option'])[2]")
 	private WebElementFacade call1;
 
 	@FindBy(xpath = "/html[1]/body[1]/div[3]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/form[1]/div[1]/div[2]/div[7]/div[1]/div[1]/div[1]/a[1]/span[1]")
 	private WebElementFacade insidesale;
 
 	
-	@FindBy(xpath = "/html[1]/body[1]/div[18]/ul[1]/li[3]/div[1]")
+	@FindBy(xpath = "(//div[@role='option'])[3]")
 	private WebElementFacade insidesale1;
 
 	@FindBy(xpath = "/html[1]/body[1]/div[3]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/form[1]/div[1]/div[2]/div[7]/div[2]/div[1]/div[1]/a[1]/span[1]")
 	private WebElementFacade urgency;
 	
-	@FindBy(xpath = "/html[1]/body[1]/div[19]/ul[1]/li[3]/div[1]")
+	@FindBy(xpath = "(//div[@role='option'])[2]")
 	private WebElementFacade urgency1;
 	
-	@FindBy(xpath = "(//*[@id=\"FlowType\"])[3]")
+	@FindBy(xpath = "(//input[@name='FlowType'])[1]")
 	private WebElementFacade radioResidential;
 	
-	@FindBy(xpath = "//*[@id=\"form0\"]/div[2]/button[2]/span")
+	@FindBy(xpath = "(//span[@class='ladda-label'])[1]")
 	private WebElementFacade save;
 	
-	@FindBy(xpath = "//*[@id=\"form0\"]/div[2]/button[2]/span")
-	private WebElementFacade saveform;
+	@FindBy(xpath = "(//input[contains(@type,'text')])[18]")
+	private WebElementFacade FirstName_ContactCustomer;
+	
+	@FindBy(xpath = "(//input[contains(@type,'text')])[21]")
+	private WebElementFacade PEmail_ContactCustomer;
+	
+	@FindBy(xpath = "//span[@class='filter-option pull-left']")
+	private WebElementFacade DDSource_ContactCustomer;
+	
+	@FindBy(xpath = "(//a[contains(@class,'opt ')])[2]")
+	private WebElementFacade ValueDDSource_ContactCustomer;
+	
+	@FindBy(xpath = "(//span[@class='ladda-label'])[1]")
+	private WebElementFacade Save_ContactCustomer;
+
+	@FindBy(xpath = "//span[contains(.,'Nothing selected')]")
+	private WebElementFacade DDSource_OpportunityCustomer;
+	
+	@FindBy(xpath = "(//span[contains(.,'CustomerPortal App')])[2]")
+	private WebElementFacade ValueDDSource_OpportunityCustomer;
+	
 	
 	@Override
 	public WebElementFacade getUniqueElement() {
@@ -473,33 +494,41 @@ public class CustomerPage extends peststreamPage {
 	public void ddlDeptReasonServiceSourceInsideSaleUrgency() {
 		
 			dept.click();
-			waitABit(2000);
+			waitABit(3000);
 			dept1.click();
-			waitABit(2000);
+			waitABit(3000);
 			call.click();
-			waitABit(2000);
+			waitABit(3000);
 		
 		 	call1.click();
-		 	waitABit(2000);
-		 	insidesale.click();
-		 	waitABit(2000);
+		 	waitABit(3000);
+		 	
+		 	DDSource_OpportunityCustomer.click();
+			waitABit(2000);	
 			
-			insidesale.click();
+			ValueDDSource_OpportunityCustomer.click();
 			waitABit(2000);
+		 	
+		 	waitABit(3000);
+		 	insidesale.click();
+		 	waitABit(3000);
+			
+		 	insidesale1.click();
+			waitABit(3000);
 			urgency.click();
-			waitABit(2000);
+			waitABit(3000);
 		 	urgency1.click();
-		
+		 	waitABit(3000);
 	}
 
 	public void residentialRadio() {
 		radioResidential.click();
-		waitABit(2000);
+		waitABit(3000);
 	}
 
 	public void confindence() {
 	save.click();
-	waitABit(2000);
+	waitABit(3000);
 	}
 
 	public void savebtn() {
@@ -507,4 +536,32 @@ public class CustomerPage extends peststreamPage {
 		waitABit(2000);
 	}
 
-}
+	public void FirstName_ContactCustomer(Map<String, String> testData) {
+		FirstName_ContactCustomer.click();
+		FirstName_ContactCustomer.sendKeys(testData.get("ContName"));
+		waitABit(4000);
+	}
+
+	public void PEmail_ContactCustomer(Map<String, String> testData) {
+		PEmail_ContactCustomer.click();
+		PEmail_ContactCustomer.sendKeys(testData.get("PEmail"));
+		waitABit(4000);
+	}
+
+	public void Source_ContactCustomer() {
+		DDSource_ContactCustomer.click();
+		waitABit(4000);
+		
+		ValueDDSource_ContactCustomer.click();
+		waitABit(4000);
+	}
+
+	public void Save_ContactCustomer() {
+		Save_ContactCustomer.click();
+		waitABit(2000);	}
+
+	public void DDSource_OpportunityCustomer() {
+			
+	}
+	
+	  }

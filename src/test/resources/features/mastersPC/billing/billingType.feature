@@ -1,4 +1,4 @@
-@run @bill
+@run @bill @pc
 Feature: Test for Billing Transcition.
 
  Background: 
