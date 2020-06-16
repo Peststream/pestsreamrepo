@@ -23,8 +23,8 @@ Feature: Test for new user PCCO2 for Pest.
     And click on Different Zip
     And click on Different City
     And click on save Button
-
-  #Done
+    
+     #Done
   @nuComFRTCompSendMail @newUserPCCO
   Scenario: Test opportunity and Send Email
     When user clicked on call tab
@@ -41,9 +41,7 @@ Feature: Test for new user PCCO2 for Pest.
     Then click on opportunity action icon
     Then review all the details and click on save and continue button
     Then click on continue button on inspection tab
-    Then click on ComddCat
-    Then click on ComddService
-    Then click on ComddFrequency
+    Then user click on DDCategory_SelectService_SalesApp
     Then click on saveBttnCom
     Then click on save and continue on select service tab
     And click on checkBox of Service under ConfigureProposal
@@ -52,8 +50,8 @@ Feature: Test for new user PCCO2 for Pest.
     Then check term and condition
     Then enter full name and signature
     Then click on save and continue on Agreement tab
-
-  #Done
+    
+    #Done
   @nuComIRTCompSendMail @newUserPCCO
   Scenario: Test opportunity info Using time range and Send Email
     When user clicked on call tab
@@ -71,9 +69,7 @@ Feature: Test for new user PCCO2 for Pest.
     Then click on opportunity action icon
     Then review all the details and click on save and continue button
     Then click on continue button on inspection tab
-    Then click on ComddCat
-    Then click on ComddService
-    Then click on ComddFrequency
+     Then user click on DDCategory_SelectService_SalesApp
     Then click on saveBttnCom
     Then click on save and continue on select service tab
     And click on checkBox of Service under ConfigureProposal
@@ -82,8 +78,8 @@ Feature: Test for new user PCCO2 for Pest.
     Then check term and condition
     Then enter full name and signature
     Then click on save and continue on Agreement tab
-
-  #Done
+    
+   #Done
   @nuComFSTCompSendEmail @newUserPCCO
   Scenario: Test to Send Email for commercial
     When user clicked on call tab
@@ -99,9 +95,7 @@ Feature: Test for new user PCCO2 for Pest.
     Then click on opportunity action icon
     Then review all the details and click on save and continue button
     Then click on continue button on inspection tab
-    Then click on ComddCat
-    Then click on ComddService
-    Then click on ComddFrequency
+     Then user click on DDCategory_SelectService_SalesApp
     Then click on saveBttnCom
     Then click on save and continue on select service tab
     And click on checkBox of Service under ConfigureProposal
@@ -110,8 +104,8 @@ Feature: Test for new user PCCO2 for Pest.
     Then check term and condition
     Then enter full name and signature
     Then click on save and continue on Agreement tab
-
-  #Done
+    
+     #Done
   @nuComISTSendEmail @newUserPCCO
   Scenario: Test opportunity for InsideRadioButton complete flow for commercial
     When user clicked on call tab
@@ -128,9 +122,7 @@ Feature: Test for new user PCCO2 for Pest.
     Then click on opportunity action icon
     Then review all the details and click on save and continue button
     Then click on continue button on inspection tab
-    Then click on ComddCat
-    Then click on ComddService
-    Then click on ComddFrequency
+    Then user click on DDCategory_SelectService_SalesApp
     Then click on saveBttnCom
     Then click on save and continue on select service tab
     And click on checkBox of Service under ConfigureProposal
@@ -139,3 +131,21 @@ Feature: Test for new user PCCO2 for Pest.
     Then check term and condition
     Then enter full name and signature
     Then click on save and continue on Agreement tab
+    
+    Then click on opportunity action icon
+    Then review all the details and click on save and continue button
+    Then click on continue button on inspection tab
+    Then user click on DDCategory_SelectService_SalesApp
+    And click on add button
+    Then click on save and continue on select service tab
+    And click on checkBox of Service under ConfigureProposal
+    Then review proposal and click on save and proposal
+    Then check payment type and enter amount
+    Then check term and condition
+    Then enter full name and signature
+    Then click on save and continue on Agreement tab
+
+ 
+
+
+ 

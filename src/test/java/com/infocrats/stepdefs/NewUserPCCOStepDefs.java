@@ -407,4 +407,12 @@ public void user_click_on_sendagreementlink() {
 }
 
 
+@Then("^user click on DDCategory_SelectService_SalesApp$")
+public void user_click_on_DDCategory_SelectService_SalesApp() {
+	newuserpccosteps.DDCategory_SelectService_SalesApp();
+}
+
+
+
+
 }

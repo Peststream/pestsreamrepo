@@ -13,9 +13,11 @@ Feature: Create pest control residential opportunity for exiting user.
   
     @con
   Scenario: To check add Contact From Customer Tab and Save
+ 
     
-   @nuComRTSendEmail @newUserPCCO
-  Scenario: Test opportunity and review proposal
+    #Done
+  @diffBillingAddressCom @newUserPCCO
+  Scenario: Test opportunity info Using Different Address
     When user clicked on call tab
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
     And select lead branch info
@@ -23,20 +25,9 @@ Feature: Create pest control residential opportunity for exiting user.
     Then I click on commercial Radio button
     And click on continue button for commercial opportunity
     Then enter service address
-    Then Select first time range & Second time range
-    Then click on assign to DDL
-    And choose assign to person
+    Then check the Billing Address Different
+    And click on DifferentAddress Line first
+    And click on Different Address Line Second
+    And click on Different Zip
+    And click on Different City
     And click on save Button
-    Then click on opportunity action icon
-    Then review all the details and click on save and continue button
-    Then click on continue button on inspection tab
-    Then choose category DDL
-    And select service from DDL
-    And click on add button
-    Then click on save and continue on select service tab
-    And click on checkBox of Service under ConfigureProposal
-    Then review proposal and click on save and proposal
-    Then check payment type and enter amount
-    Then check term and condition
-    Then enter full name and signature
-    Then click on save and continue on Agreement tab
