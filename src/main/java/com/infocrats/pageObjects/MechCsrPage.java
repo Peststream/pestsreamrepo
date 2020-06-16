@@ -282,7 +282,7 @@ public class MechCsrPage extends peststreamPage {
 	public void AccountNo_CSRDB_Mech() {
 
 		AccountNo_CSRDB_Mech.click();
-		waitABit(3000);
+		waitABit(6000);
 		
 	}
 
