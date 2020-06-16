@@ -1,12 +1,11 @@
-@run @mechcallpass @hvac
-Feature: Test for new user Mech Call for Mech.
+@run @Newusermechcall
+Feature: New USer Mech Call Pass
 
   Background: 
     Given User successfully logged into system with valid credentials
     When I enter a credentials for "CompanyAdmin"
     And I can click sign in
     Then I am granted access to the system
-
   #scenarios are not declared in this feature file
   #Pass_Fixed
   @CSSO_General_Mech

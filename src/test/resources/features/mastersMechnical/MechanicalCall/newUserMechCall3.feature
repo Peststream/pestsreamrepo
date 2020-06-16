@@ -1,5 +1,5 @@
-@mech123 @newusermechcall3 @hvac
-Feature: New User Mech Call3
+@run @Newusermechcall
+Feature: New USer Mech Call 3
 
   Background: 
     Given User successfully logged into system with valid credentials
@@ -425,4 +425,6 @@ Feature: New User Mech Call3
     Then user click on continue Inspection
     Then user enters Repair to Search
     Then user click on Save Equipment
+    #Then user click on Save & Continue Equipment
     Then user click on Save & Continue Equipment
+
