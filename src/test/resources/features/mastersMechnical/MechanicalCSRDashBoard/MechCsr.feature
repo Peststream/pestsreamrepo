@@ -17,8 +17,6 @@ Feature: Create Mech CSR DashBoard for advance search.
     Then click on SecondaryPhoneNo_Opp_CSRDB_Mech
     Then click on DDDep_Opp_CSRDB_Mech
     Then click on ValueDDDep_Opp_CSRDB_Mech
-    Then click on DDService_Opp_CSRDB_Mech
-    Then click on ValueDDService_Opp_CSRDB_Mech
     Then click on DDSource_Opp_CSRDB_Mech
     Then click on ValueDDSource_Opp_CSRDB_Mech
     Then click on Cont_Opp_CSRDB_Mech
