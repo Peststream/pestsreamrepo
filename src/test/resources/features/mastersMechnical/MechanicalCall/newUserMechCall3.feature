@@ -1,6 +1,5 @@
-@hvac
-
-Feature: New User Mech Call3
+@run @Newusermechcall
+Feature: New USer Mech Call 3
 
   Background: 
     Given User successfully logged into system with valid credentials
