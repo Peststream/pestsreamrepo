@@ -131,10 +131,10 @@ public class NewUserPCCOPage extends peststreamPage {
 	@FindBy(xpath = "//span[@class='text'][contains(.,'PestControl')]")
 	private WebElementFacade catagoryValue;
 
-	@FindBy(xpath = "//select[contains(@name,'Services')]")
+	@FindBy(xpath = "(//span[contains(.,'Select Service...')])[1]")
 	private WebElementFacade serviceDDL;
 
-	@FindBy(xpath = "//*[@id=\"Services\"]/option[2]")
+	@FindBy(xpath = "(//span[contains(.,'Pest Control')])[2]")
 	private WebElementFacade serviceValue;
 
 	@FindBy(xpath = "//select[contains(@name,'Package')]")

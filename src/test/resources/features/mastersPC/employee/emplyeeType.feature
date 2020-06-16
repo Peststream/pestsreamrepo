@@ -1,4 +1,4 @@
-@run @emp
+@run @emp @pc
 Feature: Test for Employee.
 
   Background: 
@@ -30,6 +30,7 @@ Feature: Test for Employee.
     Then i click on add route button
     Then enter route
     Then enter route name
+    Then user click on Branch_RouteEmployee
     Then select lead technician
     And enter description
     Then click on save button
@@ -41,17 +42,6 @@ Feature: Test for Employee.
     Then i click on routeOverride
     Then i click on addRouteOverride
     Then i click on save
-
-  #Done
-  @createClockInOut
-  Scenario: Test create team feature in Employee tab
-    When i click on employee tab on dashboard
-    Then user click on ClockInOutTab
-    Then user click on addClockInOut
-    Then user click on ClockInOutDate
-    Then user click on TimeOut
-    Then user click on ValueTimeOut
-    Then user click on save
 
   #Done
   @createClockInOutWorkingStatus
@@ -162,3 +152,13 @@ Feature: Test for Employee.
     Then user selects ST_to_time
     Then user enters ST_Description
     Then user clicks on ST_save button
+
+  @createClockInOut
+  Scenario: Test create team feature in Employee tab
+    When i click on employee tab on dashboard
+    Then user click on ClockInOutTab
+    Then user click on addClockInOut
+    Then user click on ClockInOutDate
+    Then user click on TimeOut
+    Then user click on ValueTimeOut
+    Then user click on save

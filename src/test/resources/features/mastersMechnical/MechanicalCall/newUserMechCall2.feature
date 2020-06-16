@@ -1,6 +1,6 @@
-@hvac
-Feature: New User Mech Call 2
 
+@hvac
+Mech call 2
   Background: 
     Given User successfully logged into system with valid credentials
     When I enter a credentials for "CompanyAdmin"

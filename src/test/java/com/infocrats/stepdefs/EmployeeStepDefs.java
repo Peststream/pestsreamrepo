@@ -353,7 +353,7 @@ public class EmployeeStepDefs {
 	public void user_clicks_on_ST_save_button() {
 		employeesteps.ST_Save();
 	}
-	
+
 	@Then("^user click on Branch_StaffEmp$")
 	public void user_click_on_Branch_StaffEmp() {
 		employeesteps.Branch_StaffEmp();
@@ -398,14 +398,16 @@ public class EmployeeStepDefs {
 	public void user_click_on_Save_StaffEmp() {
 		employeesteps.Save_StaffEmp();
 	}
+
+	@Then("^user click on EmpTypeHalf$")
+	public void user_click_on_EmpTypeHalf() {
+		employeesteps.EmpTypeHalf();
+	}
 	
 
-@Then("^user click on EmpTypeHalf$")
-public void user_click_on_EmpTypeHalf() {
-	employeesteps.EmpTypeHalf();
+@Then("^user click on Branch_RouteEmployee$")
+public void user_click_on_Branch_RouteEmployee() {
+	employeesteps.Branch_RouteEmployee();
 }
-
-
-
 
 }

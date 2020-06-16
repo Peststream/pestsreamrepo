@@ -79,7 +79,7 @@ public class EmployeePage extends peststreamPage {
 	@FindBy(xpath = "//*[@id=\"s2id_ddlBranchId\"]")
 	private WebElementFacade addTeam_branchDDL;
 
-	@FindBy(xpath = "//*[@id=\"select2-results-5\"]/li[2]")
+	@FindBy(xpath = "(//div[@role='option'])[3]")
 	private WebElementFacade addTemBranchValue;
 
 	@FindBy(xpath = "//*[@id='PrimaryEmail']")
@@ -109,7 +109,7 @@ public class EmployeePage extends peststreamPage {
 	@FindBy(xpath = "//*[@id=\"form0\"]/div[2]/button[2]")
 	private WebElementFacade teamsaveBtn;
 
-	@FindBy(xpath = "//*[@id=\"s2id_autogen4_search\"]")
+	@FindBy(xpath = "(//div[@role='option'])[2]")
 	private WebElementFacade emplSearchText;
 
 	@FindBy(xpath = "/html[1]/body[1]/div[3]/div[1]/div[1]/ul[1]/li[9]/ul[1]/li[3]/a[1]")
@@ -363,6 +363,12 @@ public class EmployeePage extends peststreamPage {
 
 	@FindBy(xpath = "//*[@id='submitNonBillableTime']/span")
 	private WebElementFacade st_save;
+	
+	@FindBy(xpath = "(//span[@class='select2-chosen'])[5]")
+	private WebElementFacade Branch_RouteEmployee;
+	
+	@FindBy(xpath = "(//div[@role='option'])[3]")
+	private WebElementFacade ValueBranch_RouteEmployee;
 
 	ArrayList<String> al = new ArrayList<String>();
 
@@ -467,7 +473,7 @@ public class EmployeePage extends peststreamPage {
 
 	public void branch_name() {
 		addTeam_branchDDL.click();
-		waitABit(2000);
+		waitABit(3000);
 		addTemBranchValue.click();
 
 	}
@@ -484,16 +490,16 @@ public class EmployeePage extends peststreamPage {
 
 	public void depart_name() {
 		TeamDepartmentDDL.click();
-		waitABit(2000);
+		waitABit(4000);
 		TeamDepartmentValue.click();
 	}
 
 	public void empl_name() {
 		TeamEmployeeDDL.click();
-		waitABit(2000);
-		emplSearchText.sendKeys("Dheeraj");
-		emplSearchText.sendKeys(Keys.ENTER);
-		waitABit(2000);
+		waitABit(4000);
+		//emplSearchText.sendKeys("Dheeraj");
+		emplSearchText.click();
+		waitABit(3000);
 
 	}
 
@@ -527,16 +533,18 @@ public class EmployeePage extends peststreamPage {
 
 	public void enter_route(Map<String, String> testData) {
 		routeNumber.sendKeys(testData.get("Route"));
-		waitABit(1000);
+		waitABit(3000);
 
 	}
 
 	public void route_name(Map<String, String> testData) {
+		waitABit(3000);
 		routeName.sendKeys(testData.get("RouteName"));
 
 	}
 
 	public void lead_technician() {
+		waitABit(3000);
 		leadTechnicianDDL.click();
 		waitABit(2000);
 		leadSearch.click();
@@ -917,6 +925,14 @@ public class EmployeePage extends peststreamPage {
 		
 		waitABit(2000);
 		EmpTypeHalf.click();
+	}
+
+	public void Branch_RouteEmployee() {
+		waitABit(2000);
+		Branch_RouteEmployee.click();
+		
+		waitABit(2000);
+		ValueBranch_RouteEmployee.click();
 	}
 
 }
