@@ -104,19 +104,19 @@ public class MechCsrPage extends peststreamPage {
 	@FindBy(xpath = "//td[@class='day'][contains(.,'30')]")
 	private WebElementFacade ServiceDateValue_AddWOBttn_CSRDB_Mech;
 	
-	@FindBy(xpath = "(//input[@type='radio'])[2]")
+	@FindBy(xpath = "/html//form[@id='formWorkOrder']/div[@class='modal-body']/div[@class='form-body']//div[@class='col-md-4 margin-top-10 no_left_padding']/div[@class='form-group']/label[2]/div[@id='uniform-ServiceTimeTypes']/span")
 	private WebElementFacade RangeTimeRdioBttn_AddWOBttn_CSRDB_Mech;
 	
 	@FindBy(xpath = "//select[@id='InitialPreferedId']")
 	private WebElementFacade DDTimeRange_AddWOBttn_CSRDB_Mech;
 	
-	@FindBy(xpath = "//select[@id='InitialPreferedId']//option[contains(text(),'09:00 AM - 10:00 AM')]")
+	@FindBy(xpath = "//select[@id='InitialPreferedId']//option[contains(text(),'08:00 AM - 09:00 AM')]")
 	private WebElementFacade ValueTimeRange_AddWOBttn_CSRDB_Mech;
 	
 	@FindBy(xpath = "//select[@id='SecondInitialPreferedId']")
 	private WebElementFacade DDSecondTimeRange_AddWOBttn_CSRDB_Mech;
 	
-	@FindBy(xpath = "//select[@id='SecondInitialPreferedId']//option[contains(text(),'10:00 AM - 11:00 AM')]")
+	@FindBy(xpath = "//select[@id='SecondInitialPreferedId']//option[contains(text(),'09:15 AM - 11:40 PM')]")
 	private WebElementFacade ValueSecondTimeRange_AddWOBttn_CSRDB_Mech;
 	
 	@FindBy(xpath = "//select[@id='RouteMasterId']")
@@ -291,8 +291,13 @@ public class MechCsrPage extends peststreamPage {
 
 
 	public void OkAccountAlert_CSRDB_Mech() {
-		OkAccountAlert_CSRDB_Mech.click();
-		waitABit(3000);
+		try {
+			OkAccountAlert_CSRDB_Mech.click();
+			waitABit(3000);
+			
+		} catch (Exception e) {
+			waitABit(500);
+		}
 	}
 
 
@@ -476,6 +481,7 @@ public class MechCsrPage extends peststreamPage {
 
 
 	public void RangeTimeRdioBttn_AddWOBttn_CSRDB_Mech() {
+	
 		RangeTimeRdioBttn_AddWOBttn_CSRDB_Mech.click();
 		waitABit(3000);
 	}
