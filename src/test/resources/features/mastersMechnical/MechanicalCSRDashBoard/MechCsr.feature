@@ -1,4 +1,4 @@
-@run
+@run @mechcsr
 Feature: Create Mech CSR DashBoard for advance search.
 
   Background: 
@@ -11,7 +11,7 @@ Feature: Create Mech CSR DashBoard for advance search.
   Scenario: Test to Add Opportunity using CSRDashboard.
     When user click on CSRDashBoard_Mech
     When user clicked on AdvanceSearch_CSRDB_Mech
-    Then click on AccountNo_CSRDB_Mech
+        Then click on AccountNo_CSRDB_Mech
     Then click on OkAccountAlert_CSRDB_Mech
     Then click on AddOppBttn_CSRDB_Mech
     Then click on SecondaryPhoneNo_Opp_CSRDB_Mech
@@ -49,9 +49,9 @@ Feature: Create Mech CSR DashBoard for advance search.
     Then click on ValueServices_AddWOBttn_CSRDB_Mech
     Then click on Add_AddWOBttn_CSRDB_Mech
     Then click on KeepSameBillingAddress_AddWOBttn_CSRDB_Mech
-    Then click on ServiceDatePOP_AddWOBttn_CSRDB_Mech
-    Then click on ServiceDateValue_AddWOBttn_CSRDB_Mech
-    Then click on Save_AddWOBttn_CSRDB_Mech
+    #Then click on ServiceDatePOP_AddWOBttn_CSRDB_Mech
+    #Then click on ServiceDateValue_AddWOBttn_CSRDB_Mech
+    #Then click on Save_AddWOBttn_CSRDB_Mech
 
   @AccNo_AddWOBttn_Notes_CSRDB_Mech
   Scenario: Test to Add WorkOrder with Notes using CSRDashboard.
@@ -102,7 +102,7 @@ Feature: Create Mech CSR DashBoard for advance search.
     Then click on ServiceDatePOP_AddWOBttn_CSRDB_Mech
     Then click on ServiceDateValue_AddWOBttn_CSRDB_Mech
     Then click on DDPrimaryRoute_AddWOBttn_CSRDB_Mech
-    Then click on ValuePrimaryRoute_AddWOBttn_CSRDB_Mech
+    #Then click on ValuePrimaryRoute_AddWOBttn_CSRDB_Mech
     Then click on Save_AddWOBttn_CSRDB_Mech
     
     
@@ -213,13 +213,13 @@ Feature: Create Mech CSR DashBoard for advance search.
     Then click on Services_AddWOBttn_CSRDB_Mech
     Then click on ValueServices_AddWOBttn_CSRDB_Mech
     Then click on Add_AddWOBttn_CSRDB_Mech
-    Then click on KeepSameBillingAddress_AddWOBttn_CSRDB_Mech
+    #Then click on KeepSameBillingAddress_AddWOBttn_CSRDB_Mech
     Then click on Notes_AddWOBttn_CSRDB_Mech
     Then click on Direction_AddWOBttn_CSRDB_Mech
     Then click on ServiceDatePOP_AddWOBttn_CSRDB_Mech
     Then click on ServiceDateValue_AddWOBttn_CSRDB_Mech
     Then click on DDPrimaryRoute_AddWOBttn_CSRDB_Mech
-    Then click on ValuePrimaryRoute_AddWOBttn_CSRDB_Mech
+    #Then click on ValuePrimaryRoute_AddWOBttn_CSRDB_Mech
     Then click on SpecialInstruction_AddWOBttn_CSRDB_Mech
     Then click on ServiceInstruction_AddWOBttn_CSRDB_Mech
     Then click on InternalInstruction_AddWOBttn_CSRDB_Mech
@@ -228,6 +228,18 @@ Feature: Create Mech CSR DashBoard for advance search.
 
   @AccNo_AddWOBttn_CSRDB_Mech1
   Scenario: Test to Add WorkOrder with TwoTimeRange using CSRDashboard.
+    When user click on CSRDashBoard_Mech
+    When user clicked on AdvanceSearch_CSRDB_Mech
+    Then click on AccountNo_CSRDB_Mech
+    Then click on OkAccountAlert_CSRDB_Mech
+    Then click on AddWOBttn_CSRDB_Mech
+    Then click on DDServiceCategory_AddWOBttn_CSRDB_Mech
+    Then click on ValueDDServiceCategory_AddWOBttn_CSRDB_Mech
+    Then click on Services_AddWOBttn_CSRDB_Mech
+    Then click on ValueServices_AddWOBttn_CSRDB_Mech
+    Then click on Add_AddWOBttn_CSRDB_Mech
+    Then click on ServiceDatePOP_AddWOBttn_CSRDB_Mech
+    Then click on ServiceDateValue_AddWOBttn_CSRDB_Mech
     Then click on RangeTimeRdioBttn_AddWOBttn_CSRDB_Mech
     Then click on DDTimeRange_AddWOBttn_CSRDB_Mech
     Then click on ValueTimeRange_AddWOBttn_CSRDB_Mech
