@@ -44,7 +44,7 @@ public class CSRDashBoardPage extends peststreamPage {
 	@FindBy(xpath = "//textarea[@id='Note']")
 	private WebElementFacade notes;
 	
-	@FindBy(xpath = "(//span[contains")
+	@FindBy(xpath = "(//span[@class='ladda-label'])[1]")
 	private WebElementFacade savebtn;
 	
 	@FindBy(xpath = "//tr[1]//td[10]//a[3]//i[1]")
@@ -224,6 +224,18 @@ public class CSRDashBoardPage extends peststreamPage {
 	@FindBy(xpath = "//span[contains(text(),'CustomerPortal App')]")
 	private WebElementFacade ValueDDServicesWO;
 	
+	@FindBy(xpath = "//input[@id='LeadTaskVm_TaskName']")
+	private WebElementFacade TaskName_CSRDashboard;
+	
+	@FindBy(xpath = "//input[@id='LeadTaskVm_DueDateStr']")
+	private WebElementFacade DueDate_CSRDashboard;
+	
+	@FindBy(xpath = "(//span[@class='ladda-label'])[1]")
+	private WebElementFacade Save_CSRDashboard;
+	
+	@FindBy(xpath = "//input[contains(@name,'Agenda')]")
+	private WebElementFacade Activity_CSRDashboard;
+	
 	@Override
 	public WebElementFacade getUniqueElement() {
 		// TODO Auto-generated method stub
@@ -232,14 +244,15 @@ public class CSRDashBoardPage extends peststreamPage {
 
 	public void dashboardClick() {
 		scrollUP(DashBoardTab);
-		DashBoardTab.click();
 		waitABit(2000);
+		DashBoardTab.click();
+		waitABit(4000);
 		
 	}
 
 	public void advanceSearchbtn() {
 		AdvanceSearch.click();
-		waitABit(2000);
+		waitABit(4000);
 	}
 
 	public void callAction() {
@@ -272,11 +285,15 @@ public class CSRDashBoardPage extends peststreamPage {
 	}
 
 	public void saveBtn() {
+		waitABit(3000);
+		scrollDown(savebtn);
+		waitABit(3000);
 		savebtn.click();
-		waitABit(2000);
+		waitABit(4000);
 	}
 
 	public void newTaskAxn() {
+		waitABit(2000);
 		newTaskAxn.click();
 		waitABit(5000);
 		
@@ -285,9 +302,9 @@ public class CSRDashBoardPage extends peststreamPage {
 
 	public void tasktemplate() {
 		template.click();
-		waitABit(2000);
+		waitABit(3000);
 		Template1.click();
-		waitABit(2000);
+		waitABit(4000);
 		
 		
 	}
@@ -305,7 +322,8 @@ public class CSRDashBoardPage extends peststreamPage {
 
 	public void lobBtnDDL() {
 		logActivity.click();
-		waitABit(2000);
+		waitABit(3000);
+		//logActivity.sendKeys(testData.get("Description"));
 //		logDropDown.click();
 //		waitABit(2000);
 		logDropDown1.click();
@@ -313,8 +331,9 @@ public class CSRDashBoardPage extends peststreamPage {
 	}
 
 	public void markasDone() {
+		waitABit(3000);
 		 MarkAsDone.click();
-		 waitABit(2000);
+		 waitABit(4000);
 			
 	}
 
@@ -324,27 +343,30 @@ public class CSRDashBoardPage extends peststreamPage {
 	}
 
 	public void recuringChckBox() {
+		waitABit(3000);
 		RecurringChckBox.click();
-		waitABit(2000);
+		waitABit(4000);
 	}
 
 	public void recurringDDL() {
+		waitABit(2000);
 		frquency.click();
-		waitABit(2000);
+		waitABit(3000);
 		frequency1.click();
-		waitABit(2000);
+		waitABit(3000);
 		month1.click();
-		waitABit(2000);
+		waitABit(3000);
 		month2.click();
-		waitABit(2000);
+		waitABit(3000);
 		day1.click();
-		waitABit(2000);
+		waitABit(3000);
 		day2.click();
-		waitABit(2000);
+		waitABit(3000);
 		
 	}
 
 	public void addOportunity() {
+		waitABit(3000);
 		addOportunity.click();
 		waitABit(2000);
 
@@ -376,15 +398,16 @@ public class CSRDashBoardPage extends peststreamPage {
 	}
 
 	public void noteBtnAxn() {
+		waitABit(3000);
 		AddNoteAxn.click();
 		waitABit(5000);
 		
 	}
 
 	public void addingNote(Map<String, String> testData) {
-		
+		waitABit(3000);
 		noteType.sendKeys(testData.get("Notes"));
-		waitABit(2000);
+		waitABit(4000);
 		
 		
 	}
@@ -550,5 +573,41 @@ public class CSRDashBoardPage extends peststreamPage {
 		waitABit(2000);
 		DDServicesWO.sendKeys(Keys.ENTER);
 		waitABit(2000);
+	}
+
+	public void TaskName_CSRDashboard(Map<String, String> testData) {
+		waitABit(2000);
+		TaskName_CSRDashboard.click();
+		TaskName_CSRDashboard.sendKeys(testData.get("Description"));
+		waitABit(4000);
+		
+	}
+
+	public void DueDate_CSRDashboard() {
+		scrollDown(DueDate_CSRDashboard);
+		DueDate_CSRDashboard.click();
+		waitABit(2000);
+		nextMonth.click();	
+		waitABit(2000);
+		dueDate.click();
+		waitABit(2000);
+		//DueDate_CSRDashboard.sendKeys(testData.get("Description"));
+		waitABit(2000);
+		
+	}
+
+	public void Save_CSRDashboard() {
+		waitABit(3000);
+		scrollDown(Save_CSRDashboard);
+		Save_CSRDashboard.click();
+		waitABit(2000);
+		
+	}
+
+	public void Activity_CSRDashboard(Map<String, String> testData) {
+		waitABit(3000);
+		Activity_CSRDashboard.click();
+		Activity_CSRDashboard.sendKeys(testData.get("Description"));
+		
 	}	
 }

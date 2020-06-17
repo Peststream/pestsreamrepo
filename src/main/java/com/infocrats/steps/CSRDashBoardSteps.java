@@ -56,7 +56,8 @@ public class CSRDashBoardSteps extends pestreamSteps {
 		
 	}
 
-	public void logBtnTypeDDL() {
+	public void logBtnTypeDDL() throws Exception {
+		
 		csrDashBoardpage.lobBtnDDL();
 		
 	}
@@ -203,6 +204,28 @@ public class CSRDashBoardSteps extends pestreamSteps {
 
 	public void DDServicesWO() {
 		csrDashBoardpage.DDServicesWO();
+		
+	}
+
+	public void TaskName_CSRDashboard() throws Exception {
+		jsonData = JsonHelper.readJsonElement("call.json", "CSRDashBoard");
+		csrDashBoardpage.TaskName_CSRDashboard(jsonData);
+		
+	}
+
+	public void DueDate_CSRDashboard() {
+       csrDashBoardpage.DueDate_CSRDashboard();
+   
+	}
+
+	public void Save_CSRDashboard() throws Exception {
+		csrDashBoardpage.Save_CSRDashboard();
+		
+	}
+
+	public void Activity_CSRDashboard() throws Exception {
+		jsonData = JsonHelper.readJsonElement("call.json", "CSRDashBoard");
+		csrDashBoardpage.Activity_CSRDashboard(jsonData);
 		
 	}
 

@@ -56,7 +56,7 @@ public class CSRDashBoardStepDefs {
 	}
 
 	@Then("^User Checks the Log as Activity and Selects the activity Type log DDL$")
-	public void UserChecksTheLogButton() {
+	public void UserChecksTheLogButton() throws Exception  {
 		csrDashBoardssteps.logBtnTypeDDL();
 	}
 
@@ -204,5 +204,28 @@ public class CSRDashBoardStepDefs {
 	public void user_click_on_DDServicesWO() {
 		csrDashBoardssteps.DDServicesWO();
 	}
+	
+	@Then("^user click on TaskName_CSRDashboard$")
+	public void user_click_on_TaskName_CSRDashboard() throws Exception {
+		csrDashBoardssteps.TaskName_CSRDashboard();
+	}
+
+	@Then("^user click on DueDate_CSRDashboard$")
+	public void user_click_on_DueDate_CSRDashboard() {
+		csrDashBoardssteps.DueDate_CSRDashboard();
+	}
+
+	@Then("^user click on Save_CSRDashboard$")
+	public void user_click_on_Save_CSRDashboard() throws Exception {
+		csrDashBoardssteps.Save_CSRDashboard();
+	}
+	
+	@Then("^user click on Activity_CSRDashboard$")
+	public void user_click_on_Activity_CSRDashboard() throws Exception {
+		csrDashBoardssteps.Activity_CSRDashboard();
+	}
+
+
+
 
 }
