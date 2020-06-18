@@ -224,6 +224,33 @@ public class CSRDashBoardStepDefs {
 	public void user_click_on_Activity_CSRDashboard() throws Exception {
 		csrDashBoardssteps.Activity_CSRDashboard();
 	}
+	
+	@Then("^user click on billingAddSame_WOCSRDashboard$")
+	public void user_click_on_billingAddSame_WOCSRDashboard() {
+		csrDashBoardssteps.billingAddSame_WOCSRDashboard();
+	}
+
+	@Then("^user click on AddLine(\\d+)_WOCSRDashboard$")
+	public void user_click_on_AddLine__WOCSRDashboard(int arg1) throws Exception {
+		csrDashBoardssteps.AddLine();
+	}
+
+	@Then("^user click on zip_WOCSRDashboard$")
+	public void user_click_on_zip_WOCSRDashboard() throws Exception {
+		csrDashBoardssteps.zip_WOCSRDashboard();
+	}
+
+	/*@Then("^user click on State_WOCSRDashboard$")
+	public void user_click_on_State_WOCSRDashboard() {
+		csrDashBoardssteps.State_WOCSRDashboard();
+	}*/
+
+	@Then("^user click on save_WOCSRDashboard$")
+	public void user_click_on_save_WOCSRDashboard() {
+		csrDashBoardssteps.save_WOCSRDashboard();
+	}
+
+
 
 
 

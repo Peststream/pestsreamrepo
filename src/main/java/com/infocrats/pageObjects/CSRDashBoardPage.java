@@ -236,6 +236,24 @@ public class CSRDashBoardPage extends peststreamPage {
 	@FindBy(xpath = "//input[contains(@name,'Agenda')]")
 	private WebElementFacade Activity_CSRDashboard;
 	
+	@FindBy(xpath = "(//input[@type='checkbox'])[3]")
+	private WebElementFacade billingAddSame_WOCSRDashboard;
+	
+	@FindBy(xpath = "(//input[@placeholder='Enter Address 1'])[1]")
+	private WebElementFacade AddLine;
+	
+	@FindBy(xpath = "(//input[@placeholder='Enter Zip'])[1]")
+	private WebElementFacade zip_WOCSRDashboard;
+	
+	@FindBy(xpath = "(//input[@placeholder='Enter City'])[1]")
+	private WebElementFacade City;
+	
+	@FindBy(xpath = "(//select[@data-placeholder='Select State...'])[1]")
+	private WebElementFacade State_WOCSRDashboard;
+	
+	@FindBy(xpath = "(//button[contains(.,'Save')])[1]")
+	private WebElementFacade save_WOCSRDashboard;
+	
 	@Override
 	public WebElementFacade getUniqueElement() {
 		// TODO Auto-generated method stub
@@ -609,5 +627,39 @@ public class CSRDashBoardPage extends peststreamPage {
 		Activity_CSRDashboard.click();
 		Activity_CSRDashboard.sendKeys(testData.get("Description"));
 		
+	}
+
+	public void billingAddSame_WOCSRDashboard() {
+		waitABit(3000);
+		billingAddSame_WOCSRDashboard.click();
+		
+	}
+
+	public void AddLine(Map<String, String> testData) {
+		waitABit(3000);
+		AddLine.click();
+		AddLine.sendKeys(testData.get("AddressLine1"));
+	}
+
+	public void zip_WOCSRDashboard(Map<String, String> testData) {
+		waitABit(3000);
+		zip_WOCSRDashboard.click();
+		zip_WOCSRDashboard.sendKeys(testData.get("Zip"));
+		
+		City.click();
+		waitABit(3000);
+		City.sendKeys(testData.get("City"));
+		waitABit(3000);
+	}
+
+	/*public void State_WOCSRDashboard() {
+		waitABit(3000);
+		State_WOCSRDashboard.click();
+	}*/
+
+	public void save_WOCSRDashboard() {
+		scrollDownLarge(save_WOCSRDashboard);
+		waitABit(3000);
+		save_WOCSRDashboard.click();
 	}	
 }

@@ -7,50 +7,60 @@ Feature: Create pest control residential opportunity for exiting user.
     And I can click sign in
     Then I am granted access to the system
 
- 
-    
-    
-  
-    @conc
+  @conc
   Scenario: To check add Contact From Customer Tab and Save
-  Then user click on Activity_CSRDashboard
-  
- 
- @Scenario
-   Scenario: Testing Call action on Already Generated Account with Activity Log and mark as Done
-       When User clicks on the CsrDashboard from the left tab
-    Then User Clicks on Advvance Search Tab in CSR
-    Then User Clicks on WorkOrder Button
-    Then user click on DDServiceCategoryWO
-    Then user click on DDServicesWO
-    Then User add the Service
-    Then User Selects the Service date
-    Then User Save the WorkOrder
-    
-     #notDone
-  @WOST
-  Scenario: Testing of WorkOrder from CSR dashBoard
+    Then user click on billingAddSame_WOCSRDashboard
+    Then user click on AddLine1_WOCSRDashboard
+    Then user click on zip_WOCSRDashboard
+    Then user click on State_WOCSRDashboard
+    Then user click on save_WOCSRDashboard
+
+  @Scenario
+  Scenario: Testing Call action on Already Generated Account with Activity Log and mark as Done
     When User clicks on the CsrDashboard from the left tab
     Then User Clicks on Advvance Search Tab in CSR
     Then User Clicks on WorkOrder Button
     Then user click on DDServiceCategoryWO
     Then user click on DDServicesWO
     Then User add the Service
+    Then user click on billingAddSame_WOCSRDashboard
+    Then user click on AddLine1_WOCSRDashboard
+    Then user click on zip_WOCSRDashboard
     Then User Selects the Service date
+    Then user click on save_WOCSRDashboard
     Then User Save the WorkOrder
+
+  #notDone
+  @WOST
+  Scenario: Testing of WorkOrder from CSR dashBoard
+     When User clicks on the CsrDashboard from the left tab
+    Then User Clicks on Advvance Search Tab in CSR
+    Then User Clicks on WorkOrder Button
+    Then user click on DDServiceCategoryWO
+    Then user click on DDServicesWO
+    Then User add the Service
+    Then user click on billingAddSame_WOCSRDashboard
+    Then user click on AddLine1_WOCSRDashboard
+    Then user click on zip_WOCSRDashboard
+    Then User Selects the Service date
+    Then user click on save_WOCSRDashboard
+   
 
   #Done
   @WORT
   Scenario: Testing of WorkOrder and add Service from CSR dashBoard
-    When User clicks on the CsrDashboard from the left tab
+     When User clicks on the CsrDashboard from the left tab
     Then User Clicks on Advvance Search Tab in CSR
     Then User Clicks on WorkOrder Button
     Then user click on DDServiceCategoryWO
     Then user click on DDServicesWO
     Then User add the Service
+    Then user click on billingAddSame_WOCSRDashboard
+    Then user click on AddLine1_WOCSRDashboard
+    Then user click on zip_WOCSRDashboard
     Then User Selects the Service date
     Then User clicks on the RangeTime
-    Then User Save the WorkOrder
+   Then user click on save_WOCSRDashboard
 
   #Done
   @WOLeadTech
@@ -61,9 +71,12 @@ Feature: Create pest control residential opportunity for exiting user.
     Then user click on DDServiceCategoryWO
     Then user click on DDServicesWO
     Then User add the Service
+    Then user click on billingAddSame_WOCSRDashboard
+    Then user click on AddLine1_WOCSRDashboard
+    Then user click on zip_WOCSRDashboard
     Then User Selects the Service date
     Then User clicks on the DDleadTech
-    Then User Save the WorkOrder
+    Then user click on save_WOCSRDashboard
 
   #Done
   @ViewDetailForNewComOpportunity
@@ -76,11 +89,7 @@ Feature: Create pest control residential opportunity for exiting user.
     Then user click on DDSourceAccountOpportunit
     Then User clicks on Continue
 
- 
-    
-
-    
-    #Done
+  #Done
   @diffBillingAddressCom @newUserPCCO
   Scenario: Test opportunity info Using Different Address
     When user clicked on call tab

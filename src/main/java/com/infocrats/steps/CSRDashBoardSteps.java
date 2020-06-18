@@ -229,6 +229,33 @@ public class CSRDashBoardSteps extends pestreamSteps {
 		
 	}
 
+	public void billingAddSame_WOCSRDashboard() {
+		csrDashBoardpage.billingAddSame_WOCSRDashboard();
+		
+	}
+
+	public void AddLine() throws Exception {
+		jsonData = JsonHelper.readJsonElement("call_Termite.json", "OpportunityAddress");
+		csrDashBoardpage.AddLine(jsonData);
+		
+	}
+
+	public void zip_WOCSRDashboard() throws Exception {
+		jsonData = JsonHelper.readJsonElement("call_Termite.json", "OpportunityAddress");
+		csrDashBoardpage.zip_WOCSRDashboard(jsonData);
+		
+	}
+
+	/*public void State_WOCSRDashboard() {
+		csrDashBoardpage.State_WOCSRDashboard();
+		
+	}*/
+
+	public void save_WOCSRDashboard() {
+		csrDashBoardpage.save_WOCSRDashboard();
+		
+	}
+
 
 
 
