@@ -373,10 +373,10 @@ public class NewUserCallHVACPage extends peststreamPage {
 
 	public void DDBranch() {
 		DDBranch.click();
-		waitABit(2000);
+		waitABit(4000);
 
 		valueDDBranch.click();
-		waitABit(3000);
+		waitABit(4000);
 
 	}
 
@@ -441,13 +441,13 @@ public class NewUserCallHVACPage extends peststreamPage {
 	public void clickAdvanceSearch() throws InterruptedException {
 		Thread.sleep(6000);
 		AdvanceSearchBtn.click();
-		Thread.sleep(4000);
+		Thread.sleep(6000);
 
 	}
 
 	public void selectOneWorkOrder() throws InterruptedException {
 		FirstWorkOrderlbl.click();
-		Thread.sleep(6000);
+		Thread.sleep(7000);
 	}
 
 	public void selectLeadEmployee() throws InterruptedException {
@@ -466,7 +466,7 @@ public class NewUserCallHVACPage extends peststreamPage {
 		scrollDown(SaveBtnFromWorkOrder);
 		Thread.sleep(1500);
 		SaveBtnFromWorkOrder.click();
-		Thread.sleep(5000);
+		Thread.sleep(7000);
 
 	}
 
@@ -491,6 +491,7 @@ public class NewUserCallHVACPage extends peststreamPage {
 
 	public void clickOnCsrDashboard() throws InterruptedException {
 		scrollUPSmall(CsrDashboardLbl);
+		Thread.sleep(1000);
 		CsrDashboardLbl.click();
 		Thread.sleep(1000);
 
@@ -499,20 +500,20 @@ public class NewUserCallHVACPage extends peststreamPage {
 	public void ClickAdvanceSearchBTN() throws InterruptedException {
 		waitABit(2000);
 		AdvanceSearchButton.click();
-		Thread.sleep(4000);
+		Thread.sleep(6000);
 
 	}
 
 	public void clickOnAddCall() throws InterruptedException {
 		waitABit(2000);
 		CallIconFromAction.click();
-		Thread.sleep(3000);
+		Thread.sleep(6000);
 	}
 
 	public void ClickSaveBtn() throws InterruptedException {
 		waitABit(2000);
 		SaveBtnOnCall.click();
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 
 	}
 
@@ -536,7 +537,7 @@ public class NewUserCallHVACPage extends peststreamPage {
 	public void clickOnAddOpportunityFromAction() throws InterruptedException {
 		waitABit(2000);
 		AddOpportunityIconFromAction.click();
-		Thread.sleep(4000);
+		Thread.sleep(6000);
 	}
 
 	public void selectGeneralInfo() throws InterruptedException {
@@ -555,47 +556,53 @@ public class NewUserCallHVACPage extends peststreamPage {
 	public void clickContinueFromGenralInfo() throws InterruptedException {
 		waitABit(2000);
 		ContinueBtn.click();
-		Thread.sleep(4000);
+		Thread.sleep(6000);
 
 	}
 
 	public void ClickOnAddTaskActionFromAction() throws InterruptedException {
 		waitABit(2000);
 		scrollDown(AddTaskIconFromAction);
+		waitABit(2000);
 		AddTaskIconFromAction.click();
-		Thread.sleep(3000);
+		Thread.sleep(6000);
 
 	}
 
 	public void SelectAddTaskAndDueDateFromGeneralInfo() throws InterruptedException {
 		TaskNameTextField.click();
+		waitABit(2000);
 		TaskNameTextField.sendKeys("Task Name");
-		Thread.sleep(500);
+		Thread.sleep(1000);
 
 		DueDateSelector.click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 
 		DueDateRightArrow.click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 
 		DueDateData.click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 
 	}
 
 	public void ClickSaveBtnGeneralInfo() {
 		scrollDown(SaveBtnFromGeneralInfo);
+		waitABit(2000);
 		SaveBtnFromGeneralInfo.click();
+		waitABit(6000);
 	}
 
 	public void ClickOnAddNoteFromAction() throws InterruptedException {
 		scrollDown(AddNoteIconFromAction);
+		waitABit(2000);
 		AddNoteIconFromAction.click();
 		Thread.sleep(1000);
 	}
 
 	public void EnterNoteForAddNote() {
 		EnterNoteTextField.click();
+		waitABit(2000);
 		EnterNoteTextField.sendKeys("this is the note");
 	}
 
@@ -607,13 +614,14 @@ public class NewUserCallHVACPage extends peststreamPage {
 
 	public void ClickCloseBtnFromAddNote() {
 		CloseButtonFromAddnote.click();
+		waitABit(2000);
 	}
 
 	public void ClickCreateWorkorderFRomAction() throws InterruptedException {
 		scrollDown(CreateWorkOrderIconFromAction);
 		Thread.sleep(2500);
 		CreateWorkOrderIconFromAction.click();
-		Thread.sleep(5000);
+		Thread.sleep(6000);
 	}
 
 	public void SelectServiceCategoryAndServices() throws InterruptedException {
@@ -633,7 +641,7 @@ public class NewUserCallHVACPage extends peststreamPage {
 
 	public void ClickOnAddBTN() throws InterruptedException {
 		AddBtn.click();
-		Thread.sleep(3000);
+		Thread.sleep(6000);
 
 	}
 
@@ -652,7 +660,7 @@ public class NewUserCallHVACPage extends peststreamPage {
 		scrollDown(DetailPageIconfromAction);
 		Thread.sleep(1500);
 		DetailPageIconfromAction.click();
-		Thread.sleep(3500);
+		Thread.sleep(6000);
 
 	}
 
@@ -669,6 +677,7 @@ public class NewUserCallHVACPage extends peststreamPage {
 	public void ClickSaveOnDetailPage() throws InterruptedException {
 		Thread.sleep(1000);
 		SaveBtnFromDetailPage.click();
+		Thread.sleep(4000);
 
 	}
 
@@ -686,43 +695,48 @@ public class NewUserCallHVACPage extends peststreamPage {
 	public void EnterCustomerInfo(Map<String, String> testData) throws InterruptedException {
 		Thread.sleep(1500);
 		ContactTypeDD.click();
+		Thread.sleep(1000);
 		ContactTypeDDValue.click();
 		Thread.sleep(1000);
 		Contact.sendKeys(testData.get("Contact"));
 		Thread.sleep(1000);
 		SourceDDFromAddAccount.click();
+		Thread.sleep(1000);
 		SourceDDValueFromAddAccount.click();
 
 	}
 
 	public void ClickOnAddAccount() throws InterruptedException {
 		AddAccountBtn.click();
-		Thread.sleep(3000);
+		Thread.sleep(6000);
 	}
 
 	public void ClickSaveFromAddAccountddAccount() {
 		SaveBtnFromAddAccount.click();
-
+waitABit(5000);
 	}
 
 	public void CLickAdvanceSearchFromAccount() throws InterruptedException {
 		AdvanceSearchFromAccount.click();
-		Thread.sleep(4000);
+		Thread.sleep(6000);
 
 	}
 
 	public void ClickAddOpportunityFromAction() {
 		AddOpportunityIconForAccount.click();
+		waitABit(6000);
 
 	}
 
 	public void EnterTestDataForOpportunity() throws InterruptedException {
 		DepartmentDD.click();
+		Thread.sleep(1000);
 		DepartmentDDValue.click();
 		Thread.sleep(500);
 		SourceDDForAddOpportunity.click();
+		Thread.sleep(1000);
 		SourceDDValueForAddOpportunity.click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		OpportunityTypeRadioButton.click();
 		Thread.sleep(1000);
 
@@ -731,13 +745,13 @@ public class NewUserCallHVACPage extends peststreamPage {
 	public void ClickViewIconFromAction() throws InterruptedException {
 		Thread.sleep(2000);
 		ViewIconFromAction.click();
-		Thread.sleep(4000);
+		Thread.sleep(6000);
 
 	}
 
 	public void ClickOnPhoneSalesIconAndSelectgeneralInfo() throws InterruptedException {
 		AddTaskIconFromAction.click();
-		Thread.sleep(5000);
+		Thread.sleep(6000);
 		SourceDropDown.click();
 		Thread.sleep(1000);
 		SourceDropDownValue.click();
@@ -751,22 +765,23 @@ public class NewUserCallHVACPage extends peststreamPage {
 
 	public void ClickOnCompanyFromCustomer() throws InterruptedException {
 		CompanyFromCustomerDD.click();
-		Thread.sleep(3000);
+		Thread.sleep(6000);
 
 	}
 
 	public void EnterTestDataForAddCompany() throws InterruptedException {
 		EnterNameForAddCompany.sendKeys("Nitesh");
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		SourceDDForAddCompany.click();
+		Thread.sleep(1000);
 		SourceDDValueForAddCompany.click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 
 	}
 
 	public void ClickOnAddOpportunityForCompany() throws InterruptedException {
 		AddOpportunityForCompany.click();
-		Thread.sleep(2500);
+		Thread.sleep(6000);
 
 	}
 
@@ -780,12 +795,13 @@ public class NewUserCallHVACPage extends peststreamPage {
 	public void ClickContinueFromAddOpportunityForCompany() {
 		waitABit(2000);
 		ContinueButtonFromCreateOpportunity1.click();
+		waitABit(3000);
 	}
 
 	public void ClickOnViewFromActionForCompany() throws InterruptedException {
 		waitABit(2000);
 		ViewIconFromActionForCompany.click();
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 	}
 
 	public void ClickOnDeleteFromActionForCompany() {
@@ -796,7 +812,7 @@ public class NewUserCallHVACPage extends peststreamPage {
 
 	public void ConfirmTheDeleteAlert() {
 		waitABit(2000);
-		AcceptAlert.click();
+		//AcceptAlert.click();
 	}
 
 	public void CancelTheDeleteAlert() {
@@ -807,11 +823,14 @@ public class NewUserCallHVACPage extends peststreamPage {
 	public void ClickContactFromCustomerDD() {
 		waitABit(2000);
 		ContactFromCustomerDD.click();
+		waitABit(5000);
 
 	}
 
 	public void ClickOnAddContact() {
+		waitABit(2000);
 		AddContactbtn.click();
+		waitABit(5000);
 	}
 
 	public void EnterTestDataForAddContact() {
@@ -822,42 +841,45 @@ public class NewUserCallHVACPage extends peststreamPage {
 	public void ClickCloseBtnFromAddContact() {
 		waitABit(2000);
 		CloseBtnFromAddContact.click();
+		waitABit(2000);
 	}
 
 	public void EnterTestDataOfAddOpportunityForContact() throws InterruptedException {
 		waitABit(2000);
 		DepartmentDDForAddOpportunityContact.click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		DepartmentDDValueForAddOpportunityContact.click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		SourceDDForAddOpportunityContact.click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		SourceDDValueForAddOpportunityContact.click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		OpportunityTypeRadioButton.click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 	}
 
 	public void ClickonAddOpportunityForContact() throws InterruptedException {
 		waitABit(2000);
 		AddOpportunityForContactBtn.click();
-		Thread.sleep(2500);
+		Thread.sleep(5000);
 	}
 
 	public void ClickonSaveButtonForAddOpportunityContact() {
 		waitABit(2000);
 		SaveBtnFromAddAccount.click();
+		waitABit(5000);
 	}
 
 	public void CLickOnViewContactFromAction() throws InterruptedException {
 		waitABit(2000);
 		ViewActionForContact.click();
-		Thread.sleep(2500);
+		Thread.sleep(5000);
 	}
 
 	public void CLickOnDeleteContactFromAction() {
 		waitABit(2000);
 		DeleteIconForContact.click();
+		waitABit(2000);
 	}
 
 	public void ConfirmDeleteForContact() {
@@ -873,11 +895,13 @@ public class NewUserCallHVACPage extends peststreamPage {
 	public void SelectopportunityFromCustomerDD() {
 		waitABit(2000);
 		OpportunityFromCustomerDd.click();
+		waitABit(4000);
 	}
 
 	public void ClickNewACcountBtnInAddOpportunity() {
 		waitABit(2000);
 		NewACcountBtnInAddOpportunity.click();
+		waitABit(4000);
 	}
 
 	public void SelectLeadFromCustomerDD() throws InterruptedException {
@@ -888,6 +912,7 @@ public class NewUserCallHVACPage extends peststreamPage {
 	public void ClickAddLeadBtn() {
 		waitABit(2000);
 		AddLeadBtn.click();
+		waitABit(5000);
 	}
 
 	public void SelectOrEnterInfoForAddLead() {
@@ -900,11 +925,13 @@ public class NewUserCallHVACPage extends peststreamPage {
 	public void selectDatabaseFromCustomerDD() {
 		waitABit(2000);
 		DatabaseFromCustomerDd.click();
+		waitABit(2000);
 	}
 
 	public void clickAddDatabaseEntryBtn() {
 		waitABit(2000);
 		AddDatabaseEntryBtn.click();
+		waitABit(2000);
 	}
 
 	public void enterGeneralTestDataForAddDatabaseEntry() {
@@ -918,7 +945,7 @@ public class NewUserCallHVACPage extends peststreamPage {
 			CloseBtnForAlert.click();
 			
 		} catch (Exception e) {
-			waitABit(2000);
+			waitABit(1000);
 		
 
 		}

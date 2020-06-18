@@ -27,7 +27,7 @@ Feature: Test for Call HVAC.
     And Click on Continue From General Info
 
   #pass
-  @TestOpportunityInfoForHVAC
+  @TestOpportunityInfoForHVAC7
   Scenario: Test CSR Dashboard for HVAC7
     When user click on CSR Dashboard
     When user click on Advance Search from CSR Dashboard
@@ -36,21 +36,21 @@ Feature: Test for Call HVAC.
     And Click on Save Buttton From Add Call Tab
 
   #pass
-  @TestOpportunityInfoForHVAC
+  @TestOpportunityInfoForHVAC8
   Scenario: Test CSR Dashboard for HVAC8
     When user click on CSR Dashboard
     When user click on Advance Search from CSR Dashboard
     And Select Add Task From Action for the first Account
-    And Select Task Name, Due Date
+    #And Select Task Name, Due Date
     And Click on Save Button
 
   #pass
-  @TestOpportunityInfoForHVAC
+  @TestOpportunityInfoForHVAC9
   Scenario: Test CSR Dashboard for HVAC9
     When user click on CSR Dashboard
     When user click on Advance Search from CSR Dashboard
     And Select Add Task From Action for the first Account
-    And Select Task Name, Due Date
+    #And Select Task Name, Due Date
     And Click on Save Button
 
   #pass
