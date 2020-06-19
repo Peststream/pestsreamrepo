@@ -1,4 +1,4 @@
-@run @mechcsr
+@run @mechcsr @hvac
 Feature: Create Mech CSR DashBoard for advance search.
 
   Background: 
