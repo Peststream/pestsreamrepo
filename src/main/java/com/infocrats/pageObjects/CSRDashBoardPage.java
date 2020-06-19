@@ -436,8 +436,9 @@ public class CSRDashBoardPage extends peststreamPage {
 	}
 
 	public void WorkOrderBtn() {
+		waitABit(4000);
 		WorkOrderCsr.click();
-		waitABit(2000);
+		waitABit(3000);
 	}
 
 	public void ServiceCategorySubService() {
@@ -453,20 +454,21 @@ public class CSRDashBoardPage extends peststreamPage {
 	}
 
 	public void addServiceBtn() {
+		waitABit(3000);
 		AddService.click();
-		waitABit(2000);
+		waitABit(3000);
 		
 		
 	}
 
 	public void ServiceDate() {
-		waitABit(2000);
+		waitABit(4000);
 		serviceDate.click();
-		waitABit(2000);
+		waitABit(4000);
 //		nextMonth.click();
 //		waitABit(2000);
 		 dateWorkOrder.click();
-		 waitABit(2000);
+		 waitABit(4000);
 	}
 
 	public void SavingWorkOrder() {
@@ -547,17 +549,19 @@ public class CSRDashBoardPage extends peststreamPage {
 	}
 
 	public void RangeTime() {
+		waitABit(4000);
 		RangeTime.click();
-		waitABit(2000);
+		waitABit(4000);
 		
 	}
 
 	public void DDleadTech() {
+		waitABit(4000);
 		DDleadTech.click();
-		waitABit(2000);
+		waitABit(4000);
 		
 		valueleadTech.click();
-		waitABit(2000);
+		waitABit(4000);
 		
 	}
 
@@ -576,21 +580,23 @@ public class CSRDashBoardPage extends peststreamPage {
 	}
 
 	public void DDServiceCategoryWO() {
+		waitABit(3000);
 		DDServiceCategoryWO.click();
-		waitABit(2000);
+		waitABit(3000);
 		
 		ValueDDServiceCategoryWO.click();
-		waitABit(2000);
+		waitABit(3000);
 	}
 
 	public void DDServicesWO() {
+		waitABit(3000);
 		DDServicesWO.click();
-		waitABit(2000);
+		waitABit(3000);
 		
 		DDServicesWO.sendKeys(Keys.DOWN);
-		waitABit(2000);
+		waitABit(3000);
 		DDServicesWO.sendKeys(Keys.ENTER);
-		waitABit(2000);
+		waitABit(3000);
 	}
 
 	public void TaskName_CSRDashboard(Map<String, String> testData) {
@@ -630,26 +636,28 @@ public class CSRDashBoardPage extends peststreamPage {
 	}
 
 	public void billingAddSame_WOCSRDashboard() {
-		waitABit(3000);
+		waitABit(4000);
 		billingAddSame_WOCSRDashboard.click();
-		
+		waitABit(4000);
 	}
 
 	public void AddLine(Map<String, String> testData) {
-		waitABit(3000);
+		waitABit(4000);
 		AddLine.click();
+		waitABit(4000);
 		AddLine.sendKeys(testData.get("AddressLine1"));
 	}
 
 	public void zip_WOCSRDashboard(Map<String, String> testData) {
-		waitABit(3000);
+		waitABit(4000);
 		zip_WOCSRDashboard.click();
+		waitABit(4000);
 		zip_WOCSRDashboard.sendKeys(testData.get("Zip"));
-		
+		waitABit(4000);
 		City.click();
-		waitABit(3000);
+		waitABit(4000);
 		City.sendKeys(testData.get("City"));
-		waitABit(3000);
+		waitABit(4000);
 	}
 
 	/*public void State_WOCSRDashboard() {
@@ -658,8 +666,9 @@ public class CSRDashBoardPage extends peststreamPage {
 	}*/
 
 	public void save_WOCSRDashboard() {
+		waitABit(4000);
 		scrollDownLarge(save_WOCSRDashboard);
-		waitABit(3000);
+		waitABit(4000);
 		save_WOCSRDashboard.click();
 	}	
 }
