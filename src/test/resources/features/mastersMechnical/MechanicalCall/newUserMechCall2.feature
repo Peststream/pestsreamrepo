@@ -1,4 +1,4 @@
-@run @Newusermechcall
+@run @Newusermechcall1
 Feature: New USer Mech Call 2
 
   Background: 
@@ -130,18 +130,18 @@ Feature: New USer Mech Call 2
     Then user click on saveInfo Button
     Then user click on Opportunity_Mech
     Then user click on Save & Continue General Info
-    Then user click on continue Inspection
-    Then user click on Non Standard Equipment subTab
-    Then user click on Service Repair Rate(non standard)
-    Then user click on Save Equipment
-    Then user click on Save & Continue Equipment
-    Then user click on Save & Continue Customer Review
-    Then user click on Payment type
-    Then user Enters Amount paid
-    Then user click on Customer not present
-    Then user click on Sales Representative Signature
-    Then user click on Save & Continue Signatures
-    Then user click on Send Agreement Link
+   # Then user click on continue Inspection
+   # Then user click on Non Standard Equipment subTab
+   # Then user click on Service Repair Rate(non standard)
+   # Then user click on Save Equipment
+   # Then user click on Save & Continue Equipment
+   # Then user click on Save & Continue Customer Review
+    #Then user click on Payment type
+    #Then user Enters Amount paid
+    #Then user click on Customer not present
+    #Then user click on Sales Representative Signature
+    #Then user click on Save & Continue Signatures
+    #Then user click on Send Agreement Link
 
   #Pass_Fixed
   @CSSO_ScheduleEstimation_Commercial_Field_TimeRange_Save_Mech
@@ -173,7 +173,7 @@ Feature: New USer Mech Call 2
     Then user click on saveInfo Button
 
   #Passed_Recent
-  @CSSO_ScheduleEstimation_Commercial_Field_NonStd_CustAbsent_Mech
+  @CSSO_ScheduleEstimation_Commercial_Field_NonStd_CustAbsent_Mech12
   Scenario: Test Commercial ScheduleEstimation with Field using NonStandard when Cust is Absent12
     When user clicked on CallTab
     Then user enters Company
