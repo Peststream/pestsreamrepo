@@ -7,8 +7,6 @@ Feature: New USer Mech Call 3
     And I can click sign in
     Then I am granted access to the system
 
- 
-
   #Pass
   @CSSO_General_Mec3
   Scenario: Test Opportunity using PrimaryRoute.3
@@ -38,5 +36,3 @@ Feature: New USer Mech Call 3
     Then select Second Time Range
     Then user selects Primary Route
     And user clicks on Save Button Mech
-
- 
