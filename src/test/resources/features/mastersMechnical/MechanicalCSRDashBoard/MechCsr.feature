@@ -7,7 +7,7 @@ Feature: Create Mech CSR DashBoard for advance search.
     And I can click sign in
     Then I am granted access to the system
 
-  @AccNo_AddOppBttn_CSRDB_Mech
+  @AccNo_AddOppBttn_CSRDB_Mech10
   Scenario: Test to Add Opportunity using CSRDashboard.
     When user click on CSRDashBoard_Mech
     When user clicked on AdvanceSearch_CSRDB_Mech

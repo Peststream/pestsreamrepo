@@ -9,7 +9,7 @@ Feature: New USer Mech Call Pass
   #scenarios are not declared in this feature file
   #Pass_Fixed
   @CSSO_General_Mech
-  Scenario: Test to Continue General Info of ScheduleServiceOrder Mechanical
+  Scenario: Test to Continue General Info of ScheduleServiceOrder Mechanical1
     When user clicked on CallTab
     Then user enters Company
     Then user click on contact
@@ -26,7 +26,7 @@ Feature: New USer Mech Call Pass
 
   #Pass_Fixed
   @CSSO_BranchMech_JobtypeAdd_Save_Mech
-  Scenario: Test to Continue General Info of ScheduleServiceOrder with branch Mech and Job Type
+  Scenario: Test to Continue General Info of ScheduleServiceOrder with branch Mech and Job Type2
     When user clicked on CallTab
     Then user enters Company
     Then user enters Contact
@@ -53,7 +53,7 @@ Feature: New USer Mech Call Pass
 
   #Pass_Fixed
   @CSSO_GereralInfo_TMaterial_Save
-  Scenario: Test to Continue General Info of ScheduleServiceOrder Mechanical by specifying Time and Material
+  Scenario: Test to Continue General Info of ScheduleServiceOrder Mechanical by specifying Time and Material3
     When user clicked on CallTab
     Then user enters Company
     Then user enters Contact
@@ -80,7 +80,7 @@ Feature: New USer Mech Call Pass
 
   #Pass_Fixed
   @CSSO_SSO_TMaterial_TimeandPrice_After_SpecificHour_SplitPrice_Save
-  Scenario: Test to Continue General Info of ScheduleServiceOrder Mechanical by specifying Time and Material
+  Scenario: Test to Continue General Info of ScheduleServiceOrder Mechanical by specifying Time and Material4
     When user clicked on CallTab
     Then user enters Company
     Then user enters Contact
@@ -115,7 +115,7 @@ Feature: New USer Mech Call Pass
 
   #Pass
   @CSSO_SSO_FlatRate_Standard_Specific_Mechanic_Save
-  Scenario: Test to Continue General Info of ScheduleServiceOrder Mechanical by using FlatRate
+  Scenario: Test to Continue General Info of ScheduleServiceOrder Mechanical by using FlatRate5
     When user clicked on CallTab
     Then user enters Company
     Then user enters Contact
@@ -142,7 +142,7 @@ Feature: New USer Mech Call Pass
 
   #Pass
   @CSSO_SSO_FlatRate_Standard_Specific_Mechanic_WorkOrder_SaveDetails
-  Scenario: Test to Continue General Info of ScheduleServiceOrder Mechanical by specifying Time and Material
+  Scenario: Test to Continue General Info of ScheduleServiceOrder Mechanical by specifying Time and Material6
     When user clicked on CallTab
     Then user enters Company
     Then user enters Contact
@@ -170,7 +170,7 @@ Feature: New USer Mech Call Pass
 
   #Pass_fixed
   @CSSO_SSO_TMaterial_TimeandPrice_After_SpecificHour_SplitPrice_Workorder_CustPresent_Sendmail
-  Scenario: Test to Continue General Info of ScheduleServiceOrder Mechanical by specifying Time and Material
+  Scenario: Test to Continue General Info of ScheduleServiceOrder Mechanical by specifying Time and Material7
     When user clicked on CallTab
     Then user enters Company
     Then user enters Contact
@@ -206,7 +206,7 @@ Feature: New USer Mech Call Pass
 
   #PassFixed
   @CSSO_SS0_After_HolidayHour_Range_Helper_Save
-  Scenario: Test to Continue General Info of ScheduleServiceOrder with branch Mech and Job Type ,Save and open Work Order.
+  Scenario: Test to Continue General Info of ScheduleServiceOrder with branch Mech and Job Type ,Save and open Work Order.8
     When user clicked on CallTab
     Then user enters Company
     Then user enters Contact
@@ -240,7 +240,7 @@ Feature: New USer Mech Call Pass
 
   #Pass_fix
   @CSSO_SSO_TMaterial_After_HolidayHour_SplitPrice_Helper_Save
-  Scenario: Test to Continue General Info of ScheduleServiceOrder Mechanical by specifying Time and Material
+  Scenario: Test to Continue General Info of ScheduleServiceOrder Mechanical by specifying Time and Material9
     When user clicked on CallTab
     Then user enters Company
     Then user enters Contact
@@ -273,7 +273,7 @@ Feature: New USer Mech Call Pass
 
   #Pass
   @CSSO_GereralInfo_TMaterial_TimeRange_Save
-  Scenario: Test to Continue General Info of ScheduleServiceOrder Mechanical by specifying Time and Material,Time Range.
+  Scenario: Test to Continue General Info of ScheduleServiceOrder Mechanical by specifying Time and Material,Time Range.10
     When user clicked on CallTab
     Then user enters Company
     Then user enters Contact
@@ -302,7 +302,7 @@ Feature: New USer Mech Call Pass
 
   #Pass_Fixed
   @CSSO_WorkOrder_Frate_ServiceApp_CustPresent_SendMail_Mech
-  Scenario: Test to Continue General Info of ScheduleServiceOrder with branch Mech and Job Type ,Save and open Work Order.
+  Scenario: Test to Continue General Info of ScheduleServiceOrder with branch Mech and Job Type ,Save and open Work Order.11
     When user clicked on CallTab
     Then user enters Company
     Then user enters Contact
@@ -335,7 +335,7 @@ Feature: New USer Mech Call Pass
 
   #Pass_Fixed
   @CSSO_WorkOrder_Frate_ServiceApp_CustAbsent_SendMail_Mech
-  Scenario: Test to Continue General Info of ScheduleServiceOrder with branch Mech and Job Type ,Save and open Work Order.
+  Scenario: Test to Continue General Info of ScheduleServiceOrder with branch Mech and Job Type ,Save and open Work Order.12
     When user clicked on CallTab
     Then user enters Company
     Then user enters Contact
@@ -368,7 +368,7 @@ Feature: New USer Mech Call Pass
 
   #Passed_Fixed
   @CSSO__After_HolidayHour_Range_Helper_ServiceApp_CustAbsent_SendMail_Mech
-  Scenario: Test to Continue General Info of ScheduleServiceOrder with branch Mech and Job Type ,Save and open Work Order.
+  Scenario: Test to Continue General Info of ScheduleServiceOrder with branch Mech and Job Type ,Save and open Work Order.13
     When user clicked on CallTab
     Then user enters Company
     Then user enters Contact
@@ -408,7 +408,7 @@ Feature: New USer Mech Call Pass
 
   #pass_fixed
   @CSSO__JTNew_TMaterial_Mechanic_ServiceApp_CustAbsent_SendMail_Mech
-  Scenario: Test to Continue General Info of ScheduleServiceOrder with branch Mech and Job Type ,Save and open Work Order.
+  Scenario: Test to Continue General Info of ScheduleServiceOrder with branch Mech and Job Type ,Save and open Work Order.14
     When user clicked on CallTab
     Then user enters Company
     Then user enters Contact
@@ -444,7 +444,7 @@ Feature: New USer Mech Call Pass
 
   #Pass_Fixed
   @CSSO__After_HolidayHour_Range_Helper_ServiceApp_CustPresent_SendMail_Mech
-  Scenario: Test to Continue General Info of ScheduleServiceOrder with branch Mech and Job Type ,Save and open Work Order.
+  Scenario: Test to Continue General Info of ScheduleServiceOrder with branch Mech and Job Type ,Save and open Work Order.15
     When user clicked on CallTab
     Then user enters Company
     Then user enters Contact
@@ -484,7 +484,7 @@ Feature: New USer Mech Call Pass
 
   #PAss_Fixed
   @CSSO__TMaterial_After_Hour_Trange_Helper_Workorder_StopJob_CustPresent_Mech
-  Scenario: Test to Continue WorkOrder when CustomerPresent.
+  Scenario: Test to Continue WorkOrder when CustomerPresent.16
     When user clicked on CallTab
     Then user enters Company
     Then user enters Contact
@@ -523,7 +523,7 @@ Feature: New USer Mech Call Pass
 
   #PassFixed
   @CSSO__JTNew_After_SpecificHour__Split_Range_Helper_Save_Mech
-  Scenario: Test Opportunity using Specific Hour.
+  Scenario: Test Opportunity using Specific Hour.17
     When user clicked on CallTab
     Then user enters Company
     Then user enters Contact
@@ -557,7 +557,7 @@ Feature: New USer Mech Call Pass
 
   #Pass_Fixed
   @CSSO__JTNew_After_SpecificHour__Split_Range_Helper_Save_SerApp_CustPresent_Mech
-  Scenario: Test Serevice Appointments and Send Email.
+  Scenario: Test Serevice Appointments and Send Email.18
     When user clicked on CallTab
     Then user enters Company
     Then user enters Contact
@@ -593,7 +593,7 @@ Feature: New USer Mech Call Pass
 
   #Passed_Fixed
   @CSSO_WorkOrder_TMaterial_ServiceApp_CustPresent_SendMail_Mech
-  Scenario: Test Service Appointments when Cust is Present and Send Email.
+  Scenario: Test Service Appointments when Cust is Present and Send Email.19
     When user clicked on CallTab
     Then user enters Company
     Then user enters Contact
@@ -625,7 +625,7 @@ Feature: New USer Mech Call Pass
 
   #Passed_fixed
   @CSSO_WorkOrder_TMaterial_ServiceApp_CustAbsent_SendMail_Mech
-  Scenario: Scenario: Test Service Appointments when Cust is Absent and Send Email
+  Scenario: Scenario: Test Service Appointments when Cust is Absent and Send Email20
     When user clicked on CallTab
     Then user enters Company
     Then user enters Contact
@@ -658,7 +658,7 @@ Feature: New USer Mech Call Pass
 
   #Pass_fixed
   @CSSO_GeneralInfo_ScheduleEstimation_Mech
-  Scenario: Test to Continue General Info of ScheduleEstimation Mechanical
+  Scenario: Test to Continue General Info of ScheduleEstimation Mechanical21
     When user clicked on CallTab
     Then user enters Company
     Then user click on contact
@@ -676,7 +676,7 @@ Feature: New USer Mech Call Pass
 
   #Pass_fixed
   @CSSO_ScheduleEstimation_Save_Mech
-  Scenario: Test General Info of ScheduleEstimation with Job Type
+  Scenario: Test General Info of ScheduleEstimation with Job Type22
     When user clicked on CallTab
     Then user enters Company
     Then user enters Contact
@@ -701,7 +701,7 @@ Feature: New USer Mech Call Pass
 
   #Passes_fixed
   @CSSO_ScheduleEstimation_RangeTime_Mech
-  Scenario: Test to Continue General Info of ScheduleEstimation with RangeTime
+  Scenario: Test to Continue General Info of ScheduleEstimation with RangeTime23
     When user clicked on CallTab
     Then user enters Company
     Then user enters Contact
@@ -729,7 +729,7 @@ Feature: New USer Mech Call Pass
 
   #Passed_fixed
   @CSSO_ScheduleEstimation_Residential_Field_SpecificTime_Save_Mech
-  Scenario: Test to General Info of ScheduleEstimation with SpecificTime
+  Scenario: Test to General Info of ScheduleEstimation with SpecificTime24
     When user clicked on CallTab
     Then user enters Company
     Then user enters Contact
@@ -755,7 +755,7 @@ Feature: New USer Mech Call Pass
 
   #Pass_Fixed
   @CSSO_ScheduleEstimation_Residential_Inside_SpecificTime_Save_Mech
-  Scenario: Test ScheduleEstimation Residential with InsideSpecificTime
+  Scenario: Test ScheduleEstimation Residential with InsideSpecificTime25
     When user clicked on CallTab
     Then user enters Company
     Then user enters Contact
@@ -780,7 +780,7 @@ Feature: New USer Mech Call Pass
 
   #Passed_Fixed
   @CSSO_ScheduleEstimation_Commercial_Field_Specific_Save_Mech
-  Scenario: Test ScheduleEstimation Commercial with FieldSpecific
+  Scenario: Test ScheduleEstimation Commercial with FieldSpecific26
     When user clicked on CallTab
     Then user enters Company
     Then user enters Contact
@@ -807,8 +807,8 @@ Feature: New USer Mech Call Pass
  
 
   #Pass_Email
-  @CSSO_SchEstimation_Resi_Field_Specific_NonStd_CustPresent_Mech
-  Scenario: Test Scheduleestimation Residential with FieldSpecific when Cust is Present
+  @CSSO_SchEstimation_Resi_Field_Specific_NonStd_CustPresent_Mech2
+  Scenario: Test Scheduleestimation Residential with FieldSpecific when Cust is Present27
     When user clicked on CallTab
     Then user enters Company
     Then user enters Contact
@@ -850,7 +850,7 @@ Feature: New USer Mech Call Pass
 
   #Pass
   @CSSO_ScheduleEstimation_Comm_Inside_TimeRange_Save_Mech
-  Scenario: Test ScheduleEstimation Commercial with InsideTimeRange
+  Scenario: Test ScheduleEstimation Commercial with InsideTimeRange28
     When user clicked on CallTab
     Then user enters Company
     Then user enters Contact
