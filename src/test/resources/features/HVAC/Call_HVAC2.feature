@@ -1,4 +1,4 @@
-@run @hvac
+@run @hvac2
 Feature: Test for call Hvac 2
 
   Background: 

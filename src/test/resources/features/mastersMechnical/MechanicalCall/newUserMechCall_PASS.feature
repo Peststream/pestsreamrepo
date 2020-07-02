@@ -1,4 +1,4 @@
-@run @Newusermechcall10
+@run @Newusermechcallpas
 Feature: New USer Mech Call Pass
 
   Background: 
@@ -490,3 +490,4 @@ Feature: New USer Mech Call Pass
     Then select Second Time Range
     Then user click on Assigned,Estimated Duration
     Then user click on saveInfo Button
+    
