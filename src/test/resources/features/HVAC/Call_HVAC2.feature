@@ -1,23 +1,11 @@
-@run @hvac2
+@run @hvac
 Feature: Test for call Hvac 2
 
   Background: 
     Given User successfully logged into system with valid credentials
     When I enter a credentials for "CompanyAdmin"
-    And I can click sign in
+    And I can click sign inc
     Then I am granted access to the system
-
-  #pass
-  
-  @TestOpportunityInfoForHVAC17
-  Scenario: Test Customer DropDown For Company17
-    When User Click On Customer
-    And Select Customer From The DD List
-    And click on Advance Search from Add Company
-    And Click On Add Opportunity Icon From Action Company
-    And Select Account From DD
-    And Click on Continue From Add Opportunity
-
  
 
   #Pass

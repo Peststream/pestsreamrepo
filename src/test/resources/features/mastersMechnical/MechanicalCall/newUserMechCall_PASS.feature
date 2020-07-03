@@ -1,4 +1,4 @@
-@run @Newusermechcallpas
+@run @Newusermechcallpas @hvac
 Feature: New USer Mech Call Pass
 
   Background: 
@@ -421,48 +421,7 @@ Feature: New USer Mech Call Pass
     Then user click on Assigned,Estimated Duration
     Then user click on saveInfo Button
 
-  #Pass_Email
-  @CSSO_SchEstimation_Resi_Field_Specific_NonStd_CustPresent_Mech2
-  Scenario: Test Scheduleestimation Residential with FieldSpecific when Cust is Present27
-    When user clicked on CallTab
-    Then user enters Company
-    Then user enters Contact
-    And user click on search
-    Then user enters Primary Email
-    Then user enters Cell
-    Then user selects Branch Mech
-    Then user selects Service
-    Then user selects Source
-    Then user click on schedule Type(schedule estimation)
-    Then user enters Account Alert
-    Then user enters Problem Description
-    Then user click on Commercial
-    Then user click on continue
-    Then user click on Service Address
-    Then user enters Address
-    Then user enters Zip
-    Then user enters City
-    Then user click on Address Sub Type(residential)
-    Then user click on sales type (field)
-    Then user click on Assigned,Estimated Duration
-    Then user click on saveInfo Button
-    Then user click on Opportunity_Mech
-    Then user click on Save & Continue General Info
-    Then user click on continue Inspection
-    Then user click on Non Standard Equipment subTab
-    Then user click on Service Repair Rate(non standard)
-    Then user click on Save Equipment
-    Then user click on Save & Continue Equipment
-    Then user click on Save & Continue Customer Review
-    Then user click on Payment type
-    Then user Enters Amount paid
-    Then user click on I Agree Terms & Condition
-    Then user click on Electronic Signature
-    Then user click on Customer Signature
-    Then user click on Sales Representative Signature
-    Then user click on Save & Continue Signatures
-    Then user click on send email(Cust Present)
-
+  
   #Pass
   @CSSO_ScheduleEstimation_Comm_Inside_TimeRange_Save_Mech
   Scenario: Test ScheduleEstimation Commercial with InsideTimeRange28
