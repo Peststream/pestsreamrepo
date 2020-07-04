@@ -1,10 +1,10 @@
-@run @hvac
+@run @hvac2
 Feature: Test for call Hvac 2
 
   Background: 
     Given User successfully logged into system with valid credentials
     When I enter a credentials for "CompanyAdmin"
-    And I can click sign inc
+    And I can click sign in
     Then I am granted access to the system
  
 
