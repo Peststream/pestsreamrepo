@@ -1,4 +1,4 @@
-@run @Newusermechcallpas @hvac
+@run @Newusermechcallpas
 Feature: New USer Mech Call Pass
 
   Background: 

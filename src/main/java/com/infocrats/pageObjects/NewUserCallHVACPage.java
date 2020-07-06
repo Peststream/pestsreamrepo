@@ -4,10 +4,15 @@ import java.util.Map;
 
 import org.codehaus.groovy.ast.stmt.ContinueStatement;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.server.handler.AcceptAlert;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.infocrats.utils.BaseUtills;
 
+import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
 
@@ -372,36 +377,43 @@ public class NewUserCallHVACPage extends peststreamPage {
 	}
 
 	public void DDBranch() {
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(DDBranch));
 		DDBranch.click();
-		waitABit(4000);
-
+		
+		
+		wait.until(ExpectedConditions.elementToBeClickable(valueDDBranch));
 		valueDDBranch.click();
-		waitABit(4000);
+		
+
+	
 
 	}
 
 	public void DDSource() {
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(DDSource));
 		DDSource.click();
-		waitABit(2000);
-
+		
+		wait.until(ExpectedConditions.elementToBeClickable(valueDDSource));
 		valueDDSource.click();
-		waitABit(1000);
-		AccountAlert.click();
 	}
 
 	public void PrimaryRequestedService() throws InterruptedException {
-		Thread.sleep(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(DDPrimaryRequestedService));
 		DDPrimaryRequestedService.click();
-		Thread.sleep(2000);
+		wait.until(ExpectedConditions.elementToBeClickable(valueDDPrimaryRequestedService));
 		valueDDPrimaryRequestedService.click();
-		Thread.sleep(2000);
-
+		
 	}
 
 	public void ServiceAddress(Map<String, String> testData) throws InterruptedException {
-		Thread.sleep(2500);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(PlusButtonSA));
 		PlusButtonSA.click();
-		Thread.sleep(2000);
+		
+		wait.until(ExpectedConditions.elementToBeClickable(AddressLine1));
 		AddressLine1.sendKeys(testData.get("Address line 1"));
 		Thread.sleep(2000);
 		ZipCode.sendKeys(testData.get("Zip"));
@@ -412,7 +424,9 @@ public class NewUserCallHVACPage extends peststreamPage {
 	}
 
 	public void SaveFromOpportunity() throws InterruptedException {
-		Thread.sleep(3000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(SaveButton));
+		
 		scrollUP(SaveButton);
 		Thread.sleep(2000);
 		scrollUP(SaveButton);
@@ -424,33 +438,42 @@ public class NewUserCallHVACPage extends peststreamPage {
 	}
 
 	public void JobDescription(Map<String, String> testData) throws InterruptedException {
-		Thread.sleep(3000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(JobDescTF));
 		JobDescTF.click();
-		Thread.sleep(3000);
 		JobDescTF.sendKeys(testData.get("Job Desc"));
 		Thread.sleep(3000);
 
 	}
 
 	public void checkFlatRate() throws InterruptedException {
-		Thread.sleep(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(Flatrate));
+		
+
 		Flatrate.click();
-		Thread.sleep(2000);
+	
 	}
 
 	public void clickAdvanceSearch() throws InterruptedException {
-		Thread.sleep(6000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(AdvanceSearchBtn));
 		AdvanceSearchBtn.click();
-		Thread.sleep(6000);
+		
 
 	}
 
 	public void selectOneWorkOrder() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(FirstWorkOrderlbl));
 		FirstWorkOrderlbl.click();
-		Thread.sleep(7000);
+		
 	}
 
 	public void selectLeadEmployee() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(LeadEmployeeDD));
+		
 		scrollDownLarge(LeadEmployeeDD);
 		PrimaryRouteDD.click();
 		Thread.sleep(2000);
@@ -463,62 +486,78 @@ public class NewUserCallHVACPage extends peststreamPage {
 	}
 
 	public void clickSavefromWorkOrder() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(SaveBtnFromWorkOrder));
+		
+		
 		scrollDown(SaveBtnFromWorkOrder);
-		Thread.sleep(1500);
+	
+		wait.until(ExpectedConditions.elementToBeClickable(SaveBtnFromWorkOrder));
 		SaveBtnFromWorkOrder.click();
-		Thread.sleep(7000);
 
 	}
 
 	public void clickOnAdvanceSearchBtn() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(AdvanceSearchBtn));
 		AdvanceSearchBtn.click();
-		Thread.sleep(3000);
-
+	
+		
 	}
 
 	public void clickOnWorkOrderNumber() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(WorkOrderNumber));
 		WorkOrderNumber.click();
-		Thread.sleep(7000);
+		
 
 	}
 
 	public void selectOrderFromOrderTypeDD() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(OrderTypeDD));
+		
 		OrderTypeDD.click();
+		Thread.sleep(1000);
 		OrderValueDD.click();
 		Thread.sleep(3000);
 
 	}
 
 	public void clickOnCsrDashboard() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(CsrDashboardLbl));
 		scrollUPSmall(CsrDashboardLbl);
-		Thread.sleep(1000);
 		CsrDashboardLbl.click();
-		Thread.sleep(1000);
+	
 
 	}
 
 	public void ClickAdvanceSearchBTN() throws InterruptedException {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(AdvanceSearchButton));
 		AdvanceSearchButton.click();
-		Thread.sleep(6000);
 
 	}
 
 	public void clickOnAddCall() throws InterruptedException {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(CallIconFromAction));
 		CallIconFromAction.click();
-		Thread.sleep(6000);
+	
 	}
 
 	public void ClickSaveBtn() throws InterruptedException {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(SaveBtnOnCall));
 		SaveBtnOnCall.click();
-		Thread.sleep(5000);
-
+		
 	}
 
 	public void SelectcallInfo() throws InterruptedException {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(CalledForDDValue));
+		
 		CalledForDDValue.click();
 		Thread.sleep(1000);
 
@@ -535,13 +574,17 @@ public class NewUserCallHVACPage extends peststreamPage {
 	}
 
 	public void clickOnAddOpportunityFromAction() throws InterruptedException {
-		waitABit(2000);
+		
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20); 
+		wait.until(ExpectedConditions.elementToBeClickable(AddOpportunityIconFromAction));
 		AddOpportunityIconFromAction.click();
-		Thread.sleep(6000);
+		
 	}
 
 	public void selectGeneralInfo() throws InterruptedException {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(PrimaryRequestedServiceDD));
+		
 		PrimaryRequestedServiceDD.click();
 		Thread.sleep(1000);
 		PrimaryRequestedServiceDDValue.click();
@@ -554,22 +597,27 @@ public class NewUserCallHVACPage extends peststreamPage {
 	}
 
 	public void clickContinueFromGenralInfo() throws InterruptedException {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(ContinueBtn));
 		ContinueBtn.click();
-		Thread.sleep(6000);
-
+		
+		
 	}
 
 	public void ClickOnAddTaskActionFromAction() throws InterruptedException {
-		waitABit(2000);
+
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(AddTaskIconFromAction));
 		scrollDown(AddTaskIconFromAction);
-		waitABit(2000);
 		AddTaskIconFromAction.click();
-		Thread.sleep(6000);
+		
 
 	}
 
 	public void SelectAddTaskAndDueDateFromGeneralInfo() throws InterruptedException {
+
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(TaskNameTextField));
 		TaskNameTextField.click();
 		waitABit(2000);
 		TaskNameTextField.sendKeys("Task Name");
@@ -587,45 +635,66 @@ public class NewUserCallHVACPage extends peststreamPage {
 	}
 
 	public void ClickSaveBtnGeneralInfo() {
+		
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(SaveBtnFromGeneralInfo));
 		scrollDown(SaveBtnFromGeneralInfo);
-		waitABit(2000);
 		SaveBtnFromGeneralInfo.click();
-		waitABit(6000);
+	
 	}
 
 	public void ClickOnAddNoteFromAction() throws InterruptedException {
+		
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(AddNoteIconFromAction));
 		scrollDown(AddNoteIconFromAction);
-		waitABit(2000);
 		AddNoteIconFromAction.click();
-		Thread.sleep(1000);
+		
 	}
 
 	public void EnterNoteForAddNote() {
+		
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(EnterNoteTextField));
+	
 		EnterNoteTextField.click();
 		waitABit(2000);
 		EnterNoteTextField.sendKeys("this is the note");
 	}
 
 	public void ClickSaveFromAddNote() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(SaveButtonFromAddNote));
+	
 		SaveButtonFromAddNote.click();
 		Thread.sleep(2000);
 
 	}
 
-	public void ClickCloseBtnFromAddNote() {
+	public void ClickCloseBtnFromAddNote() 
+	{
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(CloseButtonFromAddnote));
+	
 		CloseButtonFromAddnote.click();
 		waitABit(2000);
 	}
 
 	public void ClickCreateWorkorderFRomAction() throws InterruptedException {
+		
+		
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(CreateWorkOrderIconFromAction));
 		scrollDown(CreateWorkOrderIconFromAction);
-		Thread.sleep(2500);
+
 		CreateWorkOrderIconFromAction.click();
-		Thread.sleep(6000);
+		
 	}
 
 	public void SelectServiceCategoryAndServices() throws InterruptedException {
-		Thread.sleep(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(ServiceCategoryDD));
+		
 		ServiceCategoryDD.click();
 		Thread.sleep(2000);
 		ServiceCategoryDDValue.click();
@@ -640,12 +709,17 @@ public class NewUserCallHVACPage extends peststreamPage {
 	}
 
 	public void ClickOnAddBTN() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(AddBtn));
 		AddBtn.click();
-		Thread.sleep(6000);
+		
 
 	}
 
 	public void EnterServiceDate() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(ServiceDatePicker));
+	
 		scrollDownLarge(ServiceDatePicker);
 		Thread.sleep(1500);
 		ServiceDatePicker.click();
@@ -657,6 +731,8 @@ public class NewUserCallHVACPage extends peststreamPage {
 	}
 
 	public void ClickDetailPageFRomAction() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(DetailPageIconfromAction));
 		scrollDown(DetailPageIconfromAction);
 		Thread.sleep(1500);
 		DetailPageIconfromAction.click();
@@ -665,6 +741,9 @@ public class NewUserCallHVACPage extends peststreamPage {
 	}
 
 	public void EnterNoteForDetailPage() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(EnterNoteTF));
+		
 		scrollDown(EnterNoteTF);
 		Thread.sleep(1500);
 		EnterNoteTF.click();
@@ -675,25 +754,33 @@ public class NewUserCallHVACPage extends peststreamPage {
 	}
 
 	public void ClickSaveOnDetailPage() throws InterruptedException {
-		Thread.sleep(1000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(SaveBtnFromDetailPage));
+		
 		SaveBtnFromDetailPage.click();
-		Thread.sleep(4000);
 
 	}
 
 	public void ClickOnCustomer() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(CustomerDD));
+		
 		CustomerDD.click();
-		Thread.sleep(1500);
 		
 	}
 
 	public void ClickOnAccountFromCustomer() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(AccountInCustomerDD));
+		
 		AccountInCustomerDD.click();
-		Thread.sleep(1500);
 	}
 
 	public void EnterCustomerInfo(Map<String, String> testData) throws InterruptedException {
-		Thread.sleep(1500);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(ContactTypeDD));
+		
+		
 		ContactTypeDD.click();
 		Thread.sleep(1000);
 		ContactTypeDDValue.click();
@@ -707,28 +794,39 @@ public class NewUserCallHVACPage extends peststreamPage {
 	}
 
 	public void ClickOnAddAccount() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(AddAccountBtn));
+		
 		AddAccountBtn.click();
-		Thread.sleep(6000);
 	}
 
 	public void ClickSaveFromAddAccountddAccount() {
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(SaveBtnFromAddAccount));
+		
 		SaveBtnFromAddAccount.click();
-waitABit(5000);
 	}
 
 	public void CLickAdvanceSearchFromAccount() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(AdvanceSearchFromAccount));
+		
 		AdvanceSearchFromAccount.click();
-		Thread.sleep(6000);
 
 	}
 
 	public void ClickAddOpportunityFromAction() {
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(AddOpportunityIconForAccount));
+		
 		AddOpportunityIconForAccount.click();
-		waitABit(6000);
 
 	}
 
 	public void EnterTestDataForOpportunity() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(DepartmentDD));
+		
 		DepartmentDD.click();
 		Thread.sleep(1000);
 		DepartmentDDValue.click();
@@ -743,15 +841,20 @@ waitABit(5000);
 	}
 
 	public void ClickViewIconFromAction() throws InterruptedException {
-		Thread.sleep(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(ViewIconFromAction));
+		
 		ViewIconFromAction.click();
 		Thread.sleep(6000);
 
 	}
 
 	public void ClickOnPhoneSalesIconAndSelectgeneralInfo() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(AddTaskIconFromAction));
+		
 		AddTaskIconFromAction.click();
-		Thread.sleep(6000);
+		wait.until(ExpectedConditions.elementToBeClickable(SourceDropDown));
 		SourceDropDown.click();
 		Thread.sleep(1000);
 		SourceDropDownValue.click();
@@ -764,12 +867,17 @@ waitABit(5000);
 	}
 
 	public void ClickOnCompanyFromCustomer() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(CompanyFromCustomerDD));
+		
 		CompanyFromCustomerDD.click();
-		Thread.sleep(6000);
 
 	}
 
 	public void EnterTestDataForAddCompany() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(EnterNameForAddCompany));
+		
 		EnterNameForAddCompany.sendKeys("Nitesh");
 		Thread.sleep(1000);
 		SourceDDForAddCompany.click();
@@ -780,12 +888,17 @@ waitABit(5000);
 	}
 
 	public void ClickOnAddOpportunityForCompany() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(AddOpportunityForCompany));
+		
 		AddOpportunityForCompany.click();
-		Thread.sleep(6000);
 
 	}
 
 	public void SelectAccountFromCompany() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(OpportunityTypeRadioButton));
+		
 		OpportunityTypeRadioButton.click();
 		Thread.sleep(2000);
 		
@@ -793,15 +906,17 @@ waitABit(5000);
 	}
 
 	public void ClickContinueFromAddOpportunityForCompany() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(ContinueButtonFromCreateOpportunity1));
+		
 		ContinueButtonFromCreateOpportunity1.click();
-		waitABit(3000);
 	}
 
 	public void ClickOnViewFromActionForCompany() throws InterruptedException {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(ViewIconFromActionForCompany));
+		
 		ViewIconFromActionForCompany.click();
-		Thread.sleep(5000);
 	}
 
 	public void ClickOnDeleteFromActionForCompany() {
@@ -821,31 +936,38 @@ waitABit(5000);
 	}
 
 	public void ClickContactFromCustomerDD() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(ContactFromCustomerDD));
 		ContactFromCustomerDD.click();
-		waitABit(5000);
-
+	
 	}
 
 	public void ClickOnAddContact() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(AddContactbtn));
+		
 		AddContactbtn.click();
-		waitABit(5000);
 	}
 
 	public void EnterTestDataForAddContact() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(FirstNameTFForContact));
+		
 		FirstNameTFForContact.sendKeys("Test Data");
 	}
 
 	public void ClickCloseBtnFromAddContact() {
-		waitABit(2000);
+		
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(CloseBtnFromAddContact));
 		CloseBtnFromAddContact.click();
-		waitABit(2000);
+	
 	}
 
 	public void EnterTestDataOfAddOpportunityForContact() throws InterruptedException {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(DepartmentDDForAddOpportunityContact));
+	
 		DepartmentDDForAddOpportunityContact.click();
 		Thread.sleep(1000);
 		DepartmentDDValueForAddOpportunityContact.click();
@@ -859,27 +981,32 @@ waitABit(5000);
 	}
 
 	public void ClickonAddOpportunityForContact() throws InterruptedException {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(AddOpportunityForContactBtn));
+	
 		AddOpportunityForContactBtn.click();
-		Thread.sleep(5000);
 	}
 
 	public void ClickonSaveButtonForAddOpportunityContact() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(SaveBtnFromAddAccount));
+	
+		
 		SaveBtnFromAddAccount.click();
-		waitABit(5000);
 	}
 
 	public void CLickOnViewContactFromAction() throws InterruptedException {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(ViewActionForContact));
+	
 		ViewActionForContact.click();
-		Thread.sleep(5000);
 	}
 
 	public void CLickOnDeleteContactFromAction() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(DeleteIconForContact));
+	
 		DeleteIconForContact.click();
-		waitABit(2000);
 	}
 
 	public void ConfirmDeleteForContact() {
@@ -888,60 +1015,73 @@ waitABit(5000);
 	}
 
 	public void DeclineDeleteAlertForContact() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(DeclineDeleteAlertForContact));
+	
 		DeclineDeleteAlertForContact.click();
 	}
 
 	public void SelectopportunityFromCustomerDD() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(OpportunityFromCustomerDd));
+	
 		OpportunityFromCustomerDd.click();
-		waitABit(4000);
 	}
 
 	public void ClickNewACcountBtnInAddOpportunity() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(NewACcountBtnInAddOpportunity));
+	
 		NewACcountBtnInAddOpportunity.click();
-		waitABit(4000);
 	}
 
 	public void SelectLeadFromCustomerDD() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(LeadFromCustomerDD));
+	
 		LeadFromCustomerDD.click();
-		Thread.sleep(2500);
 	}
 
 	public void ClickAddLeadBtn() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(AddLeadBtn));
+	
 		AddLeadBtn.click();
-		waitABit(5000);
 	}
 
 	public void SelectOrEnterInfoForAddLead() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(FirstNameTfFromAddLead));
+	
 		FirstNameTfFromAddLead.sendKeys("Test");
 		waitABit(1000);
 		OpportunityTypeRadioButton.click();
 	}
 
 	public void selectDatabaseFromCustomerDD() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(DatabaseFromCustomerDd));
+	
 		DatabaseFromCustomerDd.click();
-		waitABit(2000);
 	}
 
 	public void clickAddDatabaseEntryBtn() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(AddDatabaseEntryBtn));
+	
 		AddDatabaseEntryBtn.click();
-		waitABit(2000);
 	}
 
 	public void enterGeneralTestDataForAddDatabaseEntry() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+		wait.until(ExpectedConditions.elementToBeClickable(EnterFirstNameTfForDatabase));
+	
 		EnterFirstNameTfForDatabase.sendKeys("test");
 	}
 
 	public void clickCloseForAlert() {
 		try {
-			waitABit(2000);
+			waitABit(5000);
 			CloseBtnForAlert.click();
 			
 		} catch (Exception e) {

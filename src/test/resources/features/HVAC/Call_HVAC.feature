@@ -18,15 +18,6 @@ Feature: Test for Call HVAC.
     And click on continue button for commercial opportunity
 
   #pass
-  @TestOpportunityInfoForHVAC
-  Scenario: Test CSR Dashboard for HVAC6
-    When user click on CSR Dashboard
-    When user click on Advance Search from CSR Dashboard
-    And Select Add Opportunity From Action for the first Account
-    And Select General Info From Opportunity Info
-    And Click on Continue From General Info
-
-  #pass
   @TestOpportunityInfoForHVAC7
   Scenario: Test CSR Dashboard for HVAC7
     When user click on CSR Dashboard
@@ -63,14 +54,6 @@ Feature: Test for Call HVAC.
     And Enter Note
     And Click On Save Button
 
-  #pass
-  @TestOpportunityInfoForHVAC
-  Scenario: Test CSR Dashboard for HVAC11
-    When user click on CSR Dashboard
-    When user click on Advance Search from CSR Dashboard
-    And Select Add Opportunity From Action for the first Account
-    And Select General Info From Opportunity Info
-    And Click on Continue From General Info
 
   #pass
   @TestOpportunityInfoForHVAC

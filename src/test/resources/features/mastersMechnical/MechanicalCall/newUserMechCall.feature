@@ -1,4 +1,4 @@
-@run @Newusermechcall1 @hvac
+@run @Newusermechcall1 
 
 Feature: New USer Mech Call 1
 

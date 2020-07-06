@@ -1,4 +1,4 @@
-@run @Newusermechcall22 @hvac
+@run @Newusermechcall 
 Feature: New USer Mech Call 2
 
   Background: 

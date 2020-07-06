@@ -1,7 +1,7 @@
-@run @mechcsr  @hvac
+@run @mechcsr
 Feature: Create Mech CSR DashBoard for advance search.
 
-  Background: 
+  Background:
     Given User successfully logged into system with valid credentials
     When I enter a credentials for "CompanyAdmin"
     And I can click sign in
