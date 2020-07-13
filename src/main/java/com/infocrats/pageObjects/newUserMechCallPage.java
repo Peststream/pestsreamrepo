@@ -1,3 +1,4 @@
+
 package com.infocrats.pageObjects;
 
 import java.util.Map;
@@ -5,6 +6,8 @@ import java.util.Map;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.infocrats.utils.BaseUtills;
 
@@ -391,50 +394,50 @@ public class newUserMechCallPage extends peststreamPage {
 
 	@FindBy(xpath = "//select[@id='OrderType']/option[@value='ServiceOrder']")
 	private WebElementFacade WorkOrderDD;
-	
+
 	@FindBy(xpath = "//*[@id='btnSubmit']/span[1]")
 	private WebElementFacade SaveBtnOnWorkOrder;
-	
-	
-	
-	
-	
+
 	@Override
 	public WebElementFacade getUniqueElement() {
 		return null;
 	}
 
 	public void clickOnCallTab() {
-		waitABit(3000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(CallTab));
 		CallTab.click();
 
 	}
 
 	public void enterCompany(Map<String, String> testData) {
-		waitABit(3000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(Company_CSSO));
+
 		Company_CSSO.sendKeys(testData.get("Company_CSSO"));
-		waitABit(3000);
+		wait.until(ExpectedConditions.elementToBeClickable(companySearch));
 		companySearch.click();
-		waitABit(3000);
+		wait.until(ExpectedConditions.elementToBeClickable(companySearchCreate));
 		companySearchCreate.click();
-		waitABit(3000);
 	}
 
 	public void clickOnContact(Map<String, String> testData) {
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(Company_CSSO));
 		Contact_CSSO.click();
-		waitABit(3000);
+
 		Contact_CSSO.sendKeys(testData.get("Contact_CSSO"));
+
 		contactSearch.click();
-		waitABit(3000);
+		wait.until(ExpectedConditions.elementToBeClickable(contactSearchValue));
 		contactSearchValue.click();
-		waitABit(3000);
 
 	}
 
 	public void clickOnSearch() {
-		waitABit(3000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(companySearch));
 		companySearch.click();
-		waitABit(3000);
 	}
 
 	public void enterPrimaryEmail(Map<String, String> testData) {
@@ -442,305 +445,353 @@ public class newUserMechCallPage extends peststreamPage {
 	}
 
 	public void enterCell(Map<String, String> testData) {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(PPhone_CSSO));
 		PPhone_CSSO.sendKeys(testData.get("Primary_Cell"));
-		waitABit(2000);
 	}
 
 	public void clickOnBranch() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(DDBranch_CSSO));
 		DDBranch_CSSO.click();
 		waitABit(3000);
 		ValueDDBranch_CSSO.click();
-		waitABit(2000);
 	}
 
 	public void clickOnDept() {
-		waitABit(5000);
+		waitABit(1500);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(DDDep_CSSO));
 		DDDep_CSSO.click();
-		waitABit(3000);
+		waitABit(1500);
 		ValueDDDep_CSSO.click();
+		waitABit(3000);
+		
 	}
 
 	public void clickOnService() {
 		waitABit(5000);
 		DDService_CSSO.click();
-		waitABit(2000);
+		waitABit(4000);
 		ValueDDService_CSSO.click();
-		waitABit(2000);
 
 	}
 
 	public void clickOnSource() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(DDSource_CSSO));
 		DDSource_CSSO.click();
-		waitABit(2000);
+		waitABit(3000);
 		ValueDDSource_CSSO.click();
-		waitABit(2000);
 		// scrollUP(Customer);
 	}
 
 	public void enterAcc_Alert(Map<String, String> testData) {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(AccAlert_CSSO));
 		AccAlert_CSSO.click();
-		waitABit(2000);
-		AccAlert_CSSO.sendKeys(testData.get("Acc_Alert_Mech"));
-		waitABit(2000);
+		wait.until(ExpectedConditions.elementToBeClickable(AccAlert_CSSO));
+        AccAlert_CSSO.sendKeys(testData.get("Acc_Alert_Mech"));
 	}
 
 	public void enterProblemDescription(Map<String, String> testData) {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(ProbDes_CSSO));
 		ProbDes_CSSO.sendKeys(testData.get("Problem_Description_Mech"));
-		waitABit(2000);
 	}
 
 	public void selectOppType() {
-		waitABit(3000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(Opp_Type_Commercial));
 		scrollDown(Opp_Type_Commercial);
-		waitABit(3000);
+		wait.until(ExpectedConditions.elementToBeClickable(Opp_Type_Commercial));
 		Opp_Type_Commercial.click();
-		waitABit(2000);
 
 	}
 
 	public void clickOnContinue() {
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(Continue_CSSO));
 		Continue_CSSO.click();
-		waitABit(2000);
 	}
 
 	public void ScheduleType() {
-		waitABit(3000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(scheduleType));
 		scheduleType.click();
 	}
 
 	public void Job_Type() {
-		waitABit(2000);
+        waitABit(1500);
+
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(job_Type));
 		job_Type.click();
-		waitABit(2000);
+           waitABit(1500);
 		Value_job_Type.click();
 	}
 
 	public void Ser_Repair_Rate() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(ser_Repair_Rate));
 		ser_Repair_Rate.click();
 	}
 
 	public void Job_Description(Map<String, String> testData) {
-		waitABit(3000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(job_Description));
 		scrollDown(job_Description);
-		waitABit(3000);
+		wait.until(ExpectedConditions.elementToBeClickable(job_Description));
+
 		job_Description.sendKeys(testData.get("Job_Description"));
 	}
 
 	public void ClickOnAdd() {
-		waitABit(3000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(add_Button));
 		add_Button.click();
-		waitABit(2000);
 	}
 
 	public void enter_Address(Map<String, String> testData) {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(Address));
 		Address.sendKeys(testData.get("Address"));
-		waitABit(2000);
 
 	}
 
 	public void enter_Zip(Map<String, String> testData) {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(Zip));
 		Zip.sendKeys(testData.get("Zip"));
 	}
 
 	public void enter_City(Map<String, String> testData) {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(enter_city));
 		enter_city.sendKeys(testData.get("City"));
 
 	}
 
 	public void select_State() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(select_state));
 		select_state.click();
-		waitABit(2000);
+		wait.until(ExpectedConditions.elementToBeClickable(value_select_state));
 		value_select_state.click();
 	}
 
 	public void select_Country() {
-
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(select_country));
 		select_country.click();
-		waitABit(2000);
+		wait.until(ExpectedConditions.elementToBeClickable(value_select_country));
 		value_select_country.click();
 	}
 
 	public void clickOnSchedule_Time() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(specific_Time));
 		specific_Time.click();
 	}
 
 	public void select_Primary_Route() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(select_primary_route));
 		select_primary_route.click();
-		waitABit(2000);
+		wait.until(ExpectedConditions.elementToBeClickable(value_select_primary_route));
+
 		value_select_primary_route.click();
 	}
 
 	public void clickOnFlatRate() {
-		waitABit(5000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(flatRate));
 		flatRate.click();
 
 	}
 
 	public void clickOnSaveButton_Mech() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
 		scrollDown(save_button_Mech);
-		waitABit(2000);
+		wait.until(ExpectedConditions.elementToBeClickable(save_button_Mech));
 		save_button_Mech.click();
-		waitABit(3000);
+		wait.until(ExpectedConditions.elementToBeClickable(ok_Button));
 		ok_Button.click();
 	}
 
 	public void clickOnAdvanceSearch_Mech() {
-
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(advanceSearch_Mech));
 		advanceSearch_Mech.click();
 	}
 
 	public void select_Work_Order() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(select_Work_Order));
 		select_Work_Order.click();
 
 	}
 
 	public void checkDetails_Save() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(SaveBtnOnWorkOrder));
 		scrollDown(SaveBtnOnWorkOrder);
 		waitABit(2000);
 		SaveBtnOnWorkOrder.click();
 	}
 
 	public void clickOn_Appointment_Tab() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(appointment_Tab));
 		appointment_Tab.click();
 	}
 
 	public void clickOn_Service_Appointment() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(service_Appointment));
 		service_Appointment.click();
 	}
 
 	public void clickOn_Name() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(name));
 		name.click();
 	}
 
 	public void subWorkOrder_Action() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(action_Button));
 		scrollDown(action_Button);
+		waitABit(3000);
 		action_Button.click();
-		waitABit(2000);
+		waitABit(3000);
 		action_Button.click();
-		waitABit(2000);
+		waitABit(3000);
 		action_Button.click();
 	}
 
 	public void clickOnStart_Repair() {
-		waitABit(5000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(start_Repair));
 		start_Repair.click();
 	}
 
 	public void completeSub_Work_Order() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(complete_SubWork_Order));
 		complete_SubWork_Order.click();
 	}
 
 	public void clickOnPayment_Mode() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(payment_Mode));
+	
 		payment_Mode.click();
 
 	}
 
 	public void enter_Amount(Map<String, String> testData) {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(enter_Amount));
+	
 		scrollDown(enter_Amount);
 		waitABit(2000);
 		enter_Amount.sendKeys(testData.get("Amount"));
 	}
 
 	public void clickOn_Technicican_Signature(Map<String, String> testData) {
-
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(signatureBoxTech_Mech));
 		scrollDown(signatureBoxTech_Mech);
-		waitABit(2000);
+		waitABit(3000);
 		signatureBoxTech_Mech.click();
 
 	}
 
 	public void clickOn_Customer_Signature(Map<String, String> testData) {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(signatureBoxCust_Mech));
 		signatureBoxCust_Mech.click();
 	}
 
 	public void clickOnComplete_WorkOrder() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(complete_Work_Order));
 		complete_Work_Order.click();
 	}
 
 	public void clickOnService_Report_Invoice() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(service_Report_Invoice));
 		service_Report_Invoice.click();
 	}
 
 	public void clickOnSend_Mail() {
-		waitABit(3000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(send_Email));
 		send_Email.click();
 	}
 
 	/******************* @CSSO_ScheduleEstimation_Residential_Field_SpecificTime_Save_Mech ************************/
 
 	public void clickOnScheduleEstimation() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(scheduleEstimation));
+		
 		scheduleEstimation.click();
 	}
 
 	public void clickOnaddSubType_Residential() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(addresssubType_Residential));
 		scrollDown(addresssubType_Residential);
-		waitABit(2000);
+		waitABit(3000);
 		addresssubType_Residential.click();
-		waitABit(2000);
+		wait.until(ExpectedConditions.elementToBeClickable(value_addresssubType_Residential));
+
 		value_addresssubType_Residential.click();
 	}
 
 	public void clickOnSalesType_Field() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(salesType_Field));
 		scrollDownLarge(salesType_Field);
-		waitABit(5000);
+		wait.until(ExpectedConditions.elementToBeClickable(salesType_Field));
 		salesType_Field.click();
 
 	}
 
 	public void clickOnScheduleTime_Specific() {
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(scheduleTime_Specific));
 
-		waitABit(2000);
 		scheduleTime_Specific.click();
 	}
 
 	public void click_on_Assigned_Estimated_Duration(Map<String, String> testData) {
-
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(assignedTo));
 		assignedTo.click();
-		waitABit(2000);
+		wait.until(ExpectedConditions.elementToBeClickable(value_assignedTo));
 		value_assignedTo.click();
-		waitABit(2000);
+		wait.until(ExpectedConditions.elementToBeClickable(estimated_Duration));
+
 		estimated_Duration.sendKeys(testData.get("Estimated_Duration"));
 	}
 
 	public void clickOn_Commercial() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(commercial));
 		commercial.click();
 	}
 
 	public void clickOnSaveInfo_Button() {
 		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		
+		wait.until(ExpectedConditions.elementToBeClickable(saveInfo_Button));
+		waitABit(1000);
+		
 		saveInfo_Button.click();
 	}
 
@@ -749,32 +800,42 @@ public class newUserMechCallPage extends peststreamPage {
 	 ************************/
 
 	public void clickOnOpportunity_Mech() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(clickOnOpp_Mech));
+		
 		clickOnOpp_Mech.click();
 
 	}
 
 	public void clickOnSaveandContinue_GenralInfo() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(saveandContinue_GenralInfo));
+		
 		saveandContinue_GenralInfo.click();
 	}
 
 	public void clickOnContinue_Inspection() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(continue_Inspection));
+		
 		scrollUP(continue_Inspection);
 		waitABit(2000);
 		continue_Inspection.click();
 	}
 
 	public void clickOnNonStdEquipmentSubTab(Map<String, String> testData) {
- 		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(nonStdEquipmentSubTab));
+		
 		nonStdEquipmentSubTab.click();
 
 	}
 
 	public void clickOnServiceRepairRate_NonStd(Map<String, String> testData) {
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(serviceRepairRate_NonStd));
+		
 
-		waitABit(2000);
 		scrollDown(serviceRepairRate_NonStd);
 		waitABit(2000);
 		serviceRepairRate_NonStd.click();
@@ -785,56 +846,73 @@ public class newUserMechCallPage extends peststreamPage {
 	}
 
 	public void clickOnSaveEquipment() {
-		// waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(saveEquipment));
+		
 		saveEquipment.click();
 	}
 
 	public void clickOnSaveandContinue_Equipment() {
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(saveandContinue_Equipment));
+		
 
-		waitABit(2000);
 		saveandContinue_Equipment.click();
 	}
 
 	public void clickOnSaveandContinueCust_Review() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(saveandContinueCust_Review));
 		scrollUP(saveandContinueCust_Review);
+		waitABit(1000);
 		scrollUP(saveandContinueCust_Review);
-		waitABit(2000);
+		wait.until(ExpectedConditions.elementToBeClickable(saveandContinueCust_Review));
+
 		saveandContinueCust_Review.click();
 
 	}
 
 	public void clickOnPayment_Type() {
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(payment_Type));
+		
 
-		waitABit(2000);
 		payment_Type.click();
 	}
 
 	public void clickOnAmountPaid(Map<String, String> testData) {
-
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(amountPaid));
+		
 		amountPaid.sendKeys(testData.get("Amount"));
 	}
 
 	public void clickOnIAgree() {
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(clickOnIAgree));
+		
 
-		waitABit(2000);
-		clickOnIAgree.click();
 	}
 
 	public void clickOnElectronic_Signature() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(electronic_Signature));
+		
 		electronic_Signature.click();
 	}
 
 	public void clickOnSalesRep_Signature() {
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(salesRep_Signature));
+		
 
-		waitABit(2000);
 		salesRep_Signature.click();
 	}
 
 	public void clickOnSaveandContinue_Signature() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(saveandContinue_Signature));
+		
 		saveandContinue_Signature.click();
 	}
 
@@ -842,7 +920,8 @@ public class newUserMechCallPage extends peststreamPage {
 		boolean staleElement = true;
 		while (staleElement) {
 			try {
-				waitABit(2000);
+				WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+				wait.until(ExpectedConditions.elementToBeClickable(sendEmail_Agreement));
 				sendEmail_Agreement.click();
 				staleElement = false;
 			} catch (StaleElementReferenceException e) {
@@ -856,46 +935,64 @@ public class newUserMechCallPage extends peststreamPage {
 	}
 
 	public void clickOnTime_Material() {
-		waitABit(3000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(time_Material));
+		
 		time_Material.click();
 	}
 
 	public void clickOnRange_Time() {
-		waitABit(3000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(range_Time));
+		
 		scrollDownLarge(range_Time);
+		waitABit(2000);
 		range_Time.click();
 
 	}
 
 	public void Time_Range() {
-		waitABit(3000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(time_Range));
+		
 		time_Range.click();
-		waitABit(3000);
+		wait.until(ExpectedConditions.elementToBeClickable(value_time_Range));
+
 		value_time_Range.click();
 	}
 
 	public void SecondTime_Range() {
-		waitABit(3000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(second_Time_Range));
+		
 		second_Time_Range.click();
-		waitABit(3000);
+		wait.until(ExpectedConditions.elementToBeClickable(value_second_Time_Range));
+
 		value_second_Time_Range.click();
 
 	}
 
 	public void clickOnCustomer_NotPresent() {
-		waitABit(3000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(cust_NotPresent));
+		
 		scrollDown(cust_NotPresent);
+		waitABit(1500);
 		cust_NotPresent.click();
 
 	}
 
 	public void clickOnOppType_Residential() {
-		waitABit(3000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(oppType_Residential));
+		
 		oppType_Residential.click();
 	}
 
 	public void clickOnSendAgreement_Link() {
-		waitABit(3000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(sendAgreement_Link));
+		
 		sendAgreement_Link.click();
 	}
 
@@ -906,7 +1003,9 @@ public class newUserMechCallPage extends peststreamPage {
 	 */
 
 	public void repairToSearch(Map<String, String> testData) {
-		waitABit(3000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(repairToSearch));
+		
 		repairToSearch.sendKeys(testData.get("Repairto_Search"));
 		waitABit(2000);
 		repairToSearch.sendKeys(Keys.DOWN);
@@ -919,68 +1018,89 @@ public class newUserMechCallPage extends peststreamPage {
 	}
 
 	public void clickOnOppType_Commercial() {
-		waitABit(3000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(oppType_Commercial));
+		
 		oppType_Commercial.click();
 	}
 
 	public void clickOnaddSubType_Commercial() {
-		waitABit(3000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(addSubType_Commercial));
+		
 		addSubType_Commercial.click();
 	}
 
 	public void clickOnSalesType_Inside() {
-		waitABit(3000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(saleType_Inside));
+		
 		saleType_Inside.click();
 	}
 
 	public void clickOnService_Address() {
-		waitABit(3000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(service_Address));
+		
 		service_Address.click();
 	}
 
 	public void enterLast_Name(Map<String, String> testData) {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(last_Name));
+		
 		last_Name.sendKeys(testData.get("Last_Name"));
 	}
 
 	public void priceNot_Exceed(Map<String, String> testData) {
-		waitABit(2000);
-		priceNot_Exceed.sendKeys(testData.get("Price"));
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(priceNot_Exceed));
+				priceNot_Exceed.sendKeys(testData.get("Price"));
 	}
 
 	public void clickOnServiceRR_After() {
-		waitABit(2000);
+		waitABit(5000);
 		serviceRR_After.click();
-		waitABit(2000);
 	}
 
 	public void clickOnSpecific_Hour() {
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(specific_Hour));
+		
 		specific_Hour.click();
 	}
 
 	public void clickOnSplit_Price() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(split_Price));
+		
 		split_Price.click();
 	}
 
 	public void clickOnLabourType_Helper() {
-		waitABit(2000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(labourType_Helper));
+		
 		labourType_Helper.click();
-		waitABit(2000);
 	}
 
 	public void jTNew_Construction() {
+		waitABit(3000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(job_Type));
+		
 		job_Type.click();
-		waitABit(2000);
+		
 		Value_jtnew_Cons.click();
 	}
 
 	public void sendEmail_CustPresent() {
-		waitABit(2000);
 		boolean staleElement = true;
 		while (staleElement) {
 			try {
-				waitABit(3000);
+				WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+				wait.until(ExpectedConditions.elementToBeClickable(sendEmail_CustPresent));
+				
 				sendEmail_CustPresent.click();
 				staleElement = false;
 			} catch (StaleElementReferenceException e) {
@@ -990,87 +1110,105 @@ public class newUserMechCallPage extends peststreamPage {
 	}
 
 	public void clickOnCreate_Quote() {
-		waitABit(4000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(create_Quote));
+		
 		create_Quote.click();
 
 	}
 
 	public void service_Meachanic() {
-		waitABit(3000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(select_Service));
+		
 		select_Service.click();
+		waitABit(2000);
 		select_Service_Value.click();
 		waitABit(3000);
 		select_Mechanic.click();
+		waitABit(2000);
 		select_Mechanic_Value.click();
 	}
 
 	public void clickOn_Submit() {
-		waitABit(3000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(submit));
+		
 		submit.click();
-		waitABit(7000);
 	}
 
 	public void clickOnPurchase_Order() {
-		waitABit(4000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(purchase_Order));
+		
 		purchase_Order.click();
-		waitABit(7000);
 	}
 
 	public void clickOnAddPurchase_Order() {
-		waitABit(4000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(addPurchase_Order));
 		addPurchase_Order.click();
-		waitABit(7000);
 	}
 
 	public void vendor_VendorLocation() {
-		waitABit(3000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(select_Vendor));
+		
 		select_Vendor.click();
+		waitABit(2000);
 		select_Vendor_Value.click();
 		waitABit(3000);
 		select_Vendor_Location.click();
+		waitABit(2000);
+	
 		select_Vendor_Location_Value.click();
 		waitABit(3000);
 	}
 
 	public void clickOnSubmit_Request() {
-		waitABit(3000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(submit_Request));
+		
 		submit_Request.click();
-		waitABit(3000);
 	}
 
 	public void navigate_Back() {
+		
 		waitABit(4000);
 		((JavascriptExecutor) getDriver()).executeScript("window.history.go(-1)");
 
 		waitABit(3000);
 		((JavascriptExecutor) getDriver()).executeScript("window.history.go(-1)");
-		
+
 	}
 
 	public void clickOnStop_Job() {
-		waitABit(3000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(stop_Job));
+		
 		stop_Job.click();
-		waitABit(3000);
 	}
 
 	public void select_Reason() {
-		waitABit(3000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(reason));
 		reason.click();
-		waitABit(3000);
+		wait.until(ExpectedConditions.elementToBeClickable(reason_Value));
 		reason_Value.click();
-		waitABit(3000);
 	}
 
 	public void clickOnSave_Reason() {
-		waitABit(3000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(save_Reason));
+		
 		save_Reason.click();
 	}
 
 	public void clickOnSaveandContinue_Job() {
-		waitABit(3000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+		wait.until(ExpectedConditions.elementToBeClickable(saveAndContinue_Job));
+		
 		saveAndContinue_Job.click();
 	}
-
-	
 
 }

@@ -1,4 +1,4 @@
-@run @Newusermechcallpas
+@run @NewUserMechCallPass1
 Feature: New USer Mech Call Pass
 
   Background: 
@@ -7,9 +7,8 @@ Feature: New USer Mech Call Pass
     And I can click sign in
     Then I am granted access to the system
 
-  #scenarios are not declared in this feature file
   #Pass_Fixed
-  @CSSO_General_Mech
+  @CSSO_General_MechPa
   Scenario: Test to Continue General Info of ScheduleServiceOrder Mechanical1
     When user clicked on CallTab
     Then user enters Company
@@ -421,7 +420,6 @@ Feature: New USer Mech Call Pass
     Then user click on Assigned,Estimated Duration
     Then user click on saveInfo Button
 
-  
   #Pass
   @CSSO_ScheduleEstimation_Comm_Inside_TimeRange_Save_Mech
   Scenario: Test ScheduleEstimation Commercial with InsideTimeRange28
@@ -449,4 +447,3 @@ Feature: New USer Mech Call Pass
     Then select Second Time Range
     Then user click on Assigned,Estimated Duration
     Then user click on saveInfo Button
-    
