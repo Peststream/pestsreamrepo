@@ -1,4 +1,4 @@
-@run @NewUserMechCallPass 
+@run @NewUserMechCallPass1
 Feature: New USer Mech Call 3
 
   Background: 
@@ -391,11 +391,11 @@ Feature: New USer Mech Call 3
     Then user click on saveInfo Button
     Then user click on Opportunity_Mech
     Then user click on Save & Continue General Info
-    Then user click on continue Inspection
-    Then user enters Repair to Search
-    Then user click on Save Equipment
+   # Then user click on continue Inspection
+   # Then user enters Repair to Search
+    #Then user click on Save Equipment
     #Then user click on Save & Continue Equipment
-    Then user click on Save & Continue Equipment
+    #Then user click on Save & Continue Equipment
 
   #Pass
   @CSSO_General_Mec3
