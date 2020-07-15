@@ -240,19 +240,19 @@ Feature: New USer Mech Call 3
     Then user click on saveInfo Button
     Then user click on Opportunity_Mech
     Then user click on Save & Continue General Info
-    Then user click on continue Inspection
-    Then user click on Non Standard Equipment subTab
-    Then user click on Service Repair Rate(non standard)
-    Then user click on Save Equipment
-    Then user click on Save & Continue Equipment
-    Then user click on Save & Continue Customer Review
-    Then user click on Payment type
-    Then user Enters Amount paid
-    Then user click on I Agree Terms & Condition
-    Then user click on Electronic Signature
-    Then user click on Customer Signature
-    Then user click on Sales Representative Signature
-    Then user click on Save & Continue Signatures
+    #Then user click on continue Inspection
+    #Then user click on Non Standard Equipment subTab
+    #Then user click on Service Repair Rate(non standard)
+    #Then user click on Save Equipment
+    #Then user click on Save & Continue Equipment
+    #Then user click on Save & Continue Customer Review
+    #Then user click on Payment type
+    #Then user Enters Amount paid
+    #Then user click on I Agree Terms & Condition
+    #Then user click on Electronic Signature
+    #Then user click on Customer Signature
+    #Then user click on Sales Representative Signature
+    #Then user click on Save & Continue Signatures
 
   #Passed_recent
   @CSSO_SchEstimation_Resi_Inside_Specific_NonStd_CustPresent_Mech

@@ -522,7 +522,7 @@ public class newUserMechCallPage extends peststreamPage {
 	}
 
 	public void Job_Type() {
-        waitABit(1500);
+        waitABit(3000);
 
 		WebDriverWait wait = new WebDriverWait(getDriver(), 20);
 		wait.until(ExpectedConditions.elementToBeClickable(job_Type));
