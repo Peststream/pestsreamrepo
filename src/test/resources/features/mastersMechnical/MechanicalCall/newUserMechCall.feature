@@ -1,4 +1,4 @@
-@run @NewUserMechCallPass11 
+@run @NewUserMechCallPass 
 
 Feature: New USer Mech Call 1
 
