@@ -1,7 +1,6 @@
 @run @NewUserMechCallPass1
 
 Feature: New USer Mech Call 1
-
   Background: 
     Given User successfully logged into system with valid credentials
     When I enter a credentials for "CompanyAdmin"
