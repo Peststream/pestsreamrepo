@@ -6,6 +6,8 @@ import org.openqa.selenium.JavascriptExecutor;
 
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.infocrats.utils.BaseUtills;
 
@@ -13,6 +15,7 @@ import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
 
 public class NewUserPCCOPage extends peststreamPage {
+	private static final Logger logger = LoggerFactory.getLogger(NewUserPCCOPage.class);
 	BaseUtills utills = new BaseUtills();
 
 	@FindBy(xpath = "/html/body/div[3]/div[1]/div/ul/li[3]/a")
@@ -512,8 +515,14 @@ public class NewUserPCCOPage extends peststreamPage {
 	}
 
 	public void continue_btn() {
+try {
 		continueBtn.click();
-	}
+
+}
+catch(Exception e){
+	logger.error("continue_btn >>> continue button is not clickable");
+	
+}}
 
 	public void service_address(Map<String, String> testData) {
 		serviceAddressLine1.sendKeys(testData.get("Address"));
