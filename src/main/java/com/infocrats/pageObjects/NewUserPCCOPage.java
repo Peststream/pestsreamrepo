@@ -89,7 +89,7 @@ public class NewUserPCCOPage extends peststreamPage {
 	@FindBy(xpath = "//*[@id=\"uniform-rdoCommercial\"]/span")
 	private WebElementFacade Commercial_RadioBtn;
 
-	@FindBy(xpath = "//*[@id=\"btnGenerateLead\"]")
+	@FindBy(xpath = "//*[@id=\"GenerateLead\"]")
 	private WebElementFacade continueBtn;
 
 	@FindBy(xpath = "//*[@id=\"SpRequiredServiceAddressControl_ServiceAddressLine1\"]")
