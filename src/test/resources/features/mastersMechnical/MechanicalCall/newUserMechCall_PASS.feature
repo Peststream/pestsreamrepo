@@ -420,7 +420,7 @@ Feature: New USer Mech Call Pass
     Then user click on Assigned,Estimated Duration
     Then user click on saveInfo Button
 
-  #Pas
+  #Pass
   @CSSO_ScheduleEstimation_Comm_Inside_TimeRange_Save_Mech
   Scenario: Test ScheduleEstimation Commercial with InsideTimeRange28
     When user clicked on CallTab
@@ -445,5 +445,5 @@ Feature: New USer Mech Call Pass
     Then user click on Range 	Time
     Then select Time Range
     Then select Second Time Range
-    Then user click on AssignedEstimated Duration
+    Then user click on Assigned,Estimated Duration
     Then user click on saveInfo Button
