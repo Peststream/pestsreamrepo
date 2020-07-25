@@ -18,14 +18,4 @@ Feature: Create pest control residential opportunity for exiting user.
     Then I click on commercial Radio button
     And click on continue button for commercial opportunity
 
-  #with checkbox lead(Done)
-  @nuWLCom
-  Scenario: Test opportunity info (general info) for commercial with lead
-    When user clicked on call tab
-    When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
-    And select lead branch info
-    Then Check lead button
-    And enters Account_Alert and enterProblemDiscription
-    Then I click on commercial Radio button
-    And click on continue button for commercial opportunity
   
