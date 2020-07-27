@@ -1,4 +1,4 @@
-@dheeraj
+@manjeet
 Feature: Create pest control residential opportunity for exiting user.
 
   Background: 
@@ -9,13 +9,16 @@ Feature: Create pest control residential opportunity for exiting user.
 
   
    #without lead checkbox(done)
-  @nuWOLCom
-  Scenario: Test opportunity info (general info) for commercial
-    When user clicked on call tab
-    When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
-    And select lead branch info
-    And enters Account_Alert and enterProblemDiscription
-    Then I click on commercial Radio button
-    And click on continue button for commercial opportunity
+  @general
+  Scenario: Test to Continue General Info of Termite
+    When user click on CallTab
+    Then user enters company
+    Then user enters contact
+    Then user click on Branch
+    Then user click on Source
+    Then user enters Alert
+    Then user enters Problem Description
+    Then user click on OppType
+    Then user click on continue
 
   
