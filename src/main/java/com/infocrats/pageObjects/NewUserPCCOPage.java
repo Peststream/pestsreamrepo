@@ -203,7 +203,7 @@ public class NewUserPCCOPage extends peststreamPage {
 	@FindBy(xpath = "//select[@id='InitialPreferedId']//option[contains(text(),'Any Time')]")
 	private WebElementFacade SecondTime;
 
-	@FindBy(xpath = "/html[1]/body[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[6]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/button[4]/span[1]")
+	@FindBy(xpath = "div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[6]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/button[4]/span[1]")
 	private WebElementFacade MarkAsLost;
 
 	@FindBy(xpath = "/html/body/div[3]/div[1]/div/ul/li[4]/a/span[1]")
