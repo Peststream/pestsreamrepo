@@ -167,7 +167,6 @@ public class MechCsrPage extends peststreamPage {
 		waitABit(1000);
 		CSRDashBoard_Mech.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
-		System.out.println(jsonData.get("Time1"));
 		waitABit(jsonData.get("Time1"));
 
 	}
