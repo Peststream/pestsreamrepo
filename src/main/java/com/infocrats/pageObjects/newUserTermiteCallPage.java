@@ -3,12 +3,14 @@ package com.infocrats.pageObjects;
 import java.util.Map;
 
 import com.infocrats.utils.BaseUtills;
+import com.infocrats.utils.JsonHelper;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
 
 public class newUserTermiteCallPage extends peststreamPage {
 	BaseUtills utills = new BaseUtills();
+	private Map<String, Integer> jsonData;
 
 	@FindBy(xpath = "//span[contains(text(),'Call')]")
 	private WebElementFacade CallTab;
@@ -339,21 +341,25 @@ public class newUserTermiteCallPage extends peststreamPage {
 
 	}
 
-	public void clickOnBranch() {
+	public void clickOnBranch() throws Exception {
 		DDBranch.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time1"));
 
 		ValueBranch.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time1"));
 
 	}
 
-	public void clickOnSource() {
+	public void clickOnSource() throws Exception {
 		DDSource.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time1"));
 
 		ValueSource.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time1"));
 
 	}
 
@@ -374,18 +380,20 @@ public class newUserTermiteCallPage extends peststreamPage {
 
 	// ************************
 
-	public void clickOncompany(Map<String, String> testData) {
+	public void clickOncompany(Map<String, String> testData) throws Exception {
 		company.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		company.sendKeys(testData.get("CompName"));
 
 		companySearch.click();
 		companySearchCreate.click();
 	}
 
-	public void clickOncontact(Map<String, String> testData) {
+	public void clickOncontact(Map<String, String> testData) throws Exception {
 		contact.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		contact.sendKeys(testData.get("ContName"));
 
 		contactSearch.click();
@@ -393,88 +401,108 @@ public class newUserTermiteCallPage extends peststreamPage {
 
 	}
 
-	public void clickOnMName(Map<String, String> testData) {
+	public void clickOnMName(Map<String, String> testData) throws Exception {
 		MName.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		MName.sendKeys(testData.get("MName"));
 	}
 
-	public void clickOnLName(Map<String, String> testData) {
+	public void clickOnLName(Map<String, String> testData) throws Exception {
 		LName.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		LName.sendKeys(testData.get("LName"));
 	}
 
-	public void clickOnPEmail(Map<String, String> testData) {
+	public void clickOnPEmail(Map<String, String> testData) throws Exception {
 		PEmail.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		PEmail.sendKeys(testData.get("PEmail"));
 	}
 
-	public void clickOncell(Map<String, String> testData) {
+	public void clickOncell(Map<String, String> testData) throws Exception {
 		Cell.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		Cell.sendKeys(testData.get("CNumber"));
 	}
 
-	public void clickOnlead() {
+	public void clickOnlead() throws Exception {
 		Lead.click();
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 
 	}
 
-	public void clickOnaddressLine(Map<String, String> testData) {
+	public void clickOnaddressLine(Map<String, String> testData) throws Exception {
 		AddressLine.click();
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 		AddressLine.sendKeys(testData.get("AddressLine1"));
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 	}
 
-	public void clickOnzip(Map<String, String> testData) {
+	public void clickOnzip(Map<String, String> testData) throws Exception {
 		Zip.click();
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 		Zip.sendKeys(testData.get("Zip"));
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 	}
 
-	public void clickOncity(Map<String, String> testData) {
+	public void clickOncity(Map<String, String> testData) throws Exception {
 		City.click();
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 		City.sendKeys(testData.get("City"));
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 	}
 
-	public void clickOnaddNote(Map<String, String> testData) {
+	public void clickOnaddNote(Map<String, String> testData) throws Exception {
 		AddNote.click();
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 		AddNote.sendKeys(testData.get("AddNote"));
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 	}
 
-	public void clickOnDDserviceStdServic() {
+	public void clickOnDDserviceStdServic() throws Exception {
 		scrollDown(DDService);
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 		DDService.click();
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 
 		valueService.click();
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 	}
 
-	public void clickOnDDpackageStdServices() {
+	public void clickOnDDpackageStdServices() throws Exception {
 		DDPackage.click();
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 
 		valuePackage.click();
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 	}
 
-	public void clickOnDDfrequencyStdServices() {
+	public void clickOnDDfrequencyStdServices() throws Exception {
 		DDFrequency.click();
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 
 		valueFrequency.click();
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 	}
 
 	// public void clickOnDDbillingFrequency() {
@@ -482,165 +510,199 @@ public class newUserTermiteCallPage extends peststreamPage {
 	// waitABit(1000);
 	// }
 
-	public void clickOnaddStdServices() {
+	public void clickOnaddStdServices() throws Exception {
 		AddStdService.click();
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 	}
 
-	public void clickOnradioButtionAddToAgreement() {
+	public void clickOnradioButtionAddToAgreement() throws Exception {
 		RadioBtnAddToAgreement.click();
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 	}
 
-	public void clickOnsaveAddToAgreement() {
+	public void clickOnsaveAddToAgreement() throws Exception {
 		scrollDown(SaveAddToAgreement);
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 		SaveAddToAgreement.click();
-		waitABit(6000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 	}
 
-	public void clickOnOppTypeComm() {
+	public void clickOnOppTypeComm() throws Exception {
 		scrollDown(OppTypeComm);
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 		OppTypeComm.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 
 	}
 
-	public void clickOnopportunity() {
+	public void clickOnopportunity() throws Exception {
 		Opportunity.click();
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 	}
 
-	public void clickOnsaveAndCont() {
+	public void clickOnsaveAndCont() throws Exception {
 		scrollUP(saveAndCont);
 		saveAndCont.click();
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 	}
 
-	public void clickOncontinue_Insp() {
+	public void clickOncontinue_Insp() throws Exception {
 		continue_Insp.click();
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 	}
 
-	public void clickOnOppmarkAsLost() {
+	public void clickOnOppmarkAsLost() throws Exception {
 		OppmarkAsLost.click();
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 	}
 
-	public void clickOnOppDDReason() {
+	public void clickOnOppDDReason() throws Exception {
 		OppDDReason.click();
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 
 		OppValueReason.click();
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 	}
 
-	public void clickOndes(Map<String, String> testData) {
+	public void clickOndes(Map<String, String> testData) throws Exception {
 		des.sendKeys(testData.get("Description"));
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 	}
 
-	public void clickOnsave() {
+	public void clickOnsave() throws Exception {
 		save.click();
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 	}
 
-	public void clickOnBundle() {
+	public void clickOnBundle() throws Exception {
 		scrollDownLarge(Bundle);
 		Bundle.click();
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 	}
 
-	public void clickOnDDBundle() {
+	public void clickOnDDBundle() throws Exception {
 		DDBundle.click();
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 		
 		ValueDDBundle.click();
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 	}
 
-	public void clickOnAddBundle() {
+	public void clickOnAddBundle() throws Exception {
 		AddBundle.click();
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 	}
 
-	public void clickOnradioBttnAddToAgreement() {
+	public void clickOnradioBttnAddToAgreement() throws Exception {
 		RadioBttnAddToAgreement.click();
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 	}
 
-	public void clickOnSave_BundleServices() {
+	public void clickOnSave_BundleServices() throws Exception {
 		Save_BundleServices.click();
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 	}
 
-	public void clickOnScheduleEstimations() {
+	public void clickOnScheduleEstimations() throws Exception {
 		scrollDownLarge(ScheduleEstimations);
 		ScheduleEstimations.click();
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 	}
 
-	public void clickOnDDAssignedTo() {
+	public void clickOnDDAssignedTo() throws Exception {
 		scrollDownLarge(DDAssignedTo);
 		DDAssignedTo.click();
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 		
 		ValueDDAssignedTo.click();
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 	}
 
-		public void saveScheduleEstimation() {
+		public void saveScheduleEstimation() throws Exception {
 		saveScheduleEstimation.click();
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 	}
 
-		public void MarkLScheduleEstimation() {
+		public void MarkLScheduleEstimation() throws Exception {
 			MarkLScheduleEstimation.click();
-			waitABit(3000);
+			jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+			waitABit(jsonData.get("Time3"));
 			
 		}
 
-		public void DDReason_ScheduleEstimation() {
+		public void DDReason_ScheduleEstimation() throws Exception {
 			DDReason_ScheduleEstimation.click();
-			waitABit(3000);
+			jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+			waitABit(jsonData.get("Time3"));
 			
 			ValueDDReason_ScheduleEstimation.click();
-			waitABit(3000);
+			jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+			waitABit(jsonData.get("Time3"));
 		}
 
-		public void des_ScheduleEstimation(Map<String, String> testData) {
+		public void des_ScheduleEstimation(Map<String, String> testData) throws Exception {
 			des_ScheduleEstimation.sendKeys(testData.get("Description"));
-			waitABit(3000);
+			jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+			waitABit(jsonData.get("Time3"));
 		}
 
-		public void save_ScheduleEstimation() {
+		public void save_ScheduleEstimation() throws Exception {
 			save_ScheduleEstimation.click();
-			waitABit(3000);
+			jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+			waitABit(jsonData.get("Time3"));
 		}
 
-		public void RangeTime_InsideScheduleEstimation() {
+		public void RangeTime_InsideScheduleEstimation() throws Exception {
 			RangeTime_InsideScheduleEstimation.click();
-			waitABit(3000);
+			jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+			waitABit(jsonData.get("Time3"));
 		}
 
-		public void DDTimeRange_InsideScheduleEstimation() {
+		public void DDTimeRange_InsideScheduleEstimation() throws Exception {
 			DDTimeRange_InsideScheduleEstimation.click();
-			waitABit(3000);
+			jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+			waitABit(jsonData.get("Time3"));
 			
 			ValueDDTimeRange_InsideScheduleEstimation.click();
-			waitABit(3000);
+			jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+			waitABit(jsonData.get("Time3"));
 		}
 
-		public void fieldRadioBttn_FieldScheduleEstimation() {
+		public void fieldRadioBttn_FieldScheduleEstimation() throws Exception {
 			fieldRadioBttn_FieldScheduleEstimation.click();
-			waitABit(3000);
+			jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+			waitABit(jsonData.get("Time3"));
 			
 		}
 
-		public void click_on_InsideRadioBttn_Comm() {
+		public void click_on_InsideRadioBttn_Comm() throws Exception {
 			InsideRadioBttn_Comm.click();
-			waitABit(3000);
+			jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+			waitABit(jsonData.get("Time3"));
 		}
 
 		

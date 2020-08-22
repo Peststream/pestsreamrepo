@@ -42,12 +42,12 @@ public class newUserTermiteCallStepDefs {
 	}
 
 	@Then("^user click on Branch$")
-	public void user_click_on_Branch() {
+	public void user_click_on_Branch() throws Exception {
 		newusertermitecallsteps.clickOnBranch();
 	}
 
 	@Then("^user click on Source$")
-	public void user_click_on_Source() {
+	public void user_click_on_Source() throws Exception {
 		newusertermitecallsteps.clickOnSource();
 	}
 
@@ -104,7 +104,7 @@ public class newUserTermiteCallStepDefs {
 	}
 
 	@Then("^user click on lead$")
-	public void user_click_on_lead() {
+	public void user_click_on_lead() throws Exception {
 		newusertermitecallsteps.clickOnlead();
 	}
 
@@ -129,17 +129,17 @@ public class newUserTermiteCallStepDefs {
 	}
 
 	@Then("^user click on DDserviceStdServices$")
-	public void user_click_on_DDserviceStdServices() {
+	public void user_click_on_DDserviceStdServices() throws Exception {
 		newusertermitecallsteps.clickOnDDserviceStdServic();
 	}
 
 	@Then("^user click on DDpackageStdServices$")
-	public void user_click_on_DDpackageStdServices() {
+	public void user_click_on_DDpackageStdServices() throws Exception {
 		newusertermitecallsteps.clickOnDDpackageStdServices();
 	}
 
 	@Then("^user click on DDfrequencyStdServices$")
-	public void user_click_on_DDfrequencyStdServices() {
+	public void user_click_on_DDfrequencyStdServices() throws Exception {
 		newusertermitecallsteps.clickOnDDfrequencyStdServices();
 	}
 	//
@@ -149,47 +149,47 @@ public class newUserTermiteCallStepDefs {
 	// }
 
 	@Then("^user click on addStdServices$")
-	public void user_click_on_addStdServices() {
+	public void user_click_on_addStdServices() throws Exception {
 		newusertermitecallsteps.clickOnaddStdServices();
 	}
 
 	@Then("^user click on radioButtionAddToAgreement$")
-	public void user_click_on_radioButtionAddToAgreement() {
+	public void user_click_on_radioButtionAddToAgreement() throws Exception {
 		newusertermitecallsteps.clickOnradioButtionAddToAgreement();
 	}
 
 	@Then("^user click on saveAddToAgreement$")
-	public void user_click_on_saveAddToAgreement() {
+	public void user_click_on_saveAddToAgreement() throws Exception {
 		newusertermitecallsteps.clickOnsaveAddToAgreement();
 	}
 
 	@Then("^user click on OppTypeComm$")
-	public void user_click_on_OppTypeComm() {
+	public void user_click_on_OppTypeComm() throws Exception {
 		newusertermitecallsteps.clickOnOppTypeComm();
 	}
 
 	@When("^user click on opportunity$")
-	public void user_click_on_opportunity() {
+	public void user_click_on_opportunity() throws Exception {
 		newusertermitecallsteps.clickOnopportunity();
 	}
 
 	@Then("^user click on saveAndCont_GI_SalesApp_Appointments$")
-	public void user_click_on_saveAndCont_GI_SalesApp_Appointments() {
+	public void user_click_on_saveAndCont_GI_SalesApp_Appointments() throws Exception {
 		newusertermitecallsteps.clickOnsaveAndCont();
 	}
 
 	@Then("^user click on continue_Inspection_SalesApp_Appointments$")
-	public void user_click_on_continue_Inspection_SalesApp_Appointments() {
+	public void user_click_on_continue_Inspection_SalesApp_Appointments() throws Exception {
 		newusertermitecallsteps.clickOncontinue_Insp();
 	}
 
 	@Then("^user click on markAsLost_SelectService_SalesApp_Appointments$")
-	public void user_click_on_markAsLost_SelectService_SalesApp_Appointments() {
+	public void user_click_on_markAsLost_SelectService_SalesApp_Appointments() throws Exception {
 		newusertermitecallsteps.clickOnOppmarkAsLost();
 	}
 
 	@Then("^user click on DDReason_OppLostReason$")
-	public void user_click_on_DDReason_OppLostReason() {
+	public void user_click_on_DDReason_OppLostReason() throws Exception {
 		newusertermitecallsteps.clickOnOppDDReason();
 	}
 
@@ -199,57 +199,57 @@ public class newUserTermiteCallStepDefs {
 	}
 
 	@Then("^user click on save_OppLostReason$")
-	public void user_click_on_save_OppLostReason() {
+	public void user_click_on_save_OppLostReason() throws Exception {
 		newusertermitecallsteps.clickOnsave();
 	}
 
 	@Then("^user click on ServiceBundle$")
-	public void user_click_on_ServiceBundle() {
+	public void user_click_on_ServiceBundle() throws Exception {
 		newusertermitecallsteps.clickOnServiceBundle();
 	}
 
 	@Then("^user click on DDBundle$")
-	public void user_click_on_DDBundle() {
+	public void user_click_on_DDBundle() throws Exception {
 		newusertermitecallsteps.clickOnDDBundle();
 	}
 
 	@Then("^user click on AddBundle$")
-	public void user_click_on_AddBundle() {
+	public void user_click_on_AddBundle() throws Exception {
 		newusertermitecallsteps.clickOnAddBundle();
 	}
 
 	@Then("^user click on radioBttnAddToAgreement$")
-	public void user_click_on_radioBttnAddToAgreement() {
+	public void user_click_on_radioBttnAddToAgreement() throws Exception {
 		newusertermitecallsteps.clickOnradioBttnAddToAgreement();
 	}
 
 	@Then("^user click on Save_BundleServices$")
-	public void user_click_on_Save_BundleServices() {
+	public void user_click_on_Save_BundleServices() throws Exception {
 		newusertermitecallsteps.clickOnSave_BundleServices();
 	}
 
 	@Then("^user click on ScheduleEstimation$")
-	public void user_click_on_ScheduleEstimation() {
+	public void user_click_on_ScheduleEstimation() throws Exception {
 		newusertermitecallsteps.clickOnScheduleEstimation();
 	}
 
 	@Then("^user click on DDAssignedTo$")
-	public void user_click_on_DDAssignedTo() {
+	public void user_click_on_DDAssignedTo() throws Exception {
 		newusertermitecallsteps.clickOnDDAssignedTo();
 	}
 
 	@Then("^user click on saveScheduleEstimation$")
-	public void user_click_on_saveScheduleEstimation() {
+	public void user_click_on_saveScheduleEstimation() throws Exception {
 		newusertermitecallsteps.saveScheduleEstimation();
 	}
 
 	@Then("^user click on MarkLost_ScheduleEstimation$")
-	public void user_click_on_MarkLost_ScheduleEstimation() {
+	public void user_click_on_MarkLost_ScheduleEstimation() throws Exception {
 		newusertermitecallsteps.MarkLScheduleEstimation();
 	}
 
 	@Then("^user click on DDReason_ScheduleEstimation$")
-	public void user_click_on_DDReason_ScheduleEstimation() {
+	public void user_click_on_DDReason_ScheduleEstimation() throws Exception {
 		newusertermitecallsteps.DDReason_ScheduleEstimation();
 	}
 
@@ -259,27 +259,27 @@ public class newUserTermiteCallStepDefs {
 	}
 
 	@Then("^user click on save_ScheduleEstimation$")
-	public void user_click_on_save_ScheduleEstimation() {
+	public void user_click_on_save_ScheduleEstimation() throws Exception {
 		newusertermitecallsteps.save_ScheduleEstimation();
 	}
 
 	@Then("^user click on RangeTime_InsideScheduleEstimation$")
-	public void user_click_on_RangeTime_InsideScheduleEstimation() {
+	public void user_click_on_RangeTime_InsideScheduleEstimation() throws Exception {
 		newusertermitecallsteps.RangeTime_InsideScheduleEstimation();
 	}
 
 	@Then("^user click on DDTimeRange_InsideScheduleEstimation$")
-	public void user_click_on_DDTimeRange_InsideScheduleEstimation() {
+	public void user_click_on_DDTimeRange_InsideScheduleEstimation() throws Exception {
 		newusertermitecallsteps.DDTimeRange_InsideScheduleEstimation();
 	}
 
 	@Then("^user click on fieldRadioBttn_FieldScheduleEstimation$")
-	public void user_click_on_fieldRadioBttn_FieldScheduleEstimation() {
+	public void user_click_on_fieldRadioBttn_FieldScheduleEstimation() throws Exception {
 		newusertermitecallsteps.fieldRadioBttn_FieldScheduleEstimation();
 	}
 
 	@Then("^user click on InsideRadioBttn_Comm$")
-	public void user_click_on_InsideRadioBttn_Comm() {
+	public void user_click_on_InsideRadioBttn_Comm() throws Exception {
 		newusertermitecallsteps.click_on_InsideRadioBttn_Comm();
 	}
 

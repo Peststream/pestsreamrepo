@@ -41,11 +41,11 @@ public class newUserTermiteCallSteps extends pestreamSteps {
 		newusertermitecallpage.clickOnCell(jsonData);
 	}
 
-	public void clickOnBranch() {
+	public void clickOnBranch() throws Exception {
 		newusertermitecallpage.clickOnBranch();
 	}
 
-	public void clickOnSource() {
+	public void clickOnSource() throws Exception {
 		newusertermitecallpage.clickOnSource();
 	}
 
@@ -93,7 +93,7 @@ public class newUserTermiteCallSteps extends pestreamSteps {
 		newusertermitecallpage.clickOncell(jsonData);
 	}
 
-	public void clickOnlead() {
+	public void clickOnlead() throws Exception {
 		newusertermitecallpage.clickOnlead();
 
 	}
@@ -118,15 +118,15 @@ public class newUserTermiteCallSteps extends pestreamSteps {
 		newusertermitecallpage.clickOnaddNote(jsonData);
 	}
 
-	public void clickOnDDserviceStdServic() {
+	public void clickOnDDserviceStdServic() throws Exception {
 		newusertermitecallpage.clickOnDDserviceStdServic();
 	}
 
-	public void clickOnDDpackageStdServices() {
+	public void clickOnDDpackageStdServices() throws Exception {
 		newusertermitecallpage.clickOnDDpackageStdServices();
 	}
 
-	public void clickOnDDfrequencyStdServices() {
+	public void clickOnDDfrequencyStdServices() throws Exception {
 		newusertermitecallpage.clickOnDDfrequencyStdServices();
 	}
 
@@ -134,40 +134,40 @@ public class newUserTermiteCallSteps extends pestreamSteps {
 	// newusertermitecallpage.clickOnDDbillingFrequency();
 	// }
 
-	public void clickOnaddStdServices() {
+	public void clickOnaddStdServices() throws Exception {
 		newusertermitecallpage.clickOnaddStdServices();
 	}
 
-	public void clickOnradioButtionAddToAgreement() {
+	public void clickOnradioButtionAddToAgreement() throws Exception {
 		newusertermitecallpage.clickOnradioButtionAddToAgreement();
 	}
 
-	public void clickOnsaveAddToAgreement() {
+	public void clickOnsaveAddToAgreement() throws Exception {
 		newusertermitecallpage.clickOnsaveAddToAgreement();
 	}
 
-	public void clickOnOppTypeComm() {
+	public void clickOnOppTypeComm() throws Exception {
 		newusertermitecallpage.clickOnOppTypeComm();
 
 	}
 
-	public void clickOnopportunity() {
+	public void clickOnopportunity() throws Exception {
 		newusertermitecallpage.clickOnopportunity();
 	}
 
-	public void clickOnsaveAndCont() {
+	public void clickOnsaveAndCont() throws Exception {
 		newusertermitecallpage.clickOnsaveAndCont();
 	}
 
-	public void clickOncontinue_Insp() {
+	public void clickOncontinue_Insp() throws Exception {
 		newusertermitecallpage.clickOncontinue_Insp();
 	}
 
-	public void clickOnOppmarkAsLost() {
+	public void clickOnOppmarkAsLost() throws Exception {
 		newusertermitecallpage.clickOnOppmarkAsLost();
 	}
 
-	public void clickOnOppDDReason() {
+	public void clickOnOppDDReason() throws Exception {
 		newusertermitecallpage.clickOnOppDDReason();
 	}
 
@@ -176,51 +176,51 @@ public class newUserTermiteCallSteps extends pestreamSteps {
 		newusertermitecallpage.clickOndes(jsonData);
 	}
 
-	public void clickOnsave() {
+	public void clickOnsave() throws Exception {
 		newusertermitecallpage.clickOnsave();
 	}
 
-	public void clickOnServiceBundle() {
+	public void clickOnServiceBundle() throws Exception {
 		newusertermitecallpage.clickOnBundle();
 	}
 
-	public void clickOnDDBundle() {
+	public void clickOnDDBundle() throws Exception {
 		newusertermitecallpage.clickOnDDBundle();
 	}
 
-	public void clickOnAddBundle() {
+	public void clickOnAddBundle() throws Exception {
 		newusertermitecallpage.clickOnAddBundle();
 	}
 
-	public void clickOnradioBttnAddToAgreement() {
+	public void clickOnradioBttnAddToAgreement() throws Exception {
 		newusertermitecallpage.clickOnradioBttnAddToAgreement();
 	}
 
-	public void clickOnSave_BundleServices() {
+	public void clickOnSave_BundleServices() throws Exception {
 		newusertermitecallpage.clickOnSave_BundleServices();
 	}
 
-	public void clickOnScheduleEstimation() {
+	public void clickOnScheduleEstimation() throws Exception {
 		newusertermitecallpage.clickOnScheduleEstimations();
 		
 	}
 
-	public void clickOnDDAssignedTo() {
+	public void clickOnDDAssignedTo() throws Exception {
 		newusertermitecallpage.clickOnDDAssignedTo();
 		
 	}
 
-	public void saveScheduleEstimation() {
+	public void saveScheduleEstimation() throws Exception {
 		newusertermitecallpage.saveScheduleEstimation();
 		
 	}
 
-	public void MarkLScheduleEstimation() {
+	public void MarkLScheduleEstimation() throws Exception {
 		newusertermitecallpage.MarkLScheduleEstimation();
 		
 	}
 
-	public void DDReason_ScheduleEstimation() {
+	public void DDReason_ScheduleEstimation() throws Exception {
 		newusertermitecallpage.DDReason_ScheduleEstimation();
 	}
 
@@ -229,24 +229,24 @@ public class newUserTermiteCallSteps extends pestreamSteps {
 		newusertermitecallpage.des_ScheduleEstimation(jsonData);
 	}
 
-	public void save_ScheduleEstimation() {
+	public void save_ScheduleEstimation() throws Exception {
 		newusertermitecallpage.save_ScheduleEstimation();
 	}
 
-	public void RangeTime_InsideScheduleEstimation() {
+	public void RangeTime_InsideScheduleEstimation() throws Exception {
 		newusertermitecallpage.RangeTime_InsideScheduleEstimation();
 	}
 
-	public void DDTimeRange_InsideScheduleEstimation() {
+	public void DDTimeRange_InsideScheduleEstimation() throws Exception {
 		newusertermitecallpage.DDTimeRange_InsideScheduleEstimation();
 	}
 
-	public void fieldRadioBttn_FieldScheduleEstimation() {
+	public void fieldRadioBttn_FieldScheduleEstimation() throws Exception {
 		newusertermitecallpage.fieldRadioBttn_FieldScheduleEstimation();
 		
 	}
 
-	public void click_on_InsideRadioBttn_Comm() {
+	public void click_on_InsideRadioBttn_Comm() throws Exception {
 		newusertermitecallpage.click_on_InsideRadioBttn_Comm();
 		
 	}
