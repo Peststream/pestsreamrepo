@@ -1,16 +1,20 @@
 package com.infocrats.pageObjects;
 
+import java.util.Map;
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.touch.DownAction;
 import org.openqa.selenium.remote.server.handler.interactions.touch.Down;
 
 import com.infocrats.utils.BaseUtills;
+import com.infocrats.utils.JsonHelper;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
 
 public class MechCsrPage extends peststreamPage {
 	BaseUtills utills = new BaseUtills();
+	private Map<String, Integer> jsonData;
 
 	@FindBy(xpath = "//span[contains(text(),'CSR DashBoard')]")
 	private WebElementFacade CSRDashBoard_Mech;
@@ -158,12 +162,13 @@ public class MechCsrPage extends peststreamPage {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
-	public void CSRDashBoard_Mech() {
+	public void CSRDashBoard_Mech() throws Exception {
 		scrollUP(CSRDashBoard_Mech);
 		waitABit(1000);
 		CSRDashBoard_Mech.click();
-		waitABit(5000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		System.out.println(jsonData.get("Time1"));
+		waitABit(jsonData.get("Time1"));
 
 	}
 

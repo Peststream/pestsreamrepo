@@ -84,6 +84,19 @@ public class JsonHelper {
 		return myMap;
 	}
 
+	public static synchronized Map<String, Integer> readJsonElementInteger(String jsonFileName, String elementName)
+			throws Exception {
+		String filePath = JsonHelper.getResourceFolderPath() + jsonFileName;
+		JsonElement root = new JsonParser().parse(new InputStreamReader(new FileInputStream(filePath), "UTF-8"));
+		JsonObject jsonObject = root.getAsJsonObject();
+		JsonElement some = jsonObject.get(elementName);
+		Type type = new TypeToken<Map<String, Integer>>() {
+		}.getType();
+		Gson gson = new Gson();
+		Map<String, Integer> myMap = gson.fromJson(some, type);
+		return myMap;
+	}
+
 	public static String readFileAsString(String fileName) throws Exception {
 		String data = "";
 		data = new String(Files.readAllBytes(Paths.get(fileName)), "UTF-8");

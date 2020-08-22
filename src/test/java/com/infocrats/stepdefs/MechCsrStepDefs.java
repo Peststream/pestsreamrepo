@@ -14,7 +14,7 @@ public class MechCsrStepDefs {
 	
 
 @When("^user click on CSRDashBoard_Mech$")
-public void user_click_on_CSRDashBoard_Mech() {
+public void user_click_on_CSRDashBoard_Mech() throws Exception {
 	mechcsrsteps.CSRDashBoard_Mech();
 }
 

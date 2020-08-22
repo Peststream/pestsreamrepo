@@ -6,7 +6,7 @@ public class MechCsrSteps extends pestreamSteps {
 
 	MechCsrPage mechcsrpage;
 
-	public void CSRDashBoard_Mech() {
+	public void CSRDashBoard_Mech() throws Exception {
 		mechcsrpage.CSRDashBoard_Mech();
 
 	}
