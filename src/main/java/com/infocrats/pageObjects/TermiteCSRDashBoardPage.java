@@ -5,12 +5,14 @@ import java.util.Map;
 import org.openqa.selenium.Keys;
 
 import com.infocrats.utils.BaseUtills;
+import com.infocrats.utils.JsonHelper;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
 
 public class TermiteCSRDashBoardPage extends peststreamPage {
 	BaseUtills utills = new BaseUtills();
+	private Map<String, Integer> jsonData;
 
 	@FindBy(xpath = "//span[contains(text(),'CSR DashBoard')]")
 	private WebElementFacade CSRDashboard;
@@ -109,9 +111,10 @@ public class TermiteCSRDashBoardPage extends peststreamPage {
 		CSRDashboard.click();
 	}
 
-	public void click_on_AdvanceSearch_CSRDashboard() {
+	public void click_on_AdvanceSearch_CSRDashboard() throws Exception {
 		scrollDown(AdvanceSearch_CSRDashboard);
-		waitABit(2000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 		AdvanceSearch_CSRDashboard.click();
 	}
 
@@ -119,111 +122,134 @@ public class TermiteCSRDashBoardPage extends peststreamPage {
 		AddCallAction_CSRDashboard.click();
 	}
 
-	public void click_on_DDSourceAddCAll_CSRDashboard() {
+	public void click_on_DDSourceAddCAll_CSRDashboard() throws Exception {
 		DDSourceAddCAll_CSRDashboard.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time1"));
 		ValueDDSourceAddCAll_CSRDashboard.click();
 	}
 
-	public void click_on_DDTargetAddCall_CSRDashboard() {
+	public void click_on_DDTargetAddCall_CSRDashboard() throws Exception {
 		DDTargetAddCall_CSRDashboard.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time1"));
 		ValueDDTargetAddCall_CSRDashboard.click();
 	}
 
-	public void click_on_SaveAddCall_CSRDashboard() {
-		waitABit(1000);
+	public void click_on_SaveAddCall_CSRDashboard() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time1"));
 		SaveAddCall_CSRDashboard.click();
 	}
 
-	public void click_on_AddNote_CSRDashboard() {
+	public void click_on_AddNote_CSRDashboard() throws Exception {
 		AddNote_CSRDashboard.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time1"));
 	}
 
-	public void click_on_ExpirationDate_AddNote_CSRDashboard() {
+	public void click_on_ExpirationDate_AddNote_CSRDashboard() throws Exception {
 		ExpirationDate_CSRDashboard.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time1"));
 		
 		NextMonthExpirationDate_CSRDashboard.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time1"));
 		
 		ValueExpirationDate_CSRDashboard.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time1"));
 	}
 
-	public void click_on_EnterNote_AddNote_CSRDashboard(Map<String, String> testData) {
+	public void click_on_EnterNote_AddNote_CSRDashboard(Map<String, String> testData) throws Exception {
 		EnterNote_CSRDashboard.sendKeys(testData.get("EnterNote"));
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time1"));
 	}
 
-	public void click_on_Save_AddNote_CSRDashboard() {
+	public void click_on_Save_AddNote_CSRDashboard() throws Exception {
 		SaveAddNote_CSRDashboard.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time1"));
 	}
 
 	
 	
-	public void click_on_CreateWorkorder() {
+	public void click_on_CreateWorkorder() throws Exception {
 		CreateWorkorder.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time1"));
 	}
 
-	public void click_on_DDServiceCategory_CreateWorkorder() {
+	public void click_on_DDServiceCategory_CreateWorkorder() throws Exception {
 		DDServiceCategory_CreateWorkorder.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time1"));
 		
 		ValueDDServiceCategory_CreateWorkorder.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time1"));
 	}
 
-	public void click_on_Services_CreateWorkorder() {
+	public void click_on_Services_CreateWorkorder() throws Exception {
 		DDServices_CreateWorkorder.click();
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time1"));
 		
 		ValueDDServices_CreateWorkorder.sendKeys(Keys.DOWN);
 		ValueDDServices_CreateWorkorder.sendKeys(Keys.ENTER);
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time1"));
 	}
 
-	public void click_on_AddBtn_CreateWorkorder() {
+	public void click_on_AddBtn_CreateWorkorder() throws Exception {
 		AddBtn_CreateWorkorder.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time1"));
 	}
 
-	public void click_on_DDOrderType_CreateWorkorder() {
+	public void click_on_DDOrderType_CreateWorkorder() throws Exception {
 		DDOrderType_CreateWorkorder.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time1"));
 		
 		ValueDDOrderType_CreateWorkorder.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time1"));
 	}
 
-	public void click_on_KeepSameServiceAdd_CreateWorkorder() {
+	public void click_on_KeepSameServiceAdd_CreateWorkorder() throws Exception {
 		KeepSameServiceAdd_CreateWorkorder.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time1"));
 	}
 
-	public void click_on_ServiceDate_CreateWorkorder() {
+	public void click_on_ServiceDate_CreateWorkorder() throws Exception {
 		ServiceDate_CreateWorkorder.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time1"));
 		
 		NextMonthServiceDate_CreateWorkorder.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time1"));
 		
 		ValueServiceDate_CreateWorkorder.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time1"));
 	}
 
-	public void click_on_Save_CreateWorkorder() {
+	public void click_on_Save_CreateWorkorder() throws Exception {
 		scrollDownLarge(Save_CreateWorkorder);
 		Save_CreateWorkorder.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time1"));
 	}
 
-	public void click_on_YesCreateOpportunity_CreateWorkorder() {
+	public void click_on_YesCreateOpportunity_CreateWorkorder() throws Exception {
 		YesCreateOpportunity_CreateWorkorder.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time1"));
 		
 	}
 

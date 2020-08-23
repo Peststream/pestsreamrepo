@@ -17,7 +17,7 @@ public class TermiteCSRDashBoardStepDefs {
 	}
 
 	@Then("^user click on AdvanceSearch_CSRDashboard$")
-	public void user_click_on_AdvanceSearch_CSRDashboard() {
+	public void user_click_on_AdvanceSearch_CSRDashboard() throws Exception {
 		termitecsrdashboardsteps.click_on_AdvanceSearch_CSRDashboard();
 	}
 
@@ -27,27 +27,27 @@ public class TermiteCSRDashBoardStepDefs {
 	}
 
 	@Then("^user click on DDSourceAddCAll_CSRDashboard$")
-	public void user_click_on_DDSourceAddCAll_CSRDashboard() {
+	public void user_click_on_DDSourceAddCAll_CSRDashboard() throws Exception {
 		termitecsrdashboardsteps.click_on_DDSourceAddCAll_CSRDashboard();
 	}
 
 	@Then("^user click on DDTargetAddCall_CSRDashboard$")
-	public void user_click_on_DDTargetAddCall_CSRDashboard() {
+	public void user_click_on_DDTargetAddCall_CSRDashboard() throws Exception {
 		termitecsrdashboardsteps.click_on_DDTargetAddCall_CSRDashboard();
 	}
 
 	@Then("^user click on SaveAddCall_CSRDashboard$")
-	public void user_click_on_SaveAddCall_CSRDashboard() {
+	public void user_click_on_SaveAddCall_CSRDashboard() throws Exception {
 		termitecsrdashboardsteps.click_on_SaveAddCall_CSRDashboard();
 	}
 
 	@Then("^user click on AddNote$")
-	public void user_click_on_AddNote() {
+	public void user_click_on_AddNote() throws Exception {
 		termitecsrdashboardsteps.clickonAddNote_CSRDashboard();
 	}
 
 	@Then("^user click on ExpirationDate_AddNote$")
-	public void user_click_on_ExpirationDate_AddNote() {
+	public void user_click_on_ExpirationDate_AddNote() throws Exception {
 		termitecsrdashboardsteps.click_on_ExpirationDate_AddNote_CSRDashboard();
 	}
 
@@ -57,55 +57,55 @@ public class TermiteCSRDashBoardStepDefs {
 	}
 
 	@Then("^user click on Save_AddNote$")
-	public void user_click_on_Save_AddNote() {
+	public void user_click_on_Save_AddNote() throws Exception {
 		termitecsrdashboardsteps.click_on_Save_AddNote_CSRDashboard();
 	}
 	
 	
 
 @Then("^user click on CreateWorkorder$")
-public void user_click_on_CreateWorkorder() {
+public void user_click_on_CreateWorkorder() throws Exception {
 	termitecsrdashboardsteps.click_on_CreateWorkorder();
 }
 
 @Then("^user click on DDServiceCategory_CreateWorkorder$")
-public void user_click_on_DDServiceCategory_CreateWorkorder() {
+public void user_click_on_DDServiceCategory_CreateWorkorder() throws Exception {
 	termitecsrdashboardsteps.click_on_DDServiceCategory_CreateWorkorder();
 }
 
 @Then("^user click on Services_CreateWorkorder$")
-public void user_click_on_Services_CreateWorkorder() {
+public void user_click_on_Services_CreateWorkorder() throws Exception {
 	termitecsrdashboardsteps.click_on_Services_CreateWorkorder();
 }
 
 @Then("^user click on AddBtn_CreateWorkorder$")
-public void user_click_on_AddBtn_CreateWorkorder() {
+public void user_click_on_AddBtn_CreateWorkorder() throws Exception {
 	termitecsrdashboardsteps.click_on_AddBtn_CreateWorkorder();
 }
 
 @Then("^user click on DDOrderType_CreateWorkorder$")
-public void user_click_on_DDOrderType_CreateWorkorder() {
+public void user_click_on_DDOrderType_CreateWorkorder() throws Exception {
 	termitecsrdashboardsteps.click_on_DDOrderType_CreateWorkorder();
 }
 
 @Then("^user click on KeepSameServiceAdd_CreateWorkorder$")
-public void user_click_on_KeepSameServiceAdd_CreateWorkorder() {
+public void user_click_on_KeepSameServiceAdd_CreateWorkorder() throws Exception {
 	termitecsrdashboardsteps.click_on_KeepSameServiceAdd_CreateWorkorder();
 }
 
 @Then("^user click on ServiceDate_CreateWorkorder$")
-public void user_click_on_ServiceDate_CreateWorkorder() {
+public void user_click_on_ServiceDate_CreateWorkorder() throws Exception {
 	termitecsrdashboardsteps.click_on_ServiceDate_CreateWorkorder();
 }
 
 @Then("^user click on Save_CreateWorkorder$")
-public void user_click_on_Save_CreateWorkorder() {
+public void user_click_on_Save_CreateWorkorder() throws Exception {
 	termitecsrdashboardsteps.click_on_Save_CreateWorkorder();
 }
 
 
 @Then("^user click on YesCreateOpportunity_CreateWorkorder$")
-public void user_click_on_YesCreateOpportunity_CreateWorkorder() {
+public void user_click_on_YesCreateOpportunity_CreateWorkorder() throws Exception {
 	termitecsrdashboardsteps.click_on_YesCreateOpportunity_CreateWorkorder();
 }
 
