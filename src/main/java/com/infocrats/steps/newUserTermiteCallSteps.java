@@ -10,7 +10,7 @@ public class newUserTermiteCallSteps extends pestreamSteps {
 	private Map<String, String> jsonData;
 	newUserTermiteCallPage newusertermitecallpage;
 
-	public void clickOnCallTab() {
+	public void clickOnCallTab() throws Exception {
 		newusertermitecallpage.clickOnCallTab();
 	}
 

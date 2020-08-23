@@ -12,7 +12,7 @@ public class newUserTermiteCallStepDefs {
 	newUserTermiteCallSteps newusertermitecallsteps;
 
 	@When("^user click on CallTab$")
-	public void user_click_on_CallTab() {
+	public void user_click_on_CallTab() throws Exception {
 		newusertermitecallsteps.clickOnCallTab();
 	}
 
@@ -52,7 +52,7 @@ public class newUserTermiteCallStepDefs {
 	}
 
 	@Then("^user enters alert$")
-	public void user_enters_alert() {
+	public void user_enters_alert() throws Exception {
 		newusertermitecallsteps.clickOnCallTab();
 	}
 

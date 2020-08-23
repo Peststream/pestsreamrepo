@@ -289,27 +289,34 @@ public class newUserTermiteCallPage extends peststreamPage {
 		return null;
 	}
 
-	public void clickOnCallTab() {
+	public void clickOnCallTab() throws Exception {
 		CallTab.click();
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time1"));
 
 	}
 
-	public void clickOnCompany(Map<String, String> testData) {
-		waitABit(3000);
+	public void clickOnCompany(Map<String, String> testData) throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 		Company_CSSO.sendKeys(testData.get("CompName"));
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 		companySearch.click();
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time3"));
 		companySearchCreate.click();
 
 	}
 
-	public void clickOnContact(Map<String, String> testData) {
+	public void clickOnContact(Map<String, String> testData) throws Exception {
 		Contact_CSSO.click();
-		waitABit(2000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		Contact_CSSO.sendKeys(testData.get("ContName"));
 		contactSearch.click();
-		waitABit(2000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		contactSearchValue.click();
 
 		// MiddleName.click();
@@ -328,15 +335,17 @@ public class newUserTermiteCallPage extends peststreamPage {
 		companySearch.click();
 	}
 
-	public void clickOnPrimaryEmail(Map<String, String> testData) {
+	public void clickOnPrimaryEmail(Map<String, String> testData) throws Exception {
 		PrimaryEmail.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time1"));
 		PrimaryEmail.sendKeys(testData.get("PrimaryEmail"));
 	}
 
-	public void clickOnCell(Map<String, String> testData) {
+	public void clickOnCell(Map<String, String> testData) throws Exception {
 		Cell.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time1"));
 		Cell.sendKeys(testData.get("CellNumber"));
 
 	}
