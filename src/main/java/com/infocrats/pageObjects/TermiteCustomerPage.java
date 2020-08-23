@@ -3,12 +3,14 @@ package com.infocrats.pageObjects;
 import java.util.Map;
 
 import com.infocrats.utils.BaseUtills;
+import com.infocrats.utils.JsonHelper;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
 
 public class TermiteCustomerPage extends peststreamPage {
 	BaseUtills utills = new BaseUtills();
+	private Map<String, Integer> jsonData;
 
 	@FindBy(xpath = "(//span[contains(.,'Customer')])[1]")
 	private WebElementFacade CustomerTermite;
@@ -351,729 +353,841 @@ public class TermiteCustomerPage extends peststreamPage {
 	
 	
 
-	public void clickOn_CustomerTermite() {
+	public void clickOn_CustomerTermite() throws Exception {
 		CustomerTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time1"));
 		
 	}
 
 
 
-	public void clickOn_Account_Cust() {
+	public void clickOn_Account_Cust() throws Exception {
 		Account_Cust.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 	
-	public void clickOn_AddAccount_AccCust() {
+	public void clickOn_AddAccount_AccCust() throws Exception {
 		AddAccount_Cust.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_DDContactType_AccCust() {
+	public void clickOn_DDContactType_AccCust() throws Exception {
 		DDContactType_AccCust.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 		ValueDDContactType_AccCust.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_AccountName_AccCust(Map<String, String> testData) {
+	public void clickOn_AccountName_AccCust(Map<String, String> testData) throws Exception {
 		AccountName_AccCust.sendKeys(testData.get("AccountName"));
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_DDSource_AccCust() {
+	public void clickOn_DDSource_AccCust() throws Exception {
 		DDSource_AccCust.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 		ValueDDSource_AccCust.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_Save_AccCust() {
+	public void clickOn_Save_AccCust() throws Exception {
 		scrollDown(Save_AccCust);
 		Save_AccCust.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_AddComp_Cust() {
+	public void clickOn_AddComp_Cust() throws Exception {
 		AddCompCust.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_Name_CompCust(Map<String, String> testData) {
+	public void clickOn_Name_CompCust(Map<String, String> testData) throws Exception {
 		NameCompCust.sendKeys(testData.get("Name"));
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_DDSource_CompCust() {
+	public void clickOn_DDSource_CompCust() throws Exception {
 		DDSourceCompCust.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 		ValueDDSourceCompCust.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_PEmail_CompCust(Map<String, String> testData) {
+	public void clickOn_PEmail_CompCust(Map<String, String> testData) throws Exception {
 		PEmailCompCust.sendKeys(testData.get("PrimaryEmail"));
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_PPhone_CompCust(Map<String, String> testData) {
+	public void clickOn_PPhone_CompCust(Map<String, String> testData) throws Exception {
 		PPhone_CompCust.sendKeys(testData.get("PrimaryPhone"));
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_Save_CompCust() {
+	public void clickOn_Save_CompCust() throws Exception {
 		Save_CompCust.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_CompCust() {
+	public void clickOn_CompCust() throws Exception {
 		CompCust.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_ContCustTermite() {
+	public void clickOn_ContCustTermite() throws Exception {
 		ContCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_AddCont_ContCustTermite() {
+	public void clickOn_AddCont_ContCustTermite() throws Exception {
 		AddContContCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_FName_ContCustTermite(Map<String, String> testData) {
+	public void clickOn_FName_ContCustTermite(Map<String, String> testData) throws Exception {
 		FNameContCustTermite.sendKeys(testData.get("FirstName"));
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 	
 	
-	public void clickOn_LName_ContCustTermite(Map<String, String> testData) {
+	public void clickOn_LName_ContCustTermite(Map<String, String> testData) throws Exception {
 		LNameContCustTermite.sendKeys(testData.get("LastName"));
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_PEmail_ContCustTermite(Map<String, String> testData) {
+	public void clickOn_PEmail_ContCustTermite(Map<String, String> testData) throws Exception {
 		PEmailContCustTermite.sendKeys(testData.get("PrimaryEmail"));
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_Save_ContCustTermite() {
+	public void clickOn_Save_ContCustTermite() throws Exception {
 		SaveContCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_Opp_CustTermite() {
+	public void clickOn_Opp_CustTermite() throws Exception {
 		OppCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_AddOpp_CustTermite() {
+	public void clickOn_AddOpp_CustTermite() throws Exception {
 		AddOppCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_CompanyName_OppCust(Map<String, String> testData) {
+	public void clickOn_CompanyName_OppCust(Map<String, String> testData) throws Exception {
 		CompanyNameOppCust.sendKeys(testData.get("CompanyName"));
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_OppName_OppCust(Map<String, String> testData) {
+	public void clickOn_OppName_OppCust(Map<String, String> testData) throws Exception {
 		OppNameOppCust.sendKeys(testData.get("OpportunityName"));
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_FName_OppCust(Map<String, String> testData) {
+	public void clickOn_FName_OppCust(Map<String, String> testData) throws Exception {
 		FNameOppCust.sendKeys(testData.get("FirstName"));
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_DDBranch_OppCust() {
+	public void clickOn_DDBranch_OppCust() throws Exception {
 		DDBranchOppCust.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 		ValueDDBranchOppCust.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_DDDepartment_OppCust() {
+	public void clickOn_DDDepartment_OppCust() throws Exception {
 		DDDepartmentOppCust.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 		ValueDDDepartmentOppCust.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_DDSource_OppCust() {
+	public void clickOn_DDSource_OppCust() throws Exception {
 		DDSourceOppCust.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 		ValueDDSourceOppCust.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_ResiOpptype_OppCust() {
+	public void clickOn_ResiOpptype_OppCust() throws Exception {
 		ResiOpptypeOppCust.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_Save_OppCust() {
+	public void clickOn_Save_OppCust() throws Exception {
 		SaveOppCust.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_NewAccount_OppCustTermite() {
+	public void clickOn_NewAccount_OppCustTermite() throws Exception {
 		NewAccountOppCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_Lead_CustTermite() {
+	public void clickOn_Lead_CustTermite() throws Exception {
 		LeadCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_AddLead_CustTermite() {
+	public void clickOn_AddLead_CustTermite() throws Exception {
 		AddLeadCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_FName_LeadCustTermite(Map<String, String> testData) {
+	public void clickOn_FName_LeadCustTermite(Map<String, String> testData) throws Exception {
 		FNameLeadCustTermite.sendKeys(testData.get("FirstName"));
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_PEmail_LeadCustTermite(Map<String, String> testData) {
+	public void clickOn_PEmail_LeadCustTermite(Map<String, String> testData) throws Exception {
 		PEmailLeadCustTermite.sendKeys(testData.get("PrimaryEmail"));
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_Address_LeadCustTermite(Map<String, String> testData) {
+	public void clickOn_Address_LeadCustTermite(Map<String, String> testData) throws Exception {
 		AddressLeadCustTermite.sendKeys(testData.get("Address"));
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_DDState_LeadCustTermite() {
+	public void clickOn_DDState_LeadCustTermite() throws Exception {
 		DDStateLeadCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 		ValueDDStateLeadCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_DDSource_LeadCustTermite() {
+	public void clickOn_DDSource_LeadCustTermite() throws Exception {
 		DDSourceLeadCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 		ValueDDSourceLeadCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_ResiLeadType_LeadCustTermite() {
+	public void clickOn_ResiLeadType_LeadCustTermite() throws Exception {
 		ResiLeadTypeLeadCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_SelectAssignType_LeadCustTermite() {
+	public void clickOn_SelectAssignType_LeadCustTermite() throws Exception {
 		SelectAssignTypeLeadCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_Save_LeadCustTermite() {
+	public void clickOn_Save_LeadCustTermite() throws Exception {
 		SaveLeadCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_DB_CustTermite() {
+	public void clickOn_DB_CustTermite() throws Exception {
 		DBCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_AddDB_CustTermite() {
+	public void clickOn_AddDB_CustTermite() throws Exception {
 		AddDBCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_FName_DBCustTermite(Map<String, String> testData) {
+	public void clickOn_FName_DBCustTermite(Map<String, String> testData) throws Exception {
 		FNameDBCustTermite.sendKeys(testData.get("FirstName"));
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_LName_DBCustTermite(Map<String, String> testData) {
+	public void clickOn_LName_DBCustTermite(Map<String, String> testData) throws Exception {
 		LNameDBCustTermite.sendKeys(testData.get("LastName"));
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_SourceSysName_DBCustTermite(Map<String, String> testData) {
+	public void clickOn_SourceSysName_DBCustTermite(Map<String, String> testData) throws Exception {
 		SourceSysNameDBCustTermite.sendKeys(testData.get("SourceSysName"));
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_Save_DBCustTermite() {
+	public void clickOn_Save_DBCustTermite() throws Exception {
 		SaveDBCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_AdvanceSearch_AccCustTermite() {
+	public void clickOn_AdvanceSearch_AccCustTermite() throws Exception {
 		AdvanceSearchAccCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 	}
 
 
 
-	public void clickOn_AddOppAction_AdSearchAccCustTermite() {
+	public void clickOn_AddOppAction_AdSearchAccCustTermite() throws Exception {
 		AddOppActionAdSearchAccCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 	}
 
 
 
-	public void OppName_AdSearchAccCustTermite(Map<String, String> testData) {
+	public void OppName_AdSearchAccCustTermite(Map<String, String> testData) throws Exception {
 		OppNameAdSearchAccCustTermite.sendKeys(testData.get("OppName"));
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 	}
 
 
 
-	public void clickOn_LastName_AdSearchAccCustTermite(Map<String, String> testData) {
+	public void clickOn_LastName_AdSearchAccCustTermite(Map<String, String> testData) throws Exception {
 		LastNameAdSearchAccCustTermite.sendKeys(testData.get("LName"));
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 	}
 
 
 
-	public void clickOn_DDBranch_AdSearchAccCustTermite() {
+	public void clickOn_DDBranch_AdSearchAccCustTermite() throws Exception {
 		DDBranchAdSearchAccCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 		ValueDDBranchAdSearchAccCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 	}
 
 
 
-	public void clickOn_DDDept_AdSearchAccCustTermite() {
+	public void clickOn_DDDept_AdSearchAccCustTermite() throws Exception {
         DDDeptAdSearchAccCustTermite.click();
-		waitABit(1000);
+        jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 		 ValueDDDeptAdSearchAccCustTermite.click();
-		 waitABit(1000);
+		 jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		 waitABit(jsonData.get("Time2"));
 	}
 
 
 
-	public void clickOn_DDSource_AdSearchAccCustTermite() {
+	public void clickOn_DDSource_AdSearchAccCustTermite() throws Exception {
 		DDSourceAdSearchAccCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 		ValueDDSourceAdSearchAccCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 	}
 
 
 
-	public void clickOn_ResiOppType_AdSearchAccCustTermite() {
+	public void clickOn_ResiOppType_AdSearchAccCustTermite() throws Exception {
 		ResiOppTypeAdSearchAccCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 	}
 
 
 
-	public void clickOn_Save_AdSearchAccCustTermite() {
+	public void clickOn_Save_AdSearchAccCustTermite() throws Exception {
 		SaveAdSearchAccCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 	}
 
 
 
-	public void clickOn_AddPhone_CallAdSearchAccCustTermite() {
+	public void clickOn_AddPhone_CallAdSearchAccCustTermite() throws Exception {
 		AddPhoneCallAdSearchAccCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 	}
 
 
 
-	public void clickOn_Contact_CallAdSearchAccCustTermite(Map<String, String> testData) {
+	public void clickOn_Contact_CallAdSearchAccCustTermite(Map<String, String> testData) throws Exception {
 		waitABit(1000);
 		ContactCallAdSearchAccCustTermite.sendKeys(testData.get("Contact"));
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
+		
 		SearchContactCallAdSearchAccCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
+		
 		ValueContactCallAdSearchAccCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 	}
 
 
 
-	public void clickOn_DDSource_CallAdSearchAccCustTermite() {
+	public void clickOn_DDSource_CallAdSearchAccCustTermite() throws Exception {
 		DDSourceCallAdSearchAccCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 		ValueDDSourceCallAdSearchAccCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 	}
 
 
 
-	public void clickOn_AccAlert_CallAdSearchAccCustTermite(Map<String, String> testData) {
+	public void clickOn_AccAlert_CallAdSearchAccCustTermite(Map<String, String> testData) throws Exception {
 		AccAlertCallAdSearchAccCustTermite.sendKeys(testData.get("AccAlert"));
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 	}
 
 
 
-	public void clickOn_ResiOppType_CallAdSearchAccCustTermite() {
+	public void clickOn_ResiOppType_CallAdSearchAccCustTermite() throws Exception {
 		ResiOppTypeCallAdSearchAccCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 	}
 
 
 
-	public void clickOn_Continue_CallAdSearchAccCustTermite() {
+	public void clickOn_Continue_CallAdSearchAccCustTermite() throws Exception {
 		ContinueCallAdSearchAccCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 	}
 
 
 
-	public void clickOn_Delete_AdSearchAccCustTermitee() {
+	public void clickOn_Delete_AdSearchAccCustTermitee() throws Exception {
 		DeleteAdSearchAccCustTermitee.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 	}
 
 
 
-	public void clickOn_Yes_DeleteAdSearchAccCustTermite() {
+	public void clickOn_Yes_DeleteAdSearchAccCustTermite() throws Exception {
 		YesDeleteAdSearchAccCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 	}
 
 
 
-	public void clickOn_AdvanceSearch_CompCustTermite() {
+	public void clickOn_AdvanceSearch_CompCustTermite() throws Exception {
 		AdvanceSearchCompCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 	}
 
 
 
-	public void clickOn_AddOppAction_CallAdSearchCompCustTermite() {
+	public void clickOn_AddOppAction_CallAdSearchCompCustTermite() throws Exception {
 		AddOppActionCallAdSearchCompCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 	}
 
 
 
-	public void clickOn_DDAcc_OppAdSearchAccCustTermite() {
+	public void clickOn_DDAcc_OppAdSearchAccCustTermite() throws Exception {
 		DDAccOppAdSearchAccCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 		ValueDDAccOppAdSearchAccCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 	}
 
 
 
-	public void clickOn_Continue_OppAdSearchAccCustTermite() {
+	public void clickOn_Continue_OppAdSearchAccCustTermite() throws Exception {
 	    ContinueOppAdSearchAccCustTermite.click();
-		waitABit(1000);
+	    jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 	}
 
 
 
-	public void clickOn_OppName_OppAdSearchAccCustTermite(Map<String, String> testData) {
+	public void clickOn_OppName_OppAdSearchAccCustTermite(Map<String, String> testData) throws Exception {
 		OppNameOppAdSearchAccCustTermite.sendKeys(testData.get("OppName"));
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 	}
 
 
 
-	public void clickOn_DDBranch_OppAdSearchAccCustTermite() {
+	public void clickOn_DDBranch_OppAdSearchAccCustTermite() throws Exception {
 		DDBranchOppAdSearchAccCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 		ValueDDBranchOppAdSearchAccCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 	}
 
 
 
-	public void clickOn_DDDept_OppAdSearchAccCustTermite() {
+	public void clickOn_DDDept_OppAdSearchAccCustTermite() throws Exception {
 		DDDeptOppAdSearchAccCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 		ValueDDDeptOppAdSearchAccCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 	}
 
 
 
-	public void clickOn_DDSource_OppAdSearchAccCustTermite() {
+	public void clickOn_DDSource_OppAdSearchAccCustTermite() throws Exception {
 		DDSourceOppAdSearchAccCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 		ValueDDSourceOppAdSearchAccCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 	}
 
 
 
-	public void clickOn_ResiOppType_OppAdSearchAccCustTermite() {
+	public void clickOn_ResiOppType_OppAdSearchAccCustTermite() throws Exception {
 		ResiOppTypeOppAdSearchAccCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 	}
 
 
 
-	public void clickOn_Save_OppAdSearchAccCustTermite() {
+	public void clickOn_Save_OppAdSearchAccCustTermite() throws Exception {
 		SaveOppAdSearchAccCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 	}
 
 
 
-	public void clickOn_DeleteAction_AdSearchCompCustTermite() {
+	public void clickOn_DeleteAction_AdSearchCompCustTermite() throws Exception {
 		DeleteActionAdSearchCompCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 	}
 
 
 
-	public void clickOn_Yes_DeleteAdSearchCompCustTermite() {
+	public void clickOn_Yes_DeleteAdSearchCompCustTermite() throws Exception {
 		YesDeleteAdSearchCompCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 	}
 
 
 
-	public void clickOn_AdvanceSearch_ContCustTermite() {
+	public void clickOn_AdvanceSearch_ContCustTermite() throws Exception {
 		AdvanceSearchContCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 	}
 
 
 
-	public void clickOn_AddOppAction_AdvanceSearchContCustTermite() {
+	public void clickOn_AddOppAction_AdvanceSearchContCustTermite() throws Exception {
 		AddOppActionAdvanceSearchContCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 	}
 
 
 
-	public void clickOn_DDAccount_AddOppAdvanceSearchContCustTermite() {
+	public void clickOn_DDAccount_AddOppAdvanceSearchContCustTermite() throws Exception {
 		DDAccountAddOppAdvanceSearchContCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 		ValueDDAccountAddOppAdvanceSearchContCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 	}
 
 
 
-	public void clickOn_Cont_AddOppAdvanceSearchContCustTermite() {
+	public void clickOn_Cont_AddOppAdvanceSearchContCustTermite() throws Exception {
 		ContAddOppAdvanceSearchContCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 	}
 
 
 
-	public void clickOn_OppName_AddOppAdvanceSearchContCustTermite(Map<String, String> testData) {
+	public void clickOn_OppName_AddOppAdvanceSearchContCustTermite(Map<String, String> testData) throws Exception {
 		OppNameAddOppAdvanceSearchContCustTermite.sendKeys(testData.get("OppName"));
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 	}
 
 
 
-	public void clickOn_DDBranch_AddOppAdvanceSearchContCustTermite() {
+	public void clickOn_DDBranch_AddOppAdvanceSearchContCustTermite() throws Exception {
 		DDBranchAddOppAdvanceSearchContCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 		ValueDDBranchAddOppAdvanceSearchContCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 	}
 
 
 
-	public void clickOn_DDDept_AddOppAdvanceSearchContCustTermite() {
+	public void clickOn_DDDept_AddOppAdvanceSearchContCustTermite() throws Exception {
 		DDDeptAddOppAdvanceSearchContCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 		ValueDDDeptAddOppAdvanceSearchContCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 	}
 
 
 
-	public void clickOn_DDSource_AddOppAdvanceSearchContCustTermite() {
+	public void clickOn_DDSource_AddOppAdvanceSearchContCustTermite() throws Exception {
 		DDSourceAddOppAdvanceSearchContCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 		
 		ValueDDSourceAddOppAdvanceSearchContCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 	}
 
 
 
-	public void clickOn_ResiOppType_AddOppAdvanceSearchContCustTermite() {
+	public void clickOn_ResiOppType_AddOppAdvanceSearchContCustTermite() throws Exception {
 		ResiOppTypeAddOppAdvanceSearchContCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 	}
 
 
 
-	public void clickOn_Save_AddOppAdvanceSearchContCustTermite() {
+	public void clickOn_Save_AddOppAdvanceSearchContCustTermite() throws Exception {
 		SaveAddOppAdvanceSearchContCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 	}
 
 
 
-	public void clickOn_DeleteAction_AdSearchContCustTermite() {
+	public void clickOn_DeleteAction_AdSearchContCustTermite() throws Exception {
 		DeleteActionAdSearchContCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 	}
 
 
 
-	public void clickOn_Yes_DeleteAdSearchContCustTermite() {
+	public void clickOn_Yes_DeleteAdSearchContCustTermite() throws Exception {
 		YesDeleteAdSearchContCustTermite.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(jsonData.get("Time2"));
 	}
 
 
