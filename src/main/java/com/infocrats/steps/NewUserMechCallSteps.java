@@ -10,7 +10,7 @@ public class NewUserMechCallSteps extends pestreamSteps {
 	private Map<String, String> jsonData;
 	newUserMechCallPage newusermechcallpage;
 	
-	public void clickOnCallTab() {
+	public void clickOnCallTab() throws Exception {
 		
 		newusermechcallpage.clickOnCallTab();
 	}

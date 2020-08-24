@@ -11,18 +11,18 @@ public class NewUserCallHVAC {
 	NewUserCallHVACSteps newusercallHVACsteps;
 
 	@When("^select lead branch Information$")
-	public void select_lead_branch_Information() {
+	public void select_lead_branch_Information() throws Exception {
 		newusercallHVACsteps.leadBranchInformation();
 	}
 
 	@When("^select source Information$")
-	public void select_source_Information() {
+	public void select_source_Information() throws Exception {
 		newusercallHVACsteps.ClickOnSource();
 
 	}
 
 	@When("^select primary requested service$")
-	public void select_primary_requested_service() throws InterruptedException {
+	public void select_primary_requested_service() throws Exception {
 		newusercallHVACsteps.ClickOnPrimaryRequestedService();
 	}
 
@@ -32,7 +32,7 @@ public class NewUserCallHVAC {
 	}
 
 	@When("^click on Save button from general info$")
-	public void click_on_Save_button_from_general_info() throws InterruptedException {
+	public void click_on_Save_button_from_general_info() throws Exception {
 		newusercallHVACsteps.ClickOnSaveFromOpportunity();
 	}
 
@@ -48,54 +48,54 @@ public class NewUserCallHVAC {
 	}
 
 	@When("^click on Advance Search from Work Order$")
-	public void click_on_Advance_Search_from_Work_Order() throws InterruptedException {
+	public void click_on_Advance_Search_from_Work_Order() throws Exception {
 		newusercallHVACsteps.ClickAdvanceSearch();
 	}
 
 	@When("^Select and click on one Work Order Number$")
-	public void select_and_click_on_one_Work_Order_Number() throws InterruptedException {
+	public void select_and_click_on_one_Work_Order_Number() throws Exception {
 		newusercallHVACsteps.SelectOneWorkOrder();
 	}
 
 	@When("^Select lead employee from DD$")
-	public void select_lead_employee_from_DD() throws InterruptedException {
+	public void select_lead_employee_from_DD() throws Exception {
 		newusercallHVACsteps.SelectLeadEmployeeInDD();
 	}
 
 	@When("^Click on save from Work Order$")
-	public void click_on_save_from_Work_Order() throws InterruptedException {
+	public void click_on_save_from_Work_Order() throws Exception {
 		newusercallHVACsteps.ClickOnSaveFromWorkOrder();
 	}
 
 	@When("^Click on Advance Search Button$")
-	public void click_on_Advance_Search_Button() throws InterruptedException {
+	public void click_on_Advance_Search_Button() throws Exception {
 		newusercallHVACsteps.ClickOnAdvanceSearchBtn();
 	}
 
 	@When("^Click On First Work Order Number From Work Order$")
-	public void click_On_First_Work_Order_Number_From_Work_Order() throws InterruptedException {
+	public void click_On_First_Work_Order_Number_From_Work_Order() throws Exception {
 		newusercallHVACsteps.ClickOnFirstWorkOrderNumber();
 	}
 
 	@When("^Select Order Type From DD$")
-	public void select_Order_Type_From_DD() throws InterruptedException {
+	public void select_Order_Type_From_DD() throws Exception {
 		newusercallHVACsteps.SelectOrderFromOrderTypeDD();
 
 	}
 
 	@When("^user click on CSR Dashboard$")
-	public void user_click_on_CSR_Dashboard() throws InterruptedException {
+	public void user_click_on_CSR_Dashboard() throws Exception {
 		newusercallHVACsteps.ClickOnCsrDashboard();
 
 	}
 
 	@When("^user click on Advance Search from CSR Dashboard$")
-	public void user_click_on_Advance_Search_from_CSR_Dashboard() throws InterruptedException {
+	public void user_click_on_Advance_Search_from_CSR_Dashboard() throws Exception {
 		newusercallHVACsteps.clickOnAdvanceSearchBTN();
 	}
 
 	@When("^Select Add Call From Action for the first Account$")
-	public void select_Add_Call_From_Action_for_the_first_Account() throws InterruptedException {
+	public void select_Add_Call_From_Action_for_the_first_Account() throws Exception {
 		newusercallHVACsteps.ClickOnAddCall();
 
 	}
@@ -271,7 +271,7 @@ public class NewUserCallHVAC {
 	}
 
 	@When("^click on Advance Search from Add Company$")
-	public void click_on_Advance_Search_from_Add_Company() throws InterruptedException {
+	public void click_on_Advance_Search_from_Add_Company() throws Exception {
 		newusercallHVACsteps.ClickAdvanceSearch();
 	}
 

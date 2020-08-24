@@ -11,16 +11,16 @@ public class NewUserCallHVACSteps extends pestreamSteps {
 
 	NewUserCallHVACPage newusercallHVACpage;
 
-	public void leadBranchInformation() {
+	public void leadBranchInformation() throws Exception {
 		newusercallHVACpage.DDBranch();
 	}
 
-	public void ClickOnSource() {
+	public void ClickOnSource() throws Exception {
 		newusercallHVACpage.DDSource();
 
 	}
 
-	public void ClickOnPrimaryRequestedService() throws InterruptedException {
+	public void ClickOnPrimaryRequestedService() throws Exception {
 		newusercallHVACpage.PrimaryRequestedService();
 	}
 
@@ -30,7 +30,7 @@ public class NewUserCallHVACSteps extends pestreamSteps {
 
 	}
 
-	public void ClickOnSaveFromOpportunity() throws InterruptedException {
+	public void ClickOnSaveFromOpportunity() throws Exception {
 		newusercallHVACpage.SaveFromOpportunity();
 
 	}
@@ -41,46 +41,46 @@ public class NewUserCallHVACSteps extends pestreamSteps {
 
 	}
 
-	public void CheckFlatRate() throws InterruptedException {
+	public void CheckFlatRate() throws Exception {
 		newusercallHVACpage.checkFlatRate();
 
 	}
 
-	public void ClickAdvanceSearch() throws InterruptedException {
+	public void ClickAdvanceSearch() throws Exception {
 		newusercallHVACpage.clickAdvanceSearch();
 	}
 
-	public void SelectOneWorkOrder() throws InterruptedException {
+	public void SelectOneWorkOrder() throws Exception {
 		newusercallHVACpage.selectOneWorkOrder();
 	}
 
-	public void SelectLeadEmployeeInDD() throws InterruptedException {
+	public void SelectLeadEmployeeInDD() throws Exception {
 		newusercallHVACpage.selectLeadEmployee();
 	}
 
-	public void ClickOnSaveFromWorkOrder() throws InterruptedException {
+	public void ClickOnSaveFromWorkOrder() throws Exception {
 		newusercallHVACpage.clickSavefromWorkOrder();
 	}
 
-	public void ClickOnAdvanceSearchBtn() throws InterruptedException {
+	public void ClickOnAdvanceSearchBtn() throws Exception {
 		newusercallHVACpage.clickOnAdvanceSearchBtn();
 
 	}
 
-	public void ClickOnFirstWorkOrderNumber() throws InterruptedException {
+	public void ClickOnFirstWorkOrderNumber() throws Exception {
 		newusercallHVACpage.clickOnWorkOrderNumber();
 	}
 
-	public void SelectOrderFromOrderTypeDD() throws InterruptedException {
+	public void SelectOrderFromOrderTypeDD() throws Exception {
 		newusercallHVACpage.selectOrderFromOrderTypeDD();
 
 	}
 
-	public void ClickOnCsrDashboard() throws InterruptedException {
+	public void ClickOnCsrDashboard() throws Exception {
 		newusercallHVACpage.clickOnCsrDashboard();
 	}
 
-	public void ClickOnAddCall() throws InterruptedException {
+	public void ClickOnAddCall() throws Exception {
 		newusercallHVACpage.clickOnAddCall();
 	}
 
@@ -89,7 +89,7 @@ public class NewUserCallHVACSteps extends pestreamSteps {
 
 	}
 
-	public void clickOnAdvanceSearchBTN() throws InterruptedException {
+	public void clickOnAdvanceSearchBTN() throws Exception {
 		newusercallHVACpage.ClickAdvanceSearchBTN();
 
 	}

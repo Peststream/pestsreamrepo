@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.infocrats.utils.BaseUtills;
+import com.infocrats.utils.JsonHelper;
 
 import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.annotations.findby.FindBy;
@@ -20,6 +21,7 @@ public class NewUserCallHVACPage extends peststreamPage {
 	private static final Boolean True = null;
 
 	BaseUtills utills = new BaseUtills();
+	private Map<String, Integer> jsonData;
 
 	@FindBy(xpath = "//*[@id=\"select2-chosen-5\"]")
 	private WebElementFacade DDBranch;
@@ -376,8 +378,11 @@ public class NewUserCallHVACPage extends peststreamPage {
 		return null;
 	}
 
-	public void DDBranch() {
-		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+	public void DDBranch() throws Exception {
+		
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		scrollDown(DDBranch);
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1")); 
 		wait.until(ExpectedConditions.elementToBeClickable(DDBranch));
 		DDBranch.click();
 		
@@ -390,26 +395,32 @@ public class NewUserCallHVACPage extends peststreamPage {
 
 	}
 
-	public void DDSource() {
-		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+	public void DDSource() throws Exception {
+		
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		scrollDown(DDSource);
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1")); 
 		wait.until(ExpectedConditions.elementToBeClickable(DDSource));
 		DDSource.click();
-		
 		wait.until(ExpectedConditions.elementToBeClickable(valueDDSource));
 		valueDDSource.click();
-	}
+		
+			}
 
-	public void PrimaryRequestedService() throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+	public void PrimaryRequestedService() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3")); 
 		wait.until(ExpectedConditions.elementToBeClickable(DDPrimaryRequestedService));
 		DDPrimaryRequestedService.click();
+		
 		wait.until(ExpectedConditions.elementToBeClickable(valueDDPrimaryRequestedService));
 		valueDDPrimaryRequestedService.click();
 		
 	}
 
-	public void ServiceAddress(Map<String, String> testData) throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+	public void ServiceAddress(Map<String, String> testData) throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3")); 
 		wait.until(ExpectedConditions.elementToBeClickable(PlusButtonSA));
 		PlusButtonSA.click();
 		
@@ -423,8 +434,9 @@ public class NewUserCallHVACPage extends peststreamPage {
 
 	}
 
-	public void SaveFromOpportunity() throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+	public void SaveFromOpportunity() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3")); 
 		wait.until(ExpectedConditions.elementToBeClickable(SaveButton));
 		
 		scrollUP(SaveButton);
@@ -437,8 +449,9 @@ public class NewUserCallHVACPage extends peststreamPage {
 
 	}
 
-	public void JobDescription(Map<String, String> testData) throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+	public void JobDescription(Map<String, String> testData) throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3")); 
 		wait.until(ExpectedConditions.elementToBeClickable(JobDescTF));
 		JobDescTF.click();
 		JobDescTF.sendKeys(testData.get("Job Desc"));
@@ -446,33 +459,37 @@ public class NewUserCallHVACPage extends peststreamPage {
 
 	}
 
-	public void checkFlatRate() throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+	public void checkFlatRate() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3")); 
 		wait.until(ExpectedConditions.elementToBeClickable(Flatrate));
-		
-
 		Flatrate.click();
 	
 	}
 
-	public void clickAdvanceSearch() throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+	public void clickAdvanceSearch() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3")); 
 		wait.until(ExpectedConditions.elementToBeClickable(AdvanceSearchBtn));
 		AdvanceSearchBtn.click();
 		
 
 	}
 
-	public void selectOneWorkOrder() throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+	public void selectOneWorkOrder() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3")); 
 		wait.until(ExpectedConditions.elementToBeClickable(FirstWorkOrderlbl));
+		
 		FirstWorkOrderlbl.click();
 		
 	}
 
-	public void selectLeadEmployee() throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+	public void selectLeadEmployee() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3")); 
 		wait.until(ExpectedConditions.elementToBeClickable(LeadEmployeeDD));
+		
 		
 		scrollDownLarge(LeadEmployeeDD);
 		PrimaryRouteDD.click();
@@ -485,9 +502,12 @@ public class NewUserCallHVACPage extends peststreamPage {
 		Thread.sleep(2000);
 	}
 
-	public void clickSavefromWorkOrder() throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+	public void clickSavefromWorkOrder() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3")); 
 		wait.until(ExpectedConditions.elementToBeClickable(SaveBtnFromWorkOrder));
+		
+		
 		
 		
 		scrollDown(SaveBtnFromWorkOrder);
@@ -497,25 +517,36 @@ public class NewUserCallHVACPage extends peststreamPage {
 
 	}
 
-	public void clickOnAdvanceSearchBtn() throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+	public void clickOnAdvanceSearchBtn() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3")); 
 		wait.until(ExpectedConditions.elementToBeClickable(AdvanceSearchBtn));
+		
+		
+		
 		AdvanceSearchBtn.click();
 	
 		
 	}
 
-	public void clickOnWorkOrderNumber() throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+	public void clickOnWorkOrderNumber() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3")); 
 		wait.until(ExpectedConditions.elementToBeClickable(WorkOrderNumber));
+		
+		
 		WorkOrderNumber.click();
 		
 
 	}
 
-	public void selectOrderFromOrderTypeDD() throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+	public void selectOrderFromOrderTypeDD() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3")); 
 		wait.until(ExpectedConditions.elementToBeClickable(OrderTypeDD));
+		
+		
+		
 		
 		OrderTypeDD.click();
 		Thread.sleep(1000);
@@ -524,25 +555,35 @@ public class NewUserCallHVACPage extends peststreamPage {
 
 	}
 
-	public void clickOnCsrDashboard() throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+	public void clickOnCsrDashboard() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3")); 
 		wait.until(ExpectedConditions.elementToBeClickable(CsrDashboardLbl));
+		
+		
+		
 		scrollUPSmall(CsrDashboardLbl);
 		CsrDashboardLbl.click();
 	
 
 	}
 
-	public void ClickAdvanceSearchBTN() throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+	public void ClickAdvanceSearchBTN() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3")); 
 		wait.until(ExpectedConditions.elementToBeClickable(AdvanceSearchButton));
+		
+		
 		AdvanceSearchButton.click();
 
 	}
 
-	public void clickOnAddCall() throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(getDriver(), 15); 
+	public void clickOnAddCall() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3")); 
 		wait.until(ExpectedConditions.elementToBeClickable(CallIconFromAction));
+		
+		
 		CallIconFromAction.click();
 	
 	}
