@@ -32,12 +32,12 @@ public class newUserPCROStepDefs {
 
 	@When("^select lead branch \"([^\"]*)\", \"([^\"]*)\",\"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\"$")
 	public void select_lead_branch(String BranchName, String Department, String PrimaryResonCall, String Service,
-			String Source) {
+			String Source) throws Exception {
 		newuserpcrosteps.selectBranch();
 	}
 
 	@When("^I create lead$")
-	public void i_create_lead() {
+	public void i_create_lead() throws Exception {
 		newuserpcrosteps.leadBtn();
 	}
 
@@ -58,7 +58,7 @@ public class newUserPCROStepDefs {
 	}
 
 	@When("^Enter account Id \"([^\"]*)\",$")
-	public void enter_account_Id(String arg1) {
+	public void enter_account_Id(String arg1) throws Exception {
 		newuserpcrosteps.accountId();
 	}
 
@@ -70,7 +70,7 @@ public class newUserPCROStepDefs {
 	}
 
 	@Then("^check Is Tax Exempt$")
-	public void check_Is_Tax_Exempt() {
+	public void check_Is_Tax_Exempt() throws Exception {
 		newuserpcrosteps.checkTaxExapt();
 
 	}
@@ -81,7 +81,7 @@ public class newUserPCROStepDefs {
 	}
 
 	@Then("^IS Billing Address Different Than Service Address$")
-	public void is_Billing_Address_Different_Than_Service_Address() {
+	public void is_Billing_Address_Different_Than_Service_Address() throws Exception {
 
 		newuserpcrosteps.addressCheckBtn();
 	}
@@ -102,18 +102,18 @@ public class newUserPCROStepDefs {
 	}
 
 	@Then("^click on Add Button$")
-	public void click_on_Add_Button() {
+	public void click_on_Add_Button() throws Exception {
 		newuserpcrosteps.clickOnAddButton();
 	}
 
 	@Then("^click On Save Button$")
-	public void click_On_Save_Button() {
+	public void click_On_Save_Button() throws Exception {
 
 		newuserpcrosteps.clickOnSave();
 	}
 
 	@Then("^click On Save & Proposal$")
-	public void click_On_Save_Proposal() throws InterruptedException {
+	public void click_On_Save_Proposal() throws Exception {
 
 		newuserpcrosteps.saveAndProposal();
 	}
@@ -146,7 +146,7 @@ public class newUserPCROStepDefs {
 	}
 
 	@Then("^click on Add to agreement check button$")
-	public void click_on_Add_to_agreement_check_button() {
+	public void click_on_Add_to_agreement_check_button() throws Exception {
 		newuserpcrosteps.addToAgreementCheck_Btn();
 	}
 
@@ -283,12 +283,12 @@ public class newUserPCROStepDefs {
 	}
 
 	@Then("^click On mark as lost button$")
-	public void click_On_mark_as_lost_button() {
+	public void click_On_mark_as_lost_button() throws Exception {
 		newuserpcrosteps.markAsLostBtn();
 	}
 
 	@Then("^click on Reason DDL and choose reason$")
-	public void get_Reason() {
+	public void get_Reason() throws Exception {
 		newuserpcrosteps.getReason();
 	}
 
@@ -298,7 +298,7 @@ public class newUserPCROStepDefs {
 	}
 
 	@Then("^click on Save button$")
-	public void click_on_Save_button() {
+	public void click_on_Save_button() throws Exception {
 		newuserpcrosteps.saveInMarkAsLost();
 	}
 
@@ -482,7 +482,7 @@ public class newUserPCROStepDefs {
 	public void user_click_on_addToAgreement_ServiceBundleSelectPackagesOpportunity() {
 		newuserpcrosteps.addToAgreement_ServiceBundleSelectPackagesOpportunity();
 	}
-	
+
 	@Then("^user click on addToAgreement_ServiceBundleSelectPackagesOpportunit$")
 	public void user_click_on_addToAgreement_ServiceBundleSelectPackagesOpportunit() {
 		newuserpcrosteps.addToAgreement_ServiceBundleSelectPackagesOpportunity();

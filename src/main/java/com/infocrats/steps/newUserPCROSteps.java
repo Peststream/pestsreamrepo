@@ -35,7 +35,7 @@ public class newUserPCROSteps extends pestreamSteps {
 	}
 
 	@Step
-	public void selectBranch() {
+	public void selectBranch() throws Exception {
 		newuserpcropage.selectBranchDetils();
 	}
 
@@ -52,7 +52,7 @@ public class newUserPCROSteps extends pestreamSteps {
 	}
 
 	@Step
-	public void leadBtn() {
+	public void leadBtn() throws Exception {
 		newuserpcropage.leadCheckBtn();
 
 	}
@@ -65,7 +65,7 @@ public class newUserPCROSteps extends pestreamSteps {
 	}
 
 	@Step
-	public void accountId() {
+	public void accountId() throws Exception {
 
 		newuserpcropage.account_Id();
 	}
@@ -77,7 +77,7 @@ public class newUserPCROSteps extends pestreamSteps {
 	}
 
 	@Step
-	public void checkTaxExapt() {
+	public void checkTaxExapt() throws Exception {
 
 		newuserpcropage.checkExaptBtn();
 	}
@@ -90,7 +90,7 @@ public class newUserPCROSteps extends pestreamSteps {
 	}
 
 	@Step
-	public void addressCheckBtn() {
+	public void addressCheckBtn() throws Exception {
 		newuserpcropage.isBothAddressSame();
 
 	}
@@ -114,19 +114,19 @@ public class newUserPCROSteps extends pestreamSteps {
 	}
 
 	@Step
-	public void clickOnAddButton() {
+	public void clickOnAddButton() throws Exception {
 		newuserpcropage.clickOnAddBtn();
 
 	}
 
 	@Step
-	public void clickOnSave() {
+	public void clickOnSave() throws Exception {
 
 		newuserpcropage.clickOnSaveBtn();
 	}
 
 	@Step
-	public void saveAndProposal() throws InterruptedException {
+	public void saveAndProposal() throws Exception {
 		newuserpcropage.saveAndProposal_Btn();
 
 	}
@@ -162,7 +162,7 @@ public class newUserPCROSteps extends pestreamSteps {
 	}
 
 	@Step
-	public void addToAgreementCheck_Btn() {
+	public void addToAgreementCheck_Btn() throws Exception {
 		newuserpcropage.addToAgreementBtn();
 	}
 
@@ -313,18 +313,18 @@ public class newUserPCROSteps extends pestreamSteps {
 	}
 
 	@Step
-	public void markAsLostBtn() {
+	public void markAsLostBtn() throws Exception {
 
 		newuserpcropage.markAsLost_btn();
 	}
 
 	@Step
-	public void getReason() {
+	public void getReason() throws Exception {
 		newuserpcropage.get_Reason();
 	}
 
 	@Step
-	public void saveInMarkAsLost() {
+	public void saveInMarkAsLost() throws Exception {
 		newuserpcropage.saveInMarkAsLostBtn();
 	}
 
@@ -453,8 +453,6 @@ public class newUserPCROSteps extends pestreamSteps {
 
 	}
 
-	
-
 	public void SaveforMoreSDetails() {
 		newuserpcropage.savebtn();
 
@@ -487,13 +485,10 @@ public class newUserPCROSteps extends pestreamSteps {
 		newuserpcropage.enterNotesSave(jsonData);
 	}
 
-
 	public void ServiceBundleChckBox() {
 		newuserpcropage.ChckBoxServiceBundle();
 
 	}
-
-
 
 	public void OutLook_LogIn_Bttn() {
 		newuserpcropage.OutLook_LogIn_Bttn();
@@ -501,19 +496,19 @@ public class newUserPCROSteps extends pestreamSteps {
 	}
 
 	public void ViewAction_CompanyCustomer() {
-		 newuserpcropage.ViewAction_CompanyCustomer();
-		
+		newuserpcropage.ViewAction_CompanyCustomer();
+
 	}
 
 	public void EnterNote_CompanyCustomer() throws Exception {
 		jsonData = JsonHelper.readJsonElement("call.json", "CallDataOfResidentialFlow");
 		newuserpcropage.EnterNote_CompanyCustomer(jsonData);
-		
+
 	}
 
 	public void save_CompanyCustomer() {
 		newuserpcropage.save_CompanyCustomer();
-		
+
 	}
 
 	public void addToAgreement_ServiceBundleSelectPackagesOpportunity() {
@@ -522,7 +517,7 @@ public class newUserPCROSteps extends pestreamSteps {
 
 	public void validateThePage() {
 		newuserpcropage.validateThePage();
-		
+
 	}
 
 }
