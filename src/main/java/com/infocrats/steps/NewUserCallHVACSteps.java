@@ -84,7 +84,7 @@ public class NewUserCallHVACSteps extends pestreamSteps {
 		newusercallHVACpage.clickOnAddCall();
 	}
 
-	public void ClickOnSaveBtn() throws InterruptedException {
+	public void ClickOnSaveBtn() throws Exception {
 		newusercallHVACpage.ClickSaveBtn();
 
 	}
@@ -94,85 +94,85 @@ public class NewUserCallHVACSteps extends pestreamSteps {
 
 	}
 
-	public void SelectCallInfo() throws InterruptedException {
+	public void SelectCallInfo() throws Exception {
 		newusercallHVACpage.SelectcallInfo();
 
 	}
 
-	public void ClickOnAddOpportunityFromAction() throws InterruptedException {
+	public void ClickOnAddOpportunityFromAction() throws Exception {
 		newusercallHVACpage.clickOnAddOpportunityFromAction();
 	}
 
-	public void SelectGeneralInfo() throws InterruptedException {
+	public void SelectGeneralInfo() throws Exception {
 		newusercallHVACpage.selectGeneralInfo();
 	}
 
-	public void ClickContinueFromGenralInfo() throws InterruptedException {
+	public void ClickContinueFromGenralInfo() throws Exception {
 		newusercallHVACpage.clickContinueFromGenralInfo();
 	}
 
-	public void ClickOnAddTaskActionFromAction() throws InterruptedException {
+	public void ClickOnAddTaskActionFromAction() throws Exception {
 		newusercallHVACpage.ClickOnAddTaskActionFromAction();
 	}
 
-	public void SelectAddTaskAndDueDateFromGeneralInfo() throws InterruptedException {
+	public void SelectAddTaskAndDueDateFromGeneralInfo() throws Exception {
 		newusercallHVACpage.SelectAddTaskAndDueDateFromGeneralInfo();
 	}
 
-	public void ClickSaveBtnGeneralInfo() {
+	public void ClickSaveBtnGeneralInfo() throws Exception {
 		newusercallHVACpage.ClickSaveBtnGeneralInfo();
 	}
 
-	public void ClickOnAddNoteFromAction() throws InterruptedException {
+	public void ClickOnAddNoteFromAction() throws Exception {
 		newusercallHVACpage.ClickOnAddNoteFromAction();
 	}
 
-	public void EnterNoteForAddNote() {
+	public void EnterNoteForAddNote() throws Exception {
 		newusercallHVACpage.EnterNoteForAddNote();
 	}
 
-	public void ClickSaveFromAddNote() throws InterruptedException {
+	public void ClickSaveFromAddNote() throws Exception {
 		newusercallHVACpage.ClickSaveFromAddNote();
 	}
 
-	public void ClickCloseBtnFromAddNote() {
+	public void ClickCloseBtnFromAddNote() throws Exception {
 		newusercallHVACpage.ClickCloseBtnFromAddNote();
 	}
 
-	public void ClickCreateWorkorderFRomAction() throws InterruptedException {
+	public void ClickCreateWorkorderFRomAction() throws Exception {
 		newusercallHVACpage.ClickCreateWorkorderFRomAction();
 	}
 
-	public void SelectServiceCategoryAndServices() throws InterruptedException {
+	public void SelectServiceCategoryAndServices() throws Exception {
 		newusercallHVACpage.SelectServiceCategoryAndServices();
 	}
 
-	public void ClickOnAddBTN() throws InterruptedException {
+	public void ClickOnAddBTN() throws Exception {
 		newusercallHVACpage.ClickOnAddBTN();
 	}
 
-	public void EnterServiceDate() throws InterruptedException {
+	public void EnterServiceDate() throws Exception {
 		newusercallHVACpage.EnterServiceDate();
 	}
 
-	public void ClickDetailPageFRomAction() throws InterruptedException {
+	public void ClickDetailPageFRomAction() throws Exception {
 		newusercallHVACpage.ClickDetailPageFRomAction();
 	}
 
-	public void EnterNoteForDetailPage() throws InterruptedException {
+	public void EnterNoteForDetailPage() throws Exception {
 		newusercallHVACpage.EnterNoteForDetailPage();
 
 	}
 
-	public void ClickSaveOnDetailPage() throws InterruptedException {
+	public void ClickSaveOnDetailPage() throws Exception {
 		newusercallHVACpage.ClickSaveOnDetailPage();
 	}
 
-	public void ClickOnCustomer() throws InterruptedException {
+	public void ClickOnCustomer() throws Exception {
 		newusercallHVACpage.ClickOnCustomer();
 	}
 
-	public void ClickOnAccountFromCustomer() throws InterruptedException {
+	public void ClickOnAccountFromCustomer() throws Exception {
 		newusercallHVACpage.ClickOnAccountFromCustomer();
 	}
 
@@ -181,62 +181,62 @@ public class NewUserCallHVACSteps extends pestreamSteps {
 		newusercallHVACpage.EnterCustomerInfo(jsonData);
 	}
 
-	public void ClickOnAddAccount() throws InterruptedException {
+	public void ClickOnAddAccount() throws Exception {
 		newusercallHVACpage.ClickOnAddAccount();
 
 	}
 
-	public void ClickSaveFromAddAccount() {
+	public void ClickSaveFromAddAccount() throws Exception {
 		newusercallHVACpage.ClickSaveFromAddAccountddAccount();
 	}
 
-	public void CLickAdvanceSearchFromAccount() throws InterruptedException {
+	public void CLickAdvanceSearchFromAccount() throws Exception {
 		newusercallHVACpage.CLickAdvanceSearchFromAccount();
 
 	}
 
-	public void ClickAddOpportunityFromAction() {
+	public void ClickAddOpportunityFromAction() throws Exception {
 		newusercallHVACpage.ClickAddOpportunityFromAction();
 	}
 
-	public void SelectTestDataForCustomerAddOpportunity() throws InterruptedException {
+	public void SelectTestDataForCustomerAddOpportunity() throws Exception {
 		newusercallHVACpage.EnterTestDataForOpportunity();
 	}
 
-	public void ClickViewIconFromAction() throws InterruptedException {
+	public void ClickViewIconFromAction() throws Exception {
 		newusercallHVACpage.ClickViewIconFromAction();
 
 	}
 
-	public void ClickOnPhoneSalesIconAndSelectgeneralInfo() throws InterruptedException {
+	public void ClickOnPhoneSalesIconAndSelectgeneralInfo() throws Exception {
 		newusercallHVACpage.ClickOnPhoneSalesIconAndSelectgeneralInfo();
 	}
 
-	public void ClickOnCompanyFromCustomer() throws InterruptedException {
+	public void ClickOnCompanyFromCustomer() throws Exception {
 		newusercallHVACpage.ClickOnCompanyFromCustomer();
 	}
 
-	public void EnterTestDataForAddCompany() throws InterruptedException {
+	public void EnterTestDataForAddCompany() throws Exception {
 		newusercallHVACpage.EnterTestDataForAddCompany();
 	}
 
-	public void ClickOnAddOpportunityForCompany() throws InterruptedException {
+	public void ClickOnAddOpportunityForCompany() throws Exception {
 		newusercallHVACpage.ClickOnAddOpportunityForCompany();
 	}
 
-	public void SelectAccountFromCompany() throws InterruptedException {
+	public void SelectAccountFromCompany() throws Exception {
 		newusercallHVACpage.SelectAccountFromCompany();
 	}
 
-	public void ClickContinueFromAddOpportunityForCompany() {
+	public void ClickContinueFromAddOpportunityForCompany() throws Exception {
 		newusercallHVACpage.ClickContinueFromAddOpportunityForCompany();
 	}
 
-	public void ClickOnViewFromActionForCompany() throws InterruptedException {
+	public void ClickOnViewFromActionForCompany() throws Exception {
 		newusercallHVACpage.ClickOnViewFromActionForCompany();
 	}
 
-	public void ClickOnDeleteFromActionForCompany() {
+	public void ClickOnDeleteFromActionForCompany() throws Exception {
 		newusercallHVACpage.ClickOnDeleteFromActionForCompany();
 	}
 
@@ -250,41 +250,41 @@ public class NewUserCallHVACSteps extends pestreamSteps {
 
 	}
 
-	public void ClickContactFromCustomerDD() {
+	public void ClickContactFromCustomerDD() throws Exception {
 		newusercallHVACpage.ClickContactFromCustomerDD();
 	}
 
-	public void ClickOnAddContact() {
+	public void ClickOnAddContact() throws Exception {
 		newusercallHVACpage.ClickOnAddContact();
 	}
 
-	public void EnterTestDataForAddContact() {
+	public void EnterTestDataForAddContact() throws Exception {
 		newusercallHVACpage.EnterTestDataForAddContact();
 	}
 
-	public void ClickCloseBtnFromAddContact() {
+	public void ClickCloseBtnFromAddContact() throws Exception {
 		newusercallHVACpage.ClickCloseBtnFromAddContact();
 	}
 
-	public void EnterTestDataOfAddOpportunityForContact() throws InterruptedException {
+	public void EnterTestDataOfAddOpportunityForContact() throws Exception {
 		newusercallHVACpage.EnterTestDataOfAddOpportunityForContact();
 	}
 
-	public void ClickonAddOpportunityForContact() throws InterruptedException {
+	public void ClickonAddOpportunityForContact() throws Exception {
 		newusercallHVACpage.ClickonAddOpportunityForContact();
 
 	}
 
-	public void ClickonSaveButtonForAddOpportunityContact() {
+	public void ClickonSaveButtonForAddOpportunityContact() throws Exception {
 		newusercallHVACpage.ClickonSaveButtonForAddOpportunityContact();
 
 	}
 
-	public void CLickOnViewContactFromAction() throws InterruptedException {
+	public void CLickOnViewContactFromAction() throws Exception {
 		newusercallHVACpage.CLickOnViewContactFromAction();
 	}
 
-	public void CLickOnDeleteContactFromAction() {
+	public void CLickOnDeleteContactFromAction() throws Exception {
 		newusercallHVACpage.CLickOnDeleteContactFromAction();
 	}
 
@@ -292,11 +292,11 @@ public class NewUserCallHVACSteps extends pestreamSteps {
 		newusercallHVACpage.ConfirmDeleteForContact();
 	}
 
-	public void DeclineDeleteAlertForContact() {
+	public void DeclineDeleteAlertForContact() throws Exception {
 		newusercallHVACpage.DeclineDeleteAlertForContact();
 	}
 
-	public void SelectopportunityFromCustomerDD() {
+	public void SelectopportunityFromCustomerDD() throws Exception {
 		newusercallHVACpage.SelectopportunityFromCustomerDD();
 	}
 
@@ -304,36 +304,36 @@ public class NewUserCallHVACSteps extends pestreamSteps {
 		newusercallHVACpage.ClickNewACcountBtnInAddOpportunity();
 	}
 
-	public void SelectLeadFromCustomerDD() throws InterruptedException {
+	public void SelectLeadFromCustomerDD() throws Exception {
 		newusercallHVACpage.SelectLeadFromCustomerDD();
 	}
 
-	public void ClickAddLeadBtn() {
+	public void ClickAddLeadBtn() throws Exception {
 		newusercallHVACpage.ClickAddLeadBtn();
 	}
 
-	public void SelectOrEnterInfoForAddLead() {
+	public void SelectOrEnterInfoForAddLead() throws Exception {
 		newusercallHVACpage.SelectOrEnterInfoForAddLead();
 	}
 
-	public void ClickSaveFromAddAccountddAccount() {
+	public void ClickSaveFromAddAccountddAccount() throws Exception {
 		newusercallHVACpage.ClickSaveFromAddAccountddAccount();
 	}
 
-	public void selectDatabaseFromCustomerDD() {
+	public void selectDatabaseFromCustomerDD() throws Exception {
 		newusercallHVACpage.selectDatabaseFromCustomerDD();
 	}
 
-	public void clickAddDatabaseEntryBtn() {
+	public void clickAddDatabaseEntryBtn() throws Exception {
 		newusercallHVACpage.clickAddDatabaseEntryBtn();
 	}
 
-	public void enterGeneralTestDataForAddDatabaseEntry() {
+	public void enterGeneralTestDataForAddDatabaseEntry() throws Exception {
 		newusercallHVACpage.enterGeneralTestDataForAddDatabaseEntry();
 	}
 
 	public void clickCloseForAlert() {
-		newusercallHVACpage.clickCloseForAlert();		
+		newusercallHVACpage.clickCloseForAlert();
 	}
 
 }
