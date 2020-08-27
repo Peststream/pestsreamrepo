@@ -1,8 +1,13 @@
 package com.infocrats.pageObjects;
 
+import java.util.Map;
+
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.infocrats.utils.BaseUtills;
+import com.infocrats.utils.JsonHelper;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
@@ -10,6 +15,7 @@ import net.serenitybdd.core.pages.WebElementFacade;
 public class SalesAutoPCROPage extends peststreamPage {
 
 	BaseUtills utills = new BaseUtills();
+	private Map<String, Integer> jsonData;
 
 	@FindBy(xpath = "//span[contains(text(),'Appointments')]")
 	private WebElementFacade appointmentTab;
@@ -132,15 +138,20 @@ public class SalesAutoPCROPage extends peststreamPage {
 		//
 	}
 
-	public void svAndsignAgreeBtn() {
+	public void svAndsignAgreeBtn() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait.until(ExpectedConditions.elementToBeClickable(savSignAgreement));
+
 		scrollToClickAnelement(savSignAgreement);
-		// waitABit(2000);
 		scrollToClickAnelement(savSignAgreement);
-		waitABit(4000);
 
 	}
 
 	public void svContOnsales_app() {
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait.until(ExpectedConditions.elementToBeClickable(salesSvCon));
+
 		salesSvCon.click();
 		waitABit(4000);
 
@@ -154,12 +165,17 @@ public class SalesAutoPCROPage extends peststreamPage {
 	}
 
 	public void send_agreement() {
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait.until(ExpectedConditions.elementToBeClickable(mailSend));
+
 		mailSend.click();
-		waitABit(2000);
 
 	}
 
 	public void intial_setup() {
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait.until(ExpectedConditions.elementToBeClickable(initialSetup));
+
 		initialSetup.click();
 		waitABit(6000);
 
