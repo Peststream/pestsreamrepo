@@ -12,22 +12,22 @@ public class EmployeeStepDefs {
 	EmployeeSteps employeesteps;
 
 	@When("^i click on employee tab on dashboard$")
-	public void i_click_on_employee_tab_on_dashboard() {
+	public void i_click_on_employee_tab_on_dashboard() throws Exception {
 		employeesteps.employeeTab();
 	}
 
 	@Then("^i click on staff subtab of employee$")
-	public void i_click_on_staff_subtab_of_employee() {
+	public void i_click_on_staff_subtab_of_employee() throws Exception {
 		employeesteps.staffTab();
 	}
 
 	@Then("^i click on Add Employee button$")
-	public void i_click_on_Add_Employee_button() {
+	public void i_click_on_Add_Employee_button() throws Exception {
 		employeesteps.addEmployeeBtn();
 	}
 
 	@Then("^i enter basic branch info$")
-	public void i_enter_basic_branch_info() {
+	public void i_enter_basic_branch_info() throws Exception {
 		employeesteps.basicBranchInfo();
 	}
 
@@ -37,12 +37,12 @@ public class EmployeeStepDefs {
 	}
 
 	@Then("^i choose employee type$")
-	public void i_choose_employee_type() {
+	public void i_choose_employee_type() throws Exception {
 		employeesteps.employeeType();
 	}
 
 	@Then("^i choose role name$")
-	public void i_choose_role_name() {
+	public void i_choose_role_name() throws Exception {
 		employeesteps.roleName();
 	}
 
@@ -57,17 +57,17 @@ public class EmployeeStepDefs {
 	}
 
 	@Then("^i click on team subtab of employee$")
-	public void i_click_on_team_subtab_of_employee() {
+	public void i_click_on_team_subtab_of_employee() throws Exception {
 		employeesteps.teamSubtab();
 	}
 
 	@Then("^i click on add team button$")
-	public void i_click_on_add_team_button() {
+	public void i_click_on_add_team_button() throws Exception {
 		employeesteps.addTeam();
 	}
 
 	@Then("^get branch name from DDL$")
-	public void get_branch_name_from_DDL() {
+	public void get_branch_name_from_DDL() throws Exception {
 		employeesteps.branchName();
 	}
 
@@ -82,22 +82,22 @@ public class EmployeeStepDefs {
 	}
 
 	@Then("^i get department from DDL$")
-	public void i_get_department_from_DDL() {
+	public void i_get_department_from_DDL() throws Exception {
 		employeesteps.departName();
 	}
 
 	@Then("^i get employee from DDL$")
-	public void i_get_employee_from_DDL() {
+	public void i_get_employee_from_DDL() throws Exception {
 		employeesteps.emplName();
 	}
 
 	@Then("^click on IsPrimary check button$")
-	public void click_on_IsPrimary_check_button() {
+	public void click_on_IsPrimary_check_button() throws Exception {
 		employeesteps.isPrimary();
 	}
 
 	@Then("^click on Action button$")
-	public void click_on_Action_button() {
+	public void click_on_Action_button() throws Exception {
 		employeesteps.actionBtn();
 	}
 
@@ -137,17 +137,17 @@ public class EmployeeStepDefs {
 	}
 
 	@Then("^user click on employeeType$")
-	public void user_click_on_employeeType() {
+	public void user_click_on_employeeType() throws Exception {
 		employeesteps.employeeTypePartTime();
 	}
 
 	@Then("^user clicks on DDReportingAuthority$")
-	public void user_clicks_on_DDReportingAuthority() {
+	public void user_clicks_on_DDReportingAuthority() throws Exception {
 		employeesteps.DDReportingAuthority();
 	}
 
 	@Then("^i click on routeOverride$")
-	public void i_click_on_routeOverride() {
+	public void i_click_on_routeOverride() throws Exception {
 		employeesteps.routeOverride();
 	}
 
@@ -162,27 +162,27 @@ public class EmployeeStepDefs {
 	}
 
 	@Then("^i click on save$")
-	public void i_click_on_save() {
+	public void i_click_on_save() throws Exception {
 		employeesteps.save();
 	}
 
 	@Then("^user click on ClockInOutTab$")
-	public void user_click_on_ClockInOutTab() {
+	public void user_click_on_ClockInOutTab() throws Exception {
 		employeesteps.ClockInOutTab();
 	}
 
 	@Then("^user click on addClockInOut$")
-	public void user_click_on_addClockInOut() {
+	public void user_click_on_addClockInOut() throws Exception {
 		employeesteps.addClockInOut();
 	}
 
 	@Then("^user click on ClockInOutDate$")
-	public void user_click_on_ClockInOutDate() {
+	public void user_click_on_ClockInOutDate() throws Exception {
 		employeesteps.ClockInOutDate();
 	}
 
 	@Then("^user click on save$")
-	public void user_click_on_save() {
+	public void user_click_on_save() throws Exception {
 		employeesteps.saveClock();
 	}
 
@@ -197,7 +197,7 @@ public class EmployeeStepDefs {
 	}
 
 	@Then("^user click on DDWorkingStatus$")
-	public void user_click_on_DDWorkingStatus() {
+	public void user_click_on_DDWorkingStatus() throws Exception {
 		employeesteps.DDWorkingStatus();
 	}
 
@@ -207,17 +207,17 @@ public class EmployeeStepDefs {
 	}
 
 	@Then("^user click on leaveManagement$")
-	public void user_click_on_leaveManagement() {
+	public void user_click_on_leaveManagement() throws Exception {
 		employeesteps.leaveManagement();
 	}
 
 	@Then("^user click on Action$")
-	public void user_click_on_Action() {
+	public void user_click_on_Action() throws Exception {
 		employeesteps.Action();
 	}
 
 	@Then("^user click on DDLeaveType$")
-	public void user_click_on_DDLeaveType() {
+	public void user_click_on_DDLeaveType() throws Exception {
 		employeesteps.DDLeaveType();
 	}
 
@@ -232,54 +232,54 @@ public class EmployeeStepDefs {
 	}
 
 	@Then("^user click on DDStatus$")
-	public void user_click_on_DDStatus() {
+	public void user_click_on_DDStatus() throws Exception {
 		employeesteps.DDStatus();
 	}
 
 	@Then("^user click on SaveLM$")
-	public void user_click_on_SaveLM() {
+	public void user_click_on_SaveLM() throws Exception {
 		employeesteps.SaveLM();
 	}
 
 	@Then("^user click on DDLeaveTypeHalf$")
-	public void user_click_on_DDLeaveTypeHalf() {
+	public void user_click_on_DDLeaveTypeHalf() throws Exception {
 		employeesteps.DDLeaveTypeHalf();
 	}
 
 	@Then("^user click on DDLeaveTypeSick$")
-	public void user_click_on_DDLeaveTypeSick() {
+	public void user_click_on_DDLeaveTypeSick() throws Exception {
 		employeesteps.DDLeaveTypeSick();
 	}
 
 	@Then("^user click on ToDateLM$")
-	public void user_click_on_ToDateLM() {
+	public void user_click_on_ToDateLM() throws Exception {
 		employeesteps.ToDateLM();
 	}
 
 	@Then("^user click on Employee timesheet$")
-	public void user_click_on_Employee_timesheet() {
+	public void user_click_on_Employee_timesheet() throws Exception {
 
 		employeesteps.Employee_timesheet();
 
 	}
 
 	@Then("^user click on non-billable hours$")
-	public void user_click_on_non_billable_hours() {
+	public void user_click_on_non_billable_hours() throws Exception {
 		employeesteps.nonBillable_hours();
 	}
 
 	@Then("^user selects Department$")
-	public void user_selects_Department() {
+	public void user_selects_Department() throws Exception {
 		employeesteps.department();
 	}
 
 	@Then("^user selects Time_slot$")
-	public void user_selects_Time_slot() {
+	public void user_selects_Time_slot() throws Exception {
 		employeesteps.time_slot();
 	}
 
 	@Then("^user enters Date$")
-	public void user_enters_Date() {
+	public void user_enters_Date() throws Exception {
 		employeesteps.date();
 	}
 
@@ -299,7 +299,7 @@ public class EmployeeStepDefs {
 	}
 
 	@Then("^user clicks on save button$")
-	public void user_clicks_on_save_button() {
+	public void user_clicks_on_save_button() throws Exception {
 		employeesteps.save_emp_timesheet();
 	}
 
@@ -314,23 +314,23 @@ public class EmployeeStepDefs {
 	}
 
 	@Then("^user selects STDepartment$")
-	public void user_selects_STDepartment() {
+	public void user_selects_STDepartment() throws Exception {
 		employeesteps.stDepertment();
 
 	}
 
 	@Then("^user selects STTimeslot$")
-	public void user_selects_STTimeslot() {
+	public void user_selects_STTimeslot() throws Exception {
 		employeesteps.stTimeslot();
 	}
 
 	@Then("^user selects employee type$")
-	public void user_selects_employee_type() {
+	public void user_selects_employee_type() throws Exception {
 		employeesteps.employee_type();
 	}
 
 	@Then("^user enters  ST_Date$")
-	public void user_enters_ST_Date() {
+	public void user_enters_ST_Date() throws Exception {
 		employeesteps.ST_Date();
 	}
 
@@ -355,17 +355,17 @@ public class EmployeeStepDefs {
 	}
 
 	@Then("^user click on Branch_StaffEmp$")
-	public void user_click_on_Branch_StaffEmp() {
+	public void user_click_on_Branch_StaffEmp() throws Exception {
 		employeesteps.Branch_StaffEmp();
 	}
 
 	@Then("^user click on Divison$")
-	public void user_click_on_Divison() {
+	public void user_click_on_Divison() throws Exception {
 		employeesteps.Divison();
 	}
 
 	@Then("^user click on Department$")
-	public void user_click_on_Department() {
+	public void user_click_on_Department() throws Exception {
 		employeesteps.Department();
 	}
 
@@ -385,28 +385,28 @@ public class EmployeeStepDefs {
 	}
 
 	@Then("^user click on EmpType$")
-	public void user_click_on_EmpType() {
+	public void user_click_on_EmpType() throws Exception {
 		employeesteps.EmpType();
 	}
 
 	@Then("^user click on RoleName$")
-	public void user_click_on_RoleName() {
+	public void user_click_on_RoleName() throws Exception {
 		employeesteps.RoleName();
 	}
 
 	@Then("^user click on Save_StaffEmp$")
-	public void user_click_on_Save_StaffEmp() {
+	public void user_click_on_Save_StaffEmp() throws Exception {
 		employeesteps.Save_StaffEmp();
 	}
 
 	@Then("^user click on EmpTypeHalf$")
-	public void user_click_on_EmpTypeHalf() {
+	public void user_click_on_EmpTypeHalf() throws Exception {
 		employeesteps.EmpTypeHalf();
 	}
 	
 
 @Then("^user click on Branch_RouteEmployee$")
-public void user_click_on_Branch_RouteEmployee() {
+public void user_click_on_Branch_RouteEmployee() throws Exception {
 	employeesteps.Branch_RouteEmployee();
 }
 
