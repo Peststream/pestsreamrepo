@@ -4,14 +4,18 @@ import java.util.ArrayList;
 import java.util.Map;
 
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.infocrats.utils.BaseUtills;
+import com.infocrats.utils.JsonHelper;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
 
 public class EmployeePage extends peststreamPage {
 	BaseUtills utills = new BaseUtills();
+	private Map<String, Integer> jsonData;
 
 	@FindBy(xpath = "/html[1]/body[1]/div[3]/div[1]/div[1]/ul[1]/li[9]/a[1]/span[1]")
 	private WebElementFacade employeeTab;
@@ -390,62 +394,79 @@ public class EmployeePage extends peststreamPage {
 		return null;
 	}
 
-	public void employee_tab() {
-		employeeTab.click();
+	public void employee_tab() throws Exception {
+	jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+	WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+	wait.until(ExpectedConditions.elementToBeClickable(employeeTab));
+	employeeTab.click();
 
 	}
 
-	public void staff_tab() {
+	public void staff_tab() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(staffTab));
 		staffTab.click();
-		waitABit(3000);
 
 	}
 
-	public void addEmployee_btn() {
+	public void addEmployee_btn() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(addEmployeeBtn));
 		addEmployeeBtn.click();
-		waitABit(3000);
 	}
 
-	public void basicBranch_info() {
+	public void basicBranch_info() throws Exception {
 		branchDDL.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(branchValue));
 		branchValue.click();
-		waitABit(1000);
+		waitABit(jsonData.get("Time3"));
 		divisionDDL.click();
-		waitABit(1000);
+		waitABit(jsonData.get("Time3"));
 		divisionValue.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait2 = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait2.until(ExpectedConditions.elementToBeClickable(departmentDDL));
 		departmentDDL.click();
-		waitABit(1000);
+		waitABit(jsonData.get("Time3"));
 		departmentValue.click();
-		waitABit(1000);
+		waitABit(jsonData.get("Time3"));
 	}
 
-	public void personal_info(Map<String, String> testData) {
-		waitABit(2000);
+	public void personal_info(Map<String, String> testData) throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait2 = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait2.until(ExpectedConditions.elementToBeClickable(departmentDDL));
 		firstName.sendKeys(testData.get("FirstName"));
 		lastName.sendKeys(testData.get("LastName"));
 		userName.sendKeys(testData.get("UserName"));
 
 	}
 
-	public void employee_type() {
+	public void employee_type() throws Exception {
 		employeeTypeDDL.click();
 		employeeTypeValue.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait2 = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait2.until(ExpectedConditions.elementToBeClickable(departmentDDL));
 
 		for (Object i : al) {
 			System.out.print(i + " ");
 		}
 	}
 
-	public void role_name() {
+	public void role_name() throws Exception {
 		roleDDL.click();
-		waitABit(2000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(departmentDDL));
 		editetxt.sendKeys("sales person");
-		waitABit(1000);
+		waitABit(jsonData.get("Time3"));
 		editetxt.sendKeys(Keys.ENTER);
-		waitABit(1000);
+		waitABit(jsonData.get("Time3"));
 
 	}
 
@@ -456,24 +477,31 @@ public class EmployeePage extends peststreamPage {
 
 	public void emplSv_btn() {
 		saveBtn.click();
-		waitABit(6000);
+		waitABit(jsonData.get("Time3"));
 
 	}
 
-	public void team_subtab() {
+	public void team_subtab() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(departmentDDL));
 		teamTab.click();
-		waitABit(2000);
 
 	}
 
-	public void add_team() {
-		addTeamBtn.click();
+	public void add_team() throws Exception {
+	jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+	WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+	wait.until(ExpectedConditions.elementToBeClickable(addTeamBtn));
+	addTeamBtn.click();
 
 	}
 
-	public void branch_name() {
+	public void branch_name() throws Exception {
 		addTeam_branchDDL.click();
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(addTemBranchValue));
 		addTemBranchValue.click();
 
 	}
@@ -488,299 +516,374 @@ public class EmployeePage extends peststreamPage {
 
 	}
 
-	public void depart_name() {
+	public void depart_name() throws Exception {
 		TeamDepartmentDDL.click();
-		waitABit(4000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(TeamDepartmentValue));
 		TeamDepartmentValue.click();
 	}
 
-	public void empl_name() {
+	public void empl_name() throws Exception {
 		TeamEmployeeDDL.click();
-		waitABit(4000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(TeamDepartmentValue));
+		TeamDepartmentValue.click();
 		//emplSearchText.sendKeys("Dheeraj");
 		emplSearchText.click();
-		waitABit(3000);
+		waitABit(jsonData.get("Time3"));
 
 	}
 
-	public void is_primary() {
+	public void is_primary() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(IsPrimary));
 		IsPrimary.click();
 
 	}
 
-	public void action_btn() {
+	public void action_btn() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(ActionBtn));
 		ActionBtn.click();
 
 	}
 
 	public void teamSave_btn() {
 		teamsaveBtn.click();
-		waitABit(9000);
+		waitABit(jsonData.get("Time3"));
 
 	}
 
 	public void route_tab() {
 		routeTab.click();
-		waitABit(4000);
+		waitABit(jsonData.get("Time3"));
 
 	}
 
 	public void add_route() {
 		addRoute.click();
-		waitABit(2000);
+		waitABit(jsonData.get("Time3"));
 
 	}
 
-	public void enter_route(Map<String, String> testData) {
+	public void enter_route(Map<String, String> testData) throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(ActionBtn));
 		routeNumber.sendKeys(testData.get("Route"));
-		waitABit(3000);
+		waitABit(jsonData.get("Time3"));
 
 	}
 
 	public void route_name(Map<String, String> testData) {
-		waitABit(3000);
+		waitABit(jsonData.get("Time3"));
 		routeName.sendKeys(testData.get("RouteName"));
 
 	}
 
 	public void lead_technician() {
-		waitABit(3000);
+		waitABit(jsonData.get("Time3"));
 		leadTechnicianDDL.click();
-		waitABit(2000);
+		waitABit(jsonData.get("Time3"));
 		leadSearch.click();
-		waitABit(2000);
+		waitABit(jsonData.get("Time3"));
 
 	}
 
-	public void description(Map<String, String> testData) {
+	public void description(Map<String, String> testData) throws Exception {
 		description.sendKeys(testData.get("RouteDescription"));
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(employeeTypeDDL));
 
 	}
 
-	public void employeeTypePartTime() {
+	public void employeeTypePartTime() throws Exception {
 		employeeTypeDDL.click();
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(employeeTypePartTime));
 		employeeTypePartTime.click();
-		waitABit(2000);
 
 	}
 
-	public void DDReportingAuthority() {
+	public void DDReportingAuthority() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(DDReportingAuthority));
 		DDReportingAuthority.click();
 		valueReportingAuthority.click();
-		waitABit(2000);
+		waitABit(jsonData.get("Time3"));
 
 	}
 
-	public void routeOverride() {
+	public void routeOverride() throws Exception {
 		scrollDown(routeOverride);
-		waitABit(2000);
+		waitABit(jsonData.get("Time3"));
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(routeOverride));
 		routeOverride.click();
-		waitABit(2000);
+		waitABit(jsonData.get("Time3"));
 		addrouteOverride.click();
-		waitABit(2000);
+		waitABit(jsonData.get("Time3"));
 
 	}
 
 	public void addRouteOverride() {
 		DDaddRouteOverride.click();
+		waitABit(jsonData.get("Time3"));
 		valueaddRouteOverride.click();
-		waitABit(2000);
 
 	}
 
 	public void DDcrewTechnician() {
 		DDcrewTechnician.click();
+		waitABit(jsonData.get("Time3"));
 		ValuecrewTechnician.click();
-		waitABit(2000);
+		waitABit(jsonData.get("Time3"));
 
 	}
 
-	public void save() {
+	public void save() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(save));
 		save.click();
-		waitABit(2000);
 
 	}
 
-	public void ClockInOutTab() {
+	public void ClockInOutTab() throws Exception {
 		scrollDown(ClockInOutTab);
-		waitABit(5000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(ClockInOutTab));
 		ClockInOutTab.click();
-		waitABit(2000);
+		waitABit(jsonData.get("Time3"));
 
 	}
 
-	public void addClockInOut() {
+	public void addClockInOut() throws Exception {
 		scrollUP(addClockInOut);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(addClockInOut));
 		addClockInOut.click();
 
-		waitABit(2000);
 
 	}
 
-	public void ClockInOutDate() {
+	public void ClockInOutDate() throws Exception {
 		ClockInOutDate.click();
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(valueClockInOut));
 		valueClockInOut.click();
-		waitABit(2000);
 
 	}
 
-	public void saveClock() {
+	public void saveClock() throws Exception {
+
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(saveClock));
 		saveClock.click();
-		waitABit(2000);
 
 	}
 
 	public void TimeOut() {
 		/* TimeOut.click(); */
 
-		waitABit(2000);
+		waitABit(jsonData.get("Time3"));
 
 	}
 
-	public void ValueTimeOut(Map<String, String> testData) {
-		waitABit(2000);
+	public void ValueTimeOut(Map<String, String> testData) throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(TimeOut));
 		TimeOut.sendKeys(testData.get("TimeOut"));
-		waitABit(2000);
+		waitABit(jsonData.get("Time3"));
 
 	}
 
-	public void DDWorkingStatus() {
+	public void DDWorkingStatus() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(DDWorkingStatus));
 		DDWorkingStatus.click();
-		waitABit(2000);
+		waitABit(jsonData.get("Time3"));
 		ValueWorkingStatus.click();
-		waitABit(2000);
+		waitABit(jsonData.get("Time3"));
 
 	}
 
 	public void Reason(Map<String, String> testData) {
 		Reason.click();
 		Reason.sendKeys(testData.get("Reason"));
-		waitABit(2000);
+		waitABit(jsonData.get("Time3"));
 
 	}
 
-	public void leaveManagement() {
+	public void leaveManagement() throws Exception {
 		scrollDown(leaveManagement);
-		waitABit(5000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(leaveManagement));
 		leaveManagement.click();
-		waitABit(2000);
+		waitABit(jsonData.get("Time3"));
 
 	}
 
-	public void Action() {
+	public void Action() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(Action));
 		Action.click();
-		waitABit(2000);
 
 	}
 
-	public void DDLeaveType() {
+	public void DDLeaveType() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(DDLeaveType));
 		DDLeaveType.click();
-		waitABit(2000);
+		waitABit(jsonData.get("Time3"));
 
 		ValueLeaveType.click();
-		waitABit(2000);
+		waitABit(jsonData.get("Time3"));
 
 	}
 
-	public void DDStatus() {
+	public void DDStatus() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(DDStatus));
 		DDStatus.click();
-		waitABit(2000);
-
+		waitABit(jsonData.get("Time3"));
 		ValueStatus.click();
-		waitABit(2000);
 
 	}
 
-	public void SaveLM() {
+	public void SaveLM() throws Exception {
+
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(SaveLM));
 		SaveLM.click();
-		waitABit(2000);
 
 	}
 
-	public void DDLeaveTypeHalf() {
+	public void DDLeaveTypeHalf() throws Exception {
 		DDLeaveType.click();
-		waitABit(2000);
-
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(ValueLeaveTypeHalf));
 		ValueLeaveTypeHalf.click();
-		waitABit(2000);
+		waitABit(jsonData.get("Time3"));
 
 	}
 
-	public void DDLeaveTypeSick() {
+	public void DDLeaveTypeSick() throws Exception {
 		DDLeaveType.click();
-		waitABit(2000);
-
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(ValueLeaveTypeSick));
 		ValueLeaveTypeSick.click();
-		waitABit(2000);
+		waitABit(jsonData.get("Time3"));
 
 	}
 
-	public void ToDateLM() {
+	public void ToDateLM() throws Exception {
 		DDToDateLM.click();
-		waitABit(2000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait2 = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait2.until(ExpectedConditions.elementToBeClickable(LMnextMonthFull));
 		LMnextMonthFull.click();
-		waitABit(2000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(ValueToDateLM));
 		ValueToDateLM.click();
-		waitABit(2000);
 
 	}
 
-	public void Employee_timesheet() {
+	public void Employee_timesheet() throws Exception {
 
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(emp_timesheet));
 		emp_timesheet.click();
 	}
 
-	public void nonBillable_hours() {
+	public void nonBillable_hours() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(nonbillable_hours));
 		nonbillable_hours.click();
 	}
 
-	public void department() {
+	public void department() throws Exception {
 		dept.click();
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(deptvalue));
 		deptvalue.click();
 
 	}
 
-	public void time_slot() {
+	public void time_slot() throws Exception {
 
 		timeslot.click();
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(timeslotvalue));
 		timeslotvalue.click();
 
 	}
 
-	public void date() {
-		waitABit(3000);
+	public void date() throws Exception {
+		waitABit(jsonData.get("Time3"));
 		dateClick.click();
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait2 = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait2.until(ExpectedConditions.elementToBeClickable(monthClick));
 		monthClick.click();
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(dateClickValue));
 		dateClickValue.click();
-		waitABit(3000);
+		waitABit(jsonData.get("Time3"));
 
 	}
 
 	public void from_time(Map<String, String> testData) {
 		fromtime.clear();
-		waitABit(2000);
+		waitABit(jsonData.get("Time3"));
 		fromtime.sendKeys(testData.get("from_time"));
-		waitABit(3000);
+		waitABit(jsonData.get("Time3"));
 	}
 
 	public void to_time(Map<String, String> testData) {
 		totime.sendKeys(testData.get("to_time"));
-		waitABit(3000);
+		waitABit(jsonData.get("Time3"));
 
 	}
 
-	public void emp_description(Map<String, String> testData) {
-		waitABit(3000);
+	public void emp_description(Map<String, String> testData) throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(empdescription));
 		empdescription.sendKeys(testData.get("emp_Description"));
 	}
 
-	public void save_emp_timesheet() {
-		waitABit(3000);
+	public void save_emp_timesheet() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(save_emp));
 		save_emp.click();
 	}
 
@@ -793,33 +896,44 @@ public class EmployeePage extends peststreamPage {
 		add_Nonbillablehours.click();
 	}
 
-	public void stDepartment() {
+	public void stDepartment() throws Exception {
 		stdept.click();
-		waitABit(5000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(stdeptvalue));
 		stdeptvalue.click();
 	}
 
-	public void stTimeslot() {
+	public void stTimeslot() throws Exception {
 		sttimeslot.click();
-		waitABit(5000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(sttimeslotvalue));
 		sttimeslotvalue.click();
 	}
 
-	public void employeeType() {
+	public void employeeType() throws Exception {
 		emp_type.click();
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(emp_value));
 		emp_value.click();
 	}
 
-	public void ST_date() {
+	public void ST_date() throws Exception {
 		// TODO Auto-generated method stub
 		st_date.click();
-		waitABit(3000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(st_date_value));
 		st_date_value.click();
 	}
 
-	public void ST_from_time(Map<String, String> testData) {
+	public void ST_from_time(Map<String, String> testData) throws Exception {
 		st_from_time.clear();
-		waitABit(2000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(st_from_time));
 		st_from_time.sendKeys(testData.get("st_from_time"));
 	}
 
@@ -836,102 +950,134 @@ public class EmployeePage extends peststreamPage {
 		st_save.click();
 	}
 
-	public void LMFromTime(Map<String, String> testData) {
+	public void LMFromTime(Map<String, String> testData) throws Exception {
 		waitABit(2000);
 		lm_from_time.click();
-		waitABit(2000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait2 = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait2.until(ExpectedConditions.elementToBeClickable(lm_from_time));
 		lm_from_time.clear();
-		waitABit(2000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(lm_from_time));
 		lm_from_time.sendKeys(testData.get("fromLM_time"));
 	}
 
-	public void LMToTime(Map<String, String> testData) {
-		waitABit(2000);
+	public void LMToTime(Map<String, String> testData) throws Exception {
+		waitABit(jsonData.get("Time3"));
 		lm_to_time.click();
-		waitABit(2000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(lm_to_time));
 		lm_to_time.clear();
-		waitABit(2000);
+		waitABit(jsonData.get("Time3"));
 		lm_to_time.sendKeys(testData.get("toLM_time"));
 	}
 
-	public void Branch_StaffEmp() {
-		waitABit(3000);
+	public void Branch_StaffEmp() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(DDBranch_StaffEmp));
 		DDBranch_StaffEmp.click();
-		
-		waitABit(3000);
+		waitABit(jsonData.get("Time3"));
 		ValueDDBranch_StaffEmp.click();
 	}
 
-	public void Divison() {
-		waitABit(2000);
+	public void Divison() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(DDDivison));
 		DDDivison.click();
-		
-		waitABit(2000);
+		waitABit(jsonData.get("Time3"));
 		ValueDDDivison.click();
 	}
 
-	public void Department() {
-		waitABit(2000);
+	public void Department() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(DDDepartment));
 		DDDepartment.click();
-		
-		waitABit(2000);
+		waitABit(jsonData.get("Time3"));
 		ValueDDDepartment.click();
 	}
 
-	public void FName(Map<String, String> testData) {
-		waitABit(2000);
+	public void FName(Map<String, String> testData) throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(FName));
 		FName.sendKeys(testData.get("FName"));
 		
 	}
 
-	public void LName(Map<String, String> testData) {
-		waitABit(2000);
+	public void LName(Map<String, String> testData) throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(LName));
 		LName.sendKeys(testData.get("LName"));
 		
 	}
 
-	public void Username(Map<String, String> testData) {
-		waitABit(2000);
+	public void Username(Map<String, String> testData) throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(Username));
 		Username.sendKeys(testData.get("Username"));
 			}
 
-	public void EmpType() {
-		waitABit(2000);
+	public void EmpType() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(DDEmpType));
 		DDEmpType.click();
-		
-		waitABit(2000);
+		waitABit(jsonData.get("Time3"));
 		ValueDDEmpType.click();
 	}
 
-	public void RoleName() {
-		waitABit(2000);
+	public void RoleName() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(DDRoleName));
 		DDRoleName.click();
 		
-		waitABit(2000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait2 = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait2.until(ExpectedConditions.elementToBeClickable(ValueDDRoleName));
 		ValueDDRoleName.click();
 	}
 
-	public void Save_StaffEmp() {
-		waitABit(2000);
+	public void Save_StaffEmp() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(Save_StaffEmp));
 		scrollDownLarge(Save_StaffEmp);
 		
-		waitABit(2000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait2 = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait2.until(ExpectedConditions.elementToBeClickable(Save_StaffEmp));
 		Save_StaffEmp.click();
 	}
 
-	public void EmpTypeHalf() {
-		waitABit(2000);
+	public void EmpTypeHalf() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(DDEmpType));
 		DDEmpType.click();
 		
-		waitABit(2000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait2 = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait2.until(ExpectedConditions.elementToBeClickable(EmpTypeHalf));
 		EmpTypeHalf.click();
 	}
 
-	public void Branch_RouteEmployee() {
-		waitABit(2000);
+	public void Branch_RouteEmployee() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(Branch_RouteEmployee));
 		Branch_RouteEmployee.click();
 		
-		waitABit(2000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait2 = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait2.until(ExpectedConditions.elementToBeClickable(ValueBranch_RouteEmployee));
 		ValueBranch_RouteEmployee.click();
 	}
 
