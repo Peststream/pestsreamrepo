@@ -11,7 +11,7 @@ public class CustomerStepDefs {
 	CustomerSteps customersteps;
 	
 	@Then("^User clicked on lead tab$")
-	public void user_clicked_on_lead_tab() {
+	public void user_clicked_on_lead_tab() throws Exception {
 		customersteps.leadTab();
 	}
 

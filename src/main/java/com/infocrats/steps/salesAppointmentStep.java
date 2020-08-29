@@ -11,62 +11,62 @@ public class salesAppointmentStep extends pestreamSteps {
 	 * 
 	 * }
 	 */
-	public void appoinmentTab() {
+	public void appoinmentTab() throws Exception {
 		salessppointmentpage.appoinment_tab();
 
 	}
 
-	public void SalesApp() {
+	public void SalesApp() throws Exception {
 		salessppointmentpage.SalesApp();
 
 	}
 
-	public void Opportunity() {
+	public void Opportunity() throws Exception {
 		salessppointmentpage.Opportunity();
 
 	}
 
-	public void ContgeneralInfo() {
+	public void ContgeneralInfo() throws Exception {
 		salessppointmentpage.ContgeneralInfo();
 
 	}
 
-	public void Continueinspection() {
+	public void Continueinspection() throws Exception {
 		salessppointmentpage.Continueinspection();
 
 	}
 
-	public void DDCatSalesApp() {
+	public void DDCatSalesApp() throws Exception {
 		salessppointmentpage.DDCatSalesApp();
 
 	}
 
-	public void DDServiceSalesApp() {
+	public void DDServiceSalesApp() throws Exception {
 		salessppointmentpage.DDServiceSalesApp();
 
 	}
 
-	public void DDFrequencySalesApp() {
+	public void DDFrequencySalesApp()  throws Exception{
 		salessppointmentpage.DDFrequencySalesApp();
 
 	}
 
-	public void InternalNotes() {
+	public void InternalNotes()  throws Exception{
 		salessppointmentpage.InternalNotes();
 
 	}
 
-	public void saveBttn() {
+	public void saveBttn() throws Exception {
 		salessppointmentpage.saveBttn();
 
 	}
 
-	public void SaveContinueService() {
+	public void SaveContinueService()  throws Exception{
 		salessppointmentpage.SaveContinueService();
 
 	}
 
-	public void NonStdRadioBttn() {
+	public void NonStdRadioBttn()  throws Exception{
 		salessppointmentpage.NonStdRadioBttn();
 
 	}

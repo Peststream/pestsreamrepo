@@ -45,7 +45,7 @@ public class SalesAutoPCROStepDefs {
 	}
 
 	@Then("^click on save & sign agreement button on sales Appointment select service$")
-	public void click_on_save_sign_agreement_button_on_sales_Appointment_select_service() {
+	public void click_on_save_sign_agreement_button_on_sales_Appointment_select_service() throws Exception {
 		salesautopcrosteps.svAndSignAgreementBtn();
 	}
 

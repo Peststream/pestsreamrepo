@@ -12,7 +12,7 @@ public class NewUserMechCallStepDefs {
 	NewUserMechCallSteps newusermechcallsteps;
 	
 	@When("^user clicked on CallTab$")
-	public void user_clicked_on_CallTab() {
+	public void user_clicked_on_CallTab() throws Exception {
 		newusermechcallsteps.clickOnCallTab();
 	}
 	
