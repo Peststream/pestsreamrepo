@@ -9,50 +9,50 @@ public class ExitingUserPCROSteps extends pestreamSteps {
 	ExitingUserPCROPage exitinguserpcropage;
 
 	@Step
-	public void exitAcct(String acctDetails) {
+	public void exitAcct(String acctDetails) throws Exception {
 		
 		exitinguserpcropage.exit_acct(acctDetails);
 	}
 
 	@Step
-	public void serviceAndSource() {
+	public void serviceAndSource() throws Exception {
 		exitinguserpcropage.serviceAnd_source();
 		
 	}
 
 	@Step
-	public void customerTab() {
+	public void customerTab() throws Exception {
 		
 		exitinguserpcropage.customer_tab();
 		
 	}
 
 	@Step
-	public void opportunityTab() {
+	public void opportunityTab() throws Exception {
 		exitinguserpcropage.opportunity_tab();
 		
 	}
 
 	@Step
-	public void advSrchBtn() {
+	public void advSrchBtn() throws Exception {
 		exitinguserpcropage.advSrch_btn();
 		
 	}
 
 	@Step
-	public void openTab() {
+	public void openTab() throws Exception {
 		exitinguserpcropage.open_tab();
 		
 	}
 	
 	@Step
-	public void selectOpp() {
+	public void selectOpp() throws Exception {
 		exitinguserpcropage.select_opp();
 		
 	}
 
 	@Step
-	public void writeNote() {
+	public void writeNote() throws Exception {
 		exitinguserpcropage.write_note();
 		
 	}
@@ -64,7 +64,7 @@ public class ExitingUserPCROSteps extends pestreamSteps {
 //	}
 
 	@Step
-	public void packageDetailsOnPhnSales() {
+	public void packageDetailsOnPhnSales() throws Exception {
 		exitinguserpcropage.packageDetailsOnPhn_sales();
 		
 	}
