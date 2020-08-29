@@ -6,201 +6,197 @@ import net.thucydides.core.annotations.Step;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class newUserHvacSteps extends pestreamSteps {
-	
-	
+
 	newUserHvacPage newuserhvacpage;
-	
+
 	@Step
 	public void clickOnCallTab() throws InterruptedException {
-		Thread.sleep(3000);	
+		Thread.sleep(3000);
 		newuserhvacpage.clickedOnCallTab();
-}
+	}
 
 	public void verifyCallPageTittle() {
 		assertThat(newuserhvacpage.getOpportunityPageTittle()).isEqualTo("General Info (Opportunity Info)");
-		
+
 	}
 
-	public void enterLeadInfo() {
+	public void enterLeadInfo() throws Exception {
 		newuserhvacpage.enterLeadDetails();
-		
+
 	}
 
-	public void selectBranch() {
+	public void selectBranch() throws Exception {
 		newuserhvacpage.selectBranchDetils();
-		
+
 	}
 
-	public void alertDesc() {
+	public void alertDesc() throws Exception {
 		newuserhvacpage.alertDesc();
-		
+
 	}
 
-	
-
-	public void ContinueBtn() {
+	public void ContinueBtn() throws Exception {
 		newuserhvacpage.continueClick();
-		
+
 	}
 
-	public void scheduleEstimation() {
+	public void scheduleEstimation() throws Exception {
 		newuserhvacpage.ScheduleEstimationBtnRadio();
-		
+
 	}
 
-	public void OppType() {
+	public void OppType() throws Exception {
 		newuserhvacpage.opportunityType();
-		
+
 	}
 
-	public void addressLine() {
+	public void addressLine() throws Exception {
 		newuserhvacpage.addresslineDetails();
 	}
 
-	public void assignedTo() {
+	public void assignedTo() throws Exception {
 		newuserhvacpage.assignedToPerson();
-		
+
 	}
 
-	public void SaveBtn() {
+	public void SaveBtn() throws Exception {
 		newuserhvacpage.SaveClick();
-		
+
 	}
 
-	public void reqAppointment() {
+	public void reqAppointment() throws Exception {
 		newuserhvacpage.reqAppointment();
-		
+
 	}
 
-	public void SaveAndContSave() {
+	public void SaveAndContSave() throws Exception {
 		newuserhvacpage.saveContBtnSaveBtn();
-		
+
 	}
 
-	public void NonStdRadioRepairName() {
+	public void NonStdRadioRepairName() throws Exception{
 		newuserhvacpage.RadioRepairName();
-		
+
 	}
 
-	public void CostSaveBtn() {
+	public void CostSaveBtn() throws Exception{
 		newuserhvacpage.CostSaveBtn();
-		
+
 	}
 
-	public void saveContBtnTWICE() {
+	public void saveContBtnTWICE()throws Exception {
 		newuserhvacpage.ContSaveTwice();
-		
+
 	}
 
-	public void agreeChckBoxName() {
+	public void agreeChckBoxName() throws Exception{
 		newuserhvacpage.agreeChckBox();
 	}
 
-	public void sign() {
+	public void sign() throws Exception{
 		newuserhvacpage.signAgree();
-		
+
 	}
 
-	public void saveContBtn() {
+	public void saveContBtn() throws Exception{
 		newuserhvacpage.saveContBtn();
 	}
 
-	public void sendMail() {
+	public void sendMail() throws Exception{
 		newuserhvacpage.sendMailBtn();
 	}
 
-	public void rangeTimeRadioDesiredRange() {
+	public void rangeTimeRadioDesiredRange() throws Exception{
 		newuserhvacpage.rangeTimrDesiredRange();
-		
+
 	}
 
-	public void fieldRadioButton() {
+	public void fieldRadioButton()throws Exception {
 		newuserhvacpage.fieldRadioButton();
-		
+
 	}
 
-	public void flatRateRadioButton() {
+	public void flatRateRadioButton() throws Exception{
 		newuserhvacpage.flatRateRadio();
-		
+
 	}
 
-	public void jobDescAddButton() {
+	public void jobDescAddButton() throws Exception{
 		newuserhvacpage.jobDescriptionAddButton();
-		
+
 	}
 
-	public void primaryRoute() {
+	public void primaryRoute() throws Exception{
 		newuserhvacpage.primaryRoute();
-		
+
 	}
 
-	public void saveButton() {
+	public void saveButton()throws Exception {
 		newuserhvacpage.saveButton();
-		
+
 	}
 
-	public void advanceSearchWorkOrderDesiredOpportunity() {
+	public void advanceSearchWorkOrderDesiredOpportunity() throws Exception{
 		newuserhvacpage.advanceSearchDesiredOpportunity();
-		
+
 	}
 
-	public void saveBtnHVACSSC() {
+	public void saveBtnHVACSSC() throws Exception{
 		newuserhvacpage.savBtnHVACssc();
 	}
 
-	public void serviceAppointment() {
+	public void serviceAppointment() throws Exception{
 		newuserhvacpage.serviceAppointment();
 	}
 
-	public void desiredOpportunityServiceAppointment() {
+	public void desiredOpportunityServiceAppointment() throws Exception{
 		newuserhvacpage.desiredOpportunityServiceAppointment();
-		
+
 	}
 
-	public void Recieve_OnMyWay_Arrived_StartRepair() {
+	public void Recieve_OnMyWay_Arrived_StartRepair() throws Exception{
 		newuserhvacpage.recievedOnmyWayArrivedStartRepair();
-		
+
 	}
 
-	public void completeSubOrder() {
+	public void completeSubOrder() throws Exception{
 		newuserhvacpage.completeSubOrder();
-		
+
 	}
 
-	public void paymentMode() {
+	public void paymentMode() throws Exception{
 		newuserhvacpage.paymentMode();
-		
+
 	}
 
-	public void customerTechnicianSign() {
+	public void customerTechnicianSign() throws Exception{
 		newuserhvacpage.customerTechnicianSign();
-		
+
 	}
 
-	public void completeWorkOrder() {
+	public void completeWorkOrder() throws Exception{
 		newuserhvacpage.completeWorkOrder();
-		
+
 	}
 
-	public void addressZip() {
+	public void addressZip()throws Exception {
 		newuserhvacpage.adressZip();
-		
+
 	}
 
-	public void afterHourRadio() {
+	public void afterHourRadio() throws Exception{
 		newuserhvacpage.afterHour();
-		
+
 	}
 
-	public void HelperRadioBtn() {
+	public void HelperRadioBtn() throws Exception{
 		newuserhvacpage.helperRadio();
-		
+
 	}
 
-	public void TimeMaterial() {
+	public void TimeMaterial() throws Exception{
 		newuserhvacpage.TimeMaterialRadio();
-		
+
 	}
 
 }
-	
