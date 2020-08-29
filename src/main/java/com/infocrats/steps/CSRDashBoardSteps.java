@@ -10,17 +10,17 @@ public class CSRDashBoardSteps extends pestreamSteps {
 	
 	CSRDashBoardPage csrDashBoardpage;
 
-	public void csrDashboardClick() {
+	public void csrDashboardClick() throws Exception {
 		csrDashBoardpage.dashboardClick();
 		
 	}
 
-	public void advanceButton() {
+	public void advanceButton() throws Exception {
 		csrDashBoardpage.advanceSearchbtn();
 		
 	}
 
-	public void CallBtnAction() {
+	public void CallBtnAction() throws Exception {
 		csrDashBoardpage.callAction();
 		
 	}
@@ -36,22 +36,22 @@ public class CSRDashBoardSteps extends pestreamSteps {
 		
 	}
 
-	public void SaveBtn() {
+	public void SaveBtn() throws Exception {
 		csrDashBoardpage.saveBtn();
 		
 	}
 
-	public void newTaskactionbtn() {
+	public void newTaskactionbtn() throws Exception {
 		csrDashBoardpage.newTaskAxn();
 		
 	}
 
-	public void taskTemplate() {
+	public void taskTemplate() throws Exception {
 		csrDashBoardpage.tasktemplate();
 		
 	}
 
-	public void dueDadte() {
+	public void dueDadte() throws Exception {
 		csrDashBoardpage.dueDate();
 		
 	}
@@ -62,27 +62,27 @@ public class CSRDashBoardSteps extends pestreamSteps {
 		
 	}
 
-	public void markAsDone() {
+	public void markAsDone() throws Exception {
 		csrDashBoardpage.markasDone();
 		
 	}
 
-	public void followUpCreate() {
+	public void followUpCreate() throws Exception {
 		csrDashBoardpage.followUpCreate();
 		
 	}
 
-	public void recurringChckBox() {
+	public void recurringChckBox() throws Exception {
 		csrDashBoardpage.recuringChckBox();
 		
 	}
 
-	public void recuringDDL() {
+	public void recuringDDL() throws Exception {
 		csrDashBoardpage.recurringDDL();
 		
 	}
 
-	public void addOpportunity() {
+	public void addOpportunity() throws Exception {
 		csrDashBoardpage.addOportunity();
 		
 	}
@@ -103,7 +103,7 @@ public class CSRDashBoardSteps extends pestreamSteps {
 		
 	}
 
-	public void noteButtonAxn() {
+	public void noteButtonAxn() throws Exception {
 		csrDashBoardpage.noteBtnAxn();
 		
 	}
@@ -119,21 +119,21 @@ public class CSRDashBoardSteps extends pestreamSteps {
 		
 	}
 
-	public void WorkOrderBtn() {
+	public void WorkOrderBtn() throws Exception {
 		csrDashBoardpage.WorkOrderBtn();
 		
 	}
 
-	public void ServiceCategorySubService() {
+	public void ServiceCategorySubService() throws Exception {
 		csrDashBoardpage.ServiceCategorySubService();
 	}
 
-	public void addServiceBtn() {
+	public void addServiceBtn() throws Exception {
 		csrDashBoardpage.addServiceBtn();
 		
 	}
 
-	public void serviceDate() {
+	public void serviceDate() throws Exception {
 		csrDashBoardpage.ServiceDate();
 		
 	}
@@ -143,7 +143,7 @@ public class CSRDashBoardSteps extends pestreamSteps {
 		
 	}
 
-	public void ViewDetailsActionTab() {
+	public void ViewDetailsActionTab() throws Exception {
 		csrDashBoardpage.ViewDetailBtn();
 		
 	}
@@ -158,7 +158,7 @@ public class CSRDashBoardSteps extends pestreamSteps {
 		
 	}
 
-	public void calledSourceTarget() {
+	public void calledSourceTarget() throws Exception {
 		csrDashBoardpage.calledSourceTarget();
 		
 	}
@@ -168,22 +168,22 @@ public class CSRDashBoardSteps extends pestreamSteps {
 		
 	}
 
-	public void workOrderDetails() {
+	public void workOrderDetails() throws Exception {
 		csrDashBoardpage.detailsWorKOrder();
 			
 	}
 
-	public void ComOpportunity() {
+	public void ComOpportunity() throws Exception {
 		csrDashBoardpage.ComOpportunity();
 		
 	}
 
-	public void RangeTime() {
+	public void RangeTime() throws Exception {
 		csrDashBoardpage.RangeTime();
 		
 	}
 
-	public void DDleadTech() {
+	public void DDleadTech() throws Exception {
 		csrDashBoardpage.DDleadTech();
 		
 	}
@@ -192,17 +192,17 @@ public class CSRDashBoardSteps extends pestreamSteps {
 		csrDashBoardpage.alertmessageCSRDashboard();
 	}
 
-	public void DDSourceAccountOpportunity() {
+	public void DDSourceAccountOpportunity() throws Exception {
 		csrDashBoardpage.DDSourceAccountOpportunity();
 		
 	}
 
-	public void DDServiceCategoryWO() {
+	public void DDServiceCategoryWO() throws Exception {
 		csrDashBoardpage.DDServiceCategoryWO();
 		
 	}
 
-	public void DDServicesWO() {
+	public void DDServicesWO() throws Exception {
 		csrDashBoardpage.DDServicesWO();
 		
 	}
@@ -213,7 +213,7 @@ public class CSRDashBoardSteps extends pestreamSteps {
 		
 	}
 
-	public void DueDate_CSRDashboard() {
+	public void DueDate_CSRDashboard() throws Exception {
        csrDashBoardpage.DueDate_CSRDashboard();
    
 	}
@@ -229,7 +229,7 @@ public class CSRDashBoardSteps extends pestreamSteps {
 		
 	}
 
-	public void billingAddSame_WOCSRDashboard() {
+	public void billingAddSame_WOCSRDashboard() throws Exception {
 		csrDashBoardpage.billingAddSame_WOCSRDashboard();
 		
 	}
@@ -251,7 +251,7 @@ public class CSRDashBoardSteps extends pestreamSteps {
 		
 	}*/
 
-	public void save_WOCSRDashboard() {
+	public void save_WOCSRDashboard() throws Exception {
 		csrDashBoardpage.save_WOCSRDashboard();
 		
 	}

@@ -11,17 +11,17 @@ public class CSRDashBoardStepDefs {
 	CSRDashBoardSteps csrDashBoardssteps;
 
 	@When("^User clicks on the CsrDashboard from the left tab$")
-	public void user_clicks_on_the_CsrDashboard_from_the_left_tab() {
+	public void user_clicks_on_the_CsrDashboard_from_the_left_tab() throws Exception {
 		csrDashBoardssteps.csrDashboardClick();
 	}
 
 	@Then("^User Clicks on Advvance Search Tab in CSR$")
-	public void ClicksOnAdvanceSearch() {
+	public void ClicksOnAdvanceSearch() throws Exception {
 		csrDashBoardssteps.advanceButton();
 	}
 
 	@Then("^User clicks on Call Button in the Action Section$")
-	public void user_clicks_on_Call_Button_in_the_Action_Section() {
+	public void user_clicks_on_Call_Button_in_the_Action_Section() throws Exception {
 		csrDashBoardssteps.CallBtnAction();
 	}
 
@@ -36,22 +36,22 @@ public class CSRDashBoardStepDefs {
 	}
 
 	@Then("^User Clicks on Save Button$")
-	public void user_Clicks_on_Save_Button() {
+	public void user_Clicks_on_Save_Button() throws Exception {
 		csrDashBoardssteps.SaveBtn();
 	}
 
 	@Then("^User clicks on new Task button in thr Action Section$")
-	public void user_clicks_on_new_Task_button_in_thr_Action_Section() {
+	public void user_clicks_on_new_Task_button_in_thr_Action_Section() throws Exception {
 		csrDashBoardssteps.newTaskactionbtn();
 	}
 
 	@Then("^User Selects the task Template from the DDL$")
-	public void user_Selects_the_task_Template_from_the_DDL() {
+	public void user_Selects_the_task_Template_from_the_DDL() throws Exception {
 		csrDashBoardssteps.taskTemplate();
 	}
 
 	@Then("^User Selects Due Date from Calender$")
-	public void user_Selects_Due_Date_from_Calender() {
+	public void user_Selects_Due_Date_from_Calender() throws Exception {
 		csrDashBoardssteps.dueDadte();
 	}
 
@@ -61,27 +61,27 @@ public class CSRDashBoardStepDefs {
 	}
 
 	@Then("^User Checks the Mark As Done$")
-	public void UserChecksMarkAsDone() {
+	public void UserChecksMarkAsDone() throws Exception {
 		csrDashBoardssteps.markAsDone();
 	}
 
 	@Then("^User Checks on Create Follow Up$")
-	public void UserCheckCreateFollowUp() {
+	public void UserCheckCreateFollowUp() throws Exception {
 		csrDashBoardssteps.followUpCreate();
 	}
 
 	@Then("^User Clicks on Recurring$")
-	public void UserClicksonRecurring() {
+	public void UserClicksonRecurring() throws Exception {
 		csrDashBoardssteps.recurringChckBox();
 	}
 
 	@Then("^User selects the recurrence pattern$")
-	public void recurringPattern() {
+	public void recurringPattern() throws Exception {
 		csrDashBoardssteps.recuringDDL();
 	}
 
 	@Then("^User clicks on add Opportunity Button in Action Tab$")
-	public void user_clicks_on_add_Opportunity_Button_in_Action_Tab() {
+	public void user_clicks_on_add_Opportunity_Button_in_Action_Tab() throws Exception {
 		csrDashBoardssteps.addOpportunity();
 	}
 
@@ -101,7 +101,7 @@ public class CSRDashBoardStepDefs {
 	}
 
 	@Then("^User clicks on add Notes Button in Action Tab$")
-	public void user_clicks_on_add_Notes_Button_in_Action_Tab() {
+	public void user_clicks_on_add_Notes_Button_in_Action_Tab() throws Exception {
 		csrDashBoardssteps.noteButtonAxn();
 	}
 
@@ -116,22 +116,22 @@ public class CSRDashBoardStepDefs {
 	}
 
 	@Then("^User Clicks on WorkOrder Button$")
-	public void clickonWorkOrderBtn() {
+	public void clickonWorkOrderBtn() throws Exception {
 		csrDashBoardssteps.WorkOrderBtn();
 	}
 
 	@Then("user Selects the Service category Services and Sub Service$")
-	public void serviceCategoryandSubCategory() {
+	public void serviceCategoryandSubCategory() throws Exception {
 		csrDashBoardssteps.ServiceCategorySubService();
 	}
 
 	@Then("^User add the Service$")
-	public void AddBtnServiceCategory() {
+	public void AddBtnServiceCategory() throws Exception {
 		csrDashBoardssteps.addServiceBtn();
 	}
 
 	@Then("^User Selects the Service date$")
-	public void ServiceDate() {
+	public void ServiceDate() throws Exception {
 		csrDashBoardssteps.serviceDate();
 	}
 
@@ -141,7 +141,7 @@ public class CSRDashBoardStepDefs {
 	}
 
 	@Then("^User Clicks on the View Details from action tab$")
-	public void UserClicksonActionTabViewDetails() {
+	public void UserClicksonActionTabViewDetails() throws Exception {
 		csrDashBoardssteps.ViewDetailsActionTab();
 	}
 
@@ -156,7 +156,7 @@ public class CSRDashBoardStepDefs {
 	}
 
 	@Then("^User enters CalledFor Source and Target DDL again$")
-	public void calledForSourceTarget() {
+	public void calledForSourceTarget() throws Exception {
 		csrDashBoardssteps.calledSourceTarget();
 	}
 
@@ -166,22 +166,22 @@ public class CSRDashBoardStepDefs {
 	}
 
 	@Then("^User Clicks on Add Work Order$")
-	public void clicksOnWorkOrderinDetails() {
+	public void clicksOnWorkOrderinDetails() throws Exception {
 		csrDashBoardssteps.workOrderDetails();
 	}
 
 	@Then("^User selects ComOpportunity Type$")
-	public void user_selects_ComOpportunity_Type() {
+	public void user_selects_ComOpportunity_Type() throws Exception {
 		csrDashBoardssteps.ComOpportunity();
 	}
 
 	@Then("^User clicks on the RangeTime$")
-	public void user_clicks_on_the_RangeTime() {
+	public void user_clicks_on_the_RangeTime() throws Exception {
 		csrDashBoardssteps.RangeTime();
 	}
 
 	@Then("^User clicks on the DDleadTech$")
-	public void user_clicks_on_the_DDleadTech() {
+	public void user_clicks_on_the_DDleadTech() throws Exception {
 		csrDashBoardssteps.DDleadTech();
 	}
 
@@ -191,17 +191,17 @@ public class CSRDashBoardStepDefs {
 	}
 
 	@Then("^user click on DDSourceAccountOpportunit$")
-	public void user_click_on_DDSourceAccountOpportunit() {
+	public void user_click_on_DDSourceAccountOpportunit() throws Exception {
 		csrDashBoardssteps.DDSourceAccountOpportunity();
 	}
 	
 	@Then("^user click on DDServiceCategoryWO$")
-	public void user_click_on_DDServiceCategoryWO() {
+	public void user_click_on_DDServiceCategoryWO() throws Exception {
 		csrDashBoardssteps.DDServiceCategoryWO();
 	}
 
 	@Then("^user click on DDServicesWO$")
-	public void user_click_on_DDServicesWO() {
+	public void user_click_on_DDServicesWO() throws Exception {
 		csrDashBoardssteps.DDServicesWO();
 	}
 	
@@ -211,7 +211,7 @@ public class CSRDashBoardStepDefs {
 	}
 
 	@Then("^user click on DueDate_CSRDashboard$")
-	public void user_click_on_DueDate_CSRDashboard() {
+	public void user_click_on_DueDate_CSRDashboard() throws Exception {
 		csrDashBoardssteps.DueDate_CSRDashboard();
 	}
 
@@ -226,7 +226,7 @@ public class CSRDashBoardStepDefs {
 	}
 	
 	@Then("^user click on billingAddSame_WOCSRDashboard$")
-	public void user_click_on_billingAddSame_WOCSRDashboard() {
+	public void user_click_on_billingAddSame_WOCSRDashboard() throws Exception {
 		csrDashBoardssteps.billingAddSame_WOCSRDashboard();
 	}
 
@@ -246,13 +246,9 @@ public class CSRDashBoardStepDefs {
 	}*/
 
 	@Then("^user click on save_WOCSRDashboard$")
-	public void user_click_on_save_WOCSRDashboard() {
+	public void user_click_on_save_WOCSRDashboard() throws Exception {
 		csrDashBoardssteps.save_WOCSRDashboard();
 	}
-
-
-
-
 
 
 }

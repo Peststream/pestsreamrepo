@@ -14,26 +14,26 @@ public class EmployeeSteps {
 	EmployeePage employeepage;
 
 	@Step
-	public void employeeTab() {
+	public void employeeTab() throws Exception {
 		
 		employeepage.employee_tab();
 		
 	}
 
 	@Step
-	public void staffTab() {
+	public void staffTab() throws Exception {
 		employeepage.staff_tab();
 		
 	}
 
 	@Step
-	public void addEmployeeBtn() {
+	public void addEmployeeBtn() throws Exception {
 		employeepage.addEmployee_btn();
 		
 	}
 
 	@Step
-	public void basicBranchInfo() {
+	public void basicBranchInfo() throws Exception {
 		employeepage.basicBranch_info();
 		
 	}
@@ -46,13 +46,13 @@ public class EmployeeSteps {
 	}
 
 	@Step
-	public void employeeType() {
+	public void employeeType() throws Exception {
 		employeepage.employee_type();
 		
 	}
 
 	@Step
-	public void roleName() {
+	public void roleName() throws Exception {
 		employeepage.role_name();
 		
 	}
@@ -70,19 +70,19 @@ public class EmployeeSteps {
 	}
 
 	@Step
-	public void teamSubtab() {
+	public void teamSubtab() throws Exception {
 		employeepage.team_subtab();
 		
 	}
 
 	@Step
-	public void addTeam() {
+	public void addTeam() throws Exception {
 		employeepage.add_team();
 		
 	}
 
 	@Step
-	public void branchName() {
+	public void branchName() throws Exception {
 		employeepage.branch_name();
 		
 	}
@@ -102,25 +102,25 @@ public class EmployeeSteps {
 	}
 
 	@Step
-	public void departName() {
+	public void departName() throws Exception {
 	employeepage.depart_name();
 		
 	}
 
 	@Step
-	public void emplName() {
+	public void emplName() throws Exception {
 		employeepage.empl_name();
 		
 	}
 
 	@Step
-	public void isPrimary() {
+	public void isPrimary() throws Exception {
 		employeepage.is_primary();
 		
 	}
 
 	@Step
-	public void actionBtn() {
+	public void actionBtn() throws Exception {
 		employeepage.action_btn();
 		
 	}
@@ -170,17 +170,17 @@ public class EmployeeSteps {
 		
 	}
 
-	public void employeeTypePartTime() {
+	public void employeeTypePartTime() throws Exception {
 		employeepage.employeeTypePartTime();
 		
 	}
 
-	public void DDReportingAuthority() {
+	public void DDReportingAuthority() throws Exception {
 		employeepage.DDReportingAuthority();
 		
 	}
 
-	public void routeOverride() {
+	public void routeOverride() throws Exception {
 		employeepage.routeOverride();
 		
 	}
@@ -195,27 +195,27 @@ public class EmployeeSteps {
 		
 	}
 
-	public void save() {
+	public void save() throws Exception {
 		employeepage.save();
 		
 	}
 
-	public void ClockInOutTab() {
+	public void ClockInOutTab() throws Exception {
 		employeepage.ClockInOutTab();
 		
 	}
 
-	public void addClockInOut() {
+	public void addClockInOut() throws Exception {
 		employeepage.addClockInOut();
 		
 	}
 
-	public void ClockInOutDate() {
+	public void ClockInOutDate() throws Exception {
 		employeepage.ClockInOutDate();
 		
 	}
 
-	public void saveClock() {
+	public void saveClock() throws Exception {
 		employeepage.saveClock();
 		
 	}
@@ -231,7 +231,7 @@ public class EmployeeSteps {
 		
 	}
 
-	public void DDWorkingStatus() {
+	public void DDWorkingStatus() throws Exception {
 		employeepage.DDWorkingStatus();
 		
 	}
@@ -242,66 +242,66 @@ public class EmployeeSteps {
 		
 	}
 
-	public void leaveManagement() {
+	public void leaveManagement() throws Exception {
 		employeepage.leaveManagement();
 		
 	}
 
-	public void Action() {
+	public void Action() throws Exception {
 		employeepage.Action();
 		
 	}
 
-	public void DDLeaveType() {
+	public void DDLeaveType() throws Exception {
 		employeepage.DDLeaveType();
 		
 	}
 
-	public void DDStatus() {
+	public void DDStatus() throws Exception {
 		employeepage.DDStatus();
 		
 	}
 
-	public void SaveLM() {
+	public void SaveLM() throws Exception {
 		employeepage.SaveLM();
 		
 	}
 
-	public void DDLeaveTypeHalf() {
+	public void DDLeaveTypeHalf() throws Exception {
 		employeepage.DDLeaveTypeHalf();
 		
 	}
 
-	public void DDLeaveTypeSick() {
+	public void DDLeaveTypeSick() throws Exception {
 		employeepage.DDLeaveTypeSick();
 		
 	}
 
-	public void ToDateLM() {
+	public void ToDateLM() throws Exception {
 		employeepage.ToDateLM();
 		
 	}
 
-	public void Employee_timesheet() {
+	public void Employee_timesheet() throws Exception {
 		employeepage.Employee_timesheet();
 	}
 
-	public void nonBillable_hours() {
+	public void nonBillable_hours() throws Exception {
 		
 		employeepage.nonBillable_hours();
 	}
 
-	public void department() {
+	public void department() throws Exception {
 		employeepage.department();
 		
 	}
 
-	public void time_slot() {
+	public void time_slot() throws Exception {
 		
 		employeepage.time_slot();
 	}
 
-	public void date() {
+	public void date() throws Exception {
 		employeepage.date();
 	}
 
@@ -321,7 +321,7 @@ public class EmployeeSteps {
 		employeepage.emp_description(jsonData);
 	}
 
-	public void save_emp_timesheet() {
+	public void save_emp_timesheet() throws Exception {
 		employeepage.save_emp_timesheet();
 	}
 
@@ -335,20 +335,20 @@ public class EmployeeSteps {
 		
 	}
 
-	public void stDepertment() {
+	public void stDepertment() throws Exception {
 		employeepage.stDepartment();
 	}
 
-	public void stTimeslot() {
+	public void stTimeslot() throws Exception {
 	employeepage.stTimeslot();
 		
 	}
 
-	public void employee_type() {
+	public void employee_type() throws Exception {
 		employeepage.employee_type();
 	}
 	
-	public void ST_Date() {
+	public void ST_Date() throws Exception {
 		employeepage.ST_date();
 	}
 
@@ -386,17 +386,17 @@ public class EmployeeSteps {
 	
 	}
 
-	public void Branch_StaffEmp() {
+	public void Branch_StaffEmp() throws Exception {
 		employeepage.Branch_StaffEmp();
 		
 	}
 
-	public void Divison() {
+	public void Divison() throws Exception {
 		employeepage.Divison();
 		
 	}
 
-	public void Department() {
+	public void Department() throws Exception {
 		employeepage.Department();
 		
 	}
@@ -419,27 +419,27 @@ public class EmployeeSteps {
 		
 	}
 
-	public void EmpType() {
+	public void EmpType() throws Exception {
 		employeepage.EmpType();
 		
 	}
 
-	public void RoleName() {
+	public void RoleName() throws Exception {
 		employeepage.RoleName();
 		
 	}
 
-	public void Save_StaffEmp() {
+	public void Save_StaffEmp() throws Exception {
 		employeepage.Save_StaffEmp();
 		
 	}
 
-	public void EmpTypeHalf() {
+	public void EmpTypeHalf() throws Exception {
 		employeepage.EmpTypeHalf();
 		
 	}
 
-	public void Branch_RouteEmployee() {
+	public void Branch_RouteEmployee() throws Exception {
 		employeepage.Branch_RouteEmployee();
 		
 	}
