@@ -41,7 +41,7 @@ public class SalesAutoPCROSteps extends pestreamSteps {
 	}
 
 	@Step
-	public void svAndSignAgreementBtn() {
+	public void svAndSignAgreementBtn() throws Exception {
 		salesautopcropage.svAndsignAgreeBtn();
 		
 	}

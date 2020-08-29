@@ -5,6 +5,8 @@ import java.util.Map;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.touch.DownAction;
 import org.openqa.selenium.remote.server.handler.interactions.touch.Down;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.infocrats.utils.BaseUtills;
 import com.infocrats.utils.JsonHelper;
@@ -162,19 +164,23 @@ public class MechCsrPage extends peststreamPage {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
 	public void CSRDashBoard_Mech() throws Exception {
 		scrollUP(CSRDashBoard_Mech);
-		waitABit(1000);
-		CSRDashBoard_Mech.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait.until(ExpectedConditions.elementToBeClickable(CSRDashBoard_Mech));
+		CSRDashBoard_Mech.click();
 		waitABit(jsonData.get("Time1"));
 
 	}
 
-	public void AdvanceSearch_CSRDB_Mech() {
-		waitABit(1000);
+	public void AdvanceSearch_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait.until(ExpectedConditions.elementToBeClickable(AdvanceSearch_CSRDB_Mech));
 		AdvanceSearch_CSRDB_Mech.click();
-		waitABit(5000);
+		waitABit(jsonData.get("Time1"));
 	}
 
 	public void MechOpp_CSRDB_Mech() {
@@ -183,276 +189,383 @@ public class MechCsrPage extends peststreamPage {
 		// waitABit(3000);
 	}
 
-	public void CallBttn_CSRDB_Mech() {
-		waitABit(1000);
+	public void CallBttn_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait.until(ExpectedConditions.elementToBeClickable(CallBttn_CSRDB_Mech));
 		CallBttn_CSRDB_Mech.click();
-		waitABit(5000);
+		waitABit(jsonData.get("Time1"));
 
 	}
 
-	public void DDCalledFor_CallBttn_CSRDB_Mech() {
+	public void DDCalledFor_CallBttn_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait.until(ExpectedConditions.elementToBeClickable(DDCalledFor_CallBttn_CSRDB_Mech));
 		DDCalledFor_CallBttn_CSRDB_Mech.click();
-		waitABit(5000);
+		waitABit(jsonData.get("Time1"));
 
 	}
 
-	public void ValueDDCalledFor_CallBttn_CSRDB_Mech() {
+	public void ValueDDCalledFor_CallBttn_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait.until(ExpectedConditions.elementToBeClickable(ValueDDCalledFor_CallBttn_CSRDB_Mech));
 		ValueDDCalledFor_CallBttn_CSRDB_Mech.click();
-		waitABit(7000);
+		waitABit(jsonData.get("Time1"));
 	}
 
-	public void Des_CallBttn_CSRDB_Mech() {
+	public void Des_CallBttn_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait2 = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait2.until(ExpectedConditions.elementToBeClickable(Des_CallBttn_CSRDB_Mech));
 		Des_CallBttn_CSRDB_Mech.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait.until(ExpectedConditions.elementToBeClickable(Des_CallBttn_CSRDB_Mech));
 		Des_CallBttn_CSRDB_Mech.sendKeys("Des regarding mechanical activity");
-		waitABit(4000);
+		waitABit(jsonData.get("Time1"));
 	}
 
-	public void Note_CallBttn_CSRDB_Mech() {
-		waitABit(1000);
+	public void Note_CallBttn_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait2 = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait2.until(ExpectedConditions.elementToBeClickable(Note_CallBttn_CSRDB_Mech));
 		Note_CallBttn_CSRDB_Mech.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait.until(ExpectedConditions.elementToBeClickable(Note_CallBttn_CSRDB_Mech));
 		Note_CallBttn_CSRDB_Mech.sendKeys("Note regardind mech activity");
-		waitABit(4000);
+		waitABit(jsonData.get("Time1"));
 	}
 
-	public void Save_CallBttn_CSRDB_Mech() {
+	public void Save_CallBttn_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait.until(ExpectedConditions.elementToBeClickable(Save_CallBttn_CSRDB_Mech));
 		Save_CallBttn_CSRDB_Mech.click();
-		waitABit(5000);
+		waitABit(jsonData.get("Time1"));
 	}
 
-	public void ThreeNext_CallBttn_CSRDB_Mech() {
+	public void ThreeNext_CallBttn_CSRDB_Mech() throws Exception {
+
 		scrollDown(ThreeNext_CallBttn_CSRDB_Mech);
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait.until(ExpectedConditions.elementToBeClickable(ThreeNext_CallBttn_CSRDB_Mech));
 		ThreeNext_CallBttn_CSRDB_Mech.click();
-		waitABit(5000);
+		waitABit(jsonData.get("Time1"));
 
 	}
 
-	public void AccountNo_CSRDB_Mech() {
-
+	public void AccountNo_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait.until(ExpectedConditions.elementToBeClickable(AccountNo_CSRDB_Mech));
 		AccountNo_CSRDB_Mech.click();
-		waitABit(6000);
+		waitABit(jsonData.get("Time1"));
 
 	}
 
 	public void OkAccountAlert_CSRDB_Mech() {
 		try {
 			OkAccountAlert_CSRDB_Mech.click();
-			waitABit(1000);
+			waitABit(jsonData.get("Time1"));
 
 		} catch (Exception e) {
-			waitABit(1000);
+			waitABit(jsonData.get("Time1"));
 		}
 	}
 
-	public void AddCallBttn_CSRDB_Mech() {
+	public void AddCallBttn_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait.until(ExpectedConditions.elementToBeClickable(AddCallBttn_CSRDB_Mech));
 		AddCallBttn_CSRDB_Mech.click();
-		waitABit(5000);
+		waitABit(jsonData.get("Time1"));
 	}
 
-	public void DDTarget_CSRDB_Mech() {
+	public void DDTarget_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait.until(ExpectedConditions.elementToBeClickable(DDTarget_CSRDB_Mech));
 		DDTarget_CSRDB_Mech.click();
-		waitABit(5000);
+		waitABit(jsonData.get("Time1"));
 	}
 
-	public void ValueDDTarget_CSRDB_Mech() {
+	public void ValueDDTarget_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait.until(ExpectedConditions.elementToBeClickable(ValueDDTarget_CSRDB_Mech));
 		ValueDDTarget_CSRDB_Mech.click();
-		waitABit(5000);
+		waitABit(jsonData.get("Time1"));
 	}
 
-	public void AddOppBttn_CSRDB_Mech() {
+	public void AddOppBttn_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait2 = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait2.until(ExpectedConditions.elementToBeClickable(AddOppBttn_CSRDB_Mech));
+		ValueDDTarget_CSRDB_Mech.click();
 		AddOppBttn_CSRDB_Mech.click();
-		waitABit(3000);
+		waitABit(jsonData.get("Time1"));
 
 		String allWindowHandle = getDriver().getWindowHandle();
-		waitABit(1000);
+		waitABit(jsonData.get("Time1"));
 		getDriver().switchTo().window(allWindowHandle);
-		waitABit(1000);
 		getDriver().get(
 				"https://pestream.com/Sale/PhoneSales?accountNo=4468&returnUrl=/Sales/CrmAccount/AccountDetail?accountId");
-		waitABit(3000);
+		waitABit(jsonData.get("Time1"));
 
 	}
 
-	public void SecondaryPhoneNo_Opp_CSRDB_Mech() {
+	public void SecondaryPhoneNo_Opp_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait2 = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait2.until(ExpectedConditions.elementToBeClickable(SecondaryPhoneNo_Opp_CSRDB_Mech));
 		SecondaryPhoneNo_Opp_CSRDB_Mech.click();
-		waitABit(1000);
+		waitABit(jsonData.get("Time1"));
 		SecondaryPhoneNo_Opp_CSRDB_Mech.sendKeys("9636987452");
-		waitABit(4000);
+		waitABit(jsonData.get("Time1"));
 	}
 
-	public void DDDep_Opp_CSRDB_Mech() {
+	public void DDDep_Opp_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait2 = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait2.until(ExpectedConditions.elementToBeClickable(DDDep_Opp_CSRDB_Mech));
 		DDDep_Opp_CSRDB_Mech.click();
-		waitABit(4000);
 	}
 
-	public void ValueDDDep_Opp_CSRDB_Mech() {
+	public void ValueDDDep_Opp_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait2 = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait2.until(ExpectedConditions.elementToBeClickable(ValueDDDep_Opp_CSRDB_Mech));
 		ValueDDDep_Opp_CSRDB_Mech.click();
-		waitABit(4000);
 	}
 
-	public void DDService_Opp_CSRDB_Mech() {
+	public void DDService_Opp_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait2 = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait2.until(ExpectedConditions.elementToBeClickable(DDService_Opp_CSRDB_Mech));
 		DDService_Opp_CSRDB_Mech.click();
-		waitABit(4000);
 	}
 
-	public void ValueDDService_Opp_CSRDB_Mech() {
+	public void ValueDDService_Opp_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait2 = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait2.until(ExpectedConditions.elementToBeClickable(ValueDDService_Opp_CSRDB_Mech));
 		ValueDDService_Opp_CSRDB_Mech.click();
-		waitABit(4000);
 	}
 
-	public void DDSource_Opp_CSRDB_Mech() {
+	public void DDSource_Opp_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait2 = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait2.until(ExpectedConditions.elementToBeClickable(DDSource_Opp_CSRDB_Mech));
 		DDSource_Opp_CSRDB_Mech.click();
-		waitABit(4000);
 	}
 
-	public void ValueDDSource_Opp_CSRDB_Mech() {
+	public void ValueDDSource_Opp_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait2 = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait2.until(ExpectedConditions.elementToBeClickable(ValueDDSource_Opp_CSRDB_Mech));
 		ValueDDSource_Opp_CSRDB_Mech.click();
-		waitABit(4000);
 	}
 
-	public void Cont_Opp_CSRDB_Mech() {
+	public void Cont_Opp_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait2 = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait2.until(ExpectedConditions.elementToBeClickable(Cont_Opp_CSRDB_Mech));
 		Cont_Opp_CSRDB_Mech.click();
-		waitABit(4000);
 	}
 
-	public void AddWOBttn_CSRDB_Mech() {
+	public void AddWOBttn_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait2 = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait2.until(ExpectedConditions.elementToBeClickable(AddWOBttn_CSRDB_Mech));
 		AddWOBttn_CSRDB_Mech.click();
-		waitABit(6000);
+		waitABit(jsonData.get("Time1"));
 
 		String allWindowHandle = getDriver().getWindowHandle();
-		waitABit(1000);
+		waitABit(jsonData.get("Time1"));
 		getDriver().switchTo().window(allWindowHandle);
-		waitABit(1000);
+		waitABit(jsonData.get("Time1"));
 		getDriver().get(
 				"https://pestream.com/Services/WorkOrder/Manage?accountNo=4731&returnUrl=/Sales/CrmAccount/AccountDetail?accountId");
-		waitABit(5000);
+		waitABit(jsonData.get("Time1"));
 	}
 
-	public void KeepSameBillingAddress_AddWOBttn_CSRDB_Mech() {
+	public void KeepSameBillingAddress_AddWOBttn_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait2 = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait2.until(ExpectedConditions.elementToBeClickable(KeepSameBillingAddress_AddWOBttn_CSRDB_Mech));
 		KeepSameBillingAddress_AddWOBttn_CSRDB_Mech.click();
-		waitABit(4000);
 	}
 
-	public void Notes_AddWOBttn_CSRDB_Mech() {
+	public void Notes_AddWOBttn_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait2 = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait2.until(ExpectedConditions.elementToBeClickable(Notes_AddWOBttn_CSRDB_Mech));
 		Notes_AddWOBttn_CSRDB_Mech.click();
-		waitABit(1000);
+		waitABit(jsonData.get("Time1"));
 		Notes_AddWOBttn_CSRDB_Mech.sendKeys("Notes");
-		waitABit(3000);
+		waitABit(jsonData.get("Time1"));
 	}
 
-	public void Direction_AddWOBttn_CSRDB_Mech() {
+	public void Direction_AddWOBttn_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait2 = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait2.until(ExpectedConditions.elementToBeClickable(Direction_AddWOBttn_CSRDB_Mech));
 		Direction_AddWOBttn_CSRDB_Mech.click();
-		waitABit(1000);
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait.until(ExpectedConditions.elementToBeClickable(Direction_AddWOBttn_CSRDB_Mech));
 		Direction_AddWOBttn_CSRDB_Mech.sendKeys("Direction");
 		waitABit(3000);
 	}
 
-	public void ServiceDatePOP_AddWOBttn_CSRDB_Mech() {
+	public void ServiceDatePOP_AddWOBttn_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait.until(ExpectedConditions.elementToBeClickable(ServiceDatePOP_AddWOBttn_CSRDB_Mech));
 		ServiceDatePOP_AddWOBttn_CSRDB_Mech.click();
-		waitABit(4000);
 	}
 
-	public void ServiceDateValue_AddWOBttn_CSRDB_Mech() {
+	public void ServiceDateValue_AddWOBttn_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait.until(ExpectedConditions.elementToBeClickable(ServiceDateValue_AddWOBttn_CSRDB_Mech));
 		ServiceDateValue_AddWOBttn_CSRDB_Mech.click();
-		waitABit(4000);
 	}
 
-	public void RangeTimeRdioBttn_AddWOBttn_CSRDB_Mech() {
-
+	public void RangeTimeRdioBttn_AddWOBttn_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait.until(ExpectedConditions.elementToBeClickable(RangeTimeRdioBttn_AddWOBttn_CSRDB_Mech));
 		RangeTimeRdioBttn_AddWOBttn_CSRDB_Mech.click();
-		waitABit(3000);
 	}
 
-	public void DDTimeRange_AddWOBttn_CSRDB_Mech() {
+	public void DDTimeRange_AddWOBttn_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait.until(ExpectedConditions.elementToBeClickable(DDTimeRange_AddWOBttn_CSRDB_Mech));
 		DDTimeRange_AddWOBttn_CSRDB_Mech.click();
-		waitABit(3000);
 	}
 
-	public void ValueTimeRange_AddWOBttn_CSRDB_Mech() {
+	public void ValueTimeRange_AddWOBttn_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait.until(ExpectedConditions.elementToBeClickable(ValueTimeRange_AddWOBttn_CSRDB_Mech));
 		ValueTimeRange_AddWOBttn_CSRDB_Mech.click();
-		waitABit(3000);
 	}
 
-	public void DDSecondTimeRange_AddWOBttn_CSRDB_Mech() {
+	public void DDSecondTimeRange_AddWOBttn_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait.until(ExpectedConditions.elementToBeClickable(DDSecondTimeRange_AddWOBttn_CSRDB_Mech));
 		DDSecondTimeRange_AddWOBttn_CSRDB_Mech.click();
-		waitABit(3000);
 	}
 
-	public void ValueSecondTimeRange_AddWOBttn_CSRDB_Mech() {
+	public void ValueSecondTimeRange_AddWOBttn_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait.until(ExpectedConditions.elementToBeClickable(ValueSecondTimeRange_AddWOBttn_CSRDB_Mech));
 		ValueSecondTimeRange_AddWOBttn_CSRDB_Mech.click();
-		waitABit(3000);
 	}
 
-	public void DDPrimaryRoute_AddWOBttn_CSRDB_Mech() {
+	public void DDPrimaryRoute_AddWOBttn_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait.until(ExpectedConditions.elementToBeClickable(DDPrimaryRoute_AddWOBttn_CSRDB_Mech));
 		DDPrimaryRoute_AddWOBttn_CSRDB_Mech.click();
-		waitABit(3000);
 	}
 
-	public void ValuePrimaryRoute_AddWOBttn_CSRDB_Mech() {
+	public void ValuePrimaryRoute_AddWOBttn_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait.until(ExpectedConditions.elementToBeClickable(ValuePrimaryRoute_AddWOBttn_CSRDB_Mech));
 		ValuePrimaryRoute_AddWOBttn_CSRDB_Mech.click();
-		waitABit(3000);
 	}
 
-	public void SpecialInstruction_AddWOBttn_CSRDB_Mech() {
+	public void SpecialInstruction_AddWOBttn_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait.until(ExpectedConditions.elementToBeClickable(SpecialInstruction_AddWOBttn_CSRDB_Mech));
 		SpecialInstruction_AddWOBttn_CSRDB_Mech.click();
-		waitABit(1000);
 		SpecialInstruction_AddWOBttn_CSRDB_Mech.sendKeys("this is Special Instruction");
-		waitABit(3000);
+		waitABit(jsonData.get("Time1"));
 	}
 
-	public void ServiceInstruction_AddWOBttn_CSRDB_Mech() {
+	public void ServiceInstruction_AddWOBttn_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait.until(ExpectedConditions.elementToBeClickable(ServiceInstruction_AddWOBttn_CSRDB_Mech));
 		ServiceInstruction_AddWOBttn_CSRDB_Mech.click();
-		waitABit(1000);
+		waitABit(jsonData.get("Time1"));
 		ServiceInstruction_AddWOBttn_CSRDB_Mech.sendKeys("This is Service Instruction");
-		waitABit(3000);
+		waitABit(jsonData.get("Time1"));
 	}
 
-	public void InternalInstruction_AddWOBttn_CSRDB_Mech() {
+	public void InternalInstruction_AddWOBttn_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait.until(ExpectedConditions.elementToBeClickable(InternalInstruction_AddWOBttn_CSRDB_Mech));
 		InternalInstruction_AddWOBttn_CSRDB_Mech.click();
-		waitABit(1000);
+		waitABit(jsonData.get("Time1"));
 		InternalInstruction_AddWOBttn_CSRDB_Mech.sendKeys("This is Internal Instructions");
-		waitABit(3000);
+		waitABit(jsonData.get("Time1"));
 	}
 
-	public void SetUpInstruction_AddWOBttn_CSRDB_Mech() {
+	public void SetUpInstruction_AddWOBttn_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait.until(ExpectedConditions.elementToBeClickable(SetUpInstruction_AddWOBttn_CSRDB_Mech));
 		SetUpInstruction_AddWOBttn_CSRDB_Mech.click();
-		waitABit(1000);
+		waitABit(jsonData.get("Time1"));
 		SetUpInstruction_AddWOBttn_CSRDB_Mech.sendKeys("This is SetUp Instructions");
-		waitABit(3000);
+		waitABit(jsonData.get("Time1"));
 	}
 
-	public void Save_AddWOBttn_CSRDB_Mech() {
+	public void Save_AddWOBttn_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait.until(ExpectedConditions.elementToBeClickable(Save_AddWOBttn_CSRDB_Mech));
 		Save_AddWOBttn_CSRDB_Mech.click();
-		waitABit(3000);
 	}
 
-	public void DDServiceCategory_AddWOBttn_CSRDB_Mech() {
+	public void DDServiceCategory_AddWOBttn_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait.until(ExpectedConditions.elementToBeClickable(DDServiceCategory_AddWOBttn_CSRDB_Mech));
 		DDServiceCategory_AddWOBttn_CSRDB_Mech.click();
-		waitABit(3000);
 
 	}
 
-	public void ValueDDServiceCategory_AddWOBttn_CSRDB_Mech() {
+	public void ValueDDServiceCategory_AddWOBttn_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait.until(ExpectedConditions.elementToBeClickable(ValueDDServiceCategory_AddWOBttn_CSRDB_Mech));
 		ValueDDServiceCategory_AddWOBttn_CSRDB_Mech.click();
-		waitABit(3000);
 
 	}
 
-	public void Services_AddWOBttn_CSRDB_Mech() {
+	public void Services_AddWOBttn_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait.until(ExpectedConditions.elementToBeClickable(Services_AddWOBttn_CSRDB_Mech));
 		Services_AddWOBttn_CSRDB_Mech.click();
-		waitABit(3000);
 	}
 
-	public void ValueServices_AddWOBttn_CSRDB_Mech() {
+	public void ValueServices_AddWOBttn_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait.until(ExpectedConditions.elementToBeClickable(Services_AddWOBttn_CSRDB_Mech));
 		Services_AddWOBttn_CSRDB_Mech.sendKeys(Keys.ARROW_DOWN.TAB);
-		waitABit(3000);
 	}
 
-	public void Add_AddWOBttn_CSRDB_Mech() {
+	public void Add_AddWOBttn_CSRDB_Mech() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		wait.until(ExpectedConditions.elementToBeClickable(Add_AddWOBttn_CSRDB_Mech));
 		Add_AddWOBttn_CSRDB_Mech.click();
-		waitABit(5000);
 
 	}
 }

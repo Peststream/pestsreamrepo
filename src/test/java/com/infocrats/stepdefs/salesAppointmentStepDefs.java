@@ -17,62 +17,62 @@ public class salesAppointmentStepDefs {
 	 */
 
 	@When("^user click on Appointments tab$")
-	public void user_click_on_Appointments_tab() {
+	public void user_click_on_Appointments_tab() throws Exception {
 		salessppointmentstep.appoinmentTab();
 	}
 
 	@Then("^user click on SalesApp$")
-	public void user_click_on_SalesApp() {
+	public void user_click_on_SalesApp() throws Exception {
 		salessppointmentstep.SalesApp();
 	}
 
 	@Then("^user click on Opportunity$")
-	public void user_click_on_Opportunity() {
+	public void user_click_on_Opportunity() throws Exception {
 		salessppointmentstep.Opportunity();
 	}
 
 	@Then("^user click on Save&Continue of generalInfo$")
-	public void user_click_on_Save_Continue_of_generalInfo() {
+	public void user_click_on_Save_Continue_of_generalInfo() throws Exception {
 		salessppointmentstep.ContgeneralInfo();
 	}
 
 	@Then("^user click on Continue of inspection$")
-	public void user_click_on_Continue_of_inspection() {
+	public void user_click_on_Continue_of_inspection() throws Exception {
 		salessppointmentstep.Continueinspection();
 	}
 
 	@Then("^user click on DDCatSalesApp$")
-	public void user_click_on_DDCatSalesApp() {
+	public void user_click_on_DDCatSalesApp() throws Exception {
 		salessppointmentstep.DDCatSalesApp();
 	}
 
 	@Then("^user click on DDServiceSalesApp$")
-	public void user_click_on_DDServiceSalesApp() {
+	public void user_click_on_DDServiceSalesApp() throws Exception {
 		salessppointmentstep.DDServiceSalesApp();
 	}
 
 	@Then("^user click on DDFrequencySalesApp$")
-	public void user_click_on_DDFrequencySalesApp() {
+	public void user_click_on_DDFrequencySalesApp() throws Exception {
 		salessppointmentstep.DDFrequencySalesApp();
 	}
 
 	@Then("^user click on InternalNotes$")
-	public void user_click_on_InternalNotes() {
+	public void user_click_on_InternalNotes() throws Exception {
 		salessppointmentstep.InternalNotes();
 	}
 
 	@Then("^user click on saveBttn$")
-	public void user_click_on_saveBttn() {
+	public void user_click_on_saveBttn() throws Exception {
 		salessppointmentstep.saveBttn();
 	}
 
 	@Then("^user click on Save&Continue of Service$")
-	public void user_click_on_Save_Continue_of_Service() {
+	public void user_click_on_Save_Continue_of_Service() throws Exception {
 		salessppointmentstep.SaveContinueService();
 	}
 
 	@Then("^user click on NonStdRadioBttn$")
-	public void user_click_on_NonStdRadioBttn() {
+	public void user_click_on_NonStdRadioBttn() throws Exception {
 		salessppointmentstep.NonStdRadioBttn();
 	}
 

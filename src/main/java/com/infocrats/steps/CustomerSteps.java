@@ -13,7 +13,7 @@ public class CustomerSteps extends pestreamSteps {
 	CustomerPage customerpage;
 
 	@Step
-	public void leadTab() {
+	public void leadTab() throws Exception {
 		customerpage.lead_tab();
 		
 	}
