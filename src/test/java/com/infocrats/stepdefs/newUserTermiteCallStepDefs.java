@@ -27,7 +27,7 @@ public class newUserTermiteCallStepDefs {
 	}
 
 	@Then("^user click on Search$")
-	public void user_click_on_Search() {
+	public void user_click_on_Search() throws Exception {
 		newusertermitecallsteps.clickOnSearch();
 	}
 
@@ -62,7 +62,7 @@ public class newUserTermiteCallStepDefs {
 	}
 
 	@Then("^user click on OppType$")
-	public void user_click_on_OppType() {
+	public void user_click_on_OppType() throws Exception {
 		newusertermitecallsteps.clickOnOppType();
 	}
 
@@ -284,57 +284,57 @@ public class newUserTermiteCallStepDefs {
 	}
 
 	@Then("^user click on generatedOpportunity_FieldSTSaveComm$")
-	public void user_click_on_generatedOpportunity_FieldSTSaveComm() {
+	public void user_click_on_generatedOpportunity_FieldSTSaveComm() throws Exception {
 		newusertermitecallsteps.generatedOpportunity_FieldSTSaveComm();
 	}
 
 	@Then("^user click on saveAndcontGI_FieldSTSaveComm$")
-	public void user_click_on_saveAndcontGI_FieldSTSaveComm() {
+	public void user_click_on_saveAndcontGI_FieldSTSaveComm() throws Exception {
 		newusertermitecallsteps.saveAndcontGI_FieldSTSaveComm();
 	}
 
 	@Then("^user click on continueInspection_FieldSTSaveComm$")
-	public void user_click_on_continueInspection_FieldSTSaveComm() {
+	public void user_click_on_continueInspection_FieldSTSaveComm() throws Exception {
 		newusertermitecallsteps.continueInspection_FieldSTSaveComm();
 	}
 
 	@Then("^user click on DDCat_StdService_FieldSTSaveComm$")
-	public void user_click_on_DDCat_StdService_FieldSTSaveComm() {
+	public void user_click_on_DDCat_StdService_FieldSTSaveComm() throws Exception {
 		newusertermitecallsteps.DDCat_StdService_FieldSTSaveComm();
 	}
 
 	@Then("^user click on DDService_StdService_FieldSTSaveComm$")
-	public void user_click_on_DDService_StdService_FieldSTSaveComm() {
+	public void user_click_on_DDService_StdService_FieldSTSaveComm() throws Exception {
 		newusertermitecallsteps.DDService_StdService_FieldSTSaveComm();
 	}
 
 	@Then("^user click on DDFrequency_StdService_FieldSTSaveComm$")
-	public void user_click_on_DDFrequency_StdService_FieldSTSaveComm() {
+	public void user_click_on_DDFrequency_StdService_FieldSTSaveComm() throws Exception {
 		newusertermitecallsteps.DDFrequency_StdService_FieldSTSaveComm();
 	}
 
 	@Then("^user click on Save_StdService_FieldSTSaveComm$")
-	public void user_click_on_Save_StdService_FieldSTSaveComm() {
+	public void user_click_on_Save_StdService_FieldSTSaveComm() throws Exception {
 		newusertermitecallsteps.Save_StdService_FieldSTSaveComm();
 	}
 
 	@Then("^user click on saveAndcontSelectService_FieldSTSaveComm$")
-	public void user_click_on_saveAndcontSelectService_FieldSTSaveComm() {
+	public void user_click_on_saveAndcontSelectService_FieldSTSaveComm() throws Exception {
 		newusertermitecallsteps.saveAndcontSelectService_FieldSTSaveComm();
 	}
 
 	@Then("^user click on radioBttn_Service_FieldSTSaveComm$")
-	public void user_click_on_radioBttn_Service_FieldSTSaveComm() {
+	public void user_click_on_radioBttn_Service_FieldSTSaveComm() throws Exception {
 		newusertermitecallsteps.radioBttn_Service_FieldSTSaveComm();
 	}
 
 	@Then("^user click on saveAndcontConfigureProposal_FieldSTSaveComm$")
-	public void user_click_on_saveAndcontConfigureProposal_FieldSTSaveComm() {
+	public void user_click_on_saveAndcontConfigureProposal_FieldSTSaveComm() throws Exception {
 		newusertermitecallsteps.saveAndcontConfigureProposal_FieldSTSaveComm();
 	}
 
 	@Then("^user click on radioBttncashAgreement_FieldSTSaveComm$")
-	public void user_click_on_radioBttncashAgreement_FieldSTSaveComm() {
+	public void user_click_on_radioBttncashAgreement_FieldSTSaveComm() throws Exception {
 		newusertermitecallsteps.radioBttncashAgreement_FieldSTSaveComm();
 	}
 
@@ -344,22 +344,22 @@ public class newUserTermiteCallStepDefs {
 	}
 
 	@Then("^user click on radioBttnTANDCAgreement_FieldSTSaveComm$")
-	public void user_click_on_radioBttnTANDCAgreement_FieldSTSaveComm() {
+	public void user_click_on_radioBttnTANDCAgreement_FieldSTSaveComm() throws Exception {
 		newusertermitecallsteps.radioBttnTANDCAgreement_FieldSTSaveComm();
 	}
 
 	@Then("^user click on 	salesrepresentativesignAgreement_FieldSTSaveComm$")
-	public void user_click_on_salesrepresentativesignAgreement_FieldSTSaveComm() {
+	public void user_click_on_salesrepresentativesignAgreement_FieldSTSaveComm() throws Exception {
 		newusertermitecallsteps.salesrepresentativesignAgreement_FieldSTSaveComm();
 	}
 
 	@Then("^user click on saveandcontAgreement_FieldSTSaveComm$")
-	public void user_click_on_saveandcontAgreement_FieldSTSaveComm() {
+	public void user_click_on_saveandcontAgreement_FieldSTSaveComm() throws Exception {
 		newusertermitecallsteps.saveandcontAgreement_FieldSTSaveComm();
 	}
 
 	@Then("^user click on sendemail_FieldSTSaveComm$")
-	public void user_click_on_sendemail_FieldSTSaveComm() {
+	public void user_click_on_sendemail_FieldSTSaveComm() throws Exception {
 		newusertermitecallsteps.sendemail_FieldSTSaveComm();
 	}
 
@@ -369,17 +369,17 @@ public class newUserTermiteCallStepDefs {
 	}
 
 	@Then("^user click on markaslost_InsideSTSaveComm$")
-	public void user_click_on_markaslost_InsideSTSaveComm() {
+	public void user_click_on_markaslost_InsideSTSaveComm() throws Exception {
 		newusertermitecallsteps.markaslost_InsideSTSaveComm();
 	}
 
 	@Then("^user click on DDReasonML_InsideSTSaveComm$")
-	public void user_click_on_DDReasonML_InsideSTSaveComm() {
+	public void user_click_on_DDReasonML_InsideSTSaveComm() throws Exception {
 		newusertermitecallsteps.DDReasonML_InsideSTSaveComm();
 	}
 
 	@Then("^user click on saveML_InsideSTSaveComm$")
-	public void user_click_on_saveML_InsideSTSaveComm() {
+	public void user_click_on_saveML_InsideSTSaveComm() throws Exception {
 		newusertermitecallsteps.saveML_InsideSTSaveComm();
 	}
 	

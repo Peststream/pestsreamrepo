@@ -26,7 +26,7 @@ public class newUserTermiteCallSteps extends pestreamSteps {
 
 	}
 
-	public void clickOnSearch() {
+	public void clickOnSearch() throws Exception {
 		newusertermitecallpage.clickOnSearch();
 
 	}
@@ -53,7 +53,7 @@ public class newUserTermiteCallSteps extends pestreamSteps {
 		newusertermitecallpage.clickOnAlert();
 	}
 
-	public void clickOnOppType() {
+	public void clickOnOppType() throws Exception {
 		newusertermitecallpage.clickOnOppType();
 	}
 
@@ -260,47 +260,47 @@ public class newUserTermiteCallSteps extends pestreamSteps {
 	
 	
 	
-	public void generatedOpportunity_FieldSTSaveComm() {
+	public void generatedOpportunity_FieldSTSaveComm() throws Exception {
 		newusertermitecallpage.generatedOpportunity_FieldSTSaveComm();
 	}
 
-	public void saveAndcontGI_FieldSTSaveComm() {
+	public void saveAndcontGI_FieldSTSaveComm() throws Exception {
 		newusertermitecallpage.saveAndcontGI_FieldSTSaveComm();
 	}
 
-	public void continueInspection_FieldSTSaveComm() {
+	public void continueInspection_FieldSTSaveComm() throws Exception {
 		newusertermitecallpage.continueInspection_FieldSTSaveComm();
 	}
 
-	public void DDCat_StdService_FieldSTSaveComm() {
+	public void DDCat_StdService_FieldSTSaveComm() throws Exception {
 		newusertermitecallpage.DDCat_StdService_FieldSTSaveComm();
 	}
 
-	public void DDService_StdService_FieldSTSaveComm() {
+	public void DDService_StdService_FieldSTSaveComm() throws Exception {
 		newusertermitecallpage.DDService_StdService_FieldSTSaveComm();
 	}
 
-	public void DDFrequency_StdService_FieldSTSaveComm() {
+	public void DDFrequency_StdService_FieldSTSaveComm() throws Exception {
 		newusertermitecallpage.DDFrequency_StdService_FieldSTSaveComm();
 	}
 
-	public void Save_StdService_FieldSTSaveComm() {
+	public void Save_StdService_FieldSTSaveComm() throws Exception {
 		newusertermitecallpage.Save_StdService_FieldSTSaveComm();
 	}
 
-	public void saveAndcontSelectService_FieldSTSaveComm() {
+	public void saveAndcontSelectService_FieldSTSaveComm() throws Exception {
 		newusertermitecallpage.saveAndcontSelectService_FieldSTSaveComm();
 	}
 
-	public void radioBttn_Service_FieldSTSaveComm() {
+	public void radioBttn_Service_FieldSTSaveComm() throws Exception {
 		newusertermitecallpage.radioBttn_Service_FieldSTSaveComm();
 	}
 
-	public void saveAndcontConfigureProposal_FieldSTSaveComm() {
+	public void saveAndcontConfigureProposal_FieldSTSaveComm() throws Exception {
 		newusertermitecallpage.saveAndcontConfigureProposal_FieldSTSaveComm();
 	}
 
-	public void radioBttncashAgreement_FieldSTSaveComm() {
+	public void radioBttncashAgreement_FieldSTSaveComm() throws Exception {
 		newusertermitecallpage.radioBttncashAgreement_FieldSTSaveComm();
 	}
 
@@ -309,19 +309,19 @@ public class newUserTermiteCallSteps extends pestreamSteps {
 		newusertermitecallpage.valuepaidamountAgreement_FieldSTSaveComm(jsonData);
 	}
 
-	public void radioBttnTANDCAgreement_FieldSTSaveComm() {
+	public void radioBttnTANDCAgreement_FieldSTSaveComm() throws Exception {
 		newusertermitecallpage.radioBttnTANDCAgreement_FieldSTSaveComm();
 	}
 
-	public void salesrepresentativesignAgreement_FieldSTSaveComm() {
+	public void salesrepresentativesignAgreement_FieldSTSaveComm() throws Exception {
 		newusertermitecallpage.salesrepresentativesignAgreement_FieldSTSaveComm();
 	}
 
-	public void saveandcontAgreement_FieldSTSaveComm() {
+	public void saveandcontAgreement_FieldSTSaveComm() throws Exception {
 		newusertermitecallpage.saveandcontAgreement_FieldSTSaveComm();
 	}
 
-	public void sendemail_FieldSTSaveComm() {
+	public void sendemail_FieldSTSaveComm() throws Exception {
 		newusertermitecallpage.sendemail_FieldSTSaveComm();
 	}
 
@@ -331,15 +331,15 @@ public class newUserTermiteCallSteps extends pestreamSteps {
 		
 	}
 
-	public void markaslost_InsideSTSaveComm() {
+	public void markaslost_InsideSTSaveComm() throws Exception {
 		newusertermitecallpage.markaslost_InsideSTSaveComm();
 	}
 
-	public void DDReasonML_InsideSTSaveComm() {
+	public void DDReasonML_InsideSTSaveComm() throws Exception {
 		newusertermitecallpage.DDReasonML_InsideSTSaveComm();
 	}
 
-	public void saveML_InsideSTSaveComm() {
+	public void saveML_InsideSTSaveComm() throws Exception {
 		newusertermitecallpage.saveML_InsideSTSaveComm();
 	}
 }

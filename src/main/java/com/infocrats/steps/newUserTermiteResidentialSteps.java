@@ -15,194 +15,194 @@ public class newUserTermiteResidentialSteps extends pestreamSteps {
 		
 	}
 
-	public void leadDetailsInfo() {
+	public void leadDetailsInfo() throws Exception {
 		newusertermiteresidentialpage.enterLeadDetails();
 		
 	}
 
-	public void branchDetails() {
+	public void branchDetails() throws Exception {
 		newusertermiteresidentialpage.selectBranchDetils();
 		
 	}
 
-	public void accAlertDescDetails() {
+	public void accAlertDescDetails() throws Exception {
 		newusertermiteresidentialpage.accAlertDesc();
 	}
 
-	public void oppType() {
+	public void oppType() throws Exception {
 		newusertermiteresidentialpage.oppTypeBtn();
 		
 	}
 
-	public void continueBtn() {
+	public void continueBtn() throws Exception {
 		newusertermiteresidentialpage.continueBtn();
 	}
 
-	public void createLeadBtn() {
+	public void createLeadBtn() throws Exception {
 		newusertermiteresidentialpage.createLead();
 		
 	}
 
-	public void addAddressContact() {
+	public void addAddressContact() throws Exception {
 		newusertermiteresidentialpage.addAdressZip();
 		
 	}
 
-	public void PackageFreqBillDDL() {
+	public void PackageFreqBillDDL() throws Exception {
 		newusertermiteresidentialpage.packageFreqBillDDLAddBtn();
 		
 	}
 
-	public void PackageChckBoxAddBtn() {
+	public void PackageChckBoxAddBtn() throws Exception {
 		newusertermiteresidentialpage.chckBoxBTN();
 		
 	}
 
-	public void SaveSignAgreement() {
+	public void SaveSignAgreement() throws Exception {
 		newusertermiteresidentialpage.saveSignAgree();
 		
 	}
 
-	public void SaveContSetup() {
+	public void SaveContSetup() throws Exception {
 		newusertermiteresidentialpage.ContSetup();
 		
 	}
 
-	public void serviceDDLAddBtn() {
+	public void serviceDDLAddBtn() throws Exception {
 		newusertermiteresidentialpage.serviceDDLADD();
 		
 	}
 
-	public void freqDDLClicksOkSchedule() {
+	public void freqDDLClicksOkSchedule() throws Exception {
 		newusertermiteresidentialpage.freqokBtn();	
 	}
 
-	public void RouteSelectSaveAndGenerate() {
+	public void RouteSelectSaveAndGenerate() throws Exception {
 		newusertermiteresidentialpage.routeSelectSaveAndGenerate();
 		
 	}
 
-	public void StartDateGenerateOnlineWorkOrder() {
+	public void StartDateGenerateOnlineWorkOrder() throws Exception {
 		newusertermiteresidentialpage.StartDateEndDate();
 		
 	}
 
-	public void generateWorkOrderPublishOnline() {
+	public void generateWorkOrderPublishOnline() throws Exception {
 		newusertermiteresidentialpage.GenerateOnlineWOSelectAllPublishOnline();
 		
 	}
 
-	public void AppointmentTabServiceAppointment() {
+	public void AppointmentTabServiceAppointment() throws Exception {
 		newusertermiteresidentialpage.AppointmentTabServiceAppointment();
 		
 	}
 
-	public void desiredAppointEnterCurTime() {
+	public void desiredAppointEnterCurTime() throws Exception {
 		newusertermiteresidentialpage.desiredOppCurrentTime();
 		
 	}
 
-	public void SaveContBtnConBtn() {
+	public void SaveContBtnConBtn() throws Exception {
 		newusertermiteresidentialpage.SaveContBtnContBtn();
 		
 	}
 
-	public void SignAGreementDateBtn() {
+	public void SignAGreementDateBtn() throws Exception {
 		newusertermiteresidentialpage.SignAgreementDateBtn();
 		
 	}
 
-	public void PaymentModeSaveAndCont() {
+	public void PaymentModeSaveAndCont() throws Exception {
 		newusertermiteresidentialpage.PaymentModeSaveCont();
 		
 	}
 
-	public void TechnicianCustomerSign() {
+	public void TechnicianCustomerSign() throws Exception {
 		newusertermiteresidentialpage.TechnicianCustomerSignDate();
 		
 	}
 
-	public void SubmitSendMail() {
+	public void SubmitSendMail() throws Exception {
 		newusertermiteresidentialpage.submitSendMail();
 		
 	}
 
-	public void serviceBundleRadio() {
+	public void serviceBundleRadio() throws Exception {
 		newusertermiteresidentialpage.serviceBundleRadio();
 		
 	}
 
-	public void serviceBundleDDLBillingFreq() {
+	public void serviceBundleDDLBillingFreq() throws Exception {
 		newusertermiteresidentialpage.serviceBundleDDLFreqBilling();
 		
 	}
 
-	public void AddButtonBundle() {
+	public void AddButtonBundle() throws Exception {
 		newusertermiteresidentialpage.AddButtonBundle();
 		
 	}
 
-	public void ChckboxBundle() {
+	public void ChckboxBundle() throws Exception {
 		newusertermiteresidentialpage.chckboxBundle();
 		
 	}
 
-	public void serviceDDLBundleAddBtn() {
+	public void serviceDDLBundleAddBtn() throws Exception {
 		newusertermiteresidentialpage.serviceDDLbundleAddBtn();
 		
 	}
 
-	public void generatePublish() {
+	public void generatePublish() throws Exception {
 		newusertermiteresidentialpage.generatePublish();
 		
 	}
 
-	public void advSearchCreateSetupDesiredOpportunity() {
+	public void advSearchCreateSetupDesiredOpportunity() throws Exception {
 		newusertermiteresidentialpage.advcSearchCreateSetup();
 		
 	}
 
-	public void SetupStartDate() {
+	public void SetupStartDate() throws Exception {
 		newusertermiteresidentialpage.setupStartDate();
 		
 	}
 
-	public void frerquencySchedule() {
+	public void frerquencySchedule() throws Exception {
 		newusertermiteresidentialpage.freqSchedule();
 		
 	}
 
-	public void MarkAsLost() {
+	public void MarkAsLost() throws Exception {
 		newusertermiteresidentialpage.MarkAsLost();
 		
 	}
 
-	public void reasonDescSave() {
+	public void reasonDescSave() throws Exception {
 		newusertermiteresidentialpage.DescSaveReason();
 		
 	}
 
-	public void saveBtnOpportunity() {
+	public void saveBtnOpportunity() throws Exception {
 		newusertermiteresidentialpage.saveBtnOpp();
 		
 	}
 
-	public void saveandProposal() {
+	public void saveandProposal() throws Exception {
 		newusertermiteresidentialpage.saveProposalBtn();
 		
 	}
 
-	public void sendProposal() {
+	public void sendProposal() throws Exception {
 		newusertermiteresidentialpage.sendProposal();
 		
 	}
 
-	public void MarkAsLostsendProposal() {
+	public void MarkAsLostsendProposal() throws Exception {
 		newusertermiteresidentialpage.MarkAsLostSendProposal();
 		
 	}
 
-	public void sendAgreementSendMail() {
+	public void sendAgreementSendMail() throws Exception {
 		newusertermiteresidentialpage.sendAgreementMailSend();
 		
 	}
@@ -211,186 +211,186 @@ public class newUserTermiteResidentialSteps extends pestreamSteps {
 		
 	}
 
-	public void Complete() {
+	public void Complete() throws Exception {
 	
 		newusertermiteresidentialpage.completeTab();
 	}
 
 	
-	public void agreeChckBoxName() {
+	public void agreeChckBoxName() throws Exception {
 		newusertermiteresidentialpage.agreeTermsChck();
 		
 	}
 
 	@Step
-	public void newChromeTab() {
+	public void newChromeTab() throws Exception {
 		newusertermiteresidentialpage.newChrome_tap();
 		
 	}
 
 	@Step
-	public void openGmail() {
+	public void openGmail() throws Exception {
 		newusertermiteresidentialpage.open_gmail();
 		
 	}
 
 	@Step
-	public void openMail() {
+	public void openMail() throws Exception {
 
 		newusertermiteresidentialpage.open_mail();
 	}
 
 	@Step
-	public void openAgreement() {
+	public void openAgreement() throws Exception {
 		newusertermiteresidentialpage.open_agreement();
 		
 	}
 
-	public void advanceSearch() {
+	public void advanceSearch() throws Exception {
 		newusertermiteresidentialpage.advanceSearch();
 		
 	}
 
-	public void customerOpportunity() {
+	public void customerOpportunity() throws Exception {
 		newusertermiteresidentialpage.customerOpportunity();
 		
 	}
 
-	public void NonStdServices() {
+	public void NonStdServices() throws Exception {
 		newusertermiteresidentialpage.NonStdService();
 		
 	}
 
-	public void deptServiceName() {
+	public void deptServiceName() throws Exception {
 		newusertermiteresidentialpage.deptServiceNames();
 	}
 
-	public void addButton() {
+	public void addButton() throws Exception {
 		newusertermiteresidentialpage.addButtonclick();
 		
 	}
 
-	public void selectServicePrice() {
+	public void selectServicePrice() throws Exception {
 		newusertermiteresidentialpage.chckboxServicePrice();
 		
 	}
 
-	public void nonStdserviceAdd() {
+	public void nonStdserviceAdd() throws Exception {
 		newusertermiteresidentialpage.NonStdServiceAddbtn();
 		
 	}
 
-	public void serviceStartDate() {
+	public void serviceStartDate() throws Exception {
 		newusertermiteresidentialpage.serviceStartDate();
 		
 	}
 
-	public void RoutegeneratePublishBtn() {
+	public void RoutegeneratePublishBtn() throws Exception {
 		newusertermiteresidentialpage.RouteGenerateBtn();
 		
 	}
 
-	public void savecontToNext() {
+	public void savecontToNext() throws Exception {
 		newusertermiteresidentialpage.saveContNext();
 		
 	}
 
-	public void saveContAgainn() {
+	public void saveContAgainn() throws Exception {
 		newusertermiteresidentialpage.saveContinue();
 	}
 
-	public void PaymethodSaveCont() {
+	public void PaymethodSaveCont() throws Exception {
 		newusertermiteresidentialpage.paymentConyinue();
 	}
 
-	public void customerTechnicianSign() {
+	public void customerTechnicianSign() throws Exception {
 		newusertermiteresidentialpage.signCustomerTechnician();
 		
 	}
 
-	public void submitSendMail() {
+	public void submitSendMail() throws Exception {
 		newusertermiteresidentialpage.submitSendMailbtn();
 		
 	}
 
-	public void ScheduleEstimation() {
+	public void ScheduleEstimation() throws Exception {
 		newusertermiteresidentialpage.ScheduleEstimation();
 		
 	}
 
-	public void AssignedToEmp() {
+	public void AssignedToEmp() throws Exception {
 		newusertermiteresidentialpage.AssignedToEmp();
 		
 	}
 
-	public void saveBtnScheduleEst() {
+	public void saveBtnScheduleEst() throws Exception {
 	newusertermiteresidentialpage.svaeBtnScheduleEst();
 		
 	}
 
-	public void saveAndContBtn() {
+	public void saveAndContBtn() throws Exception {
 		newusertermiteresidentialpage.saveContBtn();
 		
 	}
 
-	public void AddingdesiredService() {
+	public void AddingdesiredService() throws Exception {
 		newusertermiteresidentialpage.addingDesiredCountry();
 		
 	}
 
-	public void selectTheServiceSaveViewAgreement() {
+	public void selectTheServiceSaveViewAgreement() throws Exception {
 		newusertermiteresidentialpage.SelectServiceViewAgreement();
 		
 	}
 
-	public void saveContinue() {
+	public void saveContinue() throws Exception {
 		newusertermiteresidentialpage.saveContBtnx2();
 		
 	}
 
-	public void agreeTermsNameSign() {
+	public void agreeTermsNameSign() throws Exception {
 		newusertermiteresidentialpage.agreeTermsNameSign();
 	}
 
-	public void ContSaveBtnx() {
+	public void ContSaveBtnx() throws Exception {
 		newusertermiteresidentialpage.saveContBtnX();
 		
 	}
 
-	public void sendMailBtn() {
+	public void sendMailBtn() throws Exception {
 			newusertermiteresidentialpage.sendMailBtn();
 		
 	}
 
-	public void desiredOpp() {
+	public void desiredOpp() throws Exception {
 		newusertermiteresidentialpage.desiredOPP();
 		
 	}
 
-	public void saveProposal() {
+	public void saveProposal() throws Exception {
 		newusertermiteresidentialpage.savePropp();
 		
 	}
 
-	public void sendpsll() {
+	public void sendpsll() throws Exception {
 		newusertermiteresidentialpage.sebdProposall();
 	}
 
-	public void sendMailProposal() {
+	public void sendMailProposal() throws Exception {
 		newusertermiteresidentialpage.sendProposal();
 		
 	}
 
-	public void sendProposalMail() {
+	public void sendProposalMail() throws Exception {
 		newusertermiteresidentialpage.senProposalMail();
 	}
 
-	public void markAsLostBtn() {
+	public void markAsLostBtn() throws Exception {
 		newusertermiteresidentialpage.markAsLostButton();
 		
 	}
 
-	public void rangeTimeTimeRange() {
+	public void rangeTimeTimeRange() throws Exception {
 		newusertermiteresidentialpage.rangeTimeTimeRange();
 		
 	}
