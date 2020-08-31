@@ -8,7 +8,7 @@ Feature: Test for Call HVAC.
     Then I am granted access to the system
 
   #pass
-  @TestOpportunityInfoForHVAC
+  @TestOpportunityInfoForHVAC55
   Scenario: Test opportunity info (general info) for HVAC1
     When user clicked on call tab
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
@@ -18,7 +18,7 @@ Feature: Test for Call HVAC.
     And click on continue button for commercial opportunity
 
   #pass
-  @TestOpportunityInfoForHVAC7
+  @TestOpportunityInfoForHVAC55
   Scenario: Test CSR Dashboard for HVAC7
     When user click on CSR Dashboard
     When user click on Advance Search from CSR Dashboard
@@ -27,16 +27,16 @@ Feature: Test for Call HVAC.
     And Click on Save Buttton From Add Call Tab
 
   #pass
-  @TestOpportunityInfoForHVAC8
+  @TestOpportunityInfoForHVAC55
   Scenario: Test CSR Dashboard for HVAC8
     When user click on CSR Dashboard
     When user click on Advance Search from CSR Dashboard
     And Select Add Task From Action for the first Account
-    #And Select Task Name, Due Date
+   And Select Task Name, Due Date
     And Click on Save Button
 
   #pass
-  @TestOpportunityInfoForHVAC9
+  @TestOpportunityInfoForHVAC55
   Scenario: Test CSR Dashboard for HVAC9
     When user click on CSR Dashboard
     When user click on Advance Search from CSR Dashboard
@@ -45,7 +45,7 @@ Feature: Test for Call HVAC.
     And Click on Save Button
 
   #pass
-  @TestOpportunityInfoForHVA10
+  @TestOpportunityInfoForHVAC55
   Scenario: Test CSR Dashboard for HVAC10
     When user click on CSR Dashboard
     When user click on Advance Search from CSR Dashboard

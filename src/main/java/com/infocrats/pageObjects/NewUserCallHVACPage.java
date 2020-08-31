@@ -155,7 +155,7 @@ public class NewUserCallHVACPage extends peststreamPage {
 	@FindBy(xpath = "/html/body/div[12]/div[1]/table/tbody/tr[3]/td[4]")
 	private WebElementFacade DueDateData;
 
-	@FindBy(xpath = "/html/body/div[3]/div[2]/form/div[2]/div/div[2]/div/div/div[11]/div[2]/button")
+	@FindBy(xpath = "/html/body/div[@class='page-container']/div[@class='page-content-wrapper']/form[@action='/Sales/Task/ManageTaskSetup']//div[@class='page-content']//button[@type='submit']")
 	private WebElementFacade SaveBtnFromGeneralInfo;
 
 	@FindBy(xpath = "//*[@id='sample_1']/tbody/tr[1]/td[10]/a[4]")
