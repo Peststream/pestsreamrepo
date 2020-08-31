@@ -2,6 +2,9 @@ package com.infocrats.pageObjects;
 
 import java.util.Map;
 
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import com.infocrats.utils.BaseUtills;
 import com.infocrats.utils.JsonHelper;
 
@@ -354,69 +357,81 @@ public class TermiteCustomerPage extends peststreamPage {
 	
 
 	public void clickOn_CustomerTermite() throws Exception {
-		CustomerTermite.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
-		waitABit(jsonData.get("Time1"));
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(CustomerTermite));
+		CustomerTermite.click();
 		
+		waitABit(jsonData.get("Time3"));
 	}
 
 
 
 	public void clickOn_Account_Cust() throws Exception {
-		Account_Cust.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
-		waitABit(jsonData.get("Time2"));
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(Account_Cust));
+		Account_Cust.click();
 		
+		waitABit(jsonData.get("Time3"));
 	}
 	
 	public void clickOn_AddAccount_AccCust() throws Exception {
-		AddAccount_Cust.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
-		waitABit(jsonData.get("Time2"));
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(AddAccount_Cust));
+		AddAccount_Cust.click();
+		waitABit(jsonData.get("Time3"));
 		
 	}
 
 
 
 	public void clickOn_DDContactType_AccCust() throws Exception {
+		
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(DDContactType_AccCust));
 		DDContactType_AccCust.click();
-		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
-		waitABit(jsonData.get("Time2"));
 		
+		wait.until(ExpectedConditions.elementToBeClickable(ValueDDContactType_AccCust));
 		ValueDDContactType_AccCust.click();
-		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
-		waitABit(jsonData.get("Time2"));
 		
+		waitABit(jsonData.get("Time3"));
 	}
 
 
 
 	public void clickOn_AccountName_AccCust(Map<String, String> testData) throws Exception {
-		AccountName_AccCust.sendKeys(testData.get("AccountName"));
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
-		waitABit(jsonData.get("Time2"));
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(AccountName_AccCust));
+		AccountName_AccCust.sendKeys(testData.get("AccountName"));
 		
+		waitABit(jsonData.get("Time3"));
 	}
 
 
 
 	public void clickOn_DDSource_AccCust() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(DDSource_AccCust));
 		DDSource_AccCust.click();
-		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
-		waitABit(jsonData.get("Time2"));
 		
+		wait.until(ExpectedConditions.elementToBeClickable(DDSource_AccCust));
 		ValueDDSource_AccCust.click();
-		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
-		waitABit(jsonData.get("Time2"));
-		
+		waitABit(jsonData.get("Time3"));
 	}
 
 
 
 	public void clickOn_Save_AccCust() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(Save_AccCust));
 		scrollDown(Save_AccCust);
 		Save_AccCust.click();
-		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		waitABit(jsonData.get("Time2"));
 		
 	}
@@ -424,8 +439,10 @@ public class TermiteCustomerPage extends peststreamPage {
 
 
 	public void clickOn_AddComp_Cust() throws Exception {
-		AddCompCust.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(AddCompCust));
+		AddCompCust.click();
 		waitABit(jsonData.get("Time2"));
 		
 	}
@@ -433,8 +450,10 @@ public class TermiteCustomerPage extends peststreamPage {
 
 
 	public void clickOn_Name_CompCust(Map<String, String> testData) throws Exception {
-		NameCompCust.sendKeys(testData.get("Name"));
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(NameCompCust));
+		NameCompCust.sendKeys(testData.get("Name"));
 		waitABit(jsonData.get("Time2"));
 		
 	}
@@ -442,12 +461,12 @@ public class TermiteCustomerPage extends peststreamPage {
 
 
 	public void clickOn_DDSource_CompCust() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(DDSourceCompCust));
 		DDSourceCompCust.click();
-		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
-		waitABit(jsonData.get("Time2"));
-		
+		wait.until(ExpectedConditions.elementToBeClickable(ValueDDSourceCompCust));
 		ValueDDSourceCompCust.click();
-		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		waitABit(jsonData.get("Time2"));
 		
 	}
@@ -455,8 +474,10 @@ public class TermiteCustomerPage extends peststreamPage {
 
 
 	public void clickOn_PEmail_CompCust(Map<String, String> testData) throws Exception {
-		PEmailCompCust.sendKeys(testData.get("PrimaryEmail"));
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(PEmailCompCust));
+		PEmailCompCust.sendKeys(testData.get("PrimaryEmail"));
 		waitABit(jsonData.get("Time2"));
 		
 	}
@@ -464,8 +485,10 @@ public class TermiteCustomerPage extends peststreamPage {
 
 
 	public void clickOn_PPhone_CompCust(Map<String, String> testData) throws Exception {
-		PPhone_CompCust.sendKeys(testData.get("PrimaryPhone"));
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(PPhone_CompCust));
+		PPhone_CompCust.sendKeys(testData.get("PrimaryPhone"));
 		waitABit(jsonData.get("Time2"));
 		
 	}
@@ -473,8 +496,10 @@ public class TermiteCustomerPage extends peststreamPage {
 
 
 	public void clickOn_Save_CompCust() throws Exception {
-		Save_CompCust.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(Save_CompCust));
+		Save_CompCust.click();
 		waitABit(jsonData.get("Time2"));
 		
 	}
@@ -482,8 +507,10 @@ public class TermiteCustomerPage extends peststreamPage {
 
 
 	public void clickOn_CompCust() throws Exception {
-		CompCust.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(CompCust));
+		CompCust.click();
 		waitABit(jsonData.get("Time2"));
 		
 	}
@@ -491,8 +518,10 @@ public class TermiteCustomerPage extends peststreamPage {
 
 
 	public void clickOn_ContCustTermite() throws Exception {
-		ContCustTermite.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(ContCustTermite));
+		ContCustTermite.click();
 		waitABit(jsonData.get("Time2"));
 		
 	}
@@ -500,8 +529,10 @@ public class TermiteCustomerPage extends peststreamPage {
 
 
 	public void clickOn_AddCont_ContCustTermite() throws Exception {
-		AddContContCustTermite.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(AddContContCustTermite));
+		AddContContCustTermite.click();
 		waitABit(jsonData.get("Time2"));
 		
 	}
@@ -509,16 +540,20 @@ public class TermiteCustomerPage extends peststreamPage {
 
 
 	public void clickOn_FName_ContCustTermite(Map<String, String> testData) throws Exception {
-		FNameContCustTermite.sendKeys(testData.get("FirstName"));
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(FNameContCustTermite));
+		FNameContCustTermite.sendKeys(testData.get("FirstName"));
 		waitABit(jsonData.get("Time2"));
 		
 	}
 	
 	
 	public void clickOn_LName_ContCustTermite(Map<String, String> testData) throws Exception {
-		LNameContCustTermite.sendKeys(testData.get("LastName"));
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(LNameContCustTermite));
+		LNameContCustTermite.sendKeys(testData.get("LastName"));
 		waitABit(jsonData.get("Time2"));
 		
 	}
@@ -526,8 +561,10 @@ public class TermiteCustomerPage extends peststreamPage {
 
 
 	public void clickOn_PEmail_ContCustTermite(Map<String, String> testData) throws Exception {
-		PEmailContCustTermite.sendKeys(testData.get("PrimaryEmail"));
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(PEmailContCustTermite));
+		PEmailContCustTermite.sendKeys(testData.get("PrimaryEmail"));
 		waitABit(jsonData.get("Time2"));
 		
 	}
@@ -535,8 +572,10 @@ public class TermiteCustomerPage extends peststreamPage {
 
 
 	public void clickOn_Save_ContCustTermite() throws Exception {
-		SaveContCustTermite.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(SaveContCustTermite));
+		SaveContCustTermite.click();
 		waitABit(jsonData.get("Time2"));
 		
 	}
@@ -544,8 +583,10 @@ public class TermiteCustomerPage extends peststreamPage {
 
 
 	public void clickOn_Opp_CustTermite() throws Exception {
-		OppCustTermite.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(OppCustTermite));
+		OppCustTermite.click();
 		waitABit(jsonData.get("Time2"));
 		
 	}
@@ -553,8 +594,10 @@ public class TermiteCustomerPage extends peststreamPage {
 
 
 	public void clickOn_AddOpp_CustTermite() throws Exception {
-		AddOppCustTermite.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(AddOppCustTermite));
+		AddOppCustTermite.click();
 		waitABit(jsonData.get("Time2"));
 		
 	}
@@ -562,8 +605,10 @@ public class TermiteCustomerPage extends peststreamPage {
 
 
 	public void clickOn_CompanyName_OppCust(Map<String, String> testData) throws Exception {
-		CompanyNameOppCust.sendKeys(testData.get("CompanyName"));
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(CompanyNameOppCust));
+		CompanyNameOppCust.sendKeys(testData.get("CompanyName"));
 		waitABit(jsonData.get("Time2"));
 		
 	}
@@ -571,8 +616,10 @@ public class TermiteCustomerPage extends peststreamPage {
 
 
 	public void clickOn_OppName_OppCust(Map<String, String> testData) throws Exception {
-		OppNameOppCust.sendKeys(testData.get("OpportunityName"));
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(OppNameOppCust));
+		OppNameOppCust.sendKeys(testData.get("OpportunityName"));
 		waitABit(jsonData.get("Time2"));
 		
 	}
@@ -580,8 +627,10 @@ public class TermiteCustomerPage extends peststreamPage {
 
 
 	public void clickOn_FName_OppCust(Map<String, String> testData) throws Exception {
-		FNameOppCust.sendKeys(testData.get("FirstName"));
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(FNameOppCust));
+		FNameOppCust.sendKeys(testData.get("FirstName"));
 		waitABit(jsonData.get("Time2"));
 		
 	}
@@ -589,12 +638,12 @@ public class TermiteCustomerPage extends peststreamPage {
 
 
 	public void clickOn_DDBranch_OppCust() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(DDBranchOppCust));
 		DDBranchOppCust.click();
-		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
-		waitABit(jsonData.get("Time2"));
-		
+		wait.until(ExpectedConditions.elementToBeClickable(ValueDDBranchOppCust));
 		ValueDDBranchOppCust.click();
-		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		waitABit(jsonData.get("Time2"));
 		
 	}
@@ -602,12 +651,12 @@ public class TermiteCustomerPage extends peststreamPage {
 
 
 	public void clickOn_DDDepartment_OppCust() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(DDDepartmentOppCust));
 		DDDepartmentOppCust.click();
-		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
-		waitABit(jsonData.get("Time2"));
-		
+		wait.until(ExpectedConditions.elementToBeClickable(ValueDDDepartmentOppCust));
 		ValueDDDepartmentOppCust.click();
-		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		waitABit(jsonData.get("Time2"));
 		
 	}
@@ -615,12 +664,12 @@ public class TermiteCustomerPage extends peststreamPage {
 
 
 	public void clickOn_DDSource_OppCust() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(DDSourceOppCust));
 		DDSourceOppCust.click();
-		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
-		waitABit(jsonData.get("Time2"));
-		
+		wait.until(ExpectedConditions.elementToBeClickable(ValueDDSourceOppCust));
 		ValueDDSourceOppCust.click();
-		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		waitABit(jsonData.get("Time2"));
 		
 	}
@@ -628,8 +677,10 @@ public class TermiteCustomerPage extends peststreamPage {
 
 
 	public void clickOn_ResiOpptype_OppCust() throws Exception {
-		ResiOpptypeOppCust.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(ResiOpptypeOppCust));
+		ResiOpptypeOppCust.click();
 		waitABit(jsonData.get("Time2"));
 		
 	}
@@ -637,8 +688,10 @@ public class TermiteCustomerPage extends peststreamPage {
 
 
 	public void clickOn_Save_OppCust() throws Exception {
-		SaveOppCust.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(SaveOppCust));
+		SaveOppCust.click();
 		waitABit(jsonData.get("Time2"));
 		
 	}
@@ -646,8 +699,10 @@ public class TermiteCustomerPage extends peststreamPage {
 
 
 	public void clickOn_NewAccount_OppCustTermite() throws Exception {
-		NewAccountOppCustTermite.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(NewAccountOppCustTermite));
+		NewAccountOppCustTermite.click();
 		waitABit(jsonData.get("Time2"));
 		
 	}
@@ -655,8 +710,10 @@ public class TermiteCustomerPage extends peststreamPage {
 
 
 	public void clickOn_Lead_CustTermite() throws Exception {
-		LeadCustTermite.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(LeadCustTermite));
+		LeadCustTermite.click();
 		waitABit(jsonData.get("Time2"));
 		
 	}
@@ -664,8 +721,10 @@ public class TermiteCustomerPage extends peststreamPage {
 
 
 	public void clickOn_AddLead_CustTermite() throws Exception {
-		AddLeadCustTermite.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(AddLeadCustTermite));
+		AddLeadCustTermite.click();
 		waitABit(jsonData.get("Time2"));
 		
 	}
@@ -673,8 +732,10 @@ public class TermiteCustomerPage extends peststreamPage {
 
 
 	public void clickOn_FName_LeadCustTermite(Map<String, String> testData) throws Exception {
-		FNameLeadCustTermite.sendKeys(testData.get("FirstName"));
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(FNameLeadCustTermite));
+		FNameLeadCustTermite.sendKeys(testData.get("FirstName"));
 		waitABit(jsonData.get("Time2"));
 		
 	}
@@ -682,8 +743,10 @@ public class TermiteCustomerPage extends peststreamPage {
 
 
 	public void clickOn_PEmail_LeadCustTermite(Map<String, String> testData) throws Exception {
-		PEmailLeadCustTermite.sendKeys(testData.get("PrimaryEmail"));
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(PEmailLeadCustTermite));
+		PEmailLeadCustTermite.sendKeys(testData.get("PrimaryEmail"));
 		waitABit(jsonData.get("Time2"));
 		
 	}
@@ -691,8 +754,10 @@ public class TermiteCustomerPage extends peststreamPage {
 
 
 	public void clickOn_Address_LeadCustTermite(Map<String, String> testData) throws Exception {
-		AddressLeadCustTermite.sendKeys(testData.get("Address"));
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(AddressLeadCustTermite));
+		AddressLeadCustTermite.sendKeys(testData.get("Address"));
 		waitABit(jsonData.get("Time2"));
 		
 	}
@@ -700,12 +765,13 @@ public class TermiteCustomerPage extends peststreamPage {
 
 
 	public void clickOn_DDState_LeadCustTermite() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(DDStateLeadCustTermite));
 		DDStateLeadCustTermite.click();
-		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
-		waitABit(jsonData.get("Time2"));
-		
+		wait.until(ExpectedConditions.elementToBeClickable(ValueDDStateLeadCustTermite));
 		ValueDDStateLeadCustTermite.click();
-		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		
 		waitABit(jsonData.get("Time2"));
 		
 	}
@@ -713,12 +779,13 @@ public class TermiteCustomerPage extends peststreamPage {
 
 
 	public void clickOn_DDSource_LeadCustTermite() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(DDSourceLeadCustTermite));
 		DDSourceLeadCustTermite.click();
-		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
-		waitABit(jsonData.get("Time2"));
-		
+		wait.until(ExpectedConditions.elementToBeClickable(ValueDDSourceLeadCustTermite));
 		ValueDDSourceLeadCustTermite.click();
-		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		
 		waitABit(jsonData.get("Time2"));
 		
 	}
@@ -726,8 +793,10 @@ public class TermiteCustomerPage extends peststreamPage {
 
 
 	public void clickOn_ResiLeadType_LeadCustTermite() throws Exception {
-		ResiLeadTypeLeadCustTermite.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(ResiLeadTypeLeadCustTermite));
+		ResiLeadTypeLeadCustTermite.click();
 		waitABit(jsonData.get("Time2"));
 		
 	}
@@ -735,8 +804,11 @@ public class TermiteCustomerPage extends peststreamPage {
 
 
 	public void clickOn_SelectAssignType_LeadCustTermite() throws Exception {
-		SelectAssignTypeLeadCustTermite.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(SelectAssignTypeLeadCustTermite));
+		SelectAssignTypeLeadCustTermite.click();
+
 		waitABit(jsonData.get("Time2"));
 		
 	}
@@ -744,8 +816,11 @@ public class TermiteCustomerPage extends peststreamPage {
 
 
 	public void clickOn_Save_LeadCustTermite() throws Exception {
-		SaveLeadCustTermite.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(SaveLeadCustTermite));
+		SaveLeadCustTermite.click();
+		
 		waitABit(jsonData.get("Time2"));
 		
 	}
@@ -753,8 +828,12 @@ public class TermiteCustomerPage extends peststreamPage {
 
 
 	public void clickOn_DB_CustTermite() throws Exception {
-		DBCustTermite.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(DBCustTermite));
+		
+		DBCustTermite.click();
+
 		waitABit(jsonData.get("Time2"));
 		
 	}
@@ -762,8 +841,11 @@ public class TermiteCustomerPage extends peststreamPage {
 
 
 	public void clickOn_AddDB_CustTermite() throws Exception {
-		AddDBCustTermite.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(AddDBCustTermite));
+		
+		AddDBCustTermite.click();
 		waitABit(jsonData.get("Time2"));
 		
 	}
@@ -771,8 +853,11 @@ public class TermiteCustomerPage extends peststreamPage {
 
 
 	public void clickOn_FName_DBCustTermite(Map<String, String> testData) throws Exception {
-		FNameDBCustTermite.sendKeys(testData.get("FirstName"));
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(FNameDBCustTermite));
+		FNameDBCustTermite.sendKeys(testData.get("FirstName"));
+	
 		waitABit(jsonData.get("Time2"));
 		
 	}
@@ -780,8 +865,11 @@ public class TermiteCustomerPage extends peststreamPage {
 
 
 	public void clickOn_LName_DBCustTermite(Map<String, String> testData) throws Exception {
-		LNameDBCustTermite.sendKeys(testData.get("LastName"));
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(LNameDBCustTermite));
+		
+		LNameDBCustTermite.sendKeys(testData.get("LastName"));
 		waitABit(jsonData.get("Time2"));
 		
 	}
@@ -789,8 +877,11 @@ public class TermiteCustomerPage extends peststreamPage {
 
 
 	public void clickOn_SourceSysName_DBCustTermite(Map<String, String> testData) throws Exception {
-		SourceSysNameDBCustTermite.sendKeys(testData.get("SourceSysName"));
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(SourceSysNameDBCustTermite));
+		
+		SourceSysNameDBCustTermite.sendKeys(testData.get("SourceSysName"));
 		waitABit(jsonData.get("Time2"));
 		
 	}
@@ -798,8 +889,11 @@ public class TermiteCustomerPage extends peststreamPage {
 
 
 	public void clickOn_Save_DBCustTermite() throws Exception {
-		SaveDBCustTermite.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(SaveDBCustTermite));
+		
+		SaveDBCustTermite.click();
 		waitABit(jsonData.get("Time2"));
 		
 	}
@@ -807,309 +901,407 @@ public class TermiteCustomerPage extends peststreamPage {
 
 
 	public void clickOn_AdvanceSearch_AccCustTermite() throws Exception {
-		AdvanceSearchAccCustTermite.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(AdvanceSearchAccCustTermite));
+		
+		AdvanceSearchAccCustTermite.click();
 		waitABit(jsonData.get("Time2"));
 	}
 
 
 
 	public void clickOn_AddOppAction_AdSearchAccCustTermite() throws Exception {
-		AddOppActionAdSearchAccCustTermite.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(AddOppActionAdSearchAccCustTermite));
+		
+		AddOppActionAdSearchAccCustTermite.click();
 		waitABit(jsonData.get("Time2"));
 	}
 
 
 
 	public void OppName_AdSearchAccCustTermite(Map<String, String> testData) throws Exception {
-		OppNameAdSearchAccCustTermite.sendKeys(testData.get("OppName"));
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(OppNameAdSearchAccCustTermite));
+		
+		OppNameAdSearchAccCustTermite.sendKeys(testData.get("OppName"));
 		waitABit(jsonData.get("Time2"));
 	}
 
 
 
 	public void clickOn_LastName_AdSearchAccCustTermite(Map<String, String> testData) throws Exception {
-		LastNameAdSearchAccCustTermite.sendKeys(testData.get("LName"));
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(LastNameAdSearchAccCustTermite));
+		
+		LastNameAdSearchAccCustTermite.sendKeys(testData.get("LName"));
 		waitABit(jsonData.get("Time2"));
 	}
 
 
 
 	public void clickOn_DDBranch_AdSearchAccCustTermite() throws Exception {
-		DDBranchAdSearchAccCustTermite.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
-		waitABit(jsonData.get("Time2"));
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(DDBranchAdSearchAccCustTermite));
 		
+		DDBranchAdSearchAccCustTermite.click();
+		wait.until(ExpectedConditions.elementToBeClickable(ValueDDBranchAdSearchAccCustTermite));
 		ValueDDBranchAdSearchAccCustTermite.click();
-		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		waitABit(jsonData.get("Time2"));
 	}
 
 
 
 	public void clickOn_DDDept_AdSearchAccCustTermite() throws Exception {
-        DDDeptAdSearchAccCustTermite.click();
-        jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
-		waitABit(jsonData.get("Time2"));
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(DDDeptAdSearchAccCustTermite));
 		
-		 ValueDDDeptAdSearchAccCustTermite.click();
-		 jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		DDDeptAdSearchAccCustTermite.click();
+		wait.until(ExpectedConditions.elementToBeClickable(ValueDDDeptAdSearchAccCustTermite));
+		ValueDDDeptAdSearchAccCustTermite.click();
 		 waitABit(jsonData.get("Time2"));
 	}
 
 
 
 	public void clickOn_DDSource_AdSearchAccCustTermite() throws Exception {
-		DDSourceAdSearchAccCustTermite.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
-		waitABit(jsonData.get("Time2"));
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(DDSourceAdSearchAccCustTermite));
 		
+		DDSourceAdSearchAccCustTermite.click();
+		wait.until(ExpectedConditions.elementToBeClickable(ValueDDSourceAdSearchAccCustTermite));
 		ValueDDSourceAdSearchAccCustTermite.click();
-		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		waitABit(jsonData.get("Time2"));
 	}
 
 
 
 	public void clickOn_ResiOppType_AdSearchAccCustTermite() throws Exception {
-		ResiOppTypeAdSearchAccCustTermite.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(ResiOppTypeAdSearchAccCustTermite));
+		ResiOppTypeAdSearchAccCustTermite.click();
+	
 		waitABit(jsonData.get("Time2"));
 	}
 
 
 
 	public void clickOn_Save_AdSearchAccCustTermite() throws Exception {
-		SaveAdSearchAccCustTermite.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(SaveAdSearchAccCustTermite));
+		SaveAdSearchAccCustTermite.click();
 		waitABit(jsonData.get("Time2"));
 	}
 
 
 
 	public void clickOn_AddPhone_CallAdSearchAccCustTermite() throws Exception {
-		AddPhoneCallAdSearchAccCustTermite.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(AddPhoneCallAdSearchAccCustTermite));
+		AddPhoneCallAdSearchAccCustTermite.click();
+	
 		waitABit(jsonData.get("Time2"));
 	}
 
 
 
 	public void clickOn_Contact_CallAdSearchAccCustTermite(Map<String, String> testData) throws Exception {
-		waitABit(1000);
+		waitABit(jsonData.get("Time2"));
+		
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(ContactCallAdSearchAccCustTermite));
 		ContactCallAdSearchAccCustTermite.sendKeys(testData.get("Contact"));
-		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
-		waitABit(jsonData.get("Time2"));
-		
+		wait.until(ExpectedConditions.elementToBeClickable(SearchContactCallAdSearchAccCustTermite));
 		SearchContactCallAdSearchAccCustTermite.click();
-		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
-		waitABit(jsonData.get("Time2"));
-		
+		wait.until(ExpectedConditions.elementToBeClickable(ValueContactCallAdSearchAccCustTermite));
 		ValueContactCallAdSearchAccCustTermite.click();
-		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		
 		waitABit(jsonData.get("Time2"));
 	}
 
 
 
 	public void clickOn_DDSource_CallAdSearchAccCustTermite() throws Exception {
-		DDSourceCallAdSearchAccCustTermite.click();
-		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
-		waitABit(jsonData.get("Time2"));
 		
-		ValueDDSourceCallAdSearchAccCustTermite.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(DDSourceCallAdSearchAccCustTermite));
+		DDSourceCallAdSearchAccCustTermite.click();
+		wait.until(ExpectedConditions.elementToBeClickable(ValueDDSourceCallAdSearchAccCustTermite));
+		ValueDDSourceCallAdSearchAccCustTermite.click();
+	
 		waitABit(jsonData.get("Time2"));
 	}
 
 
 
 	public void clickOn_AccAlert_CallAdSearchAccCustTermite(Map<String, String> testData) throws Exception {
-		AccAlertCallAdSearchAccCustTermite.sendKeys(testData.get("AccAlert"));
+		
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(AccAlertCallAdSearchAccCustTermite));
+		AccAlertCallAdSearchAccCustTermite.sendKeys(testData.get("AccAlert"));
+		
 		waitABit(jsonData.get("Time2"));
 	}
 
 
 
 	public void clickOn_ResiOppType_CallAdSearchAccCustTermite() throws Exception {
-		ResiOppTypeCallAdSearchAccCustTermite.click();
+		
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(ResiOppTypeCallAdSearchAccCustTermite));
+		ResiOppTypeCallAdSearchAccCustTermite.click();
+	
 		waitABit(jsonData.get("Time2"));
 	}
 
 
 
 	public void clickOn_Continue_CallAdSearchAccCustTermite() throws Exception {
-		ContinueCallAdSearchAccCustTermite.click();
+		
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(ContinueCallAdSearchAccCustTermite));
+		ContinueCallAdSearchAccCustTermite.click();
+	
 		waitABit(jsonData.get("Time2"));
 	}
 
 
 
 	public void clickOn_Delete_AdSearchAccCustTermitee() throws Exception {
-		DeleteAdSearchAccCustTermitee.click();
+		
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(DeleteAdSearchAccCustTermitee));
+		DeleteAdSearchAccCustTermitee.click();
+	
 		waitABit(jsonData.get("Time2"));
 	}
 
 
 
 	public void clickOn_Yes_DeleteAdSearchAccCustTermite() throws Exception {
-		YesDeleteAdSearchAccCustTermite.click();
+		
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(YesDeleteAdSearchAccCustTermite));
+		YesDeleteAdSearchAccCustTermite.click();
+	
 		waitABit(jsonData.get("Time2"));
 	}
 
 
 
 	public void clickOn_AdvanceSearch_CompCustTermite() throws Exception {
-		AdvanceSearchCompCustTermite.click();
+		
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(AdvanceSearchCompCustTermite));
+		AdvanceSearchCompCustTermite.click();
+
 		waitABit(jsonData.get("Time2"));
 	}
 
 
 
 	public void clickOn_AddOppAction_CallAdSearchCompCustTermite() throws Exception {
-		AddOppActionCallAdSearchCompCustTermite.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(AddOppActionCallAdSearchCompCustTermite));
+		AddOppActionCallAdSearchCompCustTermite.click();
+	
 		waitABit(jsonData.get("Time2"));
 	}
 
 
 
 	public void clickOn_DDAcc_OppAdSearchAccCustTermite() throws Exception {
-		DDAccOppAdSearchAccCustTermite.click();
-		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
-		waitABit(jsonData.get("Time2"));
 		
-		ValueDDAccOppAdSearchAccCustTermite.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(DDAccOppAdSearchAccCustTermite));
+		DDAccOppAdSearchAccCustTermite.click();
+		
+		wait.until(ExpectedConditions.elementToBeClickable(ValueDDAccOppAdSearchAccCustTermite));
+		ValueDDAccOppAdSearchAccCustTermite.click();
+		
 		waitABit(jsonData.get("Time2"));
 	}
 
 
 
 	public void clickOn_Continue_OppAdSearchAccCustTermite() throws Exception {
+		
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(ContinueOppAdSearchAccCustTermite));
 	    ContinueOppAdSearchAccCustTermite.click();
-	    jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+	
 		waitABit(jsonData.get("Time2"));
 	}
 
 
 
 	public void clickOn_OppName_OppAdSearchAccCustTermite(Map<String, String> testData) throws Exception {
-		OppNameOppAdSearchAccCustTermite.sendKeys(testData.get("OppName"));
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(OppNameOppAdSearchAccCustTermite));
+		OppNameOppAdSearchAccCustTermite.sendKeys(testData.get("OppName"));
+		
 		waitABit(jsonData.get("Time2"));
 	}
 
 
 
 	public void clickOn_DDBranch_OppAdSearchAccCustTermite() throws Exception {
-		DDBranchOppAdSearchAccCustTermite.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
-		waitABit(jsonData.get("Time2"));
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(DDBranchOppAdSearchAccCustTermite));
 		
+		DDBranchOppAdSearchAccCustTermite.click();
+		
+		wait.until(ExpectedConditions.elementToBeClickable(ValueDDBranchOppAdSearchAccCustTermite));
 		ValueDDBranchOppAdSearchAccCustTermite.click();
-		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		
 		waitABit(jsonData.get("Time2"));
 	}
 
 
 
 	public void clickOn_DDDept_OppAdSearchAccCustTermite() throws Exception {
-		DDDeptOppAdSearchAccCustTermite.click();
-		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
-		waitABit(jsonData.get("Time2"));
 		
-		ValueDDDeptOppAdSearchAccCustTermite.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(DDDeptOppAdSearchAccCustTermite));
+		DDDeptOppAdSearchAccCustTermite.click();
+		wait.until(ExpectedConditions.elementToBeClickable(ValueDDDeptOppAdSearchAccCustTermite));
+		ValueDDDeptOppAdSearchAccCustTermite.click();
+		
 		waitABit(jsonData.get("Time2"));
 	}
 
 
 
 	public void clickOn_DDSource_OppAdSearchAccCustTermite() throws Exception {
-		DDSourceOppAdSearchAccCustTermite.click();
+		
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
-		waitABit(jsonData.get("Time2"));
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(DDSourceOppAdSearchAccCustTermite));
+		
+		DDSourceOppAdSearchAccCustTermite.click();
+		wait.until(ExpectedConditions.elementToBeClickable(ValueDDSourceOppAdSearchAccCustTermite));
 		
 		ValueDDSourceOppAdSearchAccCustTermite.click();
-		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+	
 		waitABit(jsonData.get("Time2"));
 	}
 
 
 
 	public void clickOn_ResiOppType_OppAdSearchAccCustTermite() throws Exception {
-		ResiOppTypeOppAdSearchAccCustTermite.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(ResiOppTypeOppAdSearchAccCustTermite));
+		
+		ResiOppTypeOppAdSearchAccCustTermite.click();
+		
 		waitABit(jsonData.get("Time2"));
 	}
 
 
 
 	public void clickOn_Save_OppAdSearchAccCustTermite() throws Exception {
-		SaveOppAdSearchAccCustTermite.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(SaveOppAdSearchAccCustTermite));
+		SaveOppAdSearchAccCustTermite.click();
+	
 		waitABit(jsonData.get("Time2"));
 	}
 
 
 
 	public void clickOn_DeleteAction_AdSearchCompCustTermite() throws Exception {
-		DeleteActionAdSearchCompCustTermite.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(DeleteActionAdSearchCompCustTermite));
+		DeleteActionAdSearchCompCustTermite.click();
+		
 		waitABit(jsonData.get("Time2"));
 	}
 
 
 
 	public void clickOn_Yes_DeleteAdSearchCompCustTermite() throws Exception {
-		YesDeleteAdSearchCompCustTermite.click();
+		
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(YesDeleteAdSearchCompCustTermite));
+		YesDeleteAdSearchCompCustTermite.click();
+		
 		waitABit(jsonData.get("Time2"));
 	}
 
 
 
 	public void clickOn_AdvanceSearch_ContCustTermite() throws Exception {
-		AdvanceSearchContCustTermite.click();
+		
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(AdvanceSearchContCustTermite));
+		AdvanceSearchContCustTermite.click();
+		
 		waitABit(jsonData.get("Time2"));
 	}
 
 
 
 	public void clickOn_AddOppAction_AdvanceSearchContCustTermite() throws Exception {
-		AddOppActionAdvanceSearchContCustTermite.click();
+		
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(AddOppActionAdvanceSearchContCustTermite));
+		AddOppActionAdvanceSearchContCustTermite.click();
+		
 		waitABit(jsonData.get("Time2"));
 	}
 
 
 
 	public void clickOn_DDAccount_AddOppAdvanceSearchContCustTermite() throws Exception {
-		DDAccountAddOppAdvanceSearchContCustTermite.click();
-		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
-		waitABit(jsonData.get("Time2"));
 		
-		ValueDDAccountAddOppAdvanceSearchContCustTermite.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(DDAccountAddOppAdvanceSearchContCustTermite));
+		DDAccountAddOppAdvanceSearchContCustTermite.click();
+		wait.until(ExpectedConditions.elementToBeClickable(ValueDDAccountAddOppAdvanceSearchContCustTermite));
+		ValueDDAccountAddOppAdvanceSearchContCustTermite.click();
 		waitABit(jsonData.get("Time2"));
 	}
 
 
 
 	public void clickOn_Cont_AddOppAdvanceSearchContCustTermite() throws Exception {
-		ContAddOppAdvanceSearchContCustTermite.click();
+		
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(ContAddOppAdvanceSearchContCustTermite));
+		ContAddOppAdvanceSearchContCustTermite.click();
+		
 		waitABit(jsonData.get("Time2"));
 		
 	}
@@ -1117,74 +1309,103 @@ public class TermiteCustomerPage extends peststreamPage {
 
 
 	public void clickOn_OppName_AddOppAdvanceSearchContCustTermite(Map<String, String> testData) throws Exception {
-		OppNameAddOppAdvanceSearchContCustTermite.sendKeys(testData.get("OppName"));
+		
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(OppNameAddOppAdvanceSearchContCustTermite));
+		OppNameAddOppAdvanceSearchContCustTermite.sendKeys(testData.get("OppName"));
+		
 		waitABit(jsonData.get("Time2"));
 	}
 
 
 
 	public void clickOn_DDBranch_AddOppAdvanceSearchContCustTermite() throws Exception {
-		DDBranchAddOppAdvanceSearchContCustTermite.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
-		waitABit(jsonData.get("Time2"));
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(DDBranchAddOppAdvanceSearchContCustTermite));
+		
+		DDBranchAddOppAdvanceSearchContCustTermite.click();
+		wait.until(ExpectedConditions.elementToBeClickable(ValueDDBranchAddOppAdvanceSearchContCustTermite));
 		
 		ValueDDBranchAddOppAdvanceSearchContCustTermite.click();
-		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		
 		waitABit(jsonData.get("Time2"));
 	}
 
 
 
 	public void clickOn_DDDept_AddOppAdvanceSearchContCustTermite() throws Exception {
-		DDDeptAddOppAdvanceSearchContCustTermite.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
-		waitABit(jsonData.get("Time2"));
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(DDDeptAddOppAdvanceSearchContCustTermite));
+		
+		DDDeptAddOppAdvanceSearchContCustTermite.click();
+		wait.until(ExpectedConditions.elementToBeClickable(ValueDDDeptAddOppAdvanceSearchContCustTermite));
 		
 		ValueDDDeptAddOppAdvanceSearchContCustTermite.click();
-		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		
 		waitABit(jsonData.get("Time2"));
 	}
 
 
 
 	public void clickOn_DDSource_AddOppAdvanceSearchContCustTermite() throws Exception {
-		DDSourceAddOppAdvanceSearchContCustTermite.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
-		waitABit(jsonData.get("Time2"));
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(DDSourceAddOppAdvanceSearchContCustTermite));
+		
+		DDSourceAddOppAdvanceSearchContCustTermite.click();
+		wait.until(ExpectedConditions.elementToBeClickable(ValueDDSourceAddOppAdvanceSearchContCustTermite));
 		
 		ValueDDSourceAddOppAdvanceSearchContCustTermite.click();
-		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		
 		waitABit(jsonData.get("Time2"));
 	}
 
 
 
 	public void clickOn_ResiOppType_AddOppAdvanceSearchContCustTermite() throws Exception {
-		ResiOppTypeAddOppAdvanceSearchContCustTermite.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(ResiOppTypeAddOppAdvanceSearchContCustTermite));
+		
+		ResiOppTypeAddOppAdvanceSearchContCustTermite.click();
+	
 		waitABit(jsonData.get("Time2"));
 	}
 
 
 
 	public void clickOn_Save_AddOppAdvanceSearchContCustTermite() throws Exception {
-		SaveAddOppAdvanceSearchContCustTermite.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(SaveAddOppAdvanceSearchContCustTermite));
+		
+		SaveAddOppAdvanceSearchContCustTermite.click();
+		
 		waitABit(jsonData.get("Time2"));
 	}
 
 
 
 	public void clickOn_DeleteAction_AdSearchContCustTermite() throws Exception {
-		DeleteActionAdSearchContCustTermite.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(DeleteActionAdSearchContCustTermite));
+		
+		DeleteActionAdSearchContCustTermite.click();
+		
 		waitABit(jsonData.get("Time2"));
 	}
 
 
 
 	public void clickOn_Yes_DeleteAdSearchContCustTermite() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(YesDeleteAdSearchContCustTermite));
+		
 		YesDeleteAdSearchContCustTermite.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		waitABit(jsonData.get("Time2"));

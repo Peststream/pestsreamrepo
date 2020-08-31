@@ -25,7 +25,7 @@ public class CSRDashBoardSteps extends pestreamSteps {
 		
 	}
 
-	public void CalledSourceTarget() {
+	public void CalledSourceTarget() throws Exception {
 		csrDashBoardpage.CalledSourceTarget();
 		
 	}

@@ -13,50 +13,50 @@ public class ExitingUserPCROStepDefs {
 	
 
 	@Then("^i choose an existing account \"([^\"]*)\"$")
-	public void i_choose_an_existing_account(String arg1) {
+	public void i_choose_an_existing_account(String arg1) throws Exception {
 		exitinguserpcrosteps.exitAcct(arg1);
 	}
 	
 	@Then("^i chose service and sounce from respective DDL$")
-	public void i_chose_service_and_sounce_from_respective_DDL() {
+	public void i_chose_service_and_sounce_from_respective_DDL() throws Exception {
 		exitinguserpcrosteps.serviceAndSource();
 	}
 	
 	//2
 	
 	@When("^user clicked on customer tab in left panel$")
-	public void user_clicked_on_customer_tab_in_left_panel() {
+	public void user_clicked_on_customer_tab_in_left_panel() throws Exception {
 		
 		exitinguserpcrosteps.customerTab();
 	}
 
 	@Then("^user clicked on opportunity subtab$")
-	public void user_clicked_on_opportunity_subtab() {
+	public void user_clicked_on_opportunity_subtab() throws Exception {
 		exitinguserpcrosteps.opportunityTab();
 	}
 
 	@Then("^user click on advance search button$")
-	public void user_click_on_advance_search_button() {
+	public void user_click_on_advance_search_button() throws Exception {
 		exitinguserpcrosteps.advSrchBtn();
 	}
 
 	@Then("^user click on open tap$")
-	public void user_click_on_open_tap() {
+	public void user_click_on_open_tap() throws Exception {
 		exitinguserpcrosteps.openTab();
 	}
 
 	@Then("^select opportunity$")
-	public void select_opportunity() {
+	public void select_opportunity() throws Exception {
 		exitinguserpcrosteps.selectOpp();
 	}
 
 	@Then("^user write a note$")
-	public void user_write_a_note() {
+	public void user_write_a_note() throws Exception {
 		exitinguserpcrosteps.writeNote();
 	}
 	
 	@Then("^package details \"([^\"]*)\",\"([^\"]*)\",\"([^\"]*)\",\"([^\"]*)\",\"([^\"]*)\" on phone sales$")
-	public void package_details_on_phone_sales(String arg1, String arg2, String arg3, String arg4, String arg5) {
+	public void package_details_on_phone_sales(String arg1, String arg2, String arg3, String arg4, String arg5) throws Exception {
 	    // Write code here that turns the phrase above into concrete actions
 		exitinguserpcrosteps.packageDetailsOnPhnSales();
 	}

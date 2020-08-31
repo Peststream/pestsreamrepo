@@ -26,7 +26,7 @@ public class CSRDashBoardStepDefs {
 	}
 
 	@Then("^User enters CalledFor Source and Target DDL$")
-	public void user_enters_CalledFor_Source_and_Target_DDL() {
+	public void user_enters_CalledFor_Source_and_Target_DDL() throws Exception {
 		csrDashBoardssteps.CalledSourceTarget();
 	}
 

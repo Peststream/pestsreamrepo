@@ -6,41 +6,41 @@ import com.infocrats.pageObjects.batchManagementPage;
 public class batchManagementSteps extends pestreamSteps {
 	batchManagementPage batchmanagementpage;
 
-	public void BatchManagementBtn() {
+	public void BatchManagementBtn() throws Exception {
 		batchmanagementpage.batchmanagementBtn();
 		
 	}
 
-	public void AddBatchBtn() {
+	public void AddBatchBtn() throws Exception {
 		batchmanagementpage.addBatchBtn();
 		
 	}
 
-	public void batchTypreRadio() {
+	public void batchTypreRadio() throws Exception {
 		batchmanagementpage.BatchTypeRadioBtn();
 		
 	}
 
-	public void batchNameDate() {
+	public void batchNameDate() throws Exception {
 		batchmanagementpage.BranchNameDate();
 	}
 
-	public void WorkOrderCheckBox() {
+	public void WorkOrderCheckBox() throws Exception {
 		batchmanagementpage.WorkOrderChckBox();
 		
 	}
 
-	public void SaveButtonBatch() {
+	public void SaveButtonBatch() throws Exception {
 		batchmanagementpage.SaveBtnBAtchManagement();
 		
 	}
 
-	public void batchRelease() {
+	public void batchRelease() throws Exception {
 		batchmanagementpage.batchReleaseAction();
 		
 	}
 
-	public void batchReleaseTab() {
+	public void batchReleaseTab() throws Exception {
 		batchmanagementpage.releaseBatchTab();
 		
 	}
