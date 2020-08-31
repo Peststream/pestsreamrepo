@@ -8,7 +8,7 @@ Feature: Test for Call HVAC.
     Then I am granted access to the system
 
   #pass
-  @TestOpportunityInfoForHVAC55
+  @TestOpportunityInfoForHVAC5
   Scenario: Test opportunity info (general info) for HVAC1
     When user clicked on call tab
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
