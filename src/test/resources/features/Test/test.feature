@@ -9,7 +9,7 @@ Feature: Create pest control residential opportunity for exiting user.
 
   
    #without lead checkbox(done)
-  @general
+  @newUserPCCO1
   Scenario: Test to Continue General Info of Termite
     When user click on CallTab
     Then user enters company
