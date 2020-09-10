@@ -45,7 +45,7 @@ Feature: Test for Call HVAC.
     And Click on Save Button
 
   #pass
-  @TestOpportunityInfoForHVAC55
+  @TestOpportunityInfoForHVAC5500
   Scenario: Test CSR Dashboard for HVAC10
     When user click on CSR Dashboard
     When user click on Advance Search from CSR Dashboard
