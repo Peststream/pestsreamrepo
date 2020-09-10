@@ -1189,12 +1189,14 @@ public class NewUserCallHVACPage extends peststreamPage {
 
 	public void clickCloseForAlert() {
 		try {
+			waitABit(1000);
+			
+
+		} catch (Exception e) {
 			WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
 			wait.until(ExpectedConditions.elementToBeClickable(CloseBtnForAlert));
 
 			CloseBtnForAlert.click();
-
-		} catch (Exception e) {
 			waitABit(1000);
 
 		}
