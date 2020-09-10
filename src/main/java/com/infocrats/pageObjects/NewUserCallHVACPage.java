@@ -465,6 +465,7 @@ public class NewUserCallHVACPage extends peststreamPage {
 	public void clickAdvanceSearch() throws Exception {
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		waitABit(3000);
 		wait.until(ExpectedConditions.elementToBeClickable(AdvanceSearchBtn));
 		AdvanceSearchBtn.click();
 
@@ -473,7 +474,9 @@ public class NewUserCallHVACPage extends peststreamPage {
 	public void selectOneWorkOrder() throws Exception {
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		
 		wait.until(ExpectedConditions.elementToBeClickable(FirstWorkOrderlbl));
+		waitABit(4000);
 
 		FirstWorkOrderlbl.click();
 
@@ -756,10 +759,10 @@ public class NewUserCallHVACPage extends peststreamPage {
 	public void EnterServiceDate() throws Exception {
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
-
+		scrollDownLarge(ServiceDatePicker);
 		wait.until(ExpectedConditions.elementToBeClickable(ServiceDatePicker));
 
-		scrollDownLarge(ServiceDatePicker);
+		
 		Thread.sleep(1500);
 		ServiceDatePicker.click();
 		Thread.sleep(1500);
