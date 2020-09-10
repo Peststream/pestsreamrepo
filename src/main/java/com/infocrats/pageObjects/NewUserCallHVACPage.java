@@ -38,10 +38,10 @@ public class NewUserCallHVACPage extends peststreamPage {
 	@FindBy(xpath = "//*[@id='AccountDescription']")
 	private WebElementFacade AccountAlert;
 
-	@FindBy(xpath = "//*[@id='PrimaryServiceId']")
+	@FindBy(css = "select#PrimaryServiceId")
 	private WebElementFacade DDPrimaryRequestedService;
 
-	@FindBy(xpath = "//*[@id='PrimaryServiceId']/optgroup/option[1]")
+	@FindBy(css = "select#PrimaryServiceId  option[value='15036']")
 	private WebElementFacade valueDDPrimaryRequestedService;
 
 	@FindBy(xpath = "//*[@id='JobDesc']")
@@ -98,7 +98,7 @@ public class NewUserCallHVACPage extends peststreamPage {
 	@FindBy(xpath = "/html/body/div[3]/div[1]/div/ul/li[2]/a/span")
 	private WebElementFacade CsrDashboardLbl;
 
-	@FindBy(xpath = "//*[@id='form0']/div/div/div[19]/div/div/button")
+	@FindBy(css = ".btnSubmitAdvanceSearch")
 	private WebElementFacade AdvanceSearchButton;
 
 	@FindBy(xpath = "//*[@id='sample_1']/tbody/tr[1]/td[10]/a[1]")
@@ -200,10 +200,10 @@ public class NewUserCallHVACPage extends peststreamPage {
 	@FindBy(xpath = "//*[@id='form0']/div[2]/div/div[4]/div/button/span")
 	private WebElementFacade SaveBtnFromDetailPage;
 
-	@FindBy(xpath = "/html/body/div[3]/div[1]/div/ul/li[4]/a")
+	@FindBy(xpath = "/html/body//ul[@class='page-sidebar-menu page-sidebar-menu-compact']/li[5]/a[@href='#']/span[@class='title']")
 	private WebElementFacade CustomerDD;
 
-	@FindBy(xpath = "/html/body/div[3]/div[1]/div/ul/li[4]/ul/li[1]/a/span")
+	@FindBy(css = "[href='\\/Sales\\/CrmAccount']")
 	private WebElementFacade AccountInCustomerDD;
 
 	@FindBy(xpath = "/html/body/div[3]/div[2]/div[1]/div/div[2]/div/div/div[1]/div[1]/div/div/button")
@@ -263,7 +263,7 @@ public class NewUserCallHVACPage extends peststreamPage {
 	@FindBy(xpath = "//*[@id='ProblemDescription']")
 	private WebElementFacade ProblemDescTF;
 
-	@FindBy(xpath = "/html/body/div[3]/div[1]/div/ul/li[4]/ul/li[2]/a")
+	@FindBy(css = "[href='\\/Sales\\/CrmCompany'] .title")
 	private WebElementFacade CompanyFromCustomerDD;
 
 	@FindBy(xpath = "//*[@id='Name']")
@@ -299,7 +299,7 @@ public class NewUserCallHVACPage extends peststreamPage {
 	@FindBy(xpath = "//*[@id='DeleteCrmCompany']/div/div/div[2]/div[2]/button[1]")
 	private WebElementFacade DeclineAlert;
 
-	@FindBy(xpath = "/html/body/div[3]/div[1]/div/ul/li[4]/ul/li[3]/a/span")
+	@FindBy(css = "[href='\\/Sales\\/CrmContact']")
 	private WebElementFacade ContactFromCustomerDD;
 
 	@FindBy(xpath = "/html/body/div[3]/div[2]/div[1]/div/div[2]/div/div/div[1]/div[1]/div/div/button/span")
@@ -341,13 +341,13 @@ public class NewUserCallHVACPage extends peststreamPage {
 	@FindBy(xpath = "/html//div[@id='DeleteCrmContact']/div[@class='modal-dialog']//div[@class='modal-footer']/button[1]")
 	private WebElementFacade DeclineDeleteAlertForContact;
 
-	@FindBy(xpath = "/html/body//ul[@class='page-sidebar-menu page-sidebar-menu-compact']/li[4]/ul[@class='sub-menu']//a[@href='/Sales/Lead']")
+	@FindBy(css = "[href='\\/Sales\\/Lead'] .title")
 	private WebElementFacade OpportunityFromCustomerDd;
 
 	@FindBy(xpath = "//*[@id='newAccount']/a")
 	private WebElementFacade NewACcountBtnInAddOpportunity;
 
-	@FindBy(xpath = "/html/body//ul[@class='page-sidebar-menu page-sidebar-menu-compact']/li[4]/ul[@class='sub-menu']//a[@href='/Sales/WebLead']")
+	@FindBy(css = "[href='\\/Sales\\/WebLead']")
 	private WebElementFacade LeadFromCustomerDD;
 
 	@FindBy(xpath = "/html/body/div[@class='page-container']/div[@class='page-content-wrapper']//div[@class='page-content']//div[@class='input-group']/button[@href='#']")
@@ -356,7 +356,7 @@ public class NewUserCallHVACPage extends peststreamPage {
 	@FindBy(xpath = "/html//div[@id='AddWebLeadPopupDiv']/div[@class='vertical-alignment-helper']/div[@class='modal-dialog modal-lg vertical-align-center']/div[@class='modal-content']//form[@action='/Sales/WebLead/Manage']//input[@id='FirstName']")
 	private WebElementFacade FirstNameTfFromAddLead;
 
-	@FindBy(xpath = "/html/body//ul[@class='page-sidebar-menu page-sidebar-menu-compact']/li[4]/ul[@class='sub-menu']//a[@href='/Sales/CrmDatabase']")
+	@FindBy(css = "[href='\\/Sales\\/CrmDatabase']")
 	private WebElementFacade DatabaseFromCustomerDd;
 
 	@FindBy(xpath = "/html/body/div[@class='page-container']/div[@class='page-content-wrapper']/div[@class='page-content-wrapper']/div[@class='page-content']//button[@href='#']")
@@ -405,8 +405,6 @@ public class NewUserCallHVACPage extends peststreamPage {
 	public void PrimaryRequestedService() throws Exception {
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
-		wait.until(ExpectedConditions.elementToBeClickable(DDPrimaryRequestedService));
-		DDPrimaryRequestedService.click();
 
 		wait.until(ExpectedConditions.elementToBeClickable(valueDDPrimaryRequestedService));
 		valueDDPrimaryRequestedService.click();
@@ -455,7 +453,9 @@ public class NewUserCallHVACPage extends peststreamPage {
 	}
 
 	public void checkFlatRate() throws Exception {
+		waitABit(2000);
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		scrollDown(Flatrate);
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
 		wait.until(ExpectedConditions.elementToBeClickable(Flatrate));
 		Flatrate.click();
@@ -548,8 +548,10 @@ public class NewUserCallHVACPage extends peststreamPage {
 	}
 
 	public void ClickAdvanceSearchBTN() throws Exception {
+		
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		scrollDown(AdvanceSearchButton);
 		wait.until(ExpectedConditions.elementToBeClickable(AdvanceSearchButton));
 
 		AdvanceSearchButton.click();
@@ -807,7 +809,7 @@ public class NewUserCallHVACPage extends peststreamPage {
 
 	public void ClickOnCustomer() throws Exception {
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
-		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
 
 		wait.until(ExpectedConditions.elementToBeClickable(CustomerDD));
 
@@ -817,7 +819,7 @@ public class NewUserCallHVACPage extends peststreamPage {
 
 	public void ClickOnAccountFromCustomer() throws Exception {
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
-		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
 
 		wait.until(ExpectedConditions.elementToBeClickable(AccountInCustomerDD));
 

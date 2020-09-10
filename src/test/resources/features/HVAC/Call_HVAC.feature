@@ -1,4 +1,4 @@
-@run @hvac 
+@run @hvac
 Feature: Test for Call HVAC.
 
   Background: 
@@ -8,7 +8,7 @@ Feature: Test for Call HVAC.
     Then I am granted access to the system
 
   #pass
-  @TestOpportunityInfoForHVAC5
+  @TestOpportunityInfoForHVAC001
   Scenario: Test opportunity info (general info) for HVAC1
     When user clicked on call tab
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
@@ -56,7 +56,7 @@ Feature: Test for Call HVAC.
 
 
   #pass
-  @TestOpportunityInfoForHVAC
+  @TestOpportunityInfoForHVAC002
   Scenario: Test Customer DropDown For Account12
     When User Click On Customer
     And Select Account From The DD List
@@ -65,7 +65,7 @@ Feature: Test for Call HVAC.
     And Click on Save	From Add Account
 
   #pass
-  @TestOpportunityInfoForHVAC
+  @TestOpportunityInfoForHVAC003
   Scenario: Test Customer DropDown For Account13
     When User Click On Customer
     And Select Account From The DD List
@@ -75,7 +75,7 @@ Feature: Test for Call HVAC.
     And Click on Save	From Add Account
 
   #pass
-  @TestOpportunityInfoForHVA14
+  @TestOpportunityInfoForHVAC004
   Scenario: Test Customer DropDown For Account14
     When User Click On Customer
     And Select Account From The DD List
@@ -84,7 +84,7 @@ Feature: Test for Call HVAC.
     And Enter Note
     And Click On Save Button
   #pass
-  @TestOpportunityInfoForHVAC
+  @TestOpportunityInfoForHVAC005
   Scenario: Test Customer DropDown For Account15
     When User Click On Customer
     And Select Account From The DD List
@@ -93,7 +93,7 @@ Feature: Test for Call HVAC.
     And Click on Continue From General Info
 
   #pass
-  @TestOpportunityInfoForHVAC
+  @TestOpportunityInfoForHVAC006
   Scenario: Test Customer DropDown For Company16
     When User Click On Customer
     And Select Customer From The DD List
@@ -102,7 +102,7 @@ Feature: Test for Call HVAC.
     And Click on Save	From Add Account
 
   #pass
-  @TestOpportunityInfoForHVA18
+  @TestOpportunityInfoForHVAC007
   Scenario: Test Customer DropDown For Company18
     When User Click On Customer
     And Select Customer From The DD List
@@ -112,7 +112,7 @@ Feature: Test for Call HVAC.
     And Click On Save Button
 
   #pass
-  @TestOpportunityInfoForHVA19
+  @TestOpportunityInfoForHVA008
   Scenario: Test Customer DropDown For Company19
     When User Click On Customer
     And Select Customer From The DD List
@@ -130,7 +130,7 @@ Feature: Test for Call HVAC.
     And Cancel The Alert
 
   #pass
-  @TestOpportunityInfoForHVAC
+  @TestOpportunityInfoForHVAC21
   Scenario: Test Customer DropDown For Contact21
     When User Click On Customer
     And Select Contact From The DD List

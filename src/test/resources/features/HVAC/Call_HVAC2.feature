@@ -76,7 +76,7 @@ Feature: Test for call Hvac 2
     And Click on save from Work Order
 
   #Pass
-  @TestOpportunityInfoForHVAC01
+  @TestOpportunityInfoForHVAC0060
   Scenario: Test Customer DropDown For Contact22
     When User Click On Customer
     And Select Contact From The DD List
@@ -85,7 +85,7 @@ Feature: Test for call Hvac 2
     And Click on Close	From Add Account
 
   #PassButOnlyOneTimeAddopportunityIsPossible
-  @TestOpportunityInfoForHVAC23
+  @TestOpportunityInfoForHVAC203
   Scenario: Test Customer DropDown For Contact23
     When User Click On Customer
     And Select Contact From The DD List
@@ -93,7 +93,7 @@ Feature: Test for call Hvac 2
     And Click On Add Opportunity For Contact
   
   #Pass
-  @TestOpportunityInfoForHVAC
+  @TestOpportunityInfoForHVAC024
   Scenario: Test Customer DropDown For Contact24
     When User Click On Customer
     And Select Contact From The DD List
@@ -103,7 +103,7 @@ Feature: Test for call Hvac 2
     And Click On Save Button
 
   #pass
-  @TestOpportunityInfoForHVAC
+  @TestOpportunityInfoForHVAC025
   Scenario: Test Customer DropDown For Contact25
     When User Click On Customer
     And Select Contact From The DD List
@@ -112,7 +112,7 @@ Feature: Test for call Hvac 2
     And Confirm Delete Alert For Contact
 
   #Pass
-  @TestOpportunityInfoForHVAC
+  @TestOpportunityInfoForHVAC026
   Scenario: Test Customer DropDown For Contact26
     When User Click On Customer
     And Select Contact From The DD List
@@ -121,7 +121,7 @@ Feature: Test for call Hvac 2
     And Decline Delete Alert For Contact
 
   #Pass
-  @TestOpportunityInfoForHVAC
+  @TestOpportunityInfoForHVAC027
   Scenario: Test Customer DropDown For Opportunity27
     When User Click On Customer
     And Select Opportunity From The DD List
@@ -131,7 +131,7 @@ Feature: Test for call Hvac 2
     And Click on Save	From Add Opportunity
 
   #Pass
-  @TestOpportunityInfoForHVAC
+  @TestOpportunityInfoForHVAC028
   Scenario: Test Customer DropDown For Lead28
     When User Click On Customer
     And Select Lead From The DD List
@@ -140,7 +140,7 @@ Feature: Test for call Hvac 2
     And Click on Save	From Add Lead
 
   #Pass
-  @TestOpportunityInfoForHVAC
+  @TestOpportunityInfoForHVAC029
   Scenario: Test Customer DropDown For Database29
     When User Click On Customer
     And Select Database From The DD List

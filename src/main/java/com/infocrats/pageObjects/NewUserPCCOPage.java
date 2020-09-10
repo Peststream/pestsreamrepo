@@ -18,7 +18,7 @@ public class NewUserPCCOPage extends peststreamPage {
 	private static final Logger logger = LoggerFactory.getLogger(NewUserPCCOPage.class);
 	BaseUtills utills = new BaseUtills();
 
-	@FindBy(xpath = "/html/body/div[3]/div[1]/div/ul/li[3]/a")
+	@FindBy(xpath = "/html/body//ul[@class='page-sidebar-menu page-sidebar-menu-compact']//a[@href='/Sale/PhoneSales/Index']")
 	private WebElementFacade callTab;
 
 	@FindBy(xpath = "//*[@id=\"crmCompanySaleshead\"]")
@@ -92,7 +92,7 @@ public class NewUserPCCOPage extends peststreamPage {
 	@FindBy(xpath = "//*[@id=\"uniform-rdoCommercial\"]/span")
 	private WebElementFacade Commercial_RadioBtn;
 
-	@FindBy(xpath = "//*[@id=\"GenerateLead\"]")
+	@FindBy(css = "button#btnGenerateLead > .ladda-label")
 	private WebElementFacade continueBtn;
 
 	@FindBy(xpath = "//*[@id=\"SpRequiredServiceAddressControl_ServiceAddressLine1\"]")
@@ -516,6 +516,7 @@ public class NewUserPCCOPage extends peststreamPage {
 
 	public void continue_btn() {
 try {
+	waitABit(3000);
 		continueBtn.click();
 
 }
