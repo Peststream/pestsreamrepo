@@ -191,7 +191,7 @@ public class NewUserCallHVACPage extends peststreamPage {
 	@FindBy(xpath = "/html/body/div[14]/div[1]/table/tbody/tr[3]/td[4]")
 	private WebElementFacade ServiceDateValue;
 
-	@FindBy(xpath = "tr:nth-of-type(1)  a[title='Detail Page']")
+	@FindBy(css = "tr:nth-of-type(1)  a[title='Detail Page']")
 	private WebElementFacade DetailPageIconfromAction;
 
 	@FindBy(xpath = "//*[@id='Note']")
