@@ -1182,11 +1182,15 @@ scrollUP(select_Work_Order);
 
 	public void jTNew_Construction() throws Exception {
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		waitABit(3000);
 		scrollDownLarge(job_Type);
+		waitABit(500);
+		scrollUPSmall(job_Type);
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
 		wait.until(ExpectedConditions.elementToBeClickable(job_Type));
 
 		job_Type.click();
+		waitABit(500);
 
 		Value_jtnew_Cons.click();
 	}
