@@ -824,7 +824,6 @@ public class newUserMechCallPage extends peststreamPage {
 		scrollDownLarge(salesTypeText);
 		wait.until(ExpectedConditions.elementToBeClickable(salesTypeText));
 		salesTypeText.click();
-		scrollDown(salesType_Field);
 		waitABit(1000);
 		salesType_Field.click();
 

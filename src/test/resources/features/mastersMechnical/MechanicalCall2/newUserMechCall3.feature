@@ -79,7 +79,7 @@ Feature: New USer Mech Call 3
     Then user click on name
 
   #Passed_Recent
-  @CSSO_General_Mechanical_Fixed
+  @CSSO_General_Mechanical_Fixed100
   Scenario: Test to General Info of ScheduleEstimation send Email for CustomerSignature.7
     When user clicked on CallTab
     Then user enters Company
