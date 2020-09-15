@@ -6,7 +6,7 @@ import cucumber.api.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
 
 @RunWith(CucumberWithSerenity.class)
-@CucumberOptions(features = { "src/test/resources/features" }, tags = { "@CSSO__JTNew_TMaterial_Mechanic_ServiceApp_CustAbsent_SendMail_Mech" }, glue = {
+@CucumberOptions(features = { "src/test/resources/features" }, tags = { "@NewUserMechCallPass3" }, glue = {
 		"com.infocrats.stepdefs" }, monochrome = true, plugin = { "pretty", "html:target/cucumber-reports",
 
 				"json:target/cucumber.json", "rerun:rerun.txt" })

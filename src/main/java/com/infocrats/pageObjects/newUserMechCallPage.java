@@ -819,6 +819,7 @@ scrollUP(select_Work_Order);
 		wait.until(ExpectedConditions.elementToBeClickable(salesType_Field));
 		scrollDownLarge(salesType_Field);
 		wait.until(ExpectedConditions.elementToBeClickable(salesType_Field));
+		waitABit(1000);
 		salesType_Field.click();
 
 	}
