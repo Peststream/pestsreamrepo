@@ -208,6 +208,11 @@ public class newUserMechCallPage extends peststreamPage {
 
 	@FindBy(xpath = "//*[@id='uniform-SalesType'][2]")
 	private WebElementFacade salesType_Field;
+	
+	@FindBy(xpath = "[for='SalesType']")
+	private WebElementFacade salesTypeText;
+	
+	
 
 	@FindBy(xpath = "//*[@id='submit']")
 	private WebElementFacade scheduleTime_Specific;
@@ -817,8 +822,10 @@ scrollUP(select_Work_Order);
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
 		wait.until(ExpectedConditions.elementToBeClickable(salesType_Field));
-		scrollDownLarge(salesType_Field);
-		wait.until(ExpectedConditions.elementToBeClickable(salesType_Field));
+		scrollDownLarge(salesTypeText);
+		wait.until(ExpectedConditions.elementToBeClickable(salesTypeText));
+		salesTypeText.click();
+		scrollDown(salesType_Field);
 		waitABit(1000);
 		salesType_Field.click();
 
