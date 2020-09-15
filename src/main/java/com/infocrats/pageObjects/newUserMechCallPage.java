@@ -1,11 +1,13 @@
 
 package com.infocrats.pageObjects;
 
+import java.sql.Driver;
 import java.util.Map;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -660,9 +662,12 @@ public class newUserMechCallPage extends peststreamPage {
 		waitABit(2000);
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		JavascriptExecutor js = (JavascriptExecutor) getDriver();
+        js.executeScript("window.scrollBy(0,200)", "");
 		wait.until(ExpectedConditions.elementToBeClickable(select_Work_Order));
-		waitABit(5000);
+		waitABit(2000);
 		select_Work_Order.click();
+		waitABit(2000);
 
 	}
 
