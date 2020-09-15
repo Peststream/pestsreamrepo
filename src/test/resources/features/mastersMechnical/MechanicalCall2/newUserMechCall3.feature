@@ -8,7 +8,7 @@ Feature: New USer Mech Call 3
     Then I am granted access to the system
 
   #Pass_Fixed
-  @CSSO_General_Mec11
+  @CSSO_General_Mechanical_Fixed
   Scenario: Test to Continue General Info of ScheduleServiceOrder with branch Mech and Job Type ,Save and open Work Order.1
     When user clicked on CallTab
     Then user enters Company
@@ -39,7 +39,7 @@ Feature: New USer Mech Call 3
 
   #And user checks the details and Save
   #Passed_Fixed
-  @CSSO_General_Mec2
+  @CSSO_General_Mechanical_Fixed
   Scenario: Test to Continue General Info of ScheduleServiceOrder with branch Mech and Job Type ,Save and open Work Order.2
     When user clicked on CallTab
     Then user enters Company
@@ -79,7 +79,7 @@ Feature: New USer Mech Call 3
     Then user click on name
 
   #Passed_Recent
-  @CSSO_General_Mec7
+  @CSSO_General_Mechanical_Fixed
   Scenario: Test to General Info of ScheduleEstimation send Email for CustomerSignature.7
     When user clicked on CallTab
     Then user enters Company
@@ -121,7 +121,7 @@ Feature: New USer Mech Call 3
   #Then user click on Save & Continue Signatures
   #Then user click on Send email	Agreement1
   #Passed_recent
-  @CSSO_General_Mec8
+  @CSSO_General_Mechanical_Fixed
   Scenario: Test ScheduleEstimation with FieldRange  Cust is Absent8
     When user clicked on CallTab
     Then user enters Company
@@ -152,7 +152,7 @@ Feature: New USer Mech Call 3
     Then user click on Save & Continue General Info
 
   #Passed_Recent
-  @CSSO_General_Mec9
+  @CSSO_General_Mechanical_Fixed
   Scenario: Test ScheduleEstimation with InsideRange when Cust is Absent and Send Agreement Link9
     When user clicked on CallTab
     Then user enters Company
@@ -186,7 +186,7 @@ Feature: New USer Mech Call 3
   # Then user click on Save Equipment
   #Then user click on Save & Continue Equipment
   #Pass_Fixed
-  @CSSO_General_Mec10
+  @CSSO_General_Mechanical_Fixed
   Scenario: Test ScheduleEstimation Commercial with FieldSpecific when Cust is Present and send email10
     When user clicked on CallTab
     Then user enters Company
@@ -215,7 +215,7 @@ Feature: New USer Mech Call 3
 
   #Then user click on send email(Cust Present)
   #Passed_Recent
-  @CSSO_General_Mec111
+  @CSSO_General_Mechanical_Fixed
   Scenario: Test ScheduleEstimation with branch Mech Schedule Estimation,Residential and Specific Schedule Time.11
     When user clicked on CallTab
     Then user enters Company
@@ -255,7 +255,7 @@ Feature: New USer Mech Call 3
     #Then user click on Save & Continue Signatures
 
   #Passed_recent
-  @CSSO_SchEstimation_Resi_Inside_Specific_NonStd_CustPresent_Mech
+  @CSSO_General_Mechanical_Fixed
   Scenario: Test ScheduleEstimation with IndideSpecific with Cust is Present12
     When user clicked on CallTab
     Then user enters Company
@@ -282,7 +282,7 @@ Feature: New USer Mech Call 3
     Then user click on Save & Continue General Info
 
   #Pass_Email
-  @CSSO_SchEstimation_Resi_Field_Specific_NonStd_CustPresent_Mech
+  @CSSO_General_Mechanical_Fixed
   Scenario: Test Scheduleestimation Residential with FieldSpecific when Cust is Present13
     When user clicked on CallTab
     Then user enters Company
@@ -323,7 +323,7 @@ Feature: New USer Mech Call 3
   #Then user click on Sales Representative Signature
   #Then user click on Save & Continue Signatures
   #passed_recent
-  @CSSO_ScheduleEstimation_Comm_Inside_Specific_NonStd_CustPresent_Mech
+  @CSSO_General_Mechanical_Fixed
   Scenario: Test ScheduleEstimation Commercial with InsideSpecific when Cust is Present.23
     When user clicked on CallTab
     Then user enters Company
@@ -363,7 +363,7 @@ Feature: New USer Mech Call 3
   #Then user click on Sales Representative Signature
   #Then user click on Save & Continue Signatures
   #Passed_recent
-  @CSSO_SchEstimation_Comm_Inside_Range_Std_CustAbsent_Mech
+  @CSSO_General_Mechanical_Fixed
   Scenario: Test ScheduleEstimation Commercial with InsideRange when Cust is Absent and send and email5
     When user clicked on CallTab
     Then user enters Company
@@ -398,7 +398,7 @@ Feature: New USer Mech Call 3
     #Then user click on Save & Continue Equipment
 
   #Pass
-  @CSSO_General_Mec3
+  @CSSO_General_Mechanical_Fixed
   Scenario: Test Opportunity using PrimaryRoute.3
     When user clicked on CallTab
     Then user enters Company

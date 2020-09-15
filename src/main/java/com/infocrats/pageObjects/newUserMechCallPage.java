@@ -140,12 +140,10 @@ public class newUserMechCallPage extends peststreamPage {
 
 	@FindBy(css = "tr:nth-of-type(1) > td:nth-of-type(3) > a[title='Edit Work Order']")
 	private WebElementFacade select_Work_Order;
-	
+
 	@FindBy(css = "tr:nth-of-type(1) > td:nth-of-type(3)")
 	private WebElementFacade TextNearSelectWorkOrder;
 
-	
-	
 	@FindBy(xpath = "//form[@id='frmLeadDetail']/div[@class='modal-footer pull-right']//button[@id='btnSave']")
 	private WebElementFacade checkDetails_Save_Button;
 
@@ -208,11 +206,9 @@ public class newUserMechCallPage extends peststreamPage {
 
 	@FindBy(xpath = "//*[@id='uniform-SalesType'][2]")
 	private WebElementFacade salesType_Field;
-	
-	@FindBy(xpath = "[for='SalesType']")
+
+	@FindBy(css = "[for='SalesType']")
 	private WebElementFacade salesTypeText;
-	
-	
 
 	@FindBy(xpath = "//*[@id='submit']")
 	private WebElementFacade scheduleTime_Specific;
@@ -321,6 +317,9 @@ public class newUserMechCallPage extends peststreamPage {
 
 	@FindBy(xpath = "//*[@id='SpRequiredServiceAddressControl_AddressSubType']/option[3]")
 	private WebElementFacade addSubType_Commercial;
+
+	@FindBy(css = "select#SpRequiredServiceAddressControl_AddressSubType")
+	private WebElementFacade AddressSubTypeDD;
 
 	@FindBy(xpath = "//*[@id='SalesType']")
 	private WebElementFacade saleType_Inside;
@@ -642,7 +641,7 @@ public class newUserMechCallPage extends peststreamPage {
 
 	public void clickOnFlatRate() throws Exception {
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
-		
+
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
 		wait.until(ExpectedConditions.elementToBeClickable(flatRate));
 		waitABit(4000);
@@ -672,8 +671,8 @@ public class newUserMechCallPage extends peststreamPage {
 		waitABit(2000);
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
-scrollUP(select_Work_Order);		
-        
+		scrollUP(select_Work_Order);
+
 		waitABit(2000);
 		TextNearSelectWorkOrder.click();
 		wait.until(ExpectedConditions.elementToBeClickable(select_Work_Order));
@@ -1120,7 +1119,11 @@ scrollUP(select_Work_Order);
 	public void clickOnaddSubType_Commercial() throws Exception {
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
-		wait.until(ExpectedConditions.elementToBeClickable(addSubType_Commercial));
+
+		scrollDown(AddressSubTypeDD);
+		wait.until(ExpectedConditions.elementToBeClickable(AddressSubTypeDD));
+		AddressSubTypeDD.click();
+		waitABit(1000);
 
 		addSubType_Commercial.click();
 	}

@@ -312,7 +312,7 @@ public class NewUserMechCallStepDefs {
 		newusermechcallsteps.clickOnScheduleTime_Specific();
 	}
 
-
+	@Then("^user click on Assigned,Estimated Duration$")
 	public void user_click_on_Assigned_Estimated_Duration() throws Exception {
 		newusermechcallsteps.click_on_Assigned_Estimated_Duration();
 	}
@@ -392,6 +392,7 @@ public class NewUserMechCallStepDefs {
 	public void user_click_on_Electronic_Signature() throws Exception {
 		newusermechcallsteps.clickOnElectronic_Signature();
 	}
+	
 
 	@Then("^user click on Sales Representative Signature$")
 	public void user_click_on_Sales_Representative_Signature() throws Exception {
