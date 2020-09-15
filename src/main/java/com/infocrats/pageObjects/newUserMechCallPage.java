@@ -662,8 +662,8 @@ public class newUserMechCallPage extends peststreamPage {
 		waitABit(2000);
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
-		JavascriptExecutor js = (JavascriptExecutor) getDriver();
-        js.executeScript("window.scrollBy(0,200)", "");
+scrollUP(select_Work_Order);		
+        
 		wait.until(ExpectedConditions.elementToBeClickable(select_Work_Order));
 		waitABit(2000);
 		select_Work_Order.click();
