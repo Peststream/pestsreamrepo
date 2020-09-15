@@ -41,7 +41,7 @@ Feature: New USer Mech Call 2
     Then user click on LabourType(Helper)
     And user clicks on Save Button Mech
     Then user click on Advance Search Mech
-    #Then user selects Work order
+    Then user selects Work order
 
   #Pass_Fixed
   @CSSO_WorkOrder_Frate_ServiceApp_CustPresent_SendMail_Mech
