@@ -138,9 +138,14 @@ public class newUserMechCallPage extends peststreamPage {
 	@FindBy(xpath = "//*[@id='btnAdvanceSearch']")
 	private WebElementFacade advanceSearch_Mech;
 
-	@FindBy(xpath = "//table[@id='sample_1']/tbody/tr[1]/td[3]/a[@title='Edit Work Order']")
+	@FindBy(css = "tr:nth-of-type(1) > td:nth-of-type(3) > a[title='Edit Work Order']")
 	private WebElementFacade select_Work_Order;
+	
+	@FindBy(css = "tr:nth-of-type(1) > td:nth-of-type(3)")
+	private WebElementFacade TextNearSelectWorkOrder;
 
+	
+	
 	@FindBy(xpath = "//form[@id='frmLeadDetail']/div[@class='modal-footer pull-right']//button[@id='btnSave']")
 	private WebElementFacade checkDetails_Save_Button;
 
@@ -664,8 +669,9 @@ public class newUserMechCallPage extends peststreamPage {
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
 scrollUP(select_Work_Order);		
         
-		wait.until(ExpectedConditions.elementToBeClickable(select_Work_Order));
 		waitABit(2000);
+		TextNearSelectWorkOrder.click();
+		wait.until(ExpectedConditions.elementToBeClickable(select_Work_Order));
 		select_Work_Order.click();
 		waitABit(2000);
 
