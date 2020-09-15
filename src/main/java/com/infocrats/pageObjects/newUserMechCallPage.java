@@ -652,6 +652,7 @@ public class newUserMechCallPage extends peststreamPage {
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
 		wait.until(ExpectedConditions.elementToBeClickable(advanceSearch_Mech));
+		waitABit(2000);
 		advanceSearch_Mech.click();
 	}
 
