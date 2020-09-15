@@ -19,7 +19,7 @@ public class newUserMechCallPage extends peststreamPage {
 	BaseUtills utills = new BaseUtills();
 	private Map<String, Integer> jsonData;
 
-	@FindBy(xpath = "//body/div/div/div/ul/li[3]/a[1]")
+	@FindBy(css = "[href='\\/Sale\\/PhoneSales\\/Index']")
 	private WebElementFacade CallTab;
 
 	@FindBy(xpath = "//*[@id='crmCompanySaleshead']")
@@ -145,10 +145,10 @@ public class newUserMechCallPage extends peststreamPage {
 	@FindBy(xpath = "//*[@id='dynamicModal']/div/div/div[3]/span")
 	private WebElementFacade ok_Button;
 
-	@FindBy(xpath = "/html/body/div[3]/div[1]/div/ul/li[8]/a/span[1]")
+	@FindBy(css = "[data-keep-expanded] .nav-item:nth-of-type(9) [href='\\#']")
 	private WebElementFacade appointment_Tab;
 
-	@FindBy(xpath = "/html/body/div[3]/div[1]/div/ul/li[8]/ul/li[2]/a/span")
+	@FindBy(css = "[href='\\/Service\\/WorkOrder'] .title")
 	private WebElementFacade service_Appointment;
 
 	@FindBy(xpath = "//*[@id='sample_1']/tbody/tr[1]/td[1]/a")
@@ -537,6 +537,8 @@ public class newUserMechCallPage extends peststreamPage {
 	public void Job_Type() throws Exception {
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		waitABit(3000);
+		scrollDownLarge(job_Type);
 		wait.until(ExpectedConditions.elementToBeClickable(job_Type));
 		job_Type.click();
 		waitABit(1500);
@@ -563,6 +565,7 @@ public class newUserMechCallPage extends peststreamPage {
 	public void ClickOnAdd() throws Exception {
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		scrollUPSmall(add_Button);
 		wait.until(ExpectedConditions.elementToBeClickable(add_Button));
 		add_Button.click();
 	}
@@ -627,8 +630,10 @@ public class newUserMechCallPage extends peststreamPage {
 
 	public void clickOnFlatRate() throws Exception {
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
 		wait.until(ExpectedConditions.elementToBeClickable(flatRate));
+		waitABit(4000);
 		flatRate.click();
 
 	}
@@ -1132,6 +1137,7 @@ public class newUserMechCallPage extends peststreamPage {
 	public void clickOnServiceRR_After() throws Exception {
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		waitABit(2500);
 		wait.until(ExpectedConditions.elementToBeClickable(serviceRR_After));
 		serviceRR_After.click();
 	}
@@ -1162,6 +1168,7 @@ public class newUserMechCallPage extends peststreamPage {
 
 	public void jTNew_Construction() throws Exception {
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		scrollDownLarge(job_Type);
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
 		wait.until(ExpectedConditions.elementToBeClickable(job_Type));
 

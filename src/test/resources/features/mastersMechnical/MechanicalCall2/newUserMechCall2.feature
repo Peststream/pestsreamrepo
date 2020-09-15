@@ -1,4 +1,4 @@
-@run @NewUserMechCallPass1
+@run @NewUserMechCallPass3
 Feature: New USer Mech Call 2
 
   Background: 
@@ -107,7 +107,7 @@ Feature: New USer Mech Call 2
     And user checks the details and Save
     Then user click on Appointments Tab
     Then user click on service appointments
-    Then user click on name
+   
 
   #Passed_Fixed
   @CSSO__After_HolidayHour_Range_Helper_ServiceApp_CustAbsent_SendMail_Mech
