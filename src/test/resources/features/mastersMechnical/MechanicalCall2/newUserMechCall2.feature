@@ -387,8 +387,8 @@ Feature: New USer Mech Call 2
     Then user enters City
     Then user click on Address Sub Type(Commercial)
     Then user click on sales type (field)
-    Then user click on Assigned,Estimated Duration
-    Then user click on saveInfo Button
+    #Then user click on Assigned,Estimated Duration
+    #Then user click on saveInfo Button
 
   #Passed_Recent
   @CSSO_ScheduleEstimation_Residential_Inside_TimeRange_Save_Mech
