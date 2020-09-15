@@ -658,6 +658,7 @@ public class newUserMechCallPage extends peststreamPage {
 	public void select_Work_Order() throws Exception {
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		waitABit(5000);
 		wait.until(ExpectedConditions.elementToBeClickable(select_Work_Order));
 		select_Work_Order.click();
 
