@@ -1,4 +1,4 @@
-@run @hvac
+@run @hvac @Passed
 Feature: Test for Call HVAC.
 
   Background: 

@@ -1,5 +1,5 @@
-@run @NewUserMechCall
-Feature: New USer Mech Call 2
+@run @NewUserMechCall @Passed
+Feature: New USer Mech Call 2 
 
   Background: 
     Given User successfully logged into system with valid credentials
