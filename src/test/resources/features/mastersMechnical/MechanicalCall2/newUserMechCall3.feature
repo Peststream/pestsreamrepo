@@ -144,12 +144,12 @@ Feature: New USer Mech Call 3
     Then user click on Address Sub Type(Commercial)
     Then user click on sales type (field)
     Then user click on Range 	Time
-    Then select Time Range
-    Then select Second Time Range
-    Then user click on Assigned,Estimated Duration
-    Then user click on saveInfo Button
-    Then user click on Opportunity_Mech
-    Then user click on Save & Continue General Info
+   #Then select Time Range
+    #Then select Second Time Range
+    #Then user click on Assigned,Estimated Duration
+    #Then user click on saveInfo Button
+    #Then user click on Opportunity_Mech
+    #Then user click on Save & Continue General Info
 
   #Passed_Recent
   @CSSO_General_Mechanical_Fixed
@@ -186,7 +186,7 @@ Feature: New USer Mech Call 3
   # Then user click on Save Equipment
   #Then user click on Save & Continue Equipment
   #Pass_Fixed
-  @CSSO_General_Mechanical_Fixed
+  @CSSO_General_Mechanical_Fixed10
   Scenario: Test ScheduleEstimation Commercial with FieldSpecific when Cust is Present and send email10
     When user clicked on CallTab
     Then user enters Company
