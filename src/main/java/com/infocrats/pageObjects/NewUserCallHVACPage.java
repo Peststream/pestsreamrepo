@@ -74,6 +74,9 @@ public class NewUserCallHVACPage extends peststreamPage {
 	@FindBy(css = "tbody .odd:nth-of-type(1) td:nth-of-type(3) [href]")
 	private WebElementFacade FirstWorkOrderlbl;
 	
+	@FindBy(css = "tr[role='row'] > th:nth-of-type(3)")
+	private WebElementFacade WorkOrderCLick;
+	
 	
 
 	@FindBy(xpath = "//*[@id='select2-chosen-1']")
@@ -515,7 +518,10 @@ public class NewUserCallHVACPage extends peststreamPage {
 		wait.until(ExpectedConditions.elementToBeClickable(FirstWorkOrderlbl));
 		
 		waitABit(6000);
+		
 		scrollDown(FirstWorkOrderlbl);
+		waitABit(1000);
+		WorkOrderCLick.click();
 waitABit(1000);
 		FirstWorkOrderlbl.click();
 
@@ -524,10 +530,16 @@ waitABit(1000);
 	public void clickOnWorkOrderNumber() throws Exception {
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		
 		wait.until(ExpectedConditions.elementToBeClickable(FirstWorkOrderlbl));
-
+		
+		waitABit(6000);
+		
+		scrollDown(FirstWorkOrderlbl);
+		waitABit(1000);
+		WorkOrderCLick.click();
+waitABit(1000);
 		FirstWorkOrderlbl.click();
-
 	}
 
 	public void selectOrderFromOrderTypeDD() throws Exception {
