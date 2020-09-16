@@ -308,12 +308,6 @@ Feature: New USer Mech Call Pass
     Then user click on Primary Email
     Then user click on cell
     Then user click on branch Mech
-    Then user click on department
-    Then user click on service
-    Then user click on source
-    Then user click on schedule Type(schedule estimation)
-    Then user enters Alert
-    Then user enters Problem Description
     Then user click on continue
 
   #Pass_fixed

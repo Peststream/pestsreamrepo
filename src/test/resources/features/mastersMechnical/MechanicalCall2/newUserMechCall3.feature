@@ -143,7 +143,7 @@ Feature: New USer Mech Call 3
     Then user enters City
     Then user click on Address Sub Type(Commercial)
     Then user click on sales type (field)
-    Then user click on Range 	Time
+    #Then user click on Range 	Time
    #Then select Time Range
     #Then select Second Time Range
     #Then user click on Assigned,Estimated Duration
