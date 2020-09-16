@@ -478,4 +478,9 @@ public class NewUserMechCallSteps extends pestreamSteps {
 		newusermechcallpage.clickOnSaveandContinue_Job();
 	}
 
+	public void clickOnRange_TimeSecond() throws Exception {
+		newusermechcallpage.clickOnRange_TimeSecond();
+		
+	}
+
 }

@@ -423,7 +423,11 @@ public class NewUserMechCallStepDefs {
 	public void user_click_on_Range_Time() throws Exception {
 		newusermechcallsteps.clickOnRange_Time();
 	}
-
+	
+	@Then("^user click on Range Time Second$")
+	public void user_click_on_Range_Time_Second() throws Exception {
+		newusermechcallsteps.clickOnRange_TimeSecond();
+	}
 	@Then("^select Time Range$")
 	public void select_Time_Range() throws Exception {
 		newusermechcallsteps.Time_Range();

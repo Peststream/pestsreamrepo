@@ -1034,6 +1034,16 @@ public class newUserMechCallPage extends peststreamPage {
 		range_Time.click();
 
 	}
+	
+	public void clickOnRange_TimeSecond() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(range_Time));
+
+		waitABit(2000);
+		range_Time.click();
+
+	}
 
 	public void Time_Range() throws Exception {
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
