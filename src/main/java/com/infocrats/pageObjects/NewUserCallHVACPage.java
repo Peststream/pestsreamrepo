@@ -70,8 +70,8 @@ public class NewUserCallHVACPage extends peststreamPage {
 
 	@FindBy(xpath = "//*[@id='btnAdvanceSearch']")
 	private WebElementFacade AdvanceSearchBtn;
-
-	@FindBy(css = "tr:nth-of-type(1) > td:nth-of-type(3) > a[title='Edit Work Order']")
+	
+	@FindBy(css = "tbody .odd:nth-of-type(1) td:nth-of-type(3) [href]")
 	private WebElementFacade FirstWorkOrderlbl;
 	
 	
@@ -513,8 +513,10 @@ public class NewUserCallHVACPage extends peststreamPage {
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
 		
 		wait.until(ExpectedConditions.elementToBeClickable(FirstWorkOrderlbl));
+		
 		waitABit(6000);
-
+		scrollDown(FirstWorkOrderlbl);
+waitABit(1000);
 		FirstWorkOrderlbl.click();
 
 	}
