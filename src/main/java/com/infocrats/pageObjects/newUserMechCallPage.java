@@ -287,7 +287,12 @@ public class newUserMechCallPage extends peststreamPage {
 
 	@FindBy(xpath = "//*[@id='uniform-RangeTimeType']")
 	private WebElementFacade range_Time;
+	
+	@FindBy(css = "[for='ServiceStartStartTimeStr']")
+	private WebElementFacade range_TimeLbl;
 
+	
+	
 	@FindBy(xpath = "//*[@id='InitialPreferedId']")
 	private WebElementFacade time_Range;
 
@@ -1030,6 +1035,9 @@ public class newUserMechCallPage extends peststreamPage {
 		wait.until(ExpectedConditions.elementToBeClickable(range_Time));
 
 		scrollDownLarge(range_Time);
+		waitABit(1000);
+		range_TimeLbl.click();
+		
 		waitABit(2000);
 		range_Time.click();
 

@@ -121,7 +121,7 @@ Feature: New USer Mech Call 3
   #Then user click on Save & Continue Signatures
   #Then user click on Send email	Agreement1
   #Passed_recent
-  @CSSO_General_Mechanical_Fixed
+  @CSSO_General_Mechanical_Fixed8
   Scenario: Test ScheduleEstimation with FieldRange  Cust is Absent8
     When user clicked on CallTab
     Then user enters Company
