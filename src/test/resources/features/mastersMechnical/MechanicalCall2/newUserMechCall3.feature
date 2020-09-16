@@ -1,4 +1,4 @@
-@run @NewUserMechCallPass3
+@run @NewUserMechCallPassThree
 Feature: New USer Mech Call 3
 
   Background: 
