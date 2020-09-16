@@ -103,8 +103,8 @@ Feature: New USer Mech Call 3
     Then user click on sales type (field)
     Then user click on Assigned,Estimated Duration
     Then user click on saveInfo Button
-    Then user click on Opportunity_Mech
-    Then user click on Save & Continue General Info
+   # Then user click on Opportunity_Mech
+    #Then user click on Save & Continue General Info
 
   #Then user click on continue Inspection
   #Then user click on Non Standard Equipment subTab
@@ -148,8 +148,8 @@ Feature: New USer Mech Call 3
     Then select Second Time Range
     Then user click on Assigned,Estimated Duration
     Then user click on saveInfo Button
-    Then user click on Opportunity_Mech
-    Then user click on Save & Continue General Info
+   # Then user click on Opportunity_Mech
+    #Then user click on Save & Continue General Info
 
   #Passed_Recent
   @CSSO_General_Mechanical_Fixed
