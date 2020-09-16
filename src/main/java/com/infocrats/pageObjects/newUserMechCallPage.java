@@ -1139,8 +1139,11 @@ public class newUserMechCallPage extends peststreamPage {
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
 		wait.until(ExpectedConditions.elementToBeClickable(service_Address));
-
-		service_Address.click();
+scrollDown(service_Address);
+waitABit(1000);
+scrollDown(service_Address);
+waitABit(1000);
+		service_Address.click();		
 	}
 
 	public void enterLast_Name(Map<String, String> testData) throws Exception {
