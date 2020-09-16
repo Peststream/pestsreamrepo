@@ -71,8 +71,10 @@ public class NewUserCallHVACPage extends peststreamPage {
 	@FindBy(xpath = "//*[@id='btnAdvanceSearch']")
 	private WebElementFacade AdvanceSearchBtn;
 
-	@FindBy(xpath = "//table[@id='sample_1']/tbody/tr[1]/td[3]/a[@title='Edit Work Order']")
+	@FindBy(css = "tr:nth-of-type(1) > td:nth-of-type(3) > a[title='Edit Work Order']")
 	private WebElementFacade FirstWorkOrderlbl;
+	
+	
 
 	@FindBy(xpath = "//*[@id='select2-chosen-1']")
 	private WebElementFacade LeadEmployeeDD;
@@ -85,9 +87,6 @@ public class NewUserCallHVACPage extends peststreamPage {
 
 	@FindBy(xpath = "//*[@id='RouteMasterId']/optgroup[2]/option[1]")
 	private WebElementFacade PrimaryRouteDD;
-
-	@FindBy(xpath = "//table[@id='sample_1']/tbody/tr[1]/td[3]/a[@title='Edit Work Order']")
-	private WebElementFacade WorkOrderNumber;
 
 	@FindBy(xpath = "//*[@id='OrderType']")
 	private WebElementFacade OrderTypeDD;
@@ -471,16 +470,7 @@ public class NewUserCallHVACPage extends peststreamPage {
 
 	}
 
-	public void selectOneWorkOrder() throws Exception {
-		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
-		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
-		
-		wait.until(ExpectedConditions.elementToBeClickable(FirstWorkOrderlbl));
-		waitABit(4000);
-
-		FirstWorkOrderlbl.click();
-
-	}
+	
 
 	public void selectLeadEmployee() throws Exception {
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
@@ -518,13 +508,23 @@ public class NewUserCallHVACPage extends peststreamPage {
 		AdvanceSearchBtn.click();
 
 	}
+	public void selectOneWorkOrder() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		
+		wait.until(ExpectedConditions.elementToBeClickable(FirstWorkOrderlbl));
+		waitABit(6000);
+
+		FirstWorkOrderlbl.click();
+
+	}
 
 	public void clickOnWorkOrderNumber() throws Exception {
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
-		wait.until(ExpectedConditions.elementToBeClickable(WorkOrderNumber));
+		wait.until(ExpectedConditions.elementToBeClickable(FirstWorkOrderlbl));
 
-		WorkOrderNumber.click();
+		FirstWorkOrderlbl.click();
 
 	}
 

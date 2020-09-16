@@ -42,7 +42,7 @@ Feature: Test for call Hvac 2
     And Click on save from Work Order
 
   #pass
-  @TestOpportunityInfoForHVA4
+  @TestOpportunityInfoForHVA3
   Scenario: Test opportunity info (general info) for HVAC4
     When user clicked on call tab
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
@@ -60,7 +60,7 @@ Feature: Test for call Hvac 2
     And Select lead employee from DD
     And Click on save from Work Order
     And Click on Advance Search Button
-    And Click On First Work Order Number From Work Order
+    And Select and click on one Work Order Number
     And Select Order Type From DD
     And Click on save from Work Order
 
