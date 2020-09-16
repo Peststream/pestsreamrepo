@@ -1034,7 +1034,6 @@ public class newUserMechCallPage extends peststreamPage {
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
 		wait.until(ExpectedConditions.elementToBeClickable(range_Time));
 
-		scrollDownLarge(range_Time);
 		waitABit(1000);
 		range_TimeLbl.click();
 		
