@@ -8,7 +8,7 @@ Feature: New USer Mech Call 3
     Then I am granted access to the system
 
   #Pass_Fixed
-  @CSSO_General_Mechanical_Fixed
+  @CSSO_General_Mechanical_Fixed100
   Scenario: Test to Continue General Info of ScheduleServiceOrder with branch Mech and Job Type ,Save and open Work Order.1
     When user clicked on CallTab
     Then user enters Company
@@ -79,7 +79,7 @@ Feature: New USer Mech Call 3
     Then user click on name
 
   #Passed_Recent
-  @CSSO_General_Mechanical_Fixed100
+  @CSSO_General_Mechanical_Fixed
   Scenario: Test to General Info of ScheduleEstimation send Email for CustomerSignature.7
     When user clicked on CallTab
     Then user enters Company
@@ -103,8 +103,8 @@ Feature: New USer Mech Call 3
     Then user click on sales type (field)
     Then user click on Assigned,Estimated Duration
     Then user click on saveInfo Button
-   # Then user click on Opportunity_Mech
-    #Then user click on Save & Continue General Info
+    Then user click on Opportunity_Mech
+    Then user click on Save & Continue General Info
 
   #Then user click on continue Inspection
   #Then user click on Non Standard Equipment subTab
@@ -121,7 +121,7 @@ Feature: New USer Mech Call 3
   #Then user click on Save & Continue Signatures
   #Then user click on Send email	Agreement1
   #Passed_recent
-  @CSSO_General_Mechanical_Fixed8
+  @CSSO_General_Mechanical_Fixed
   Scenario: Test ScheduleEstimation with FieldRange  Cust is Absent8
     When user clicked on CallTab
     Then user enters Company
@@ -148,8 +148,8 @@ Feature: New USer Mech Call 3
     Then select Second Time Range
     Then user click on Assigned,Estimated Duration
     Then user click on saveInfo Button
-   # Then user click on Opportunity_Mech
-    #Then user click on Save & Continue General Info
+    Then user click on Opportunity_Mech
+    Then user click on Save & Continue General Info
 
   #Passed_Recent
   @CSSO_General_Mechanical_Fixed
