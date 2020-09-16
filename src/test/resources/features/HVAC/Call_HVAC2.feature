@@ -37,43 +37,43 @@ Feature: Test for call Hvac 2
     And enters service address "Address Line1", "Zip","Contact", "City"
     And click on Save button from general info
     And click on Advance Search from Work Order
-    And Select and click on one Work Order Number
-    And Select lead employee from DD
-    And Click on save from Work Order
+   # And Select and click on one Work Order Number
+   # And Select lead employee from DD
+    #And Click on save from Work Order
 
   #pass
-  @TestOpportunityInfoForHVA3
-  Scenario: Test opportunity info (general info) for HVAC4
-    When user clicked on call tab
-    When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
-    And select lead branch Information
-    And select source Information
-    And enters Account_Alert and enterProblemDiscription
-    And click on continue button for commercial opportunity
-    And select primary requested service
-    And check flat rate
-    And Enter Job Description
-    And enters service address "Address Line1", "Zip","Contact", "City"
-    And click on Save button from general info
-    And click on Advance Search from Work Order
-    And Select and click on one Work Order Number
-    And Select lead employee from DD
-    And Click on save from Work Order
-    And Click on Advance Search Button
-    And Select and click on one Work Order Number
-    And Select Order Type From DD
-    And Click on save from Work Order
-
+  #@TestOpportunityInfoForHVA3
+  #Scenario: Test opportunity info (general info) for HVAC4
+    #When user clicked on call tab
+    #When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
+    #And select lead branch Information
+    #And select source Information
+    #And enters Account_Alert and enterProblemDiscription
+    #And click on continue button for commercial opportunity
+    #And select primary requested service
+    #And check flat rate
+    #And Enter Job Description
+    #And enters service address "Address Line1", "Zip","Contact", "City"
+    #And click on Save button from general info
+    #And click on Advance Search from Work Order
+    #And Select and click on one Work Order Number
+    #And Select lead employee from DD
+    #And Click on save from Work Order
+    #And Click on Advance Search Button
+    #And Select and click on one Work Order Number
+    #And Select Order Type From DD
+    #And Click on save from Work Order
+#
   #pass
-  @TestOpportunityInfoForHVA5
-  Scenario: Test CSR Dashboard for HVAC5
-    When user click on CSR Dashboard
-    When user click on Advance Search from CSR Dashboard
-    And Select Create Workorder From Action for the first Account
-    And Select Service Category & Services
-    And Click On Add Button
-    And Enter Service Date
-    And Click on save from Work Order
+  #@TestOpportunityInfoForHVA5
+  #Scenario: Test CSR Dashboard for HVAC5
+    #When user click on CSR Dashboard
+    #When user click on Advance Search from CSR Dashboard
+    #And Select Create Workorder From Action for the first Account
+    #And Select Service Category & Services
+    #And Click On Add Button
+    #And Enter Service Date
+    #And Click on save from Work Order
 
   #Pass
   @TestOpportunityInfoForHVAC0060
