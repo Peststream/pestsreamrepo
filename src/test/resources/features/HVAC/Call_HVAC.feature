@@ -8,11 +8,7 @@ Feature: Test for Call HVAC.
     Then I am granted access to the system
 
   #pass
-<<<<<<< Updated upstream
-  @TestOpportunityInfoForHVAC001
-=======
   @TestOpportunityInfoForHVACMS
->>>>>>> Stashed changes
   Scenario: Test opportunity info (general info) for HVAC1
     When user clicked on call tab
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
@@ -22,11 +18,7 @@ Feature: Test for Call HVAC.
     And click on continue button for commercial opportunity
 
   #pass
-<<<<<<< Updated upstream
-  @TestOpportunityInfoForHVAC55
-=======
   @TestOpportunityInfoForHVAC7MS
->>>>>>> Stashed changes
   Scenario: Test CSR Dashboard for HVAC7
     When user click on CSR Dashboard
     When user click on Advance Search from CSR Dashboard
@@ -35,11 +27,7 @@ Feature: Test for Call HVAC.
     And Click on Save Buttton From Add Call Tab
 
   #pass
-<<<<<<< Updated upstream
-  @TestOpportunityInfoForHVAC55
-=======
   @TestOpportunityInfoForHVAC8MS
->>>>>>> Stashed changes
   Scenario: Test CSR Dashboard for HVAC8
     When user click on CSR Dashboard
     When user click on Advance Search from CSR Dashboard
@@ -68,11 +56,7 @@ Feature: Test for Call HVAC.
 
 
   #pass
-<<<<<<< Updated upstream
-  @TestOpportunityInfoForHVAC002
-=======
   @TestOpportunityInfoForHVAC123
->>>>>>> Stashed changes
   Scenario: Test Customer DropDown For Account12
     When User Click On Customer
     And Select Account From The DD List
