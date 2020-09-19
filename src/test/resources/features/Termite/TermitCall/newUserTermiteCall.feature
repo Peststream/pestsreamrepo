@@ -1,4 +1,4 @@
-@run @termitecall
+@run @termitecall1
 Feature: Test for new User Termite Call of Termite.
 
   Background: 
@@ -19,7 +19,11 @@ Feature: Test for new User Termite Call of Termite.
     Then user click on OppType
     Then user click on continue
 
+<<<<<<< Updated upstream
   @generalInfoResidentialWithLeadMSN
+=======
+  @generalInfoResidentialWithLead
+>>>>>>> Stashed changes
   Scenario: Test to Continue General Info with lead Termite
     When user click on CallTab
     Then user enters company
@@ -76,6 +80,7 @@ Feature: Test for new User Termite Call of Termite.
     Then user click on radioButtionAddToAgreement
     Then user click on saveAddToAgreement
     When user click on opportunity
+    Then user enters LastNameGI
     Then user click on saveAndCont_GI_SalesApp_Appointments
     Then user click on continue_Inspection_SalesApp_Appointments
     Then user click on markAsLost_SelectService_SalesApp_Appointments
@@ -190,7 +195,7 @@ Feature: Test for new User Termite Call of Termite.
     Then user click on DDAssignedTo
     Then user click on saveScheduleEstimation
 
-  @resiScheduleEstimationFieldRangeTimeSave
+  @resiScheduleEstimationFieldRangeTimeFieldSave
   Scenario: Test to Save FieldRangeTime ScheduleEstimation of Termite
     When user click on CallTab
     Then user enters company
@@ -212,31 +217,7 @@ Feature: Test for new User Termite Call of Termite.
     Then user click on DDAssignedTo
     Then user click on saveScheduleEstimation
 
-  @resiScheduleEstimationFieldRangeTimeMarkLost
-  Scenario: Test to Save FieldRangeTime MarkLost ScheduleEstimation of Termite
-    When user click on CallTab
-    Then user enters company
-    Then user enters contact
-    Then user click on Branch
-    Then user click on Source
-    Then user enters Alert
-    Then user enters Problem Description
-    Then user click on OppType
-    Then user click on continue
-    Then user click on addressLine1
-    Then user click on zip
-    Then user click on city
-    Then user click on addNote
-    Then user click on ScheduleEstimation
-    Then user click on fieldRadioBttn_FieldScheduleEstimation
-    Then user click on RangeTime_InsideScheduleEstimation
-    Then user click on DDTimeRange_InsideScheduleEstimation
-    Then user click on DDAssignedTo
-    Then user click on MarkLost_ScheduleEstimation
-    Then user click on DDReason_ScheduleEstimation
-    Then user click on des_ScheduleEstimation
-    Then user click on save_ScheduleEstimation
-
+  
   @resiScheduleEstimationFieldSpecificTimeSave
   Scenario: Test to Save FieldSpecificTime ScheduleEstimation of Termite
     When user click on CallTab
@@ -257,9 +238,7 @@ Feature: Test for new User Termite Call of Termite.
     Then user click on DDAssignedTo
     Then user click on saveScheduleEstimation
 
- 
-
-  @commScheduleEstimationFieldSpecificTimeSave
+   @commScheduleEstimationFieldSpecificTimeSave
   Scenario: Test to FieldRadioButton of ScheduleServiceOrder Termite
     When user click on CallTab
     Then user enters company
@@ -360,8 +339,11 @@ Feature: Test for new User Termite Call of Termite.
     Then user click on DDAssignedTo
     Then user click on saveScheduleEstimation
     Then user click on generatedOpportunity_FieldSTSaveComm
+    Then user enters LastNameGI
     Then user click on saveAndcontGI_FieldSTSaveComm
     Then user click on continueInspection_FieldSTSaveComm
     Then user click on markaslost_InsideSTSaveComm
     Then user click on DDReasonML_InsideSTSaveComm
     Then user click on saveML_InsideSTSaveComm
+    
+    
