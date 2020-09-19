@@ -376,7 +376,7 @@ public class newUserPCROSteps extends pestreamSteps {
 	}
 
 	@Step
-	public void startAndEndDate() {
+	public void startAndEndDate() throws Exception {
 
 		newuserpcropage.startAndEnd_Date();
 	}

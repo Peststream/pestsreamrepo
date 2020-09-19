@@ -17,7 +17,7 @@ public class EmployeePage extends peststreamPage {
 	BaseUtills utills = new BaseUtills();
 	private Map<String, Integer> jsonData;
 
-	@FindBy(xpath = "/html[1]/body[1]/div[3]/div[1]/div[1]/ul[1]/li[9]/a[1]/span[1]")
+	@FindBy(linkText = "Employee")
 	private WebElementFacade employeeTab;
 
 	@FindBy(xpath = "//span[contains(text(),'Staff')]")
@@ -74,7 +74,7 @@ public class EmployeePage extends peststreamPage {
 	@FindBy(xpath = "//*[@id=\"s2id_autogen15_search\"]")
 	private WebElementFacade editetxt;
 
-	@FindBy(xpath = "/html/body/div[3]/div[1]/div/ul/li[9]/ul/li[2]/a/span")
+	@FindBy(linkText = "Team")
 	private WebElementFacade teamTab;
 
 	@FindBy(xpath = "/html/body/div[3]/div[2]/div[1]/div/div[2]/div/div/div[1]/div[1]/div/div/button")
@@ -95,7 +95,7 @@ public class EmployeePage extends peststreamPage {
 	@FindBy(xpath = "//*[@id=\"s2id_DepartSysName\"]/a")
 	private WebElementFacade TeamDepartmentDDL;
 
-	@FindBy(xpath = "//*[@id=\"select2-results-3\"]/li[2]/ul/li[1]")
+	@FindBy(xpath = "(//*[@class=\"select2-result-label\"])[3]")
 	private WebElementFacade TeamDepartmentValue;
 
 	@FindBy(xpath = "//*[@id=\"s2id_ddlEmployeeId\"]")
@@ -110,13 +110,13 @@ public class EmployeePage extends peststreamPage {
 	@FindBy(xpath = "//*[@id=\"teamEmployee\"]/thead/tr[2]/td[4]/a")
 	private WebElementFacade ActionBtn;
 
-	@FindBy(xpath = "//*[@id=\"form0\"]/div[2]/button[2]")
+	@FindBy(xpath = "//button[@type=\"submit\"]")
 	private WebElementFacade teamsaveBtn;
 
 	@FindBy(xpath = "(//div[@role='option'])[2]")
 	private WebElementFacade emplSearchText;
 
-	@FindBy(xpath = "/html[1]/body[1]/div[3]/div[1]/div[1]/ul[1]/li[9]/ul[1]/li[3]/a[1]")
+	@FindBy(linkText = "Route")
 	private WebElementFacade routeTab;
 
 	@FindBy(xpath = "/html/body/div[3]/div[2]/div[1]/div/div[2]/div/div/div[1]/div[1]/div/div/button")
@@ -242,7 +242,7 @@ public class EmployeePage extends peststreamPage {
 	@FindBy(xpath = "//td[@class='day'][contains(text(),'28')]")
 	private WebElementFacade ValueToDateLM;
 
-	@FindBy(xpath = "/html/body/div[3]/div[1]/div/ul/li[9]/ul/li[9]/a/span")
+	@FindBy(linkText = "Employee Time Sheet")
 	private WebElementFacade emp_timesheet;
 
 	@FindBy(xpath = "/html/body/div[3]/div[2]/div[1]/div/div/div[1]/div[1]/div[1]/div/div/a/span")
@@ -281,7 +281,7 @@ public class EmployeePage extends peststreamPage {
 	@FindBy(xpath = "//*[@id='submitNonBillableTime']/span")
 	private WebElementFacade save_emp;
 
-	@FindBy(xpath = "/html/body/div[3]/div[1]/div/ul/li[9]/ul/li[10]/a/span")
+	@FindBy(linkText = "Supervisor Time Sheet")
 	private WebElementFacade supervisor_Timesheet;
 
 	@FindBy(xpath = "/html/body/div[3]/div[2]/div[1]/div/div/div[1]/div[1]/div[2]/div/div/a")
@@ -484,7 +484,7 @@ public class EmployeePage extends peststreamPage {
 	public void team_subtab() throws Exception {
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
-		wait.until(ExpectedConditions.elementToBeClickable(departmentDDL));
+		wait.until(ExpectedConditions.elementToBeClickable(teamTab));
 		teamTab.click();
 
 	}
@@ -525,11 +525,10 @@ public class EmployeePage extends peststreamPage {
 	}
 
 	public void empl_name() throws Exception {
-		TeamEmployeeDDL.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
-		wait.until(ExpectedConditions.elementToBeClickable(TeamDepartmentValue));
-		TeamDepartmentValue.click();
+		wait.until(ExpectedConditions.elementToBeClickable(TeamEmployeeDDL));
+		TeamEmployeeDDL.click();
 		//emplSearchText.sendKeys("Dheeraj");
 		emplSearchText.click();
 		waitABit(jsonData.get("Time3"));
@@ -573,7 +572,7 @@ public class EmployeePage extends peststreamPage {
 	public void enter_route(Map<String, String> testData) throws Exception {
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
-		wait.until(ExpectedConditions.elementToBeClickable(ActionBtn));
+		wait.until(ExpectedConditions.elementToBeClickable(routeNumber));
 		routeNumber.sendKeys(testData.get("Route"));
 		waitABit(jsonData.get("Time3"));
 
@@ -598,7 +597,7 @@ public class EmployeePage extends peststreamPage {
 		description.sendKeys(testData.get("RouteDescription"));
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
-		wait.until(ExpectedConditions.elementToBeClickable(employeeTypeDDL));
+		wait.until(ExpectedConditions.elementToBeClickable(teamsaveBtn));
 
 	}
 

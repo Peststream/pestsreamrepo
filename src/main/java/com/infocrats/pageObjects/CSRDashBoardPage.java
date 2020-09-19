@@ -278,7 +278,7 @@ public class CSRDashBoardPage extends peststreamPage {
 		AdvanceSearch.click();
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
-		wait.until(ExpectedConditions.elementToBeClickable(callAction));
+		wait.until(ExpectedConditions.elementToBeClickable(WorkOrderCsr));
 	}
 
 	public void callAction() throws Exception {

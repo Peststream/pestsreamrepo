@@ -558,7 +558,6 @@ waitABit(1000);
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
 		wait.until(ExpectedConditions.elementToBeClickable(CsrDashboardLbl));
-
 		scrollUPSmall(CsrDashboardLbl);
 		CsrDashboardLbl.click();
 
@@ -570,7 +569,7 @@ waitABit(1000);
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
 		scrollDown(AdvanceSearchButton);
 		wait.until(ExpectedConditions.elementToBeClickable(AdvanceSearchButton));
-
+		scrollUPSmall(CsrDashboardLbl);
 		AdvanceSearchButton.click();
 
 	}

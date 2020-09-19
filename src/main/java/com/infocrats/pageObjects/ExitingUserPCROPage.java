@@ -35,7 +35,7 @@ public class ExitingUserPCROPage extends peststreamPage {
 	@FindBy(xpath = " //*[@id=\"frmGeneralInfo\"]/div/div/div[3]/div[5]/div[2]/div/div/div/ul/li[2]/a")
 	private WebElementFacade customerPortalApp;
 
-	@FindBy(xpath = "/html/body/div[3]/div[1]/div/ul/li[4]")
+	@FindBy(linkText = "Customer")
 	private WebElementFacade customerTab;
 
 	@FindBy(xpath = "//span[contains(@class,'title')][contains(text(),'Opportunity')]")
@@ -47,7 +47,7 @@ public class ExitingUserPCROPage extends peststreamPage {
 	@FindBy(xpath = "//*[@id=\"openTab\"]")
 	private WebElementFacade open_tab;
 
-	@FindBy(xpath = "//*[@id=\"sample_1\"]/tbody/tr/td[2]/a")
+	@FindBy(xpath = "(//*[@class= \"btnOpenWorkOrderPopup\"])[2]")
 	private WebElementFacade selectOppo;
 
 	@FindBy(xpath = "//*[@id=\"Note\"]")
