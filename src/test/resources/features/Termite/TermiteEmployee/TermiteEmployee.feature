@@ -1,4 +1,4 @@
-@run @termite @one
+@run @termiteemp @one
 Feature: Test Cases for Termite Employee.
 
   Background: 
@@ -63,14 +63,6 @@ Feature: Test Cases for Termite Employee.
     Then user click on ClockOutTime_ClockInOutEmpTermite
     Then user click on Save_ClockInOutEmpTermite
 
-  @LeaveManagementEmpTermite
-  Scenario: Test to Add LeaveManagement in Termite
-    When user click on 	Emp_Termite
-    Then user click on LeaveManagement_EmpTermite
-    Then user click on EditAction_LeaveManagTermite
-    Then user click on DDLeaveType_LeaveManagTermite
-    Then user click on DDStatus_LeaveManagTermite
-    Then user click on Save_LeaveManagTermite
 
   @SupervisorTimeSheetEmpTermite
   Scenario: Test to Add Employee in Termite
@@ -90,3 +82,12 @@ Feature: Test Cases for Termite Employee.
   Then user click on LocNo_LocInventoryTermite
   Then user click on LocType_LocInventoryTermite
   Then user click on Save_LocInventoryTermite
+  
+  #@LeaveManagementEmpTermite
+  #Scenario: Test to Add LeaveManagement in Termite
+    #When user click on 	Emp_Termite
+    #Then user click on LeaveManagement_EmpTermite
+    #Then user click on EditAction_LeaveManagTermite
+    #Then user click on DDLeaveType_LeaveManagTermite
+    #Then user click on DDStatus_LeaveManagTermite
+    #Then user click on Save_LeaveManagTermite

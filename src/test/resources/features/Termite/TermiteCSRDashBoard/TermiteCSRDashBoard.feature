@@ -25,7 +25,7 @@ Feature: Test for CSRDashboard of Termite.
     Then user click on EnterNote_AddNote
     Then user click on Save_AddNote
 
-  @CreateWorkorder_CSRDashboard(f)
+  @CreateWorkorder_CSRDashboard
   Scenario: Test to CreateWorkorderAction CSRDashboard Termite
     When user click on 	CSRDashboard
     Then user click on AdvanceSearch_CSRDashboard

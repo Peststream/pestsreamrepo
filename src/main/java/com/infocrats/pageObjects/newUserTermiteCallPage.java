@@ -51,7 +51,7 @@ public class newUserTermiteCallPage extends peststreamPage {
 	@FindBy(xpath = "//*[@id=\"frmGeneralInfo\"]/div/div/div[3]/div[5]/div[2]/div/div/button/span[1]")
 	private WebElementFacade DDSource;
 
-	@FindBy(xpath = "//span[contains(text(),'CustomerPortal App')]")
+	@FindBy(xpath = "//span[@class='text'][contains(.,'CustomerPortal App')]")
 	private WebElementFacade ValueSource;
 
 	@FindBy(xpath = "//input[@id='CrmContactMiddleName']")
@@ -78,7 +78,7 @@ public class newUserTermiteCallPage extends peststreamPage {
 	@FindBy(xpath = "//*[@id=\"uniform-rdoResidential\"]")
 	private WebElementFacade OppType;
 
-	@FindBy(xpath = "//input[@id='CreateWebLead']")
+	@FindBy(xpath = "(//*[@id=\"uniform-CreateWebLead\"]/span)[1]")
 	private WebElementFacade Lead;
 
 	@FindBy(xpath = "//input[@id='SpRequiredServiceAddressControl_ServiceAddressLine1']")
@@ -150,10 +150,10 @@ public class newUserTermiteCallPage extends peststreamPage {
 	@FindBy(xpath = "(//*[@id=\"uniform-SelectServicePackageVm_SelectServiceType\"])[2]")
 	private WebElementFacade Bundle;
 	
-	@FindBy(xpath = "//*[@id=\"divbundle\"]/div[1]/div/div/button/span[1]")
+	@FindBy(xpath = "(//span[contains(.,'--Select--')])[16]")
 	private WebElementFacade DDBundle;
 	
-	@FindBy(xpath = "//span[contains(text(),'service')]")
+	@FindBy(xpath = "(//div[@role='option'])[2]")
 	private WebElementFacade ValueDDBundle;
 	
 	@FindBy(xpath = "//button[@id='addBundle']")
@@ -219,19 +219,19 @@ public class newUserTermiteCallPage extends peststreamPage {
 	@FindBy(xpath = "(//span[contains(.,'--Select--')])[5]")
 	private WebElementFacade DDCat_StdService_FieldSTSaveComm;
 	
-	@FindBy(xpath = "//span[contains(text(),'Termite Service Category')]")
+	@FindBy(xpath = "//span[@class='text'][contains(.,'Termite Service Category')]")
 	private WebElementFacade ValueDDCat_StdService_FieldSTSaveComm;
 	
 	@FindBy(xpath = "(//span[contains(.,'Select Service...')])[1]")
 	private WebElementFacade DDService_StdService_FieldSTSaveComm;
 	
-	@FindBy(xpath = "(//span[contains(.,'Termite Service')])[3]")
+	@FindBy(xpath = "(//div[@role='option'])[3]")
 	private WebElementFacade ValueDDService_StdService_FieldSTSaveComm;
 	
 	@FindBy(xpath = "(//span[contains(.,'Select Frequency...')])[1]")
 	private WebElementFacade DDFrequency_StdService_FieldSTSaveComm;
 	
-	@FindBy(xpath = "(//span[contains(.,'EOM')])[1]")
+	@FindBy(xpath = "(//div[@role='option'])[2]")
 	private WebElementFacade ValueDDFrequency_StdService_FieldSTSaveComm;
 	
 	@FindBy(xpath = "(//button[contains(.,'Save')])[5]")
@@ -285,6 +285,8 @@ public class newUserTermiteCallPage extends peststreamPage {
 	@FindBy(xpath = "//select[@id='SpServiceAddressControl_ServiceStateSysName']//option[contains(text(),'New York')]")
 	private WebElementFacade DDselectstatevalue;
 	
+	@FindBy(xpath = "//input[@name='LastName']")
+	private WebElementFacade LastNameGI;
 	
 	
 	@Override
@@ -395,6 +397,7 @@ public class newUserTermiteCallPage extends peststreamPage {
 		WebDriverWait wait1 = new WebDriverWait(getDriver(), jsonData.get("Time3"));
 		wait1.until(ExpectedConditions.elementToBeClickable(ValueSource));		
 		ValueSource.click();
+		DDSource.click();
 	}
 
 	public void clickOnAlert() {
@@ -718,10 +721,15 @@ public class newUserTermiteCallPage extends peststreamPage {
 
 	public void clickOnDDAssignedTo() throws Exception {
 		scrollDownLarge(DDAssignedTo);
-
+		
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
-		wait.until(ExpectedConditions.elementToBeClickable(ValueDDAssignedTo));
+		wait.until(ExpectedConditions.elementToBeClickable(DDAssignedTo));
+		DDAssignedTo.click();
+
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait1 = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait1.until(ExpectedConditions.elementToBeClickable(ValueDDAssignedTo));
 		ValueDDAssignedTo.click();
 	}
 
@@ -1023,6 +1031,24 @@ public class newUserTermiteCallPage extends peststreamPage {
 			WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
 			wait.until(ExpectedConditions.elementToBeClickable(saveML_InsideSTSaveComm));
 			saveML_InsideSTSaveComm.click();
+		}
+
+		public void user_enters_LastName(Map<String, String> testData) throws Exception {
+			jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+			WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+			wait.until(ExpectedConditions.elementToBeClickable(LastName));
+			LastName.click();
+			LastName.sendKeys(testData.get("LName"));
+			
+		}
+
+		public void user_enters_LastNameGI(Map<String, String> testData) throws Exception{
+			jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+			WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+			wait.until(ExpectedConditions.elementToBeClickable(LastNameGI));
+			LastNameGI.click();
+			LastNameGI.sendKeys(testData.get("LName"));
+			
 		}
 
 }

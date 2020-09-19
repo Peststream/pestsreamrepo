@@ -228,6 +228,9 @@ public class TermiteCustomerPage extends peststreamPage {
 	@FindBy(xpath = "/html//form[@id='frmGeneralInfo']/div[@class='divPhoneSales']//div[@class='col-md-3 divSalesContact']/div[@class='form-group']/div[@class='input-group']/span[@class='twitter-typeahead']/span[@class='tt-dropdown-menu']/div[@class='tt-dataset-list2']/span[@class='tt-suggestions']/div/div")
 	private WebElementFacade ValueContactCallAdSearchAccCustTermite;
 	
+	@FindBy(xpath = "(//a[@href='javascript:;'])[13]")
+	private WebElementFacade contactSearchValuetermite;
+	
 	@FindBy(xpath = "(//span[@class='filter-option pull-left'])[3]")
 	private WebElementFacade DDSourceCallAdSearchAccCustTermite;
 	
@@ -1019,15 +1022,19 @@ public class TermiteCustomerPage extends peststreamPage {
 		waitABit(jsonData.get("Time2"));
 		
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
-		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time2"));
 		wait.until(ExpectedConditions.elementToBeClickable(ContactCallAdSearchAccCustTermite));
 		ContactCallAdSearchAccCustTermite.sendKeys(testData.get("Contact"));
+		
 		wait.until(ExpectedConditions.elementToBeClickable(SearchContactCallAdSearchAccCustTermite));
 		SearchContactCallAdSearchAccCustTermite.click();
-		wait.until(ExpectedConditions.elementToBeClickable(ValueContactCallAdSearchAccCustTermite));
-		ValueContactCallAdSearchAccCustTermite.click();
+		/*wait.until(ExpectedConditions.elementToBeClickable(ValueContactCallAdSearchAccCustTermite));
+		ValueContactCallAdSearchAccCustTermite.click();*/
 		
-		waitABit(jsonData.get("Time2"));
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait2 = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait2.until(ExpectedConditions.elementToBeClickable(contactSearchValuetermite));
+		contactSearchValuetermite.click();
 	}
 
 

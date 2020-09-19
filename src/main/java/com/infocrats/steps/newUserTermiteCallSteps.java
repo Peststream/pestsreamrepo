@@ -342,4 +342,10 @@ public class newUserTermiteCallSteps extends pestreamSteps {
 	public void saveML_InsideSTSaveComm() throws Exception {
 		newusertermitecallpage.saveML_InsideSTSaveComm();
 	}
+
+	public void LastNameGI() throws Exception {
+		jsonData = JsonHelper.readJsonElement("call_Termite.json", "CallData");
+		newusertermitecallpage.user_enters_LastNameGI(jsonData);
+		
+	}
 }
