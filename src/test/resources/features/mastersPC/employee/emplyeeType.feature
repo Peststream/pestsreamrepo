@@ -1,4 +1,4 @@
-@run @emp @pc
+@run @empMSN @pc @RunMSN
 Feature: Test for Employee.
 
   Background: 
@@ -79,21 +79,6 @@ Feature: Test for Employee.
     Then user enters Description
     Then user clicks on save button
 
-  @createFullTime
-  Scenario: Test create staff for FullTime feature in Employee tab
-    When i click on employee tab on dashboard
-    Then i click on staff subtab of employee
-    And i click on Add Employee button
-    Then user click on Branch_StaffEmp
-    Then user click on Divison
-    Then user click on Department
-    Then user click on FName
-    Then user click on LName
-    Then user click on UserName
-    Then user click on EmpType
-    Then user click on RoleName
-    Then user click on Save_StaffEmp
-
   @createStaffHalfTime
   Scenario: Test create staff for HalfTime feature in Employee tab
     When i click on employee tab on dashboard
@@ -108,37 +93,6 @@ Feature: Test for Employee.
     Then user click on EmpTypeHalf
     Then user click on RoleName
     Then user click on Save_StaffEmp
-
-  @createLMFull
-  Scenario: Test create for FullLeaveManagement
-    When i click on employee tab on dashboard
-    Then user click on leaveManagement
-    Then user click on Action
-    Then user click on DDLeaveType
-    Then user click on ToDateLM
-    Then user click on DDStatus
-    Then user click on SaveLM
-
-  @createLMHalf
-  Scenario: Test create for HalfLeaveManagement
-    When i click on employee tab on dashboard
-    Then user click on leaveManagement
-    Then user click on Action
-    Then user click on DDLeaveTypeHalf
-    Then user click on LMFromTime
-    Then user click on LMToTime
-    Then user click on DDStatus
-    Then user click on SaveLM
-
-  @createLMSick
-  Scenario: Test create for LeaveType
-    When i click on employee tab on dashboard
-    Then user click on leaveManagement
-    Then user click on Action
-    Then user click on DDLeaveTypeSick
-    Then user click on ToDateLM
-    Then user click on DDStatus
-    Then user click on SaveLM
 
   @SupervisorTimesheet
   Scenario: Test create Supervisor Timesheet feature in Employee tab

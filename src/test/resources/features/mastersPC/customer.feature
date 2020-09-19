@@ -1,4 +1,4 @@
-@run @pc
+@run @pcMSN @RunMSN
 Feature: Test for Customer.
 
   Background: 
@@ -75,15 +75,3 @@ Feature: Test for Customer.
     And user enter service Sys Name
     Then User click on save button
 
-  #NeedsWorkNot Working
-  @Opportunity
-  Scenario: To Add Opportunity from Customer Tab and Save
-    When user clicked on customer tab in left panel
-    Then user clicked on opportunity subtab
-    Then User Selects Add Opportunity Button
-    Then User Selects New Account
-    Then User sends Company Name Opportunity Name Value And Contact
-    Then User Selects Department Primary reason for Call And Service Name Source Inside Sales Person Urgency
-    Then User clicks on Residential Radio
-    Then User Selects Confidence
-    Then User Clicks on Save

@@ -57,7 +57,7 @@ public class CustomerStepDefs {
 	}
 	
 	@Then("^User clicked on Account tab$")
-	public void user_clicked_on_Account_tab() {
+	public void user_clicked_on_Account_tab() throws Exception {
 		customersteps.accountTab();
 	}
 
@@ -90,7 +90,7 @@ public class CustomerStepDefs {
 	
 
 @Then("^User clicked on Company tab$")
-public void user_clicked_on_Company_tab() {
+public void user_clicked_on_Company_tab() throws Exception {
 	customersteps.Company_tab();
 }
 
@@ -110,7 +110,7 @@ public void user_select_Source_from_DDL() {
 }
 
 @Then("^User enter primary Email$")
-public void user_enter_primary_Email() {
+public void user_enter_primary_Email() throws Exception {
 	customersteps.Enter_Primary_Email();
 }
 
@@ -129,7 +129,7 @@ public void user_enter_save_button_of_add_company() {
 
 
 @Then("^User clicked on contact tab$")
-public void user_clicked_on_contact_tab() {
+public void user_clicked_on_contact_tab() throws Exception {
 	customersteps.Contact_Tab_On_Left_Pannel();
 }
 
@@ -161,7 +161,7 @@ public void user_enter_Select_Source_Add_Contact() {
 
 
 @Then("^User clicked on database tab$")
-public void user_clicked_on_database_tab() {
+public void user_clicked_on_database_tab() throws Exception {
 	customersteps.databaseTab();
 }
 
@@ -185,7 +185,7 @@ public void user_enter_service_Sys_Name() {
 	customersteps.serviceName();
 }
 @Then("^User Selects Add Opportunity Button$")
-public void user_Selects_Add_Opportunity_Button() {
+public void user_Selects_Add_Opportunity_Button() throws Exception {
 	customersteps.addOpportunity();
 }
 

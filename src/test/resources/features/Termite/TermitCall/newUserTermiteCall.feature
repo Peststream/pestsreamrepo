@@ -19,7 +19,7 @@ Feature: Test for new User Termite Call of Termite.
     Then user click on OppType
     Then user click on continue
 
-  @generalInfoResidentialWithLead 
+  @generalInfoResidentialWithLeadMSN
   Scenario: Test to Continue General Info with lead Termite
     When user click on CallTab
     Then user enters company

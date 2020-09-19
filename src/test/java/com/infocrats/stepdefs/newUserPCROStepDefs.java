@@ -338,7 +338,7 @@ public class newUserPCROStepDefs {
 	}
 
 	@Then("^select start date and end date$")
-	public void select_start_date_and_end_date() {
+	public void select_start_date_and_end_date() throws Exception {
 		newuserpcrosteps.startAndEndDate();
 	}
 

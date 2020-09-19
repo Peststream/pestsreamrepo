@@ -17,7 +17,7 @@ public class CoreSetupWOPage extends pestreamSteps {
 	BaseUtills utills = new BaseUtills();
 	private Map<String, Integer> jsonData;
 	
-	@FindBy(xpath = "/html/body/div[3]/div[1]/div/ul/li[7]/a")
+	@FindBy(linkText = "Setups")
 	private WebElementFacade setupTab;
 	
 	@FindBy(xpath = "//*[@id=\"btnAdvanceSearchSetup\"]")
@@ -26,16 +26,16 @@ public class CoreSetupWOPage extends pestreamSteps {
 	@FindBy(xpath = "(//a[@class='btn btn-icon-only red'])[2]")
 	private WebElementFacade action_btn;
 	
-	@FindBy(xpath = "/html/body/div[3]/div[1]/div/ul/li[6]/a")
+	@FindBy(linkText = "Service")
 	private WebElementFacade serviceBtn_tab;
 	
-	@FindBy(xpath = "/html/body/div[3]/div[1]/div/ul/li[6]/ul/li[2]/a")
+	@FindBy(linkText = "Work Order")
 	private WebElementFacade workOrder_tab;
 	
 	@FindBy(xpath = "//*[@id=\"btnAdvanceSearch\"]")
 	private WebElementFacade adv_search;
 	
-	@FindBy(xpath = "//*[@id=\"btnSubmit\"]")
+	@FindBy(xpath = "//button[@id=\"btnSubmit\"]")
 	private WebElementFacade svBtn;
 	
 	@FindBy(xpath = "/html/body/div[3]/div[1]/div/ul/li[6]/ul/li[1]")
@@ -93,16 +93,10 @@ public class CoreSetupWOPage extends pestreamSteps {
 	
 	public void advsearch_btn() throws Exception {
 		adv_search.click();
-		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
-		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
-		wait.until(ExpectedConditions.elementToBeClickable(svBtn));
 	}
 
 	public void svWork_order() throws Exception {
 		svBtn.click();
-		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
-		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
-		wait.until(ExpectedConditions.elementToBeClickable(pendingSetup));
 		
 	}
 

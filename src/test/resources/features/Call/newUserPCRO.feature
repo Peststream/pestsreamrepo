@@ -8,7 +8,7 @@ Feature: Test for new user PCRO for Pest.
     Then I am granted access to the system
 
   #Done
-  @nuWTOL @newUserPCRO
+  @nuWTOL @newUserPCRO11
   Scenario: Test opportunity From Left nevigation menu with new account and without Lead for Residential
     When user clicked on call tab in left panel
     Then verify page tittle of call page

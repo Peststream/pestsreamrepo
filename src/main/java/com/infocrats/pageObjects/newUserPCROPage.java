@@ -481,13 +481,7 @@ public class newUserPCROPage extends peststreamPage {
 
 	public void clickedOnCallTab() {
 
-		try {
-
 			callTab.click();
-
-		} catch (Exception e) {
-			Log.error("Unable to click Assessment Tab " + e.getMessage());
-		}
 	}
 
 	public Object getOpportunityPageTittle() {
@@ -1104,10 +1098,10 @@ public class newUserPCROPage extends peststreamPage {
 
 	}
 
-	public void startAndEnd_Date() {
+	public void startAndEnd_Date() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
 		wait.until(ExpectedConditions.elementToBeClickable(firstDateDDL));
-
 		firstDateDDL.click();
 		waitABit(300);
 		nextMonth.click();

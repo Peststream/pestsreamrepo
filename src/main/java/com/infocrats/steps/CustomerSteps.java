@@ -67,7 +67,7 @@ public class CustomerSteps extends pestreamSteps {
 	}
 
 	@Step
-	public void accountTab() {
+	public void accountTab() throws Exception {
 
 		customerpage.account_tab();
 	}
@@ -103,7 +103,7 @@ public class CustomerSteps extends pestreamSteps {
 	}
 
 	@Step
-	public void Company_tab() {
+	public void Company_tab() throws Exception {
 		customerpage.company_tab();
 		
 	}
@@ -127,7 +127,7 @@ public class CustomerSteps extends pestreamSteps {
 	}
 
 	@Step
-	public void Enter_Primary_Email() {
+	public void Enter_Primary_Email() throws Exception {
 		customerpage.primary_email();
 		
 	}
@@ -145,7 +145,7 @@ public class CustomerSteps extends pestreamSteps {
 	}
 
 	@Step
-	public void Contact_Tab_On_Left_Pannel() {
+	public void Contact_Tab_On_Left_Pannel() throws Exception {
 		customerpage.contact_tab_left_pannel();
 		
 	}
@@ -181,7 +181,7 @@ public class CustomerSteps extends pestreamSteps {
 	}
 
 	@Step
-	public void databaseTab() {
+	public void databaseTab() throws Exception {
 		customerpage.database_tab();
 		
 	}
@@ -203,7 +203,7 @@ public class CustomerSteps extends pestreamSteps {
 		customerpage.service_name();
 		
 	}
-	public void addOpportunity() {
+	public void addOpportunity() throws Exception {
 		customerpage.addOppBtn();
 		
 	}

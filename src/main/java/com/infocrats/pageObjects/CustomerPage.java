@@ -17,7 +17,7 @@ public class CustomerPage extends peststreamPage {
 	BaseUtills utills = new BaseUtills();
 	private Map<String, Integer> jsonData;
 
-	@FindBy(xpath = "//span[contains(@class,'title')][contains(text(),'Lead')]")
+	@FindBy(linkText = "Lead")
 	private WebElementFacade lead_tab;
 
 	@FindBy(xpath = "//button[@class='btn btn-primary btnAddWebLead']")
@@ -71,7 +71,7 @@ public class CustomerPage extends peststreamPage {
 	@FindBy(xpath = "(//*[starts-with(@id,'select2-result-label-')])[2]")
 	private WebElementFacade teamValue;
 
-	@FindBy(xpath = "/html/body/div[3]/div[1]/div/ul/li[4]/ul/li[1]/a")
+	@FindBy(linkText = "Account")
 	private WebElementFacade accountTab;
 
 	@FindBy(xpath = "/html/body/div[3]/div[2]/div[1]/div/div[2]/div/div/div[1]/div[1]/div/div/button")
@@ -137,7 +137,7 @@ public class CustomerPage extends peststreamPage {
 	@FindBy(xpath = "//*[@id=\"form0\"]/div[1]/div[2]/div[3]/div/div/div/div/ul/li[4]/a/span[1]")
 	private WebElementFacade SelectSource_Value_Of_Add_Contact;
 
-	@FindBy(xpath = "/html/body/div[3]/div[1]/div/ul/li[4]/ul/li[6]")
+	@FindBy(linkText = "Database")
 	private WebElementFacade database_tab;
 
 	@FindBy(xpath = "/html/body/div[3]/div[2]/div[1]/div/div[2]/div/div/div[1]/div[1]/div/div/button[1]")
@@ -236,7 +236,6 @@ public class CustomerPage extends peststreamPage {
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
 		wait.until(ExpectedConditions.elementToBeClickable(lead_tab));
-
 		lead_tab.click();
 
 	}
@@ -322,10 +321,10 @@ public class CustomerPage extends peststreamPage {
 
 	}
 
-	public void account_tab() {
+	public void account_tab() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
 		wait.until(ExpectedConditions.elementToBeClickable(accountTab));
-
 		accountTab.click();
 
 	}
@@ -371,7 +370,8 @@ public class CustomerPage extends peststreamPage {
 
 	}
 
-	public void company_tab() {
+	public void company_tab() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
 		wait.until(ExpectedConditions.elementToBeClickable(Company_Tab));
 
@@ -407,10 +407,10 @@ public class CustomerPage extends peststreamPage {
 
 	}
 
-	public void primary_email() {
+	public void primary_email() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
 		wait.until(ExpectedConditions.elementToBeClickable(Primary_email));
-
 		Primary_email.click();
 		waitABit(1000);
 		Primary_email.sendKeys("rathore@gmail.com");
@@ -434,10 +434,10 @@ public class CustomerPage extends peststreamPage {
 
 	}
 
-	public void contact_tab_left_pannel() {
+	public void contact_tab_left_pannel() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
 		wait.until(ExpectedConditions.elementToBeClickable(Contact_Tab_Left_Pannel));
-		
 		Contact_Tab_Left_Pannel.click();
 
 	}
@@ -491,10 +491,10 @@ public class CustomerPage extends peststreamPage {
 
 	}
 
-	public void database_tab() {
+	public void database_tab() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
 		wait.until(ExpectedConditions.elementToBeClickable(database_tab));
-		
 		database_tab.click();
 
 	}
@@ -525,10 +525,10 @@ public class CustomerPage extends peststreamPage {
 
 	}
 
-	public void addOppBtn() {
+	public void addOppBtn() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
 		wait.until(ExpectedConditions.elementToBeClickable(AddOppBtn));
-		
 		AddOppBtn.click();
 	}
 
