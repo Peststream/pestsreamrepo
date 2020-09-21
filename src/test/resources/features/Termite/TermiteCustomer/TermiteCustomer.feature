@@ -100,7 +100,7 @@ Feature: Test for Termite Customer of Termite.
     Then user click on Contact_CallAdSearchAccCustTermite
     Then user click on DDSource_CallAdSearchAccCustTermite
     Then user click on AccAlert_CallAdSearchAccCustTermite
-    Then user click on ResiOppType_CallAdSearchAccCustTermite
+    #Then user click on ResiOppType_CallAdSearchAccCustTermite
     Then user click on Continue_CallAdSearchAccCustTermite
 
   @DeleteAdvanceSearchAccCustTermite

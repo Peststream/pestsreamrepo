@@ -29,6 +29,7 @@ Feature: Test for new User Termite Call2 of Termite.
     Then user click on DDAssignedTo
     Then user click on saveScheduleEstimation
     Then user click on generatedOpportunity_FieldSTSaveComm
+     Then user enters LastNameGI
     Then user click on saveAndcontGI_FieldSTSaveComm
     Then user click on continueInspection_FieldSTSaveComm
     Then user click on DDCat_StdService_FieldSTSaveComm

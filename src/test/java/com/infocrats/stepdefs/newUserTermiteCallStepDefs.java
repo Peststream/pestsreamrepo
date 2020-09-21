@@ -383,5 +383,13 @@ public class newUserTermiteCallStepDefs {
 		newusertermitecallsteps.saveML_InsideSTSaveComm();
 	}
 	
+
+	@Then("^user enters LastNameGI$")
+	public void user_enters_LastNameGI() throws Exception {
+		newusertermitecallsteps.LastNameGI();
+	}
+
+
+	
 	
 }
