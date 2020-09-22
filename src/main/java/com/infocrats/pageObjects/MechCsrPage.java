@@ -105,7 +105,7 @@ public class MechCsrPage extends peststreamPage {
 	@FindBy(xpath = "//input[@id='ServiceDateStr']")
 	private WebElementFacade ServiceDatePOP_AddWOBttn_CSRDB_Mech;
 	
-	@FindBy(css = "[class] [for='1']:nth-of-type(1) span:nth-child(2)")
+	@FindBy(css = "[for='EarliestServiceDateStr']")
 	private WebElementFacade ServiceDateLbl;
 
 	
