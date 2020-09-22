@@ -430,6 +430,7 @@ public class MechCsrPage extends peststreamPage {
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
 		scrollDown(ServiceDatePOP_AddWOBttn_CSRDB_Mech);
+		scrollDown(ServiceDatePOP_AddWOBttn_CSRDB_Mech);
 		ServiceDateLbl.click();
 		wait.until(ExpectedConditions.elementToBeClickable(ServiceDatePOP_AddWOBttn_CSRDB_Mech));
 		ServiceDatePOP_AddWOBttn_CSRDB_Mech.click();
