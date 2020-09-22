@@ -63,7 +63,7 @@ public class MechCsrPage extends peststreamPage {
 	@FindBy(xpath = "//span[contains(text(),'NewTarget')]")
 	private WebElementFacade ValueDDTarget_CSRDB_Mech;
 
-	@FindBy(xpath = "//html//body//div//div//div//div//div//div//div//div//div//div//a//button//span[contains(text(),'Opportunity')]")
+	@FindBy(css = "a[target='_blank'] > .btn.btn-primary.ladda-button")
 	private WebElementFacade AddOppBttn_CSRDB_Mech;
 
 	@FindBy(xpath = "//input[@id='SecondaryPhone']")
@@ -305,7 +305,6 @@ public class MechCsrPage extends peststreamPage {
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		WebDriverWait wait2 = new WebDriverWait(getDriver(), jsonData.get("Time1"));
 		wait2.until(ExpectedConditions.elementToBeClickable(AddOppBttn_CSRDB_Mech));
-		ValueDDTarget_CSRDB_Mech.click();
 		AddOppBttn_CSRDB_Mech.click();
 		waitABit(jsonData.get("Time1"));
 

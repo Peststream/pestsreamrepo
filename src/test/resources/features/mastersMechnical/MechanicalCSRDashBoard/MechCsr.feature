@@ -21,7 +21,7 @@ Feature: Create Mech CSR DashBoard for advance search.
     Then click on ValueDDSource_Opp_CSRDB_Mech
     Then click on Cont_Opp_CSRDB_Mech
 
-  @AccNo_AddCallBttn_CSRDB_Mech
+  @AccNo_AddCallBttn_CSRDB_Mech1
   Scenario: Test to Add Call using CSRDashboard.
     When user click on CSRDashBoard_Mech
     When user clicked on AdvanceSearch_CSRDB_Mech
@@ -250,7 +250,7 @@ Feature: Create Mech CSR DashBoard for advance search.
     Then click on ServiceDateValue_AddWOBttn_CSRDB_Mech
     Then click on Save_AddWOBttn_CSRDB_Mech
 
-  @AccNo_AddWOBttn_InternalInst_CSRDB_Mech
+  @AccNo_AddWOBttn_InternalInst_CSRDB_MechDone
   Scenario: Test to Add WorkOrder with InternalInstruction using CSRDashboard.
     When user click on CSRDashBoard_Mech
     When user clicked on AdvanceSearch_CSRDB_Mech
