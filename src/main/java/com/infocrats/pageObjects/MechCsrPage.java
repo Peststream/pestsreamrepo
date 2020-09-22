@@ -104,7 +104,12 @@ public class MechCsrPage extends peststreamPage {
 
 	@FindBy(xpath = "//input[@id='ServiceDateStr']")
 	private WebElementFacade ServiceDatePOP_AddWOBttn_CSRDB_Mech;
+	
+	@FindBy(xpath = "[for='ServiceDateStr']")
+	private WebElementFacade ServiceDateLbl;
 
+	
+	
 	@FindBy(xpath = "//td[@class='day'][contains(.,'30')]")
 	private WebElementFacade ServiceDateValue_AddWOBttn_CSRDB_Mech;
 
@@ -425,6 +430,7 @@ public class MechCsrPage extends peststreamPage {
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
 		scrollDown(ServiceDatePOP_AddWOBttn_CSRDB_Mech);
+		ServiceDateLbl.click();
 		wait.until(ExpectedConditions.elementToBeClickable(ServiceDatePOP_AddWOBttn_CSRDB_Mech));
 		ServiceDatePOP_AddWOBttn_CSRDB_Mech.click();
 	}
