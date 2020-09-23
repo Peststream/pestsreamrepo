@@ -181,7 +181,7 @@ public class newUserPCROStepDefs {
 	}
 
 	@Then("^Select service bundle$")
-	public void select_service_bundle() {
+	public void select_service_bundle() throws Exception {
 		newuserpcrosteps.serviceBundle();
 	}
 
@@ -211,7 +211,7 @@ public class newUserPCROStepDefs {
 	}
 
 	@Then("^click on department DDL$")
-	public void click_on_department_DDL() {
+	public void click_on_department_DDL() throws Exception {
 
 		newuserpcrosteps.departmentDDl();
 	}

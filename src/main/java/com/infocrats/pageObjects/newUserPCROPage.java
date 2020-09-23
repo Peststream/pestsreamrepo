@@ -869,8 +869,9 @@ public class newUserPCROPage extends peststreamPage {
 
 	}
 
-	public void service_bundle() {
+	public void service_bundle() throws Exception {
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		wait.until(ExpectedConditions.elementToBeClickable(serviceBundeDDL));
 
 		serviceBundeDDL.click();
@@ -920,8 +921,10 @@ public class newUserPCROPage extends peststreamPage {
 		nonStandardTab.click();
 	}
 
-	public void department_DDL() {
+	public void department_DDL() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		wait.until(ExpectedConditions.elementToBeClickable(departmentDDL));
 
 		departmentDDL.click();

@@ -202,7 +202,7 @@ public class newUserPCROSteps extends pestreamSteps {
 	}
 
 	@Step
-	public void serviceBundle() {
+	public void serviceBundle() throws Exception {
 		newuserpcropage.service_bundle();
 
 	}
@@ -237,7 +237,7 @@ public class newUserPCROSteps extends pestreamSteps {
 	}
 
 	@Step
-	public void departmentDDl() {
+	public void departmentDDl() throws Exception {
 
 		newuserpcropage.department_DDL();
 	}

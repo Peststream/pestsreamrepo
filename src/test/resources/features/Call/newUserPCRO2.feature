@@ -1,4 +1,4 @@
-@run @pcro2 @pests
+@pcro2 @pests
 Feature: Test for new user PCRO2 for Pest.
 #done
 
@@ -10,7 +10,7 @@ Feature: Test for new user PCRO2 for Pest.
     
     
      #Done
-  @nuNonSSML @newUserPCRO
+  @nuNonSSML @newUserPCRO @P2MSN1
   Scenario: Test Mark As Lost Opportunity Info package for non-standard service
     Given user clicked on call tab in left panel
     When enters lead info "Company", "Contact", "PrimaryEmail", "PrimaryPhone", "Cell", "SecondaryPhone"
@@ -36,7 +36,7 @@ Feature: Test for new user PCRO2 for Pest.
     And click on Save button
 
   #Done
-  @nuNonSSSave @newUserPCRO
+  @nuNonSSSave @newUserPCRO @P2MSN2
   Scenario: To Test Save Opportunity Info package for non-standard service
     Given user clicked on call tab in left panel
     When enters lead info "Company", "Contact", "PrimaryEmail", "PrimaryPhone", "Cell", "SecondaryPhone"

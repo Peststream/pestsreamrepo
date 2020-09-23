@@ -113,28 +113,8 @@ Feature: Test for new user PCRO for Pest.
     And click send proposal button
     Then User Screen Waits for a Bit
 
-  #Done
-  @SaveAndSignAgreementForSSP @newUserPCRO @MSN4
-  Scenario: To Test the Save and Sign Agreement for satandard service for service package
-    Given user clicked on call tab in left panel
-    When enters lead info "Company", "Contact", "PrimaryEmail", "PrimaryPhone", "Cell", "SecondaryPhone"
-    And select lead branch "BranchName", "Department","Primary Reason Of Call", "Service", "Source"
-    And enters "AccountAlert", "ProblemDescription"
-    Then I click on Residential Radio button
-    And click on continue button
-    And Service address "line1","line2","Zip","city","state"
-    When select package as "standard service"
-    And package details "category","service","package","Frequency","Billing Frequency"
-    Then click on Add Button
-    Then click on Add to agreement check button
-    Then click on save & sign agreement button
-    And enter additional note
-    Then click on send agreement for customer signature
-    Then User Screen Waits for a Bit
 
   #Done
- 
-
   #And choose mail address
   #Then click on send Agreement list
   #Then open new tap in the browser

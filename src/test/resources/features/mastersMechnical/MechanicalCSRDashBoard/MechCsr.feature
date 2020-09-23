@@ -1,4 +1,4 @@
-@run @mechcsr
+@mechcsr
 Feature: Create Mech CSR DashBoard for advance search.
 
   Background:
