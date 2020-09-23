@@ -431,10 +431,9 @@ public class MechCsrPage extends peststreamPage {
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
 		scrollDown(ServiceDatePOP_AddWOBttn_CSRDB_Mech);
 		waitABit(1000);
-		scrollDown(ServiceDatePOP_AddWOBttn_CSRDB_Mech);
-		ServiceDateLbl.click();
-		wait.until(ExpectedConditions.elementToBeClickable(ServiceDatePOP_AddWOBttn_CSRDB_Mech));
-		ServiceDatePOP_AddWOBttn_CSRDB_Mech.click();
+		//ServiceDateLbl.click();
+		waitABit(2000);
+		//ServiceDatePOP_AddWOBttn_CSRDB_Mech.click();
 	}
 
 	public void ServiceDateValue_AddWOBttn_CSRDB_Mech() throws Exception {
