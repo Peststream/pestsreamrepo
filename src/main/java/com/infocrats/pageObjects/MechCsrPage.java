@@ -427,13 +427,14 @@ public class MechCsrPage extends peststreamPage {
 	}
 
 	public void ServiceDatePOP_AddWOBttn_CSRDB_Mech() throws Exception {
-		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
-		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
-		scrollDown(ServiceDatePOP_AddWOBttn_CSRDB_Mech);
-		waitABit(1000);
-		//ServiceDateLbl.click();
-		waitABit(2000);
+		/*
+		 * jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		 * WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time1"));
+		 * scrollDown(ServiceDatePOP_AddWOBttn_CSRDB_Mech); waitABit(1000);
+		 * ServiceDateLbl.click(); waitABit(2000);
+		 */
 		//ServiceDatePOP_AddWOBttn_CSRDB_Mech.click();
+		waitABit(1000);
 	}
 
 	public void ServiceDateValue_AddWOBttn_CSRDB_Mech() throws Exception {
