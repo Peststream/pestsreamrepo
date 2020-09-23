@@ -47,8 +47,8 @@ Feature: Create Mech CSR DashBoard for advance search.
     Then click on ValueServices_AddWOBttn_CSRDB_Mech
     Then click on Add_AddWOBttn_CSRDB_Mech
     Then click on Direction_AddWOBttn_CSRDB_Mech
-    Then click on ServiceDatePOP_AddWOBttn_CSRDB_Mech
-    Then click on ServiceDateValue_AddWOBttn_CSRDB_Mech
+    #Then click on ServiceDatePOP_AddWOBttn_CSRDB_Mech
+    #Then click on ServiceDateValue_AddWOBttn_CSRDB_Mech
     Then click on Save_AddWOBttn_CSRDB_Mech
 
   @AccNo_AddWOBttn_PrimaryRoute_CSRDB_Mech
