@@ -24,7 +24,7 @@ public class newUserPCROPage extends peststreamPage {
 	@FindBy(xpath = "//*[@id=\"frmGeneralInfo\"]/div/div/div[3]/h4")
 	private WebElementFacade call_page_tittle;
 
-	@FindBy(xpath = "/html/body/div[3]/div[1]/div/ul/li[3]/a")
+	@FindBy(linkText = "Call")
 	private WebElementFacade callTab;
 
 	@FindBy(xpath = "//*[@id=\"crmCompanySaleshead\"]")
@@ -195,7 +195,7 @@ public class newUserPCROPage extends peststreamPage {
 	@FindBy(xpath = "//*[@id=\"submit2\"]")
 	private WebElementFacade sendProposal;
 
-	@FindBy(xpath = "(//input[@type='checkbox'])[6]")
+	@FindBy(xpath = "(//*[@id=\"StandardServices_0_IsSold\"])")
 	private WebElementFacade addToagreementCheckBtn;
 
 	@FindBy(xpath = "(//button[@id='btnSaveAgreement'])[2]")
@@ -521,7 +521,7 @@ public class newUserPCROPage extends peststreamPage {
 		wait.until(ExpectedConditions.elementToBeClickable(service_ddl));
 
 		service_ddl.click();
-		waitABit(2000);
+		waitABit(4000);
 		newPortService.click();
 
 		source_ddl.click();
@@ -534,9 +534,6 @@ public class newUserPCROPage extends peststreamPage {
 	public void leadCheckBtn() throws Exception {
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
-		wait.until(ExpectedConditions.elementToBeClickable(create_lead));
-
-		create_lead.click();
 
 	}
 
@@ -649,7 +646,7 @@ public class newUserPCROPage extends peststreamPage {
 
 		// add_btn.click();
 		frequency_ddl.click();
-		waitABit(1000);
+		waitABit(4000);
 		quarterly.click();
 		waitABit(1000);
 
@@ -787,7 +784,6 @@ public class newUserPCROPage extends peststreamPage {
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time2"));
 		wait.until(ExpectedConditions.elementToBeClickable(addToagreementCheckBtn));
-
 		scrollDown(addToagreementCheckBtn);
 		waitABit(300);
 		addToagreementCheckBtn.click();

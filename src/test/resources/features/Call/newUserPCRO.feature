@@ -1,4 +1,4 @@
-@run @pcro @pests
+@run @pcro @pestsMSN
 Feature: Test for new user PCRO for Pest.
 
   Background: 
@@ -8,7 +8,7 @@ Feature: Test for new user PCRO for Pest.
     Then I am granted access to the system
 
   #Done
-  @nuWTOL @newUserPCRO11
+  @nuWTOL @newUserPCRO11MSN
   Scenario: Test opportunity From Left nevigation menu with new account and without Lead for Residential
     When user clicked on call tab in left panel
     Then verify page tittle of call page
@@ -19,7 +19,7 @@ Feature: Test for new user PCRO for Pest.
     And click on continue button
 
   #Done
-  @nuWTL @newUserPCRO
+  @nuWTL @newUserPCROMSN
   Scenario: Test opportunity From Left nevigation menu with new account and with Lead for Residential
     When user clicked on call tab in left panel
     Then verify page tittle of call page
@@ -31,7 +31,7 @@ Feature: Test for new user PCRO for Pest.
     And click on continue button
 
   #Done
-  @SaveBillingAddressDiffForSSP @newUserPCRO
+  @SaveBillingAddressDiffForSSPMSN @newUserPCRO
   Scenario: To Test Mark As Lost Opportunity Info package for standard service for service package
     Given user clicked on call tab in left panel
     When enters lead info "Company", "Contact", "PrimaryEmail", "PrimaryPhone", "Cell", "SecondaryPhone"
@@ -48,7 +48,7 @@ Feature: Test for new user PCRO for Pest.
     Then User Screen Waits for a Bit
 
   #Done
-  @MLBillingAddressDiffForSSP @newUserPCRO
+  @MLBillingAddressDiffForSSP @newUserPCRO @MSN1
   Scenario: To Test Mark As Lost Opportunity Info package for standard service for service package
     Given user clicked on call tab in left panel
     When enters lead info "Company", "Contact", "PrimaryEmail", "PrimaryPhone", "Cell", "SecondaryPhone"
@@ -66,33 +66,9 @@ Feature: Test for new user PCRO for Pest.
     Then enter reason description
     And click on Save button
     Then User Screen Waits for a Bit
-
+    
   #Done
-  @MLForSSP @newUserPCRO
-  Scenario: To Test Mark As Lost Opportunity Info package for standard service for service package
-    Given user clicked on call tab in left panel
-    When enters lead info "Company", "Contact", "PrimaryEmail", "PrimaryPhone", "Cell", "SecondaryPhone"
-    And select lead branch "BranchName", "Department","Primary Reason Of Call", "Service", "Source"
-    And enters "AccountAlert", "ProblemDescription"
-    Then I click on Residential Radio button
-    And click on continue button
-    Then Service address "line1","line2","Zip","city","state"
-    And check Is Tax Exempt
-    And Enter Tax Exemption
-    And IS Billing Address Different Than Service Address
-    And Billing addess "line1","line2","Zip","city","state"
-    When select package as "standard service"
-    And package details "category","service","package","Frequency","Billing Frequency"
-    Then click on Add Button
-    Then click on Add to agreement check button
-    And click On mark as lost button
-    Then click on Reason DDL and choose reason
-    Then enter reason description
-    And click on Save button
-    Then User Screen Waits for a Bit
-
-  #Done
-  @SaveSSP @newUserPCRO
+  @SaveSSP @newUserPCRO @MSN2
   Scenario: To Test Save Opportunity Info package for standard service for service package
     Given user clicked on call tab in left panel
     When enters lead info "Company", "Contact", "PrimaryEmail", "PrimaryPhone", "Cell", "SecondaryPhone"
@@ -113,7 +89,7 @@ Feature: Test for new user PCRO for Pest.
     Then User Screen Waits for a Bit
 
   #Done
-  @SaveAndProporsalForSSP @newUserPCRO
+  @SaveAndProporsalForSSP @newUserPCRO @MSN3
   Scenario: To Test the Save and Proposal for standard service for service package
     Given user clicked on call tab in left panel
     When enters lead info "Company", "Contact", "PrimaryEmail", "PrimaryPhone", "Cell", "SecondaryPhone"
@@ -138,7 +114,7 @@ Feature: Test for new user PCRO for Pest.
     Then User Screen Waits for a Bit
 
   #Done
-  @SaveAndSignAgreementForSSP @newUserPCRO
+  @SaveAndSignAgreementForSSP @newUserPCRO @MSN4
   Scenario: To Test the Save and Sign Agreement for satandard service for service package
     Given user clicked on call tab in left panel
     When enters lead info "Company", "Contact", "PrimaryEmail", "PrimaryPhone", "Cell", "SecondaryPhone"
@@ -173,7 +149,7 @@ Feature: Test for new user PCRO for Pest.
   #Then clicks on Complete
   #Then User Screen Waits for a Bit
   #Done
-  @SaveAndContSetup @newUserPCRO
+  @SaveAndContSetup @newUserPCRO @MSN5
   Scenario: To Test The Complete Flow Of Residential From Creating Opportunity To Sent Agreement To The Customer
     Given user clicked on call tab in left panel
     When enters lead info "Company", "Contact", "PrimaryEmail", "PrimaryPhone", "Cell", "SecondaryPhone"
@@ -196,7 +172,7 @@ Feature: Test for new user PCRO for Pest.
     Then User Screen Waits for a Bit
 
   #Done
-  @nusaveSSPundercustomerTabOppadvanceSearchoppContsalesProcess @newUserPCRO
+  @nusaveSSPundercustomerTabOppadvanceSearchoppContsalesProcess @newUserPCRO @MSN6
   Scenario: Test Flow Of Residential From Creating Opportunity To cont Sale process
     Given user clicked on call tab in left panel
     When enters lead info "Company", "Contact", "PrimaryEmail", "PrimaryPhone", "Cell", "SecondaryPhone"
@@ -215,59 +191,8 @@ Feature: Test for new user PCRO for Pest.
     Then click on Add to agreement check button
     Then click on save more
     Then User Clicks on Customer Opportunity
-    Then User Clicks on Advance Search
-    Then user click on ViewAction_CompanyCustomer
-    Then user click on EnterNote_CompanyCustomer
-    Then user click on save_CompanyCustomer
 
-  #Done
-  @nuserviceBundleAddBundleButtonML @newUserPCRO
-  Scenario: Test Mark As Lost Opportunity Info package for standard service for service bundle
-    Given user clicked on call tab in left panel
-    When enters lead info "Company", "Contact", "PrimaryEmail", "PrimaryPhone", "Cell", "SecondaryPhone"
-    And select lead branch "BranchName", "Department","Primary Reason Of Call", "Service", "Source"
-    And enters "AccountAlert", "ProblemDescription"
-    Then I click on Residential Radio button
-    And click on continue button
-    Then Service address "line1","line2","Zip","city","state"
-    And check Is Tax Exempt
-    Then Enter Tax Exemption
-    #Then IS Billing Address Different Than Service Address
-    #And Billing addess "line1","line2","Zip","city","state"
-    Then click on service bundle radio button
-    And Select service bundle
-    And click on billing Frequency DDl
-    And choose monthly frequency from DDL
-    Then click on Add Bundle button
-    And click On mark as lost button
-    Then click on Reason DDL and choose reason
-    Then enter reason description
-    And click on Save button
-
-  #Done
-  @nuserviceBundleAddBundleButtonSave @newUserPCRO
-  Scenario: Test Save Opportunity Info package for standard service for service bundle
-    Given user clicked on call tab in left panel
-    When enters lead info "Company", "Contact", "PrimaryEmail", "PrimaryPhone", "Cell", "SecondaryPhone"
-    And select lead branch "BranchName", "Department","Primary Reason Of Call", "Service", "Source"
-    And enters "AccountAlert", "ProblemDescription"
-    Then I click on Residential Radio button
-    And click on continue button
-    Then Service address "line1","line2","Zip","city","state"
-    And check Is Tax Exempt
-    Then Enter Tax Exemption
-    #Then IS Billing Address Different Than Service Address
-    #And Billing addess "line1","line2","Zip","city","state"
-    Then click on service bundle radio button
-    And Select service bundle
-    And click on billing Frequency DDl
-    And choose monthly frequency from DDL
-    Then click on Add Bundle button
-    Then User selects the Bundle
-    And click On Save Button
-    Then User Screen Waits for a Bit
- 
-  @SaveAndSignAgreementForSSPComplete @newUserPCRO
+  @SaveAndSignAgreementForSSPComplete @newUserPCRO @MSN9
   Scenario: To Test the Opportunity and send email
     Given user clicked on call tab in left panel
     When enters lead info "Company", "Contact", "PrimaryEmail", "PrimaryPhone", "Cell", "SecondaryPhone"

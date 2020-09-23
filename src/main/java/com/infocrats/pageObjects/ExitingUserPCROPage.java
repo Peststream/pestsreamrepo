@@ -47,7 +47,7 @@ public class ExitingUserPCROPage extends peststreamPage {
 	@FindBy(xpath = "//*[@id=\"openTab\"]")
 	private WebElementFacade open_tab;
 
-	@FindBy(xpath = "(//*[@class= \"btnOpenWorkOrderPopup\"])[2]")
+	@FindBy(xpath = "(//*[@onClick=\"SaveFilterValues_Session()\"])[1]")
 	private WebElementFacade selectOppo;
 
 	@FindBy(xpath = "//*[@id=\"Note\"]")
@@ -216,6 +216,7 @@ public class ExitingUserPCROPage extends peststreamPage {
 		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
 		wait.until(ExpectedConditions.elementToBeClickable(advBtn));
+		waitABit(jsonData.get("Time3"));
 		advBtn.click();
 
 	}

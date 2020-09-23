@@ -206,10 +206,10 @@ public class NewUserPCCOPage extends peststreamPage {
 	@FindBy(xpath = "div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[6]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/button[4]/span[1]")
 	private WebElementFacade MarkAsLost;
 
-	@FindBy(xpath = "/html/body/div[3]/div[1]/div/ul/li[4]/a/span[1]")
+	@FindBy(linkText = "Customer")
 	private WebElementFacade Customer;
 
-	@FindBy(xpath = "/html/body/div[3]/div[1]/div/ul/li[4]/ul/li[2]/a/span")
+	@FindBy(xpath = "//*[@id=\"sample_1\"]/tbody/tr[1]/td[2]/a")
 	private WebElementFacade opportunityy;
 
 	@FindBy(xpath = "//input[@id='btnAdvanceSearch']")
@@ -707,7 +707,7 @@ catch(Exception e){
 	public void customerOpp() {
 		scrollUP(Customer);
 		Customer.click();
-		waitABit(2000);
+		waitABit(3000);
 		opportunityy.click();
 		waitABit(2000);
 
