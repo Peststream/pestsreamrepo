@@ -1,8 +1,6 @@
-<<<<<<< Updated upstream
-@termitecall
-=======
- @run @termitecall22
->>>>>>> Stashed changes
+
+@termitecall @run @termitecall22
+
 Feature: Test for new User Termite Call2 of Termite.
 
   Background: 
