@@ -348,4 +348,19 @@ public class newUserTermiteCallSteps extends pestreamSteps {
 		newusertermitecallpage.user_enters_LastNameGI(jsonData);
 		
 	}
+
+	public void CsrDashboard() throws Exception {
+		newusertermitecallpage.CsrDashboard();
+		
+	}
+
+	public void AdvanceSearch() throws Exception {
+		newusertermitecallpage.AdvanceSearch();
+		
+	}
+
+	public void CreateNew() throws Exception {
+		newusertermitecallpage.CreateNew();
+		
+	}
 }

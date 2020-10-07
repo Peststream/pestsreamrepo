@@ -12,7 +12,7 @@ Feature: Test for new user PCCO2 for Pest.
   Scenario: Test opportunity info Using Different Address
     When user clicked on call tab
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
-    And select lead branch info
+   Then user click on DDSource
     And enters Account_Alert and enterProblemDiscription
     Then I click on commercial Radio button
     And click on continue button for commercial opportunity
@@ -29,7 +29,7 @@ Feature: Test for new user PCCO2 for Pest.
   Scenario: Test opportunity and Send Email
     When user clicked on call tab
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
-    And select lead branch info
+   Then user click on DDSource
     And enters Account_Alert and enterProblemDiscription
     Then I click on commercial Radio button
     And click on continue button for commercial opportunity
@@ -56,7 +56,7 @@ Feature: Test for new user PCCO2 for Pest.
   Scenario: Test opportunity info Using time range and Send Email
     When user clicked on call tab
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
-    And select lead branch info
+   Then user click on DDSource
     And enters Account_Alert and enterProblemDiscription
     Then I click on commercial Radio button
     And click on continue button for commercial opportunity
@@ -79,12 +79,12 @@ Feature: Test for new user PCCO2 for Pest.
     Then enter full name and signature
     Then click on save and continue on Agreement tab
     
-   #Done
-  @nuComFSTCompSendEmail @newUserPCCO
+   #Fail
+  @nuComFSTCompSendEmail @newUserPCCO 
   Scenario: Test to Send Email for commercial
     When user clicked on call tab
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
-    And select lead branch info
+   Then user click on DDSource
     And enters Account_Alert and enterProblemDiscription
     Then I click on commercial Radio button
     And click on continue button for commercial opportunity
@@ -110,7 +110,7 @@ Feature: Test for new user PCCO2 for Pest.
   Scenario: Test opportunity for InsideRadioButton complete flow for commercial
     When user clicked on call tab
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
-    And select lead branch info
+   Then user click on DDSource
     And enters Account_Alert and enterProblemDiscription
     Then I click on commercial Radio button
     And click on continue button for commercial opportunity
@@ -131,7 +131,6 @@ Feature: Test for new user PCCO2 for Pest.
     Then check term and condition
     Then enter full name and signature
     Then click on save and continue on Agreement tab
-    
     Then click on opportunity action icon
     Then review all the details and click on save and continue button
     Then click on continue button on inspection tab

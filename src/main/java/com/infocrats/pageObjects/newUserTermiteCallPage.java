@@ -45,7 +45,7 @@ public class newUserTermiteCallPage extends peststreamPage {
 	@FindBy(xpath = "//div[@id='s2id_BranchId']//b")
 	private WebElementFacade DDBranch;
 
-	@FindBy(xpath = "//*[@id=\"select2-result-label-15\"]")
+	@FindBy(xpath = "(//div[@role='option'])[6]")
 	private WebElementFacade ValueBranch;
 
 	@FindBy(xpath = "//*[@id=\"frmGeneralInfo\"]/div/div/div[3]/div[5]/div[2]/div/div/button/span[1]")
@@ -135,7 +135,7 @@ public class newUserTermiteCallPage extends peststreamPage {
 	@FindBy(xpath = "//button[@id='submitlost']//span[@class='ladda-label'][contains(text(),'Mark as Lost')]")
 	private WebElementFacade OppmarkAsLost;
 
-	@FindBy(xpath = "//span[@class='select2-arrow']//b")
+	@FindBy(xpath = "//div[@id='s2id_SelCancelReasonMasterId']//span[@class='select2-chosen']")
 	private WebElementFacade OppDDReason;
 
 	@FindBy(xpath = "(//*[starts-with(@id,'select2-result-label-')])[2]")
@@ -225,13 +225,13 @@ public class newUserTermiteCallPage extends peststreamPage {
 	@FindBy(xpath = "(//span[contains(.,'Select Service...')])[1]")
 	private WebElementFacade DDService_StdService_FieldSTSaveComm;
 	
-	@FindBy(xpath = "(//div[@role='option'])[3]")
+	@FindBy(xpath = "//span[contains(.,'Termite 2')]")
 	private WebElementFacade ValueDDService_StdService_FieldSTSaveComm;
 	
 	@FindBy(xpath = "(//span[contains(.,'Select Frequency...')])[1]")
 	private WebElementFacade DDFrequency_StdService_FieldSTSaveComm;
 	
-	@FindBy(xpath = "(//div[@role='option'])[2]")
+	@FindBy(xpath = "(//span[contains(.,'abc Frequency')])[1]")
 	private WebElementFacade ValueDDFrequency_StdService_FieldSTSaveComm;
 	
 	@FindBy(xpath = "(//button[contains(.,'Save')])[5]")
@@ -270,7 +270,7 @@ public class newUserTermiteCallPage extends peststreamPage {
 	@FindBy(xpath = "(//span[contains(.,'Mark as Lost')])[1]")
 	private WebElementFacade markaslost_InsideSTSaveComm;
 	
-	@FindBy(xpath = "//span[@id='select2-chosen-1']")
+	@FindBy(xpath = "//div[@id='s2id_SelCancelReasonMasterId']//span[@class='select2-chosen']")
 	private WebElementFacade DDReasonML_InsideSTSaveComm;
 	
 	@FindBy(xpath = " (//*[starts-with(@id,'select2-result-label-')])[2]")
@@ -287,6 +287,15 @@ public class newUserTermiteCallPage extends peststreamPage {
 	
 	@FindBy(xpath = "//input[@name='LastName']")
 	private WebElementFacade LastNameGI;
+	
+	@FindBy(xpath = "//span[contains(.,'CSR DashBoard')]")
+	private WebElementFacade CsrDashboard;
+	
+	@FindBy(xpath = "//input[@value='Create New']")
+	private WebElementFacade CreateNew;
+	
+	@FindBy(xpath = "//button[contains(.,'Advance Search')]")
+	private WebElementFacade AdvanceSearch;
 	
 	
 	@Override
@@ -1047,7 +1056,33 @@ public class newUserTermiteCallPage extends peststreamPage {
 			WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
 			wait.until(ExpectedConditions.elementToBeClickable(LastNameGI));
 			LastNameGI.click();
-			LastNameGI.sendKeys(testData.get("LName"));
+			//LastNameGI.sendKeys(testData.get("LName"));
+			
+		}
+
+		public void CsrDashboard() throws Exception {
+			scrollUP(CsrDashboard);
+			
+			jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+			WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+			wait.until(ExpectedConditions.elementToBeClickable(CsrDashboard));
+			CsrDashboard.click();
+			
+		}
+
+		public void AdvanceSearch() throws Exception {
+			jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+			WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+			wait.until(ExpectedConditions.elementToBeClickable(AdvanceSearch));
+			AdvanceSearch.click();
+			
+		}
+
+		public void CreateNew() throws Exception {
+			jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+			WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+			wait.until(ExpectedConditions.elementToBeClickable(CreateNew));
+			CreateNew.click();
 			
 		}
 

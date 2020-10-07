@@ -389,6 +389,20 @@ public class newUserTermiteCallStepDefs {
 		newusertermitecallsteps.LastNameGI();
 	}
 
+	@When("^user click on CsrDashboard$")
+	public void user_click_on_CsrDashboard() throws Exception {
+		newusertermitecallsteps.CsrDashboard();
+	}
+
+	@Then("^user click on AdvanceSearch$")
+	public void user_click_on_AdvanceSearch() throws Exception {
+		newusertermitecallsteps.AdvanceSearch();
+	}
+
+	@Then("^user click on CreateNew$")
+	public void user_click_on_CreateNew() throws Exception {
+		newusertermitecallsteps.CreateNew();
+	}
 
 	
 	

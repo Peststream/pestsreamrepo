@@ -6,10 +6,13 @@ import org.openqa.selenium.JavascriptExecutor;
 
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.infocrats.utils.BaseUtills;
+import com.infocrats.utils.JsonHelper;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
@@ -17,6 +20,7 @@ import net.serenitybdd.core.pages.WebElementFacade;
 public class NewUserPCCOPage extends peststreamPage {
 	private static final Logger logger = LoggerFactory.getLogger(NewUserPCCOPage.class);
 	BaseUtills utills = new BaseUtills();
+	private Map<String, Integer> jsonData;
 
 	@FindBy(xpath = "/html/body//ul[@class='page-sidebar-menu page-sidebar-menu-compact']//a[@href='/Sale/PhoneSales/Index']")
 	private WebElementFacade callTab;
@@ -64,13 +68,19 @@ public class NewUserPCCOPage extends peststreamPage {
 
 	@FindBy(xpath = "//*[@id='s2id_PrimaryServiceId']")
 	private WebElementFacade service_ddl;
+	
+	@FindBy(xpath = "(//div[@role='option'])[3]")
+	private WebElementFacade service_ddl_Value;
 
 	@FindBy(xpath = "//*[@id=\"select2-results-9\"]/li[2]/ul/li")
 	private WebElementFacade newPortService;
 
-	@FindBy(xpath = "//*[@id=\"frmGeneralInfo\"]/div/div/div[3]/div[5]/div[2]/div/div")
+	@FindBy(xpath = "(//span[contains(.,'--Select--')])[3]")
 	private WebElementFacade source_ddl;
-
+	
+	@FindBy(xpath = "//span[contains(.,'CustomerPortal App')]")
+	private WebElementFacade source_ddl_Value;
+	
 	@FindBy(xpath = " //*[@id=\"frmGeneralInfo\"]/div/div/div[3]/div[5]/div[2]/div/div/div/ul/li[2]/a")
 	private WebElementFacade customerPortalApp;
 
@@ -80,7 +90,7 @@ public class NewUserPCCOPage extends peststreamPage {
 	@FindBy(xpath = "//*[@id=\"frmGeneralInfo\"]/div/div/div[3]/div[5]/div[2]/div/div/div/ul/li[4]/a")
 	private WebElementFacade salesAuto;
 
-	@FindBy(xpath = "//*[@id=\"CreateWebLead\"]")
+	@FindBy(xpath = "(//input[@name='CreateWebLead'])[1]")
 	private WebElementFacade create_lead;
 
 	@FindBy(xpath = "//*[@id=\"AccountDescription\"]")
@@ -203,7 +213,7 @@ public class NewUserPCCOPage extends peststreamPage {
 	@FindBy(xpath = "//select[@id='InitialPreferedId']//option[contains(text(),'Any Time')]")
 	private WebElementFacade SecondTime;
 
-	@FindBy(xpath = "div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[6]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/button[4]/span[1]")
+	@FindBy(xpath = "(//span[contains(.,'Mark as Lost')])[1]")
 	private WebElementFacade MarkAsLost;
 
 	@FindBy(linkText = "Customer")
@@ -450,16 +460,14 @@ public class NewUserPCCOPage extends peststreamPage {
 	@FindBy(xpath = "(//a[contains(.,'EOM')])[1]")
 	private WebElementFacade ValueDDFreq;
 	
-	/*@FindBy(xpath = "//span[contains(text(),'Send Agreement Link')]")
-	private WebElementFacade sendagreementlink;
-	
-	@FindBy(xpath = "//span[contains(text(),'Send Agreement Link')]")
-	private WebElementFacade sendagreementlink;*/
-	
+	@FindBy(xpath = "//*[@id=\"frmGeneralInfo\"]/div/div/div[3]/div[5]/div[2]/div/div/button/span[1]")
+	private WebElementFacade DDSource;
 
-
-	/*@FindBy(xpath = "https://accounts.google.com/signin/v2/identifier?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin")
-	private WebElementFacade newTab;*/
+	@FindBy(xpath = "//span[@class='text'][contains(.,'CustomerPortal App')]")
+	private WebElementFacade ValueDDSource;
+	
+	@FindBy(xpath = "(//*[@id=\"uniform-CreateWebLead\"]/span)[1]")
+	private WebElementFacade Lead;
 
 
 	@Override
@@ -496,11 +504,18 @@ public class NewUserPCCOPage extends peststreamPage {
 
 	public void leandBranch_info() {
 		service_ddl.click();
-		newPortService.click();
+		
+		service_ddl_Value.click();
+	/*//	newPortService.click();
 
 		source_ddl.click();
-		customerPortalApp.click();
-
+		source_ddl_Value.click();
+		
+		//customerPortalApp.click();
+*/
+		
+		source_ddl.click();
+		source_ddl_Value.click();
 	}
 
 	public void alrtDescrip_commnt(Map<String, String> testData) {
@@ -1121,7 +1136,40 @@ catch(Exception e){
 		ValueDDFreq.click();
 		waitABit(3000);
 		
+		scrollUPSmall(saveBttnCom);
+		waitABit(3000);
+		
 	}
+
+	public void DDSource() {
+		DDSource.click();
+		waitABit(3000);
+		ValueDDSource.click();
+		waitABit(3000);
+		
+	}
+
+	public void lead_button() {
+		Lead.click();
+		waitABit(3000);
+		
+	}
+
+	/*public void clickOnSource() throws Exception {
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait.until(ExpectedConditions.elementToBeClickable(DDSource));
+		DDSource.click();
+		
+		jsonData = JsonHelper.readJsonElementInteger("waitTime.json", "SleepTime");
+		WebDriverWait wait1 = new WebDriverWait(getDriver(), jsonData.get("Time3"));
+		wait1.until(ExpectedConditions.elementToBeClickable(ValueSource));		
+		ValueSource.click();
+		DDSource.click();
+	}*/
+
+
+
 
 
 }

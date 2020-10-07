@@ -412,6 +412,17 @@ public void user_click_on_DDCategory_SelectService_SalesApp() {
 	newuserpccosteps.DDCategory_SelectService_SalesApp();
 }
 
+@Then("^user click on DDSource$")
+public void user_click_on_DDSource() {
+	newuserpccosteps.DDSource();
+}
+
+@Then("^user click on lead button$")
+public void user_click_on_lead_button() {
+	newuserpccosteps.user_click_on_lead_button();
+}
+
+
 
 
 

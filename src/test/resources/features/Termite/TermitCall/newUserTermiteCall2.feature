@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 @termitecall
+=======
+ @run @termitecall22
+>>>>>>> Stashed changes
 Feature: Test for new User Termite Call2 of Termite.
 
   Background: 
@@ -8,9 +12,13 @@ Feature: Test for new User Termite Call2 of Termite.
     Then I am granted access to the system
  
  
- @sendEmailInsideRadioBttn_Comm
+ 
+ @sendEmailInsideRadioBttn_Com
   Scenario: Test to Commercial SendEmail InsideRadioButton of ScheduleServiceOrder Termite
-    When user click on CallTab
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
+   # When user click on CallTab
     Then user enters company
     Then user enters contact
     Then user click on Branch
@@ -29,7 +37,7 @@ Feature: Test for new User Termite Call2 of Termite.
     Then user click on DDAssignedTo
     Then user click on saveScheduleEstimation
     Then user click on generatedOpportunity_FieldSTSaveComm
-     Then user enters LastNameGI
+    Then user enters LastNameGI
     Then user click on saveAndcontGI_FieldSTSaveComm
     Then user click on continueInspection_FieldSTSaveComm
     Then user click on DDCat_StdService_FieldSTSaveComm
@@ -49,7 +57,10 @@ Feature: Test for new User Termite Call2 of Termite.
 
   @markLostInsideRadioBttn_Comm
   Scenario: Test to Commercial MarkLost InsideRadioButton of ScheduleServiceOrder Termite
-    When user click on CallTab
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
+    #When user click on CallTab
     Then user enters company
     Then user enters contact
     Then user click on Branch
@@ -76,7 +87,10 @@ Feature: Test for new User Termite Call2 of Termite.
     
      @resiScheduleEstimationFieldRangeTimeMarkLost
   Scenario: Test to Save FieldRangeTime MarkLost ScheduleEstimation of Termite
-    When user click on CallTab
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
+    #When user click on CallTab
     Then user enters company
     Then user enters contact
     Then user click on Branch
@@ -101,7 +115,10 @@ Feature: Test for new User Termite Call2 of Termite.
 
   @resiScheduleEstimationFieldRangeTimeSave
   Scenario: Test to Save FieldRangeTime ScheduleEstimation of Termite
-    When user click on CallTab
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
+    #When user click on CallTab
     Then user enters company
     Then user enters contact
     Then user click on Branch
@@ -123,7 +140,10 @@ Feature: Test for new User Termite Call2 of Termite.
 
   @generalInfoCommercial
   Scenario: Test to Continue GeneralInfoCommercial of ScheduleServiceOrder Termite
-    When user click on CallTab
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
+    #When user click on CallTab
     Then user enters company
     Then user enters contact
     Then user click on Branch
@@ -135,7 +155,10 @@ Feature: Test for new User Termite Call2 of Termite.
 
   @generalInfoCommercialWithLead
   Scenario: Test to Continue GeneralInfoCommercial using Lead of ScheduleServiceOrder Termite
-    When user click on CallTab
+    When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
+   # When user click on CallTab
     Then user enters company
     Then user enters contact
     Then user click on Branch

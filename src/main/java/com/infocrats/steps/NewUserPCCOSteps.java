@@ -429,4 +429,14 @@ public class NewUserPCCOSteps extends pestreamSteps{
 		
 	}
 
+	public void DDSource() {
+		newuserpccopage.DDSource();
+		
+	}
+
+	public void user_click_on_lead_button() {
+		newuserpccopage.lead_button();
+		
+	}
+
 }

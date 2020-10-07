@@ -8,22 +8,23 @@ Feature: Test for new user PCCO for Pest.
     Then I am granted access to the system
 
   #without lead checkbox(done)
-  @nuWOLCom
+  @noppp
   Scenario: Test opportunity info (general info) for commercial
     When user clicked on call tab
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
-    And select lead branch info
+    Then user click on DDSource
     And enters Account_Alert and enterProblemDiscription
     Then I click on commercial Radio button
     And click on continue button for commercial opportunity
 
+        
   #with checkbox lead(Done)
-  @nuWLCom
+  @nuWl
   Scenario: Test opportunity info (general info) for commercial with lead
     When user clicked on call tab
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
-    And select lead branch info
-    Then Check lead button
+    Then user click on DDSource
+    Then user click on lead button
     And enters Account_Alert and enterProblemDiscription
     Then I click on commercial Radio button
     And click on continue button for commercial opportunity
@@ -33,7 +34,8 @@ Feature: Test for new user PCCO for Pest.
   Scenario: Test opportunity info Using Specific time
     When user clicked on call tab
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
-    And select lead branch info
+    Then user click on DDSource
+    Then user click on lead button
     And enters Account_Alert and enterProblemDiscription
     Then I click on commercial Radio button
     And click on continue button for commercial opportunity
@@ -42,13 +44,14 @@ Feature: Test for new user PCCO for Pest.
     And choose assign to person
     And click on save Button
     Then User waits
-
+    
   #Done
   @nuComRTSave @newUserPCCO
   Scenario: Test opportunity info Using Specific time for Range Time
     When user clicked on call tab
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
-    And select lead branch info
+    Then user click on DDSource
+    Then user click on lead button
     And enters Account_Alert and enterProblemDiscription
     Then I click on commercial Radio button
     And click on continue button for commercial opportunity
@@ -59,15 +62,14 @@ Feature: Test for new user PCCO for Pest.
     And click on save Button
     Then User waits
 
-  #Done
-  
 
   #Done
   @nuComRTI @newUserPCCO
   Scenario: Test opportunity info Using Inside Radio
     When user clicked on call tab
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
-    And select lead branch info
+    Then user click on DDSource
+    Then user click on lead button
     And enters Account_Alert and enterProblemDiscription
     Then I click on commercial Radio button
     And click on continue button for commercial opportunity
@@ -83,7 +85,8 @@ Feature: Test for new user PCCO for Pest.
   Scenario: Test opportunity for MarkLost info Using time range
     When user clicked on call tab
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
-    And select lead branch info
+    Then user click on DDSource
+    Then user click on lead button
     And enters Account_Alert and enterProblemDiscription
     Then I click on commercial Radio button
     And click on continue button for commercial opportunity
@@ -103,7 +106,8 @@ Feature: Test for new user PCCO for Pest.
   Scenario: Test opportunity for MarkLost info Using Specific time
     When user clicked on call tab
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
-    And select lead branch info
+     Then user click on DDSource
+    Then user click on lead button
     And enters Account_Alert and enterProblemDiscription
     Then I click on commercial Radio button
     And click on continue button for commercial opportunity
@@ -123,7 +127,8 @@ Feature: Test for new user PCCO for Pest.
   Scenario: Test opportunity MarkLost InspectionTab
     When user clicked on call tab
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
-    And select lead branch info
+    Then user click on DDSource
+    Then user click on lead button
     And enters Account_Alert and enterProblemDiscription
     Then I click on commercial Radio button
     And click on continue button for commercial opportunity
@@ -142,7 +147,8 @@ Feature: Test for new user PCCO for Pest.
   Scenario: Test opportunity MarkLost Inspection Tab
     When user clicked on call tab
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
-    And select lead branch info
+     Then user click on DDSource
+    Then user click on lead button
     And enters Account_Alert and enterProblemDiscription
     Then I click on commercial Radio button
     And click on continue button for commercial opportunity
@@ -160,7 +166,8 @@ Feature: Test for new user PCCO for Pest.
   Scenario: Test opportunity and review proposal
     When user clicked on call tab
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
-    And select lead branch info
+    Then user click on DDSource
+    Then user click on lead button
     And enters Account_Alert and enterProblemDiscription
     Then I click on commercial Radio button
     And click on continue button for commercial opportunity

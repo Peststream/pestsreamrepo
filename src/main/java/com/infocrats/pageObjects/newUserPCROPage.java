@@ -21,7 +21,7 @@ public class newUserPCROPage extends peststreamPage {
 	BaseUtills utills = new BaseUtills();
 	private Map<String, Integer> jsonData;
 
-	@FindBy(xpath = "//*[@id=\"frmGeneralInfo\"]/div/div/div[3]/h4")
+	@FindBy(xpath = "//span[@class='title'][contains(.,'Call')]")
 	private WebElementFacade call_page_tittle;
 
 	@FindBy(linkText = "Call")
