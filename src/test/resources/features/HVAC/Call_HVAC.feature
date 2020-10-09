@@ -1,4 +1,4 @@
-@run @hvac @Passed
+@run @hvac @Passed @hvac1
 Feature: Test for Call HVAC.
 
   Background: 
@@ -8,14 +8,14 @@ Feature: Test for Call HVAC.
     Then I am granted access to the system
 
   #pass
-  @TestOpportunityInfoForHVACMS
-  Scenario: Test opportunity info (general info) for HVAC1
-    When user clicked on call tab
-    When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
-    And select lead branch Information
-    And select source Information
-    And enters Account_Alert and enterProblemDiscription
-    And click on continue button for commercial opportunity
+  #@TestOpportunityInfoForHVACMS
+  #Scenario: Test opportunity info (general info) for HVAC1
+    #When user clicked on call tab
+    #When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
+    #And select lead branch Information
+    #And select source Information
+    #And enters Account_Alert and enterProblemDiscription
+    #And click on continue button for commercial opportunity
 
   #pass
   @TestOpportunityInfoForHVAC7MS
@@ -44,15 +44,6 @@ Feature: Test for Call HVAC.
     #And Select Task Name, Due Date
     And Click on Save Button
 
-  #pass
-  #@skip
-  #Scenario: Test CSR Dashboard for HVAC10 
-   # When user click on CSR Dashboard
-   # When user click on Advance Search from CSR Dashboard
-    #And Select Detail Page From Action for the first Account
-    #And Close Alert
-    #And Enter Note
-    #And Click On Save Button
 
 
   #pass

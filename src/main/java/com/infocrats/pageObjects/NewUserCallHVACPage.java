@@ -202,7 +202,7 @@ public class NewUserCallHVACPage extends peststreamPage {
 	@FindBy(xpath = "//*[@id='form0']/div[2]/div/div[4]/div/button/span")
 	private WebElementFacade SaveBtnFromDetailPage;
 
-	@FindBy(xpath = "/html/body//ul[@class='page-sidebar-menu page-sidebar-menu-compact']/li[5]/a[@href='#']/span[@class='title']")
+	@FindBy(css = ".page-sidebar-menu.page-sidebar-menu-compact > li:nth-of-type(4) > a > .title")
 	private WebElementFacade CustomerDD;
 
 	@FindBy(css = "[href='\\/Sales\\/CrmAccount']")
