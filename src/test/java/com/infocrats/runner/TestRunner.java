@@ -7,7 +7,7 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 
 @RunWith(CucumberWithSerenity.class)
 
-@CucumberOptions(features = { "src/test/resources/features" }, tags = { "@sendEmailInsideRadioBttn_Com" }, glue = {
+@CucumberOptions(features = { "src/test/resources/features" }, tags = { "@hvac" }, glue = {
 		"com.infocrats.stepdefs" }, monochrome = true, plugin = { "pretty", "html:target/cucumber-reports",
 
 				"json:target/cucumber.json", "rerun:rerun.txt" })
