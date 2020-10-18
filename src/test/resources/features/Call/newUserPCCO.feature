@@ -1,4 +1,4 @@
-@pccoone @pests
+@pccoone @pests @run
 Feature: Test for new user PCCO for Pest.
 
   Background: 
@@ -10,7 +10,11 @@ Feature: Test for new user PCCO for Pest.
   #without lead checkbox(done)
   @noppp
   Scenario: Test opportunity info (general info) for commercial
-    When user clicked on call tab
+  
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
+   #When user clicked on call tab
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
     Then user click on DDSource
     And enters Account_Alert and enterProblemDiscription
@@ -21,7 +25,9 @@ Feature: Test for new user PCCO for Pest.
   #with checkbox lead(Done)
   @nuWl
   Scenario: Test opportunity info (general info) for commercial with lead
-    When user clicked on call tab
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
     Then user click on DDSource
     Then user click on lead button
@@ -30,9 +36,11 @@ Feature: Test for new user PCCO for Pest.
     And click on continue button for commercial opportunity
 
   #Done
-  @nuComST @newUserPCCO
+  @nuComST @newUserPCCOMS
   Scenario: Test opportunity info Using Specific time
-    When user clicked on call tab
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
     Then user click on DDSource
     Then user click on lead button
@@ -48,7 +56,9 @@ Feature: Test for new user PCCO for Pest.
   #Done
   @nuComRTSave @newUserPCCO
   Scenario: Test opportunity info Using Specific time for Range Time
-    When user clicked on call tab
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
     Then user click on DDSource
     Then user click on lead button
@@ -66,7 +76,9 @@ Feature: Test for new user PCCO for Pest.
   #Done
   @nuComRTI @newUserPCCO
   Scenario: Test opportunity info Using Inside Radio
-    When user clicked on call tab
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
     Then user click on DDSource
     Then user click on lead button
@@ -83,7 +95,9 @@ Feature: Test for new user PCCO for Pest.
   #Done
   @MLCommRTI @newUserPCCO
   Scenario: Test opportunity for MarkLost info Using time range
-    When user clicked on call tab
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
     Then user click on DDSource
     Then user click on lead button
@@ -104,7 +118,9 @@ Feature: Test for new user PCCO for Pest.
   #Done
   @MLComRTF @newUserPCCO
   Scenario: Test opportunity for MarkLost info Using Specific time
-    When user clicked on call tab
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
      Then user click on DDSource
     Then user click on lead button
@@ -125,7 +141,9 @@ Feature: Test for new user PCCO for Pest.
   #Done
   @MLComSTF @newUserPCCO
   Scenario: Test opportunity MarkLost InspectionTab
-    When user clicked on call tab
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
     Then user click on DDSource
     Then user click on lead button
@@ -145,7 +163,9 @@ Feature: Test for new user PCCO for Pest.
   #Done
   @MLComSTI @newUserPCCO
   Scenario: Test opportunity MarkLost Inspection Tab
-    When user clicked on call tab
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
      Then user click on DDSource
     Then user click on lead button
@@ -164,7 +184,9 @@ Feature: Test for new user PCCO for Pest.
 
  @nuComRTSendEmail @newUserPCCO
   Scenario: Test opportunity and review proposal
-    When user clicked on call tab
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
     Then user click on DDSource
     Then user click on lead button

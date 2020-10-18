@@ -123,7 +123,7 @@ public class NewUserPCCOPage extends peststreamPage {
 	@FindBy(xpath = "//*[@id=\"s2id_FieldSalesPerson\"]")
 	private WebElementFacade assignToDDL;
 
-	@FindBy(xpath = "//*[@id=\"select2-results-3\"]/li[2]/ul/li[1]")
+	@FindBy(xpath = "(//*[@class=\"select2-result-label\"])[3]")
 	private WebElementFacade assignToValue;
 
 	@FindBy(xpath = "(//*[@id=\"btnSave\"])[2]")
@@ -566,7 +566,7 @@ catch(Exception e){
 	}
 
 	public void action_btn() {
-		actionBtn.click();
+		scrollToClickAnelement(actionBtn);
 		waitABit(3000);
 
 	}
@@ -1118,10 +1118,10 @@ catch(Exception e){
 	public void DDCategory_SelectService_SalesApp() {
 		waitABit(3000);
 		scrollDownLarge(DDCategory);
-		waitABit(3000);
+		waitABit(4000);
 		
 		DDCategory.click();
-		waitABit(3000);
+		waitABit(4000);
 		ValueDDCategory.click();
 		waitABit(3000);
 		

@@ -1,4 +1,4 @@
-@run @pcroMSN @pests
+@run @pcro
 Feature: Test for existing user PCRO for Pest.
  
   Background: 
@@ -10,7 +10,9 @@ Feature: Test for existing user PCRO for Pest.
 #done
 @EAWOLMSN @existingPCRO 
   Scenario: Test opportunity From Left nevigation menu with existing account and without lead for Residential
-    When user clicked on call tab in left panel
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
     Then i chose service and sounce from respective DDL
     And enters "AccountAlert", "ProblemDescription"
@@ -20,8 +22,9 @@ Feature: Test for existing user PCRO for Pest.
 #done
  @EAWTLMSN @existingPCRO
   Scenario: Test opportunity From Left nevigation menu with existing account and with lead for Residential
-    When user clicked on call tab in left panel
-    Then verify page tittle of call page
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
      When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
     Then i chose service and sounce from respective DDL
     And I create lead
@@ -30,7 +33,7 @@ Feature: Test for existing user PCRO for Pest.
     And click on continue button
     
  #done   
- @EAOOPPMSN @existingPCRO
+ @EAOOPPMSN @existingPCROMSN
   Scenario: Test open opportunity Add note and click on contiue sale process with existing account for Residential
     When user clicked on customer tab in left panel
     Then user clicked on opportunity subtab
@@ -39,7 +42,6 @@ Feature: Test for existing user PCRO for Pest.
     And select opportunity
     Then user write a note
     
- 
  #done
  @GITSMSN @existingPCRO
   Scenario: Test open opportunity General Info (Opportunity Info)>Select Pakage>Standard service>Service package for Residential

@@ -38,7 +38,7 @@ public class ExitingUserPCROPage extends peststreamPage {
 	@FindBy(linkText = "Customer")
 	private WebElementFacade customerTab;
 
-	@FindBy(xpath = "//span[contains(@class,'title')][contains(text(),'Opportunity')]")
+	@FindBy(linkText = "Opportunity")
 	private WebElementFacade opportunityTab;
 
 	@FindBy(xpath = "//*[@id=\"btnAdvanceSearch\"]")

@@ -1,4 +1,4 @@
-@run @pcro @pestsMSN
+@run @pcro @pestsMSN12
 Feature: Test for new user PCRO for Pest.
 
   Background: 
@@ -10,8 +10,9 @@ Feature: Test for new user PCRO for Pest.
   #Done
   @nuWTOL @newUserPCRO11MSN
   Scenario: Test opportunity From Left nevigation menu with new account and without Lead for Residential
-    When user clicked on call tab in left panel 
-    Then verify page tittle of call page
+    When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     When enters lead info "Company", "Contact", "PrimaryEmail", "PrimaryPhone", "Cell", "SecondaryPhone"
     And select lead branch "BranchName", "Department","Primary Reason Of Call", "Service", "Source"
     And enters "AccountAlert", "ProblemDescription"
@@ -21,8 +22,9 @@ Feature: Test for new user PCRO for Pest.
   #Done
   @nuWTL @newUserPCROMSN
   Scenario: Test opportunity From Left nevigation menu with new account and with Lead for Residential
-    When user clicked on call tab in left panel
-    Then verify page tittle of call page
+    When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     When enters lead info "Company", "Contact", "PrimaryEmail", "PrimaryPhone", "Cell", "SecondaryPhone"
     And select lead branch "BranchName", "Department","Primary Reason Of Call", "Service", "Source"
     And I create lead
@@ -33,7 +35,9 @@ Feature: Test for new user PCRO for Pest.
   #Done
   @SaveBillingAddressDiffForSSPMSN @newUserPCRO
   Scenario: To Test Mark As Lost Opportunity Info package for standard service for service package
-    Given user clicked on call tab in left panel
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     When enters lead info "Company", "Contact", "PrimaryEmail", "PrimaryPhone", "Cell", "SecondaryPhone"
     And select lead branch "BranchName", "Department","Primary Reason Of Call", "Service", "Source"
     And enters "AccountAlert", "ProblemDescription"
@@ -50,7 +54,9 @@ Feature: Test for new user PCRO for Pest.
   #Done
   @MLBillingAddressDiffForSSP @newUserPCRO @MSN1
   Scenario: To Test Mark As Lost Opportunity Info package for standard service for service package
-    Given user clicked on call tab in left panel
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     When enters lead info "Company", "Contact", "PrimaryEmail", "PrimaryPhone", "Cell", "SecondaryPhone"
     And select lead branch "BranchName", "Department","Primary Reason Of Call", "Service", "Source"
     And enters "AccountAlert", "ProblemDescription"
@@ -70,7 +76,9 @@ Feature: Test for new user PCRO for Pest.
   #Done
   @SaveSSP @newUserPCRO @MSN2
   Scenario: To Test Save Opportunity Info package for standard service for service package
-    Given user clicked on call tab in left panel
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     When enters lead info "Company", "Contact", "PrimaryEmail", "PrimaryPhone", "Cell", "SecondaryPhone"
     And select lead branch "BranchName", "Department","Primary Reason Of Call", "Service", "Source"
     And enters "AccountAlert", "ProblemDescription"
@@ -91,7 +99,9 @@ Feature: Test for new user PCRO for Pest.
   #Done
   @SaveAndProporsalForSSP @newUserPCRO @MSN3
   Scenario: To Test the Save and Proposal for standard service for service package
-    Given user clicked on call tab in left panel
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     When enters lead info "Company", "Contact", "PrimaryEmail", "PrimaryPhone", "Cell", "SecondaryPhone"
     And select lead branch "BranchName", "Department","Primary Reason Of Call", "Service", "Source"
     And enters "AccountAlert", "ProblemDescription"
@@ -131,7 +141,9 @@ Feature: Test for new user PCRO for Pest.
   #Done
   @SaveAndContSetup @newUserPCRO @MSN5
   Scenario: To Test The Complete Flow Of Residential From Creating Opportunity To Sent Agreement To The Customer
-    Given user clicked on call tab in left panel
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     When enters lead info "Company", "Contact", "PrimaryEmail", "PrimaryPhone", "Cell", "SecondaryPhone"
     And select lead branch "BranchName", "Department","Primary Reason Of Call", "Service", "Source"
     And enters "AccountAlert", "ProblemDescription"
@@ -154,7 +166,9 @@ Feature: Test for new user PCRO for Pest.
   #Done
   @nusaveSSPundercustomerTabOppadvanceSearchoppContsalesProcess @newUserPCRO @MSN6
   Scenario: Test Flow Of Residential From Creating Opportunity To cont Sale process
-    Given user clicked on call tab in left panel
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     When enters lead info "Company", "Contact", "PrimaryEmail", "PrimaryPhone", "Cell", "SecondaryPhone"
     And select lead branch "BranchName", "Department","Primary Reason Of Call", "Service", "Source"
     And enters "AccountAlert", "ProblemDescription"
@@ -174,7 +188,9 @@ Feature: Test for new user PCRO for Pest.
 
   @SaveAndSignAgreementForSSPComplete @newUserPCRO @MSN9
   Scenario: To Test the Opportunity and send email
-    Given user clicked on call tab in left panel
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     When enters lead info "Company", "Contact", "PrimaryEmail", "PrimaryPhone", "Cell", "SecondaryPhone"
     And select lead branch "BranchName", "Department","Primary Reason Of Call", "Service", "Source"
     And enters "AccountAlert", "ProblemDescription"

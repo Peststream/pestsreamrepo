@@ -1,4 +1,4 @@
-@pcco @pests
+@pcco @run
 Feature: Test for new user PCCO2 for Pest.
 
   Background: 
@@ -10,7 +10,9 @@ Feature: Test for new user PCCO2 for Pest.
       #Done
   @diffBillingAddressCom @newUserPCCO
   Scenario: Test opportunity info Using Different Address
-    When user clicked on call tab
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
    Then user click on DDSource
     And enters Account_Alert and enterProblemDiscription
@@ -27,7 +29,9 @@ Feature: Test for new user PCCO2 for Pest.
      #Done
   @nuComFRTCompSendMail @newUserPCCO
   Scenario: Test opportunity and Send Email
-    When user clicked on call tab
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
    Then user click on DDSource
     And enters Account_Alert and enterProblemDiscription
@@ -54,7 +58,9 @@ Feature: Test for new user PCCO2 for Pest.
     #Done
   @nuComIRTCompSendMail @newUserPCCO
   Scenario: Test opportunity info Using time range and Send Email
-    When user clicked on call tab
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
    Then user click on DDSource
     And enters Account_Alert and enterProblemDiscription
@@ -80,9 +86,11 @@ Feature: Test for new user PCCO2 for Pest.
     Then click on save and continue on Agreement tab
     
    #Fail
-  @nuComFSTCompSendEmail @newUserPCCO 
+  @nuComFSTCompSendEmail @newUserPCCO12321
   Scenario: Test to Send Email for commercial
-    When user clicked on call tab
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
    Then user click on DDSource
     And enters Account_Alert and enterProblemDiscription
@@ -100,15 +108,13 @@ Feature: Test for new user PCCO2 for Pest.
     Then click on save and continue on select service tab
     And click on checkBox of Service under ConfigureProposal
     Then review proposal and click on save and proposal
-    Then check payment type and enter amount
-    Then check term and condition
-    Then enter full name and signature
-    Then click on save and continue on Agreement tab
     
      #Done
-  @nuComISTSendEmail @newUserPCCO
+  @nuComISTSendEmail @newUserPCCOMS123
   Scenario: Test opportunity for InsideRadioButton complete flow for commercial
-    When user clicked on call tab
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
    Then user click on DDSource
     And enters Account_Alert and enterProblemDiscription
@@ -127,24 +133,4 @@ Feature: Test for new user PCCO2 for Pest.
     Then click on save and continue on select service tab
     And click on checkBox of Service under ConfigureProposal
     Then review proposal and click on save and proposal
-    Then check payment type and enter amount
-    Then check term and condition
-    Then enter full name and signature
-    Then click on save and continue on Agreement tab
-    Then click on opportunity action icon
-    Then review all the details and click on save and continue button
-    Then click on continue button on inspection tab
-    Then user click on DDCategory_SelectService_SalesApp
-    And click on add button
-    Then click on save and continue on select service tab
-    And click on checkBox of Service under ConfigureProposal
-    Then review proposal and click on save and proposal
-    Then check payment type and enter amount
-    Then check term and condition
-    Then enter full name and signature
-    Then click on save and continue on Agreement tab
-
- 
-
-
- 
+     

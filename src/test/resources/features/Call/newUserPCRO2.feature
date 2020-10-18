@@ -12,7 +12,9 @@ Feature: Test for new user PCRO2 for Pest.
      #Done
   @nuNonSSML @newUserPCRO @P2MSN1
   Scenario: Test Mark As Lost Opportunity Info package for non-standard service
-    Given user clicked on call tab in left panel
+    When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     When enters lead info "Company", "Contact", "PrimaryEmail", "PrimaryPhone", "Cell", "SecondaryPhone"
     And select lead branch "BranchName", "Department","Primary Reason Of Call", "Service", "Source"
     And enters "AccountAlert", "ProblemDescription"
@@ -38,7 +40,9 @@ Feature: Test for new user PCRO2 for Pest.
   #Done
   @nuNonSSSave @newUserPCRO @P2MSN2
   Scenario: To Test Save Opportunity Info package for non-standard service
-    Given user clicked on call tab in left panel
+    When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     When enters lead info "Company", "Contact", "PrimaryEmail", "PrimaryPhone", "Cell", "SecondaryPhone"
     And select lead branch "BranchName", "Department","Primary Reason Of Call", "Service", "Source"
     And enters "AccountAlert", "ProblemDescription"
@@ -63,7 +67,9 @@ Feature: Test for new user PCRO2 for Pest.
   #Done
   @nuNonSSSAP @newUserPCRO
   Scenario: To Test Save And Proposal Opportunity Info package for non-standard service
-    Given user clicked on call tab in left panel
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     When enters lead info "Company", "Contact", "PrimaryEmail", "PrimaryPhone", "Cell", "SecondaryPhone"
     And select lead branch "BranchName", "Department","Primary Reason Of Call", "Service", "Source"
     And enters "AccountAlert", "ProblemDescription"
@@ -89,7 +95,9 @@ Feature: Test for new user PCRO2 for Pest.
   #Done
   @nuNonSSSASA @newUserPCRO
   Scenario: To Test Save And Sign Agreement Opportunity Info package for non-standard service
-    Given user clicked on call tab in left panel
+    When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     When enters lead info "Company", "Contact", "PrimaryEmail", "PrimaryPhone", "Cell", "SecondaryPhone"
     And select lead branch "BranchName", "Department","Primary Reason Of Call", "Service", "Source"
     And enters "AccountAlert", "ProblemDescription"
@@ -118,7 +126,9 @@ Feature: Test for new user PCRO2 for Pest.
   #Done
   @SaveScheduleEstimationInsideST @newUserPCRO
   Scenario: To Test Save Opportunity Info Schedule Estimation for Inside for specific time
-    Given user clicked on call tab in left panel
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     When enters lead info "Company", "Contact", "PrimaryEmail", "PrimaryPhone", "Cell", "SecondaryPhone"
     And select lead branch "BranchName", "Department","Primary Reason Of Call", "Service", "Source"
     And enters "AccountAlert", "ProblemDescription"
@@ -133,7 +143,9 @@ Feature: Test for new user PCRO2 for Pest.
   #Done
   @SaveScheduleEstimationInsideRT @newUserPCRO
   Scenario: To Test Save Opportunity Info Schedule Estimation for Inside for Range time
-    Given user clicked on call tab in left panel
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     When enters lead info "Company", "Contact", "PrimaryEmail", "PrimaryPhone", "Cell", "SecondaryPhone"
     And select lead branch "BranchName", "Department","Primary Reason Of Call", "Service", "Source"
     And enters "AccountAlert", "ProblemDescription"
@@ -151,7 +163,9 @@ Feature: Test for new user PCRO2 for Pest.
   #Done
   @MLScheduleEstimationInside @newUserPCRO
   Scenario: To Test Mark As Lost Opportunity Info Schedule Estimation for Inside for Specific Time
-    Given user clicked on call tab in left panel
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     When enters lead info "Company", "Contact", "PrimaryEmail", "PrimaryPhone", "Cell", "SecondaryPhone"
     And select lead branch "BranchName", "Department","Primary Reason Of Call", "Service", "Source"
     And enters "AccountAlert", "ProblemDescription"
@@ -168,7 +182,9 @@ Feature: Test for new user PCRO2 for Pest.
   #Done
   @MLScheduleEstimationIR @newUserPCRO
   Scenario: To Test Mark As Lost Opportunity Info Schedule Estimation for Inside for Range Time
-    Given user clicked on call tab in left panel
+  When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     When enters lead info "Company", "Contact", "PrimaryEmail", "PrimaryPhone", "Cell", "SecondaryPhone"
     And select lead branch "BranchName", "Department","Primary Reason Of Call", "Service", "Source"
     And enters "AccountAlert", "ProblemDescription"
@@ -188,7 +204,9 @@ Feature: Test for new user PCRO2 for Pest.
   #Done
   @SaveScheduleEstimationFR @newUserPCRO
   Scenario: To Test Save Opportunity using TimeRange Info Schedule Estimation for field
-    Given user clicked on call tab in left panel
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     When enters lead info "Company", "Contact", "PrimaryEmail", "PrimaryPhone", "Cell", "SecondaryPhone"
     And select lead branch "BranchName", "Department","Primary Reason Of Call", "Service", "Source"
     And enters "AccountAlert", "ProblemDescription"
@@ -211,7 +229,9 @@ Feature: Test for new user PCRO2 for Pest.
   #Done
   @SaveScheduleEstimationFST @newUserPCRO
   Scenario: To Test Save Opportunity Info Schedule Estimation for field
-    Given user clicked on call tab in left panel
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     When enters lead info "Company", "Contact", "PrimaryEmail", "PrimaryPhone", "Cell", "SecondaryPhone"
     And select lead branch "BranchName", "Department","Primary Reason Of Call", "Service", "Source"
     And enters "AccountAlert", "ProblemDescription"
@@ -231,7 +251,9 @@ Feature: Test for new user PCRO2 for Pest.
   #Done
   @MLScheduleEstimationFR @newUserPCRO
   Scenario: To Test Mark As Lost Opportunity using FieldRadioButton Info Schedule Estimation for field
-    Given user clicked on call tab in left panel
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     When enters lead info "Company", "Contact", "PrimaryEmail", "PrimaryPhone", "Cell", "SecondaryPhone"
     And select lead branch "BranchName", "Department","Primary Reason Of Call", "Service", "Source"
     And enters "AccountAlert", "ProblemDescription"
@@ -254,7 +276,9 @@ Feature: Test for new user PCRO2 for Pest.
   #Done
   @MLScheduleEstimationFS @newUserPCRO
   Scenario: To Test Mark As Lost Opportunity Info Schedule Estimation for field
-    Given user clicked on call tab in left panel
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     When enters lead info "Company", "Contact", "PrimaryEmail", "PrimaryPhone", "Cell", "SecondaryPhone"
     And select lead branch "BranchName", "Department","Primary Reason Of Call", "Service", "Source"
     And enters "AccountAlert", "ProblemDescription"
