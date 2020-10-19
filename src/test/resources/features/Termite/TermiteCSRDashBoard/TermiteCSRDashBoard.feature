@@ -1,4 +1,4 @@
-@run @termite
+@run @termite @termitecsrdashboard
 Feature: Test for CSRDashboard of Termite.
   
   Background: 
@@ -25,16 +25,16 @@ Feature: Test for CSRDashboard of Termite.
     Then user click on EnterNote_AddNote
     Then user click on Save_AddNote
 
-  @CreateWorkorder_CSRDashboard
-  Scenario: Test to CreateWorkorderAction CSRDashboard Termite
-    When user click on 	CSRDashboard
-    Then user click on AdvanceSearch_CSRDashboard
-    Then user click on CreateWorkorder
-    Then user click on DDServiceCategory_CreateWorkorder
-    Then user click on Services_CreateWorkorder
-    Then user click on AddBtn_CreateWorkorder
-    Then user click on DDOrderType_CreateWorkorder
-    Then user click on KeepSameServiceAdd_CreateWorkorder
-    Then user click on ServiceDate_CreateWorkorder
-    Then user click on Save_CreateWorkorder
-    Then user click on YesCreateOpportunity_CreateWorkorder
+  #@CreateWorkorder_CSRDashboard
+  #Scenario: Test to CreateWorkorderAction CSRDashboard Termite
+   # When user click on 	CSRDashboard
+    #Then user click on AdvanceSearch_CSRDashboard
+    #Then user click on CreateWorkorder
+    #Then user click on DDServiceCategory_CreateWorkorder
+    #Then user click on Services_CreateWorkorder
+    #Then user click on AddBtn_CreateWorkorder
+    #Then user click on DDOrderType_CreateWorkorder
+    #Then user click on KeepSameServiceAdd_CreateWorkorder
+    #Then user click on ServiceDate_CreateWorkorder
+    #Then user click on Save_CreateWorkorder
+    #Then user click on YesCreateOpportunity_CreateWorkorder

@@ -1,4 +1,4 @@
-@run @coreMSN @RunMSN
+@run @core @RunMSN
 Feature:  Test for Core Setup WorkOrder.
  
   Background: 

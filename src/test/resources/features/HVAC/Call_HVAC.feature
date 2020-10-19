@@ -1,4 +1,5 @@
-@run @hvac @Passed @hvac1
+@run @hvaccall1 @Passed
+
 Feature: Test for Call HVAC.
 
   Background: 
@@ -16,6 +17,19 @@ Feature: Test for Call HVAC.
     #And select source Information
     #And enters Account_Alert and enterProblemDiscription
     #And click on continue button for commercial opportunity
+
+  @TestOpportunityInfoForHVACMS
+  Scenario: Test opportunity info (general info) for HVAC1
+  When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
+    #When user clicked on call tab
+    When enters lead info "Company", "PrimaryEmail","Contact", "PrimaryPhone", "Cell", "SecondaryPhone"
+    And select lead branch Information
+    And select source Information
+    And enters Account_Alert and enterProblemDiscription
+    And click on continue button for commercial opportunity
+
 
   #pass
   @TestOpportunityInfoForHVAC7MS
@@ -74,6 +88,7 @@ Feature: Test for Call HVAC.
     And Click On View Icon From Action For First Account
     And Enter Note
     And Click On Save Button
+ 
   #pass
   @TestOpportunityInfoForHVAC005
   Scenario: Test Customer DropDown For Account15

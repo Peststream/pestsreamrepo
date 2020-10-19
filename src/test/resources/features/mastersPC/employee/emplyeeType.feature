@@ -1,4 +1,4 @@
-@run @empMSN @pc @RunMSN
+@run @empMSN @employee @RunMSN
 Feature: Test for Employee.
 
   Background: 
@@ -36,12 +36,12 @@ Feature: Test for Employee.
     Then click on save button
 
   #Done
-  @createRouteOverride
-  Scenario: Test create RouteOverride feature in Employee tab
-    When i click on employee tab on dashboard
-    Then i click on routeOverride
-    Then i click on addRouteOverride
-    Then i click on save
+  #@createRouteOverride
+  #Scenario: Test create RouteOverride feature in Employee tab
+    #When i click on employee tab on dashboard
+    #Then i click on routeOverride
+    #Then i click on addRouteOverride
+    #Then i click on save
 
   #Done
   @createClockInOutWorkingStatus
