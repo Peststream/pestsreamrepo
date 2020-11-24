@@ -1,5 +1,4 @@
 @run @hvaccall2 @Passed
-
 Feature: Test for call Hvac 2
 
   Background: 
@@ -9,7 +8,7 @@ Feature: Test for call Hvac 2
     Then I am granted access to the system
 
 #pass
-  @TestOpportunityInfoForHVA0
+  @TestOpportunityInfoForHVA0 
   Scenario: Test opportunity info (general info) for HVAC2
    When user click on CsrDashboard
    Then user click on AdvanceSearch
@@ -20,11 +19,6 @@ Feature: Test for call Hvac 2
     And select source Information
     And enters Account_Alert and enterProblemDiscription
     And click on continue button for commercial opportunity
-    And select primary requested service
-    And check flat rate
-    And Enter Job Description
-    And enters service address "Address Line1", "Zip","Contact", "City"
-    And click on Save button from general info
 
   #pass
   @TestOpportunityInfoForHVA3
@@ -38,12 +32,6 @@ Feature: Test for call Hvac 2
     And select source Information
     And enters Account_Alert and enterProblemDiscription
     And click on continue button for commercial opportunity
-    And select primary requested service
-    And check flat rate
-    And Enter Job Description
-    And enters service address "Address Line1", "Zip","Contact", "City"
-    And click on Save button from general info
-    And click on Advance Search from Work Order
    # And Select and click on one Work Order Number
    # And Select lead employee from DD
     #And Click on save from Work Order

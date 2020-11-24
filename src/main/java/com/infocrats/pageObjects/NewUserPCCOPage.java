@@ -469,6 +469,9 @@ public class NewUserPCCOPage extends peststreamPage {
 	@FindBy(xpath = "(//*[@id=\"uniform-CreateWebLead\"]/span)[1]")
 	private WebElementFacade Lead;
 
+	@FindBy(xpath = "(//span[contains(text(),'Continue')])[1]")
+	private WebElementFacade continueBtn1;
+
 
 	@Override
 	public WebElementFacade getUniqueElement() {
@@ -533,6 +536,10 @@ public class NewUserPCCOPage extends peststreamPage {
 try {
 	waitABit(3000);
 		continueBtn.click();
+		waitABit(3000);
+		continueBtn1.click();
+		
+		
 
 }
 catch(Exception e){
