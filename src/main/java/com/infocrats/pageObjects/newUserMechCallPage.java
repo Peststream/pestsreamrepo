@@ -405,11 +405,14 @@ public class newUserMechCallPage extends peststreamPage {
 	@FindBy(xpath = "//*[@id='submit21']")
 	private WebElementFacade saveAndContinue_Job;
 
-	@FindBy(xpath = "//select[@id='OrderType']/option[@value='ServiceOrder']")
+	@FindBy(xpath = "//select[@id='OrderType']/option[@value='ServiceOrder']") 
 	private WebElementFacade WorkOrderDD;
 
 	@FindBy(xpath = "//*[@id='btnSubmit']/span[1]")
 	private WebElementFacade SaveBtnOnWorkOrder;
+
+	@FindBy(xpath = "(//span[contains(text(),'Continue')])[1]")
+	private WebElementFacade continueBtn;
 
 	@Override
 	public WebElementFacade getUniqueElement() {
@@ -536,6 +539,8 @@ public class newUserMechCallPage extends peststreamPage {
 		WebDriverWait wait = new WebDriverWait(getDriver(), jsonData.get("Time3"));
 		wait.until(ExpectedConditions.elementToBeClickable(Continue_CSSO));
 		Continue_CSSO.click();
+		Thread.sleep(3000);
+		continueBtn.click();
 	}
 
 	public void ScheduleType() throws Exception {

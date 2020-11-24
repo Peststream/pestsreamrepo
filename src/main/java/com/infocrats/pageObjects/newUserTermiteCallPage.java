@@ -81,7 +81,7 @@ public class newUserTermiteCallPage extends peststreamPage {
 	@FindBy(xpath = "(//*[@id=\"uniform-CreateWebLead\"]/span)[1]")
 	private WebElementFacade Lead;
 
-	@FindBy(xpath = "//input[@id='SpRequiredServiceAddressControl_ServiceAddressLine1']")
+	@FindBy(xpath = "(//input[@type='radio'][position()=1])[1]")
 	private WebElementFacade AddressLine;
 
 	@FindBy(xpath = "//input[@id='SpRequiredServiceAddressControl_ServiceZipCode']")
