@@ -1,4 +1,4 @@
-@run @termiteemp @one
+@run @termiteemp @termiteemployee
 Feature: Test Cases for Termite Employee.
 
   Background: 
@@ -47,13 +47,13 @@ Feature: Test Cases for Termite Employee.
     Then user click on DDLeadTech_RouteEmpTermite
     Then user click on Save_RouteEmpTermite
 
-  @RouteOverrideEmpTermite
-  Scenario: Test to Add RouteOverride in Termite
-    When user click on 	Emp_Termite
-    Then user click on RouteOverride_EmpTermite
-    Then user click on AddRouteOverride_RouteOEmpTermite
-    Then user click on DDRoute_RouteOEmpTermit
-    Then user click on Save_RouteOEmpTermite
+  #@RouteOverrideEmpTermite
+  #Scenario: Test to Add RouteOverride in Termite
+    #When user click on 	Emp_Termite
+    #Then user click on RouteOverride_EmpTermite
+    #Then user click on AddRouteOverride_RouteOEmpTermite
+    #Then user click on DDRoute_RouteOEmpTermit
+    #Then user click on Save_RouteOEmpTermite
 
   @ClockInOutEmpTermite
   Scenario: Test to Add ClockInOu in Termite

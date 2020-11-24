@@ -1,4 +1,4 @@
-@run @termite
+@run @termite @termitecustomer
 Feature: Test for Termite Customer of Termite.
 
   Background: 
@@ -149,10 +149,10 @@ Feature: Test for Termite Customer of Termite.
     Then user click on ResiOppType_AddOppAdvanceSearchContCustTermite
     Then user click on Save_AddOppAdvanceSearchContCustTermite
 
-  @DeleteAdvanceSearchContCustTermite
-  Scenario: Test to Search DeleteOpportunity ContactTermite
-    When user click on 	Customer_Termite
-    Then user click on ContCustTermite
-    Then user click on AdvanceSearch_ContCustTermite
-    Then user click on DeleteAction_AdSearchContCustTermite
-    Then user click on Yes_DeleteAdSearchContCustTermite
+  #@DeleteAdvanceSearchContCustTermite
+  #Scenario: Test to Search DeleteOpportunity ContactTermite
+    #When user click on 	Customer_Termite
+    #Then user click on ContCustTermite
+    #Then user click on AdvanceSearch_ContCustTermite
+    #Then user click on DeleteAction_AdSearchContCustTermite
+    #Then user click on Yes_DeleteAdSearchContCustTermite
