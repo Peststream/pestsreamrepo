@@ -213,7 +213,7 @@ public class newUserMechCallPage extends peststreamPage {
 	@FindBy(xpath = "//*[@id='submit']")
 	private WebElementFacade scheduleTime_Specific;
 
-	@FindBy(xpath = "//*[@id='select2-chosen-3']")
+	@FindBy(xpath = "//*[@id='s2id_FieldSalesPerson']")
 	private WebElementFacade assignedTo;
 
 	@FindBy(xpath = "(//div[contains(@role,'option')])[4]")
