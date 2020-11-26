@@ -1,4 +1,4 @@
-@run @termite @termitecustomer
+@run @termite @termitecustomer @2611
 Feature: Test for Termite Customer of Termite.
 
   Background: 
@@ -110,21 +110,6 @@ Feature: Test for Termite Customer of Termite.
     Then user click on AdvanceSearch_AccCustTermite
     Then user click on Delete_AdSearchAccCustTermite
     Then user click on Yes_DeleteAdSearchAccCustTermite
-
-  @AddOppAdvanceSearchCompCustTermite
-  Scenario: Test to Search inside Account Customer
-    When user click on 	Customer_Termite
-    Then user click on Comp_Cust
-    Then user click on AdvanceSearch_CompCustTermite
-    Then user click on AddOppAction_CallAdSearchCompCustTermite
-    Then user click on DDAcc_OppAdSearchAccCustTermite
-    Then user click on Continue_OppAdSearchAccCustTermite
-    Then user click on OppName_OppAdSearchAccCustTermite
-    Then user click on DDBranch_OppAdSearchAccCustTermite
-    Then user click on DDDept_OppAdSearchAccCustTermite
-    Then user click on DDSource_OppAdSearchAccCustTermite
-    Then user click on ResiOppType_OppAdSearchAccCustTermite
-    Then user click on Save_OppAdSearchAccCustTermite
 
   @DeleteAdvanceSearchCompCustTermite
   Scenario: Test to Search inside Account Customer
