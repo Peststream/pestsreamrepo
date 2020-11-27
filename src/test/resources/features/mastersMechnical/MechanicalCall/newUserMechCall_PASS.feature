@@ -27,7 +27,9 @@ Feature: New USer Mech Call Pass
   #Pass_Fixed
   @CSSO_BranchMech_JobtypeAdd_Save_Mech
   Scenario: Test to Continue General Info of ScheduleServiceOrder with branch Mech and Job Type2
-    When user clicked on CallTab
+    When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     Then user enters Company
     Then user enters Contact
     And user click on search
@@ -54,7 +56,9 @@ Feature: New USer Mech Call Pass
   #Pass_Fixed
   @CSSO_GereralInfo_TMaterial_Save
   Scenario: Test to Continue General Info of ScheduleServiceOrder Mechanical by specifying Time and Material3
-    When user clicked on CallTab
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     Then user enters Company
     Then user enters Contact
     And user click on search
@@ -81,7 +85,9 @@ Feature: New USer Mech Call Pass
   #Pass_Fixed
   @CSSO_SSO_TMaterial_TimeandPrice_After_SpecificHour_SplitPrice_Save
   Scenario: Test to Continue General Info of ScheduleServiceOrder Mechanical by specifying Time and Material4
-    When user clicked on CallTab
+    When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     Then user enters Company
     Then user enters Contact
     And user click on search
@@ -116,7 +122,9 @@ Feature: New USer Mech Call Pass
   #Pass
   @CSSO_SSO_FlatRate_Standard_Specific_Mechanic_Save
   Scenario: Test to Continue General Info of ScheduleServiceOrder Mechanical by using FlatRate5
-    When user clicked on CallTab
+    When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     Then user enters Company
     Then user enters Contact
     And user click on search
@@ -143,7 +151,9 @@ Feature: New USer Mech Call Pass
   #Pass
   @CSSO_SSO_FlatRate_Standard_Specific_Mechanic_WorkOrder_SaveDetails
   Scenario: Test to Continue General Info of ScheduleServiceOrder Mechanical by specifying Time and Material6
-    When user clicked on CallTab
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     Then user enters Company
     Then user enters Contact
     And user click on search
@@ -171,7 +181,9 @@ Feature: New USer Mech Call Pass
   #PassFixed
   @CSSO_SS0_After_HolidayHour_Range_Helper_Save
   Scenario: Test to Continue General Info of ScheduleServiceOrder with branch Mech and Job Type ,Save and open Work Order.8
-    When user clicked on CallTab
+    When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     Then user enters Company
     Then user enters Contact
     And user click on search
@@ -205,7 +217,9 @@ Feature: New USer Mech Call Pass
   #Pass_fix
   @CSSO_SSO_TMaterial_After_HolidayHour_SplitPrice_Helper_Save
   Scenario: Test to Continue General Info of ScheduleServiceOrder Mechanical by specifying Time and Material9
-    When user clicked on CallTab
+    When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     Then user enters Company
     Then user enters Contact
     And user click on search
@@ -238,7 +252,9 @@ Feature: New USer Mech Call Pass
   #Pass
   @CSSO_GereralInfo_TMaterial_TimeRange_Save
   Scenario: Test to Continue General Info of ScheduleServiceOrder Mechanical by specifying Time and Material,Time Range.10
-    When user clicked on CallTab
+    When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     Then user enters Company
     Then user enters Contact
     And user click on search
@@ -267,7 +283,9 @@ Feature: New USer Mech Call Pass
   #PassFixed
   @CSSO__JTNew_After_SpecificHour__Split_Range_Helper_Save_Mech
   Scenario: Test Opportunity using Specific Hour.17
-    When user clicked on CallTab
+    When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     Then user enters Company
     Then user enters Contact
     And user click on search
@@ -301,7 +319,9 @@ Feature: New USer Mech Call Pass
   #Pass_fixed
   @CSSO_GeneralInfo_ScheduleEstimation_Mech
   Scenario: Test to Continue General Info of ScheduleEstimation Mechanical21
-    When user clicked on CallTab
+    When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     Then user enters Company
     Then user click on contact
     Then user click on search
@@ -313,7 +333,9 @@ Feature: New USer Mech Call Pass
   #Pass_fixed
   @CSSO_ScheduleEstimation_Save_Mech
   Scenario: Test General Info of ScheduleEstimation with Job Type22
-    When user clicked on CallTab
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     Then user enters Company
     Then user enters Contact
     And user click on search
@@ -338,7 +360,9 @@ Feature: New USer Mech Call Pass
   #Passes_fixed
   @CSSO_ScheduleEstimation_RangeTime_Mech
   Scenario: Test to Continue General Info of ScheduleEstimation with RangeTime23
-    When user clicked on CallTab
+    When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     Then user enters Company
     Then user enters Contact
     And user click on search
@@ -366,7 +390,9 @@ Feature: New USer Mech Call Pass
   #Passed_fixed
   @CSSO_ScheduleEstimation_Residential_Field_SpecificTime_Save_Mech
   Scenario: Test to General Info of ScheduleEstimation with SpecificTime24
-    When user clicked on CallTab
+    When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     Then user enters Company
     Then user enters Contact
     And user click on search
@@ -392,7 +418,9 @@ Feature: New USer Mech Call Pass
   #Pass_Fixed
   @CSSO_ScheduleEstimation_Residential_Inside_SpecificTime_Save_Mech
   Scenario: Test ScheduleEstimation Residential with InsideSpecificTime25
-    When user clicked on CallTab
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     Then user enters Company
     Then user enters Contact
     And user click on search
@@ -417,7 +445,9 @@ Feature: New USer Mech Call Pass
   #Pass
   @CSSO_ScheduleEstimation_Comm_Inside_TimeRange_Save_Mech
   Scenario: Test ScheduleEstimation Commercial with InsideTimeRange28
-    When user clicked on CallTab
+    When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     Then user enters Company
     Then user enters Contact
     And user click on search
