@@ -1,4 +1,4 @@
-@pcro2 @pests
+@pcro2 @pests @2711
 Feature: Test for new user PCRO2 for Pest.
 #done
 

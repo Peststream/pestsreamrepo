@@ -1,4 +1,4 @@
-@run @pcro
+@run @pcro @2711
 Feature: Test for existing user PCRO for Pest.
  
   Background: 

@@ -1,4 +1,4 @@
-@run @hvaccall2 @Passed
+@run @hvaccall2 @Passed @2711
 Feature: Test for call Hvac 2
 
   Background: 

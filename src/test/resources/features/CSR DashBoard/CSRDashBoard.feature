@@ -1,4 +1,4 @@
-@run @csrpestMSN
+@run @csrpestMSN @2711
 Feature: Test of CSRDASHBOARD user for Pest.
 
   Background: 

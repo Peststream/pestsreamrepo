@@ -10,7 +10,9 @@ Feature: New USer Mech Call 3
   #Pass_Fixed
   @CSSO_General_Mechanical_Fixed100
   Scenario: Test to Continue General Info of ScheduleServiceOrder with branch Mech and Job Type ,Save and open Work Order.1
-    When user clicked on CallTab
+    When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     Then user enters Company
     Then user enters Contact
     And user click on search
@@ -41,7 +43,9 @@ Feature: New USer Mech Call 3
   #Passed_Fixed
   @CSSO_General_Mechanical_Fixed
   Scenario: Test to Continue General Info of ScheduleServiceOrder with branch Mech and Job Type ,Save and open Work Order.2
-    When user clicked on CallTab
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     Then user enters Company
     Then user enters Contact
     And user click on search
@@ -81,7 +85,9 @@ Feature: New USer Mech Call 3
   #Passed_Recent
   @CSSO_General_Mechanical_Fixed
   Scenario: Test to General Info of ScheduleEstimation send Email for CustomerSignature.7
-    When user clicked on CallTab
+    When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     Then user enters Company
     Then user enters Contact
     And user click on search
@@ -123,7 +129,9 @@ Feature: New USer Mech Call 3
   #Passed_recent
   @CSSO_General_Mechanical_Fixed
   Scenario: Test ScheduleEstimation with FieldRange  Cust is Absent8
-    When user clicked on CallTab
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     Then user enters Company
     Then user enters Contact
     And user click on search
@@ -154,7 +162,9 @@ Feature: New USer Mech Call 3
   #Passed_Recent
   @CSSO_General_Mechanical_Fixed
   Scenario: Test ScheduleEstimation with InsideRange when Cust is Absent and Send Agreement Link9
-    When user clicked on CallTab
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     Then user enters Company
     Then user enters Contact
     And user click on search
@@ -188,7 +198,9 @@ Feature: New USer Mech Call 3
   #Pass_Fixed
   @CSSO_General_Mechanical_Fixed10
   Scenario: Test ScheduleEstimation Commercial with FieldSpecific when Cust is Present and send email10
-    When user clicked on CallTab
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     Then user enters Company
     Then user enters Contact
     And user click on search
@@ -217,7 +229,9 @@ Feature: New USer Mech Call 3
   #Passed_Recent
   @CSSO_General_Mechanical_Fixed
   Scenario: Test ScheduleEstimation with branch Mech Schedule Estimation,Residential and Specific Schedule Time.11
-    When user clicked on CallTab
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     Then user enters Company
     Then user enters Contact
     And user click on search
@@ -257,7 +271,9 @@ Feature: New USer Mech Call 3
   #Passed_recent
   @CSSO_General_Mechanical_Fixed
   Scenario: Test ScheduleEstimation with IndideSpecific with Cust is Present12
-    When user clicked on CallTab
+    When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     Then user enters Company
     Then user enters Contact
     And user click on search
@@ -284,7 +300,9 @@ Feature: New USer Mech Call 3
   #Pass_Email
   @CSSO_General_Mechanical_Fixed
   Scenario: Test Scheduleestimation Residential with FieldSpecific when Cust is Present13
-    When user clicked on CallTab
+    When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     Then user enters Company
     Then user enters Contact
     And user click on search
@@ -325,7 +343,9 @@ Feature: New USer Mech Call 3
   #passed_recent
   @CSSO_General_Mechanical_Fixed
   Scenario: Test ScheduleEstimation Commercial with InsideSpecific when Cust is Present.23
-    When user clicked on CallTab
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     Then user enters Company
     Then user enters Contact
     And user click on search
@@ -365,7 +385,9 @@ Feature: New USer Mech Call 3
   #Passed_recent
   @CSSO_General_Mechanical_Fixed
   Scenario: Test ScheduleEstimation Commercial with InsideRange when Cust is Absent and send and email5
-    When user clicked on CallTab
+    When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     Then user enters Company
     Then user enters Contact
     And user click on search
@@ -400,7 +422,9 @@ Feature: New USer Mech Call 3
   #Pass
   @CSSO_General_Mechanical_Fixed
   Scenario: Test Opportunity using PrimaryRoute.3
-    When user clicked on CallTab
+   When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     Then user enters Company
     Then user enters Contact
     And user click on search
