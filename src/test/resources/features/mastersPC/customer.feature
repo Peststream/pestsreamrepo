@@ -1,4 +1,4 @@
-@run @customer @RunMSN
+@run @customer @RunMSN 
 Feature: Test for Customer.
 
   Background: 

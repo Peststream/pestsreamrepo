@@ -1,6 +1,4 @@
-
-@termitecall @run @termitecall22
-
+@termitecall @run @termitecall22 @2811
 Feature: Test for new User Termite Call2 of Termite.
 
   Background: 

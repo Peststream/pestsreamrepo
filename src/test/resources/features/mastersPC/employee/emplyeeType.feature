@@ -1,4 +1,4 @@
-@run @empMSN @employee @RunMSN
+@run @empMSN @employee @RunMSN 
 Feature: Test for Employee.
 
   Background: 
@@ -44,12 +44,11 @@ Feature: Test for Employee.
     #Then i click on save
 
   #Done
-  @createClockInOutWorkingStatus
+  @createClockInOutWorkingStatus11
   Scenario: Test create ClockInOutWorkingStatus feature in Employee tab
     When i click on employee tab on dashboard
     Then user click on ClockInOutTab
     Then user click on addClockInOut
-    Then user click on ClockInOutDate
     Then user click on ValueTimeOut
     Then user click on DDWorkingStatus
     Then user click on save
@@ -60,7 +59,6 @@ Feature: Test for Employee.
     When i click on employee tab on dashboard
     Then user click on ClockInOutTab
     Then user click on addClockInOut
-    Then user click on ClockInOutDate
     Then user click on ValueTimeOut
     Then user click on Reason
     Then user click on save
@@ -112,7 +110,6 @@ Feature: Test for Employee.
     When i click on employee tab on dashboard
     Then user click on ClockInOutTab
     Then user click on addClockInOut
-    Then user click on ClockInOutDate
     Then user click on TimeOut
     Then user click on ValueTimeOut
     Then user click on save

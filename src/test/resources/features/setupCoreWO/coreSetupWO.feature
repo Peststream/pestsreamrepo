@@ -1,4 +1,4 @@
-@run @core @RunMSN
+@run @core @RunMSN 
 Feature:  Test for Core Setup WorkOrder.
  
   Background: 
@@ -24,22 +24,6 @@ Feature:  Test for Core Setup WorkOrder.
     Then click on genrate online work order
     And Check all work order
     And Click on publish online
-    
-@Tsfcpsfwo
-  Scenario: Test setups fetaure for Click on save for save work order
-    When user clicked on Service tab in left panel
-    Then user clicked on Work Order
-    Then user clicked on Advance Search Button on save work order
-    And select opportunity
-    Then click on save Button on save work order
-    
-    
-    
-    
-    
-    
-    
-    
-    
+     
     
     
