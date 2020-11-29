@@ -10,7 +10,9 @@ Feature: New USer Mech Call Pass
   #Pass_Fixed
   @CSSO_General_MechPa
   Scenario: Test to Continue General Info of ScheduleServiceOrder Mechanical1
-    When user clicked on CallTab
+    When user click on CsrDashboard
+   Then user click on AdvanceSearch
+   Then user click on CreateNew
     Then user enters Company
     Then user click on contact
     Then user click on search
